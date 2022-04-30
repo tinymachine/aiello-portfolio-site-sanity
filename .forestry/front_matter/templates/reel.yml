@@ -5,3 +5,5 @@ fields:
 - type: number
   name: vimeo_id
   label: vimeo_id
+pages:
+- src/content/Reel.md

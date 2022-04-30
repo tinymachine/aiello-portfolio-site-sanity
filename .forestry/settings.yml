@@ -5,12 +5,16 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
-  path: src/content/About.md
-  label: About Content
-  match: "**/*"
-- type: document
   path: src/data/Meta.md
   label: Site Info
+  match: "**/*"
+- type: document
+  path: src/content/Reel.md
+  label: Reel
+  match: "**/*"
+- type: document
+  path: src/content/About.md
+  label: About Content
   match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"

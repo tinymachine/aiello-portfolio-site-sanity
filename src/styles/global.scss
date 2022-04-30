@@ -1,0 +1,215 @@
+@use './fonts';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --font-default: Fraunces, Georgia, 'Times New Roman', Times, serif;
+  --font-accent: CabinetGrotesk, -apple-system, BlinkMacSystemFont, 
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+    'Open Sans', 'Helvetica Neue', sans-serif;
+
+  --color-strongest: hsl(0, 0%, 100%);
+  --color-strong: hsl(0, 0%, 85%);
+  --color-default: hsl(0, 0%, 60%);
+  --color-bg: black;
+  --color-vertical-rule: hsl(0, 0%, 20%);
+
+  --margin-body-top: clamp(
+    1rem,
+    6.4vw,
+    3rem
+  );
+  --margin-body-bottom: var(--margin-body-top);
+  --margin-body-h: clamp(
+    1rem,
+    1rem + 2.125vw,
+    2.25rem
+  );
+  --margin-h-inset: var(--margin-body-h);
+
+  --scroll-button-diameter: calc(1.5 * var(--margin-h-inset));
+
+  font-family: var(--font-default);
+  font-size: clamp(
+    1rem,
+    0.5rem + 1.0309vw,
+    1.125rem
+  );
+  font-weight: 300;
+  font-optical-sizing: auto;
+  font-variation-settings: 
+    'WONK' 0,
+    'opsz' 16;
+  line-height: 1.75;
+  color: var(--color-default);
+  letter-spacing: 0.02em;
+}
+
+html {
+  background-color: var(--color-bg);
+
+  @media (prefers-reduced-motion: no-preference) {
+    & {
+      scroll-behavior: smooth;
+    }
+  }
+}
+
+body {
+  padding: 0 var(--margin-body-h) var(--margin-body-bottom);
+  width: 100%;
+  margin: 0 auto;
+  max-width: 36rem;
+  min-height: 100vh;
+}
+
+.initial-view {
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--margin-body-top);
+  padding-bottom: var(--margin-body-top);
+  margin-bottom: 4rem;
+  height: calc(100vh - env(safe-area-inset-bottom));
+  height: 100svh;
+  justify-content: space-between;
+  position: relative;
+}
+
+p {
+  margin-bottom: 1em;
+
+  footer & {
+    font-size: 0.75em;
+  }
+}
+
+a {
+  color: inherit;
+}
+
+header {
+  padding-bottom: 0.75em;
+  background-color: var(--color-bg);
+
+  h1, h2 {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  h1 {
+    color: var(--color-strongest);
+    letter-spacing: 0.01em;
+  }
+
+  h2 {
+    font-family: var(--font-accent);
+    letter-spacing: 0.04em;
+  }
+}
+
+h3 {
+  padding: 0.75em 0;
+  font-family: var(--font-accent);
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--color-strong);
+  background-color: var(--color-bg);
+}
+
+.bleed-r {
+  margin-right: calc(-1 * var(--margin-h-inset));
+}
+
+.portrait {
+  display: block;
+  margin-bottom: 2em;
+  width: 100%;
+}
+
+.contact {
+  a {
+    font-family: var(--font-accent);
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.5s;
+    color: var(--color-strong);
+    padding: 0.5em 0.625em;
+    position: relative;
+
+    &:hover, &:focus {
+      color: var(--color-strongest);
+    }
+  }
+}
+
+.social {
+  list-style-type: none;
+  margin: 0 0 1em;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  a:not(:last-child)::after {
+    position: absolute;
+    right: -0.125ch;
+    content: '·';
+    color: var(--color-default);
+  }
+}
+
+footer {
+  margin-left: var(--margin-h-inset);
+
+  p:first-of-type {
+    margin-top: 1.5rem;
+  }
+}
+
+body.home {
+  position: relative;
+
+  main {
+    padding-bottom: 12rem;
+  }
+
+  // vertical rule
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: var(--margin-body-top);
+    left: calc(var(--margin-body-h) + 2px);
+    width: 0.5px;
+    height: 100%;
+    background-color: var(--color-vertical-rule);
+  }
+
+  article {
+    padding-top: 2rem;
+    padding-left: var(--margin-h-inset);
+  }
+
+  h3 {
+    margin-left: calc(-1 * var(--margin-h-inset));
+    margin-bottom: 2rem;
+  }
+}
+
+.align-r {
+  text-align: right;
+}
+
+.bleed {
+  margin: 0.5rem 0 0;
+  width: 100vw;
+  min-width: 100%;
+  max-width: min(120vh, 72rem);
+  align-self: center;
+}

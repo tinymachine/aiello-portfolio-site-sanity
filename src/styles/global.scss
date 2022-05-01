@@ -1,4 +1,4 @@
-@use './fonts';
+// @use './fonts';
 
 * {
   box-sizing: border-box;
@@ -6,21 +6,21 @@
 }
 
 :root {
-  --font-default: Fraunces, Georgia, 'Times New Roman', Times, serif;
+  // --font-default: Fraunces, Georgia, 'Times New Roman', Times, serif;
   --font-accent: CabinetGrotesk, -apple-system, BlinkMacSystemFont, 
     'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
     'Open Sans', 'Helvetica Neue', sans-serif;
 
   --color-strongest: hsl(0, 0%, 100%);
   --color-strong: hsl(0, 0%, 85%);
-  --color-default: hsl(0, 0%, 65%);
+  --color-default: hsl(0, 0%, 55%);
   --color-bg: black;
   --color-vertical-rule: hsl(0, 0%, 20%);
 
   --margin-body-top: clamp(
     1rem,
     6.4vw,
-    3rem
+    2rem
   );
   --margin-body-bottom: var(--margin-body-top);
   --margin-body-h: clamp(
@@ -32,20 +32,20 @@
 
   --scroll-button-diameter: calc(1.5 * var(--margin-h-inset));
 
-  font-family: var(--font-default);
+  font-family: var(--font-accent);
   font-size: clamp(
     1rem,
     0.5rem + 1.0309vw,
     1.125rem
   );
-  font-weight: 300;
+  font-weight: 400;
   font-optical-sizing: auto;
-  font-variation-settings: 
-    'WONK' 0,
-    'opsz' 16;
-  line-height: 1.75;
+  // font-variation-settings: 
+  //   'WONK' 0,
+  //   'opsz' 16;
+  line-height: 1.5;
   color: var(--color-default);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.025em;
 }
 
 html {
@@ -82,12 +82,30 @@ p {
   margin-bottom: 1em;
 
   footer & {
-    font-size: 0.75em;
+    font-size: 0.825em;
   }
 }
 
 a {
   color: inherit;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleY {
+ to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes slideIntoPosition {
+  to {
+    transform: translate(0, 0);
+  }
 }
 
 header {
@@ -96,34 +114,45 @@ header {
 
   h1, h2 {
     font-size: 1em;
-    font-weight: 400;
+    font-weight: inherit;
     line-height: 1.4;
-  }
 
+    @media (prefers-reduced-motion: no-preference) {
+      opacity: 0;
+      animation-duration: 2s;
+      animation-name: fadeIn;
+      animation-fill-mode: forwards;
+    }
+  }
+  
   h1 {
     color: var(--color-strongest);
-    letter-spacing: 0.01em;
-  }
+    letter-spacing: 0.04em;
 
+    @media (prefers-reduced-motion: no-preference) {
+      animation-delay: 1.25s;
+    }
+  }
+  
   h2 {
     font-family: var(--font-accent);
     letter-spacing: 0.04em;
+
+    @media (prefers-reduced-motion: no-preference) {
+      animation-delay: 1.5s;
+    }
   }
 }
 
 h3 {
   padding: 0.75em 0;
   font-family: var(--font-accent);
-  font-weight: 700;
-  font-size: 13px;
+  font-weight: 600;
+  font-size: 0.825em;
   text-transform: uppercase;
   letter-spacing: 0.25em;
   color: var(--color-strong);
   background-color: var(--color-bg);
-}
-
-.bleed-r {
-  margin-right: calc(-1 * var(--margin-h-inset));
 }
 
 .portrait {
@@ -137,7 +166,7 @@ h3 {
     font-family: var(--font-accent);
     font-weight: 400;
     text-decoration: none;
-    transition: all 0.5s;
+    transition: color 0.5s;
     color: var(--color-strong);
     padding: 0.5em 0.625em;
     position: relative;
@@ -150,7 +179,7 @@ h3 {
 
 .social {
   list-style-type: none;
-  margin: 0 0 1em;
+  margin: 0 0 2em;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -189,6 +218,16 @@ body.home {
     width: 0.5px;
     height: 100%;
     background-color: var(--color-vertical-rule);
+
+    @media (prefers-reduced-motion: no-preference) {
+      transform: scaleY(0);
+      transform-origin: 0 0;
+      animation-name: scaleY;
+      animation-delay: 2s;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
+    }
   }
 
   article {
@@ -207,9 +246,29 @@ body.home {
 }
 
 .bleed {
-  margin: 0.5rem 0 0;
+  margin: 0.25rem 0 0;
   width: 100vw;
   min-width: 100%;
   max-width: min(120vh, 72rem);
   align-self: center;
+}
+
+.bleed-r {
+  margin-right: calc(-1 * var(--margin-h-inset));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .video-fade-in {
+      opacity: 0;
+      animation: fadeIn 2s ease-out 0.5s forwards;
+    }
+
+  .scroller-fade-in {
+    opacity: 0;
+    transform: translateY(-20%);
+
+    animation: 
+      fadeIn 1.5s ease-out 2s forwards,
+      slideIntoPosition 1.5s ease-out 2s forwards;
+  }
 }

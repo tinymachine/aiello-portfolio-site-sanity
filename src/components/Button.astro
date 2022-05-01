@@ -18,7 +18,10 @@ const { href, label } = Astro.props as Props;
     text-decoration: none;
     text-align: center;
     padding: 0.65em 1em;
-    transition: all 0.5s;
+    transition: 
+      color 0.5s,
+      border-color 0.5s
+    ;
 
     &:hover, &:focus {
         border-color: var(--color-button-border-hover);

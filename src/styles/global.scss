@@ -12,7 +12,7 @@
     'Open Sans', 'Helvetica Neue', sans-serif;
 
   --color-strongest: hsl(0, 0%, 100%);
-  --color-strong: hsl(0, 0%, 85%);
+  --color-strong: hsl(0, 0%, 75%);
   --color-default: hsl(0, 0%, 55%);
   --color-bg: black;
   --color-vertical-rule: hsl(0, 0%, 20%);
@@ -148,9 +148,9 @@ h3 {
   padding: 0.75em 0;
   font-family: var(--font-accent);
   font-weight: 600;
-  font-size: 0.825em;
+  font-size: 0.8125em;
   text-transform: uppercase;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.2em;
   color: var(--color-strong);
   background-color: var(--color-bg);
 }
@@ -166,10 +166,10 @@ h3 {
     font-family: var(--font-accent);
     font-weight: 400;
     text-decoration: none;
-    transition: color 0.5s;
     color: var(--color-strong);
     padding: 0.5em 0.625em;
     position: relative;
+    transition: color 0.5s, border 0.5s;
 
     &:hover, &:focus {
       color: var(--color-strongest);
@@ -205,7 +205,7 @@ body.home {
   position: relative;
 
   main {
-    padding-bottom: 12rem;
+    padding-bottom: 8rem;
   }
 
   // vertical rule

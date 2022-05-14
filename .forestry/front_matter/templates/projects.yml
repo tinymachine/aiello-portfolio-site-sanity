@@ -26,6 +26,8 @@ fields:
     - type: list
       name: clips
       label: Clips
+      description: Make sure to click 'Add' after entering a clip URL. <br><em>Note,
+        URLs might appear truncated once added, but the whole URL is saved.</em>
     - type: image_gallery
       name: stills
       label: Stills

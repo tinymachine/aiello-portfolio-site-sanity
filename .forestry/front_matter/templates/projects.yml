@@ -42,3 +42,5 @@ fields:
   config:
     min: 1
     labelField: heading
+pages:
+- src/content/Projects.md

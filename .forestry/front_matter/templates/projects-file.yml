@@ -36,3 +36,4 @@ fields:
   label: Projects
 pages:
 - src/content/Features.md
+- src/content/ShortForm.md

@@ -38,8 +38,18 @@ projects:
 - title: Komb
   director: ''
   clips: []
-  featuredStill: ''
-  stills: []
+  featuredStill: https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516789/andrew-aiello/portfolio/komb-10_ljno3t.jpg
+  stills:
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516789/andrew-aiello/portfolio/komb-10_ljno3t.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516789/andrew-aiello/portfolio/komb-09_i3a2gd.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516789/andrew-aiello/portfolio/komb-08_donasg.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516789/andrew-aiello/portfolio/komb-07_p7ihb2.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516787/andrew-aiello/portfolio/komb-06_kf4auh.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516788/andrew-aiello/portfolio/komb-05_b33bnm.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516788/andrew-aiello/portfolio/komb-04_bufw7x.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516788/andrew-aiello/portfolio/komb-03_ohpi1a.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516786/andrew-aiello/portfolio/komb-02_y1j8ve.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516786/andrew-aiello/portfolio/komb-01_pnldfx.jpg
 - title: Lil Squid — "Everybody Know"
   director: ''
   clips: []

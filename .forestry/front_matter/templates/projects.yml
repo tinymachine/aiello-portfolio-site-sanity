@@ -4,27 +4,39 @@ hide_body: true
 fields:
 - type: field_group_list
   name: projectSets
-  label: projectSets
+  label: Project Sets
   fields:
   - type: text
     name: heading
-    label: heading
+    label: Heading
+    config:
+      required: true
   - type: field_group_list
     name: projects
-    label: projects
+    label: Projects
     fields:
     - type: text
       name: title
-      label: title
+      label: Project Title
+      config:
+        required: true
     - type: text
       name: director
-      label: director
+      label: Director
     - type: list
       name: clips
-      label: clips
+      label: Clips
     - type: image_gallery
       name: stills
-      label: stills
+      label: Stills
     - type: file
       name: featuredStill
-      label: featuredStill
+      label: Featured Still
+      description: This will appear as the project image on the home page.
+    config:
+      labelField: title
+      min: 
+  description: Groupings of projects.
+  config:
+    min: 1
+    labelField: heading

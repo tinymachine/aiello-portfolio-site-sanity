@@ -86,7 +86,7 @@ projects:
 - director: ''
   clips:
   - https://vimeo.com/manage/videos/673804873
-  featuredStill: ''
+  featuredStill: https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517138/andrew-aiello/portfolio/nothingman-13_whe3nh.jpg
   stills:
   - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517138/andrew-aiello/portfolio/nothingman-13_whe3nh.jpg
   - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517138/andrew-aiello/portfolio/nothingman-12_jz9vdm.jpg

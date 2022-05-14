@@ -72,8 +72,17 @@ projects:
   - https://vimeo.com/manage/videos/169914293
   - https://vimeo.com/manage/videos/169913997
   - https://vimeo.com/manage/videos/169913530
-  featuredStill: ''
-  stills: []
+  featuredStill: https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517042/andrew-aiello/portfolio/lizzy-powers-09_fdxaga.jpg
+  stills:
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517042/andrew-aiello/portfolio/lizzy-powers-09_fdxaga.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517042/andrew-aiello/portfolio/lizzy-powers-08_hetvg3.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517042/andrew-aiello/portfolio/lizzy-powers-07_t4vp6g.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517042/andrew-aiello/portfolio/lizzy-powers-06_sjxuzf.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517042/andrew-aiello/portfolio/lizzy-powers-05_qnqz2n.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517042/andrew-aiello/portfolio/lizzy-powers-04_auf4th.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517041/andrew-aiello/portfolio/lizzy-powers-03_kkrpem.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517041/andrew-aiello/portfolio/lizzy-powers-02_lif4o3.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517042/andrew-aiello/portfolio/lizzy-powers-01_vvknw4.jpg
 - director: ''
   clips:
   - https://vimeo.com/manage/videos/673804873

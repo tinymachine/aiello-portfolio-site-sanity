@@ -53,8 +53,19 @@ projects:
 - title: Lil Squid — "Everybody Know"
   director: ''
   clips: []
-  featuredStill: ''
-  stills: []
+  featuredStill: https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516962/andrew-aiello/portfolio/lil-squid-ek-11_lq2kfb.jpg
+  stills:
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516962/andrew-aiello/portfolio/lil-squid-ek-11_lq2kfb.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516962/andrew-aiello/portfolio/lil-squid-ek-10_gantzc.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516963/andrew-aiello/portfolio/lil-squid-ek-09_pfkllr.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516963/andrew-aiello/portfolio/lil-squid-ek-08_g2hgls.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516963/andrew-aiello/portfolio/lil-squid-ek-07_l6wykv.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516962/andrew-aiello/portfolio/lil-squid-ek-06_ofedkj.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516963/andrew-aiello/portfolio/lil-squid-ek-05_b8mq2l.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516957/andrew-aiello/portfolio/lil-squid-ek-04_jrrmxn.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516961/andrew-aiello/portfolio/lil-squid-ek-03_y0h9oz.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516956/andrew-aiello/portfolio/lil-squid-ek-02_hvylw7.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516950/andrew-aiello/portfolio/lil-squid-ek-01_vlw552.jpg
 - title: Lizzy Powers
   director: ''
   clips:

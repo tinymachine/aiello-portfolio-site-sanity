@@ -1,3 +1,3 @@
 ---
-title: Short Form
+heading: Short Form
 ---

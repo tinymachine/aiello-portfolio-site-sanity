@@ -3,7 +3,8 @@ heading: Features
 projects:
 - title: International Falls
   director: Amber McGinnis
-  clips: []
+  clips:
+  - https://vimeo.com/manage/videos/673804704
   featuredStill: https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652515876/andrew-aiello/portfolio/intl-falls-17_io3xeu.jpg
   stills:
   - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652515876/andrew-aiello/portfolio/intl-falls-17_io3xeu.jpg

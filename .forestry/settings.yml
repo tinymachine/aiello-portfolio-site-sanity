@@ -11,6 +11,14 @@ sections:
   path: src/content/Reel.md
   label: Reel
 - type: document
+  path: src/content/Features.md
+  label: Features
+  match: "**/*"
+- type: document
+  path: src/content/ShortForm.md
+  label: Short Form
+  match: "**/*"
+- type: document
   path: src/content/About.md
   label: About Content
 upload_dir: uploads

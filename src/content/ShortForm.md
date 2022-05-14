@@ -87,7 +87,20 @@ projects:
   clips:
   - https://vimeo.com/manage/videos/673804873
   featuredStill: ''
-  stills: []
+  stills:
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517138/andrew-aiello/portfolio/nothingman-13_whe3nh.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517138/andrew-aiello/portfolio/nothingman-12_jz9vdm.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517138/andrew-aiello/portfolio/nothingman-11_l4op9t.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517138/andrew-aiello/portfolio/nothingman-10_yh9bjk.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517138/andrew-aiello/portfolio/nothingman-09_siag3p.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517136/andrew-aiello/portfolio/nothingman-08_lgd17u.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517137/andrew-aiello/portfolio/nothingman-07_tszema.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517135/andrew-aiello/portfolio/nothingman-06_zwaqfl.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517137/andrew-aiello/portfolio/nothingman-05_wh5jsy.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517138/andrew-aiello/portfolio/nothingman-04_plma3z.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517138/andrew-aiello/portfolio/nothingman-03_ruq93t.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517137/andrew-aiello/portfolio/nothingman-02_u96c7b.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517137/andrew-aiello/portfolio/nothingman-01_wc9q0w.jpg
   title: Nothingman
 - title: Sound of Fear
   director: ''

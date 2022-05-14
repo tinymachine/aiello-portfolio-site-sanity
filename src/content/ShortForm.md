@@ -105,8 +105,19 @@ projects:
 - title: Sound of Fear
   director: ''
   clips: []
-  featuredStill: ''
-  stills: []
+  featuredStill: https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517210/andrew-aiello/portfolio/sound-of-fear-11_eoijg7.jpg
+  stills:
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517210/andrew-aiello/portfolio/sound-of-fear-11_eoijg7.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517210/andrew-aiello/portfolio/sound-of-fear-10_fgiuwe.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517210/andrew-aiello/portfolio/sound-of-fear-09_paatvz.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517210/andrew-aiello/portfolio/sound-of-fear-08_n1y6qg.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517210/andrew-aiello/portfolio/sound-of-fear-07_ely5rr.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517210/andrew-aiello/portfolio/sound-of-fear-06_b0zyyj.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517210/andrew-aiello/portfolio/sound-of-fear-05_c9vcmg.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517208/andrew-aiello/portfolio/sound-of-fear-04_mbbj7q.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517206/andrew-aiello/portfolio/sound-of-fear-03_zxt3yu.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517206/andrew-aiello/portfolio/sound-of-fear-02_y0emjn.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517205/andrew-aiello/portfolio/sound-of-fear-01_mrv1se.jpg
 - title: Strip
   director: ''
   clips: []

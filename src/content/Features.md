@@ -22,7 +22,8 @@ projects:
   - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652514673/andrew-aiello/portfolio/fallen-queen-2_hpqayj.jpg
 - title: Bhinna
   director: Adarsh Eshwarappa
-  clips: []
+  clips:
+  - https://vimeo.com/manage/videos/674011355
   stills:
   - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652514412/andrew-aiello/portfolio/bhinna-1_imfvxn.jpg
   - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652514482/andrew-aiello/portfolio/bhinna-15_njaw79.jpg

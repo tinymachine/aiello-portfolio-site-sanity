@@ -8,7 +8,8 @@ projects:
   stills: []
 - title: Green Cobra
   director: Sigurd Culhane
-  clips: []
+  clips:
+  - https://vimeo.com/manage/videos/673324430
   featuredStill: ''
   stills: []
 - title: Komb
@@ -23,14 +24,18 @@ projects:
   stills: []
 - title: Lizzy Powers
   director: ''
-  clips: []
+  clips:
+  - https://vimeo.com/manage/videos/169914293
+  - https://vimeo.com/manage/videos/169913997
+  - https://vimeo.com/manage/videos/169913530
   featuredStill: ''
   stills: []
 - director: ''
-  clips: []
+  clips:
+  - https://vimeo.com/manage/videos/673804873
   featuredStill: ''
   stills: []
-  title: Nothing Man
+  title: Nothingman
 - title: Sound of Fear
   director: ''
   clips: []

@@ -20,8 +20,21 @@ projects:
   director: Sigurd Culhane
   clips:
   - https://vimeo.com/manage/videos/673324430
-  featuredStill: ''
-  stills: []
+  featuredStill: https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516746/andrew-aiello/portfolio/green-cobra-13_gvgt7c.jpg
+  stills:
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516746/andrew-aiello/portfolio/green-cobra-13_gvgt7c.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516747/andrew-aiello/portfolio/green-cobra-12_abxg3f.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516747/andrew-aiello/portfolio/green-cobra-11_ogwgpb.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516747/andrew-aiello/portfolio/green-cobra-10_bkfu3q.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516746/andrew-aiello/portfolio/green-cobra-09_hqfeoc.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516746/andrew-aiello/portfolio/green-cobra-08_bkwwec.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516746/andrew-aiello/portfolio/green-cobra-07_elz7ao.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516746/andrew-aiello/portfolio/green-cobra-06_veo9zp.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516742/andrew-aiello/portfolio/green-cobra-05_qoskqn.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516742/andrew-aiello/portfolio/green-cobra-04_f7srga.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516742/andrew-aiello/portfolio/green-cobra-03_rqkbqs.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516742/andrew-aiello/portfolio/green-cobra-02_rvilp9.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516741/andrew-aiello/portfolio/green-cobra-01_ektji2.jpg
 - title: Komb
   director: ''
   clips: []

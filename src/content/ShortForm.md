@@ -138,7 +138,21 @@ projects:
 - title: Vertis
   director: ''
   clips: []
-  featuredStill: ''
-  stills: []
+  featuredStill: https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517293/andrew-aiello/portfolio/vertis-14_abejkz.jpg
+  stills:
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517293/andrew-aiello/portfolio/vertis-14_abejkz.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517294/andrew-aiello/portfolio/vertis-13_hk8qyh.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517293/andrew-aiello/portfolio/vertis-12_wvn3fz.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517293/andrew-aiello/portfolio/vertis-11_fu3nuw.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517292/andrew-aiello/portfolio/vertis-10_hkue5g.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517293/andrew-aiello/portfolio/vertis-09_kjws9s.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517292/andrew-aiello/portfolio/vertis-08_qkrhix.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517292/andrew-aiello/portfolio/vertis-07_jc6h4t.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517292/andrew-aiello/portfolio/vertis-06_bstlrr.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517293/andrew-aiello/portfolio/vertis-05_zcdvkz.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517293/andrew-aiello/portfolio/vertis-04_ozevex.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517293/andrew-aiello/portfolio/vertis-03_lpyfp8.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517292/andrew-aiello/portfolio/vertis-02_c2zwvl.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517292/andrew-aiello/portfolio/vertis-01_ab6mdw.jpg
 
 ---

@@ -11,6 +11,10 @@ sections:
   path: src/content/Reel.md
   label: Reel
 - type: document
+  path: src/content/Projects.md
+  label: Projects
+  match: "**/*"
+- type: document
   path: src/content/Features.md
   label: Features
 - type: document

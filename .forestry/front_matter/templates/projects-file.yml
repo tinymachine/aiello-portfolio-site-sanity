@@ -25,6 +25,12 @@ fields:
       min: 
       max: 
     label: Clips (optional)
+  - name: featuredStill
+    type: file
+    config:
+      maxSize: 64
+    label: Featured Still
+    description: This is the still that will appear on the home page.
   - name: stills
     type: image_gallery
     config: {}

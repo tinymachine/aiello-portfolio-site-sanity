@@ -5,8 +5,27 @@ projects:
   director: Jeff Rosenberg
   clips:
   - https://vimeo.com/manage/videos/528548672
-  stills: []
-  featuredStill: ''
+  stills:
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516278/andrew-aiello/portfolio/we-broke-up-19_mn8ikn.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516276/andrew-aiello/portfolio/we-broke-up-18_o1z1pf.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516274/andrew-aiello/portfolio/we-broke-up-17_zk7uei.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516279/andrew-aiello/portfolio/we-broke-up-16_gpd0rm.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516278/andrew-aiello/portfolio/we-broke-up-15_jvyqcm.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516269/andrew-aiello/portfolio/we-broke-up-14_qtnkpa.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516276/andrew-aiello/portfolio/we-broke-up-13_zsbsrf.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516278/andrew-aiello/portfolio/we-broke-up-12_rtgkpy.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516278/andrew-aiello/portfolio/we-broke-up-11_ejdwn3.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516272/andrew-aiello/portfolio/we-broke-up-10_zjvued.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516269/andrew-aiello/portfolio/we-broke-up-09_ppn7nu.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516276/andrew-aiello/portfolio/we-broke-up-08_mofxvb.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516272/andrew-aiello/portfolio/we-broke-up-07_omgyz3.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516274/andrew-aiello/portfolio/we-broke-up-06_rkudxs.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516269/andrew-aiello/portfolio/we-broke-up-05_rprjgu.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516274/andrew-aiello/portfolio/we-broke-up-04_w70zhd.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516276/andrew-aiello/portfolio/we-broke-up-03_hedgzj.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516265/andrew-aiello/portfolio/we-broke-up-02_x2tms1.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516262/andrew-aiello/portfolio/we-broke-up-01_d4scf5.jpg
+  featuredStill: https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516278/andrew-aiello/portfolio/we-broke-up-19_mn8ikn.jpg
 - title: Shuddhi
   director: Adarsh Eshwarappa
   clips:

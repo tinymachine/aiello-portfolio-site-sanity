@@ -1,0 +1,30 @@
+---
+label: Projects
+hide_body: true
+fields:
+- type: field_group_list
+  name: projectSets
+  label: projectSets
+  fields:
+  - type: text
+    name: heading
+    label: heading
+  - type: field_group_list
+    name: projects
+    label: projects
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: director
+      label: director
+    - type: list
+      name: clips
+      label: clips
+    - type: image_gallery
+      name: stills
+      label: stills
+    - type: file
+      name: featuredStill
+      label: featuredStill

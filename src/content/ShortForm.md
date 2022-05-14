@@ -121,8 +121,20 @@ projects:
 - title: Strip
   director: ''
   clips: []
-  featuredStill: ''
-  stills: []
+  featuredStill: https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517264/andrew-aiello/portfolio/strip-12_mvmnwq.jpg
+  stills:
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517264/andrew-aiello/portfolio/strip-12_mvmnwq.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517264/andrew-aiello/portfolio/strip-11_sbx7wl.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517264/andrew-aiello/portfolio/strip-10_cerg9a.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517264/andrew-aiello/portfolio/strip-09_yu7h6j.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517264/andrew-aiello/portfolio/strip-08_v6dray.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517263/andrew-aiello/portfolio/strip-07_oz1mad.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517264/andrew-aiello/portfolio/strip-06_bxnsb4.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517264/andrew-aiello/portfolio/strip-05_ekojip.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517263/andrew-aiello/portfolio/strip-04_hxsbta.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517263/andrew-aiello/portfolio/strip-03_ufnal1.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517263/andrew-aiello/portfolio/strip-02_gp5nek.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652517262/andrew-aiello/portfolio/strip-01_onr8dh.jpg
 - title: Vertis
   director: ''
   clips: []

@@ -14,12 +14,6 @@ sections:
   path: src/content/Projects.md
   label: Projects
 - type: document
-  path: src/content/Features.md
-  label: Features
-- type: document
-  path: src/content/ShortForm.md
-  label: Short Form
-- type: document
   path: src/content/About.md
   label: About Content
 upload_dir: andrew-aiello/portfolio

@@ -4,7 +4,7 @@ projects:
 - title: Fallen Queen
   director: ''
   clips: []
-  featuredStill: ''
+  featuredStill: https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652514684/andrew-aiello/portfolio/fallen-queen-1_vp99s3.jpg
   stills:
   - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652514684/andrew-aiello/portfolio/fallen-queen-1_vp99s3.jpg
   - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652514680/andrew-aiello/portfolio/fallen-queen-14_itoojv.jpg

@@ -5,8 +5,7 @@ projects:
   director: Jeff Rosenberg
   clips:
   - https://vimeo.com/manage/videos/528548672
-  stills:
-  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516117/andrew-aiello/portfolio/we-broke-up-15_nnjjdi.jpg
+  stills: []
   featuredStill: ''
 - title: Shuddhi
   director: Adarsh Eshwarappa

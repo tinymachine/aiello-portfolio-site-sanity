@@ -1,6 +1,27 @@
 ---
 heading: Features
 projects:
+- title: Shuddhi
+  director: Adarsh Eshwarappa
+  clips:
+  - https://vimeo.com/manage/videos/674010829
+  featuredStill: https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516014/andrew-aiello/portfolio/shuddhi-15_ktoxgh.jpg
+  stills:
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516014/andrew-aiello/portfolio/shuddhi-15_ktoxgh.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516014/andrew-aiello/portfolio/shuddhi-14_yarqpa.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516015/andrew-aiello/portfolio/shuddhi-13_hfpjnm.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516014/andrew-aiello/portfolio/shuddhi-12_azb0ny.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516015/andrew-aiello/portfolio/shuddhi-11_zcdzd3.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516014/andrew-aiello/portfolio/shuddhi-10_bbgwqa.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516014/andrew-aiello/portfolio/shuddhi-09_hmymbx.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516014/andrew-aiello/portfolio/shuddhi-08_ft29il.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516014/andrew-aiello/portfolio/shuddhi-07_uw8kyy.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516014/andrew-aiello/portfolio/shuddhi-06_qtugrk.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516013/andrew-aiello/portfolio/shuddhi-05_vwlcxl.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516014/andrew-aiello/portfolio/shuddhi-04_kznohd.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516013/andrew-aiello/portfolio/shuddhi-03_wcogny.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516014/andrew-aiello/portfolio/shuddhi-02_eajqf5.jpg
+  - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652516014/andrew-aiello/portfolio/shuddhi-01_xb3odw.jpg
 - title: International Falls
   director: Amber McGinnis
   clips:

@@ -13,11 +13,9 @@ sections:
 - type: document
   path: src/content/Features.md
   label: Features
-  match: "**/*"
 - type: document
   path: src/content/ShortForm.md
   label: Short Form
-  match: "**/*"
 - type: document
   path: src/content/About.md
   label: About Content

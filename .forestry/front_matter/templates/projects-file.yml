@@ -3,5 +3,34 @@ label: Projects File
 hide_body: true
 fields:
 - type: text
-  name: title
-  label: title
+  name: heading
+  label: Heading
+- name: projects
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: true
+    label: Project Title
+  - name: director
+    type: text
+    config:
+      required: false
+    label: Director (optional)
+  - name: clips
+    type: list
+    config:
+      use_select: false
+      min: 
+      max: 
+    label: Clips (optional)
+  - name: stills
+    type: image_gallery
+    config: {}
+    label: Still Images
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Projects

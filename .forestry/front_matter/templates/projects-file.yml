@@ -34,3 +34,5 @@ fields:
     max: 
     labelField: 
   label: Projects
+pages:
+- src/content/Features.md

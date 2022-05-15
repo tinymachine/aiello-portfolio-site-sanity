@@ -1,0 +1,41 @@
+---
+import BaseModal from './BaseModal.astro'
+import VimeoPlayer from './VimeoPlayer.astro';
+
+const { triggerId, project: {title, director, clips, stills } } = Astro.props
+---
+
+<BaseModal {triggerId}>
+  <h3>{title}</h3>
+  {director && <h4>{director}</h4>}
+
+  {clips && clips.map(clip => (
+    <div class="clip bleed">
+      <VimeoPlayer url={clip} />
+    </div>
+  ))}
+
+  {stills && stills.map(still => (
+    <img src={still} alt="" loading="lazy"/>
+  ))}
+</BaseModal>
+
+<style lang="scss">
+body.home h3 {
+  margin-left: 2rem;
+  position: sticky;
+  z-index: 10;
+  top: 1rem;
+  background-color: transparent;
+  mix-blend-mode: screen;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.clip, img {
+  margin-bottom: 6rem;
+}
+</style>

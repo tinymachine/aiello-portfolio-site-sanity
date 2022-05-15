@@ -1,99 +1,32 @@
 ---
-import { Content as AboutContent, frontmatter as about } from '../content/About.md';
+import { frontmatter as metadata } from '../data/Meta.md'
 import { frontmatter as reel } from '../content/Reel.md'
-import { frontmatter as metadata } from '../data/Meta.md';
 
+import Layout from '../layout/Layout.astro'  
+import AboutSection from '../components/AboutSection.astro'
+import ProjectSets from '../components/ProjectSets.astro'
 import VimeoPlayer from '../components/VimeoPlayer.astro'
 import ScrollButton from '../components/ScrollButton.astro'
-import Button from '../components/Button.astro'
-import Monogram from '../components/Monogram.astro'
-
-import '../styles/global.scss';
 ---
 
-<html lang="en" class="no-js">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
-	<meta name="theme-color" content="#000000">
-	<title>{metadata.name} · {metadata.title}</title>
+<Layout>
+  <div class="initial-view">
+    <header>
+      <h1>{metadata.name}</h1>
+      <h2>{metadata.title}</h2>
+    </header>
 
-	<link rel="icon" href="/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-	<script>document.documentElement.className
-			= document.documentElement.className
-			.replace(/\bno-js\b/g, '') + ' js ';
-	</script>
+    <div class="bleed video-fade-in">
+      <VimeoPlayer url={reel.vimeoUrl} />
+    </div>
 
-  <style>
-    /* @font-face {
-      font-family: 'Fraunces';
-      font-display: swap;
-      font-weight: 100 900;
-      src: url('/fonts/Fraunces--latin_basic.woff2') format('woff2');
-      unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-    } */
+    <div class="align-r scroller-fade-in" style="padding-top: 1rem;">
+      <ScrollButton targetId="first-section" />
+    </div>
+  </div>
 
-    @font-face {
-      font-family: 'CabinetGrotesk';
-      font-display: swap;
-      font-weight: 100 900;
-      font-style: normal;
-      src: url('/fonts/CabinetGrotesk-Variable.woff2') format('woff2'),
-          url('/fonts/CabinetGrotesk-Variable.woff') format('woff'),
-          url('/fonts/CabinetGrotesk-Variable.ttf') format('truetype');
-      unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-    }
-  </style>
-</head>
-
-<body class="home">
-	<div class="initial-view">
-		<header>
-			<h1>{metadata.name}</h1>
-			<h2>{metadata.title}</h2>
-		</header>
-
-		<div class="bleed video-fade-in">
-			<VimeoPlayer id={reel.vimeo_id} />
-		</div>
-
-		<div class="align-r scroller-fade-in" style="padding-top: 1rem;">
-			<ScrollButton targetId="about" />
-		</div>
-	</div>
-
-	<main>
-		<article id="about">
-			<h3>{about.title}</h3>
-
-			<div class="bleed-r">
-				<img src={about.image.url} alt={about.image.alt} class="portrait">
-			</div>
-
-			<div class="contact">
-				<Button 
-					href={`mailto:${about.email_button.address}`}
-					label={about.email_button.label}
-				/>
-
-				<nav class="social">
-					{about.social_links.map(service => (
-						<a href={service.url}>{service.label}</a>
-					))}
-				</nav>
-			</div>
-
-			<AboutContent />
-		</article>
-	</main>
-
-	<footer>
-		<Monogram />
-		<p>&copy; {metadata.name}</p>
-	</footer>
-	
-	<script src="https://player.vimeo.com/api/player.js"></script>
-</body>
-</html>
+  <main>
+    <ProjectSets />
+    <AboutSection />
+  </main>
+</Layout>

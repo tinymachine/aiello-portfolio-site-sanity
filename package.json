@@ -3,14 +3,16 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
+    "dev": "astro dev --host",
+    "start": "astro dev --host",
     "build": "astro build",
     "preview": "astro preview",
     "cms-preview": "astro dev --port 8080"
   },
   "devDependencies": {
+    "accessible-astro-components": "^1.4.7",
     "astro": "^1.0.0-beta.27",
+    "marked": "^4.0.15",
     "sass": "1.51.0"
   },
   "keywords": [],

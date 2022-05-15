@@ -452,6 +452,11 @@
     vscode-nls "^5.0.0"
     vscode-uri "^2.1.2"
 
+accessible-astro-components@^1.4.7:
+  version "1.4.7"
+  resolved "https://registry.yarnpkg.com/accessible-astro-components/-/accessible-astro-components-1.4.7.tgz#992e2a0eab673cc9561aa9cbb337e83747b3ddbb"
+  integrity sha512-Rg+PU6im3nCYDyC8BqgEYr8hqBfVTkv59yB/ZZuidcb8AvTzYoXF2J5TLT7K0bSvQzVKDNSRJnZS5ErYHH8FxQ==
+
 ansi-align@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/ansi-align/-/ansi-align-3.0.1.tgz#0cdf12e111ace773a86e9a1fad1225c43cb19a59"
@@ -1902,6 +1907,11 @@ markdown-table@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/markdown-table/-/markdown-table-3.0.2.tgz#9b59eb2c1b22fe71954a65ff512887065a7bb57c"
   integrity sha512-y8j3a5/DkJCmS5x4dMCQL+OR0+2EAq3DOtio1COSHsmW2BGXnNCK3v12hJt1LrUz5iZH5g0LmuYOjDdI+czghA==
+
+marked@^4.0.15:
+  version "4.0.15"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-4.0.15.tgz#0216b7c9d5fcf6ac5042343c41d81a8b1b5e1b4a"
+  integrity sha512-esX5lPdTfG4p8LDkv+obbRCyOKzB+820ZZyMOXJZygZBHrH9b3xXR64X4kT3sPe9Nx8qQXbmcz6kFSMt4Nfk6Q==
 
 mdast-util-definitions@^5.0.0:
   version "5.1.0"

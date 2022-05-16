@@ -97,7 +97,6 @@ projectSets:
     clips: []
     featuredStill: https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652514684/andrew-aiello/portfolio/fallen-queen-1_vp99s3.jpg
     stills:
-    - "/v1652687237/andrew-aiello/portfolio/2022-audi-a6-avant-e-tron-12_g8dffa.jpg"
     - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652514684/andrew-aiello/portfolio/fallen-queen-1_vp99s3.jpg
     - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652514680/andrew-aiello/portfolio/fallen-queen-14_itoojv.jpg
     - https://res.cloudinary.com/tinymachine/image/upload/q_auto/v1652514690/andrew-aiello/portfolio/fallen-queen-13_rtm8bx.jpg

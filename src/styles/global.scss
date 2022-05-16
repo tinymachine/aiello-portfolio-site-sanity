@@ -109,7 +109,7 @@ a {
   }
 }
 
-header {
+header.landing {
   padding-bottom: 0.75em;
   background-color: var(--color-bg);
 
@@ -237,15 +237,16 @@ body.home {
     }
   }
 
-  .section {
-    padding-top: 2rem;
-    padding-left: var(--margin-h-inset);
-  }
+}
 
-  h3 {
-    margin-left: calc(-1 * var(--margin-h-inset));
-    margin-bottom: 3rem;
-  }
+.landing .section {
+  padding-top: 2rem;
+  padding-left: var(--margin-h-inset);
+}
+
+.landing h3 {
+  margin-left: calc(-1 * var(--margin-h-inset));
+  margin-bottom: 3rem;
 }
 
 .align-r {

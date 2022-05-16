@@ -7,8 +7,10 @@ const { triggerId, project: {title, director, clips, stills } } = Astro.props
 ---
 
 <BaseModal {triggerId}>
-  <h3 tabindex="-1">{title}</h3>
-  {director && <h4>Director: {director}</h4>}
+  <header>
+    <h3 tabindex="-1">{title}</h3>
+    {director && <h4>Director: {director}</h4>}
+  </header>
 
   {clips && 
     <section class="clips bleed">
@@ -31,14 +33,18 @@ const { triggerId, project: {title, director, clips, stills } } = Astro.props
 </BaseModal>
 
 <style lang="scss">
-body.home h3 {
-  // margin-top: 0;
-  margin-left: 2rem;
-  // position: sticky;
-  // z-index: 10;
-  // top: 1rem;
-  // background-color: transparent;
-  // mix-blend-mode: screen;
+header {
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+
+  h3 {
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  h4 {
+    font-weight: 400;
+  }
 }
 
 img {

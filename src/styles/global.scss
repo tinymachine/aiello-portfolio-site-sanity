@@ -30,7 +30,7 @@
   );
   --margin-h-inset: var(--margin-body-h);
 
-  --scroll-button-diameter: calc(1.5 * var(--margin-h-inset));
+  --scroll-button-diameter: 2.75em;
 
   font-family: var(--font-accent);
   font-size: clamp(

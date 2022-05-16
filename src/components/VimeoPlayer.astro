@@ -17,7 +17,7 @@ const id = url.toString().includes('/') // check if it's an URL
     src={
       `https://player.vimeo.com/video/${id}`
       + `${id.toString().includes('?') ? '&' : '?'}autoplay=${autoplay ? '1' : '0'}`
-      + `&title=0&byline=0&portrait=0`
+      // + `&title=0&byline=0&portrait=0`
       + `&playsinline=0` /* force fullscreen playback on mobile */
     }
     style="

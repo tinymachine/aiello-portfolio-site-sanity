@@ -17,7 +17,7 @@ sections:
   path: src/content/About.md
   label: About Content
 upload_dir: andrew-aiello/portfolio
-public_path: https://res.cloudinary.com/tinymachine/image/upload/q_auto
+public_path: https://res.cloudinary.com/tinymachine/image/upload
 front_matter_path: ''
 use_front_matter_path: 
 file_template: ":filename:"

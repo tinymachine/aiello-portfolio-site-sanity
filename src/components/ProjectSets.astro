@@ -2,6 +2,7 @@
 import { frontmatter } from '../content/Projects.md'
 import Markdown from './Markdown.astro'
 import ProjectModal from './ProjectModal.astro'
+import { imagePath } from '../data/siteInfo'
 ---
 
 {frontmatter.projectSets.map((set, i) => (
@@ -12,10 +13,10 @@ import ProjectModal from './ProjectModal.astro'
       <article>
         <a href="#" id={`trigger-${i}-${j}`}>
           <div class="bleed-r">
-            <img class="still bleed-r" src={project.featuredStill} alt="" />
+            <img class="still bleed-r" src={imagePath + project.featuredStill} alt="" />
           </div>
 
-          <h4><Markdown content={project.title} inline /></h4>
+          <h4><Markdown content={project.title} inline /> →</h4>
         </a>
         <ProjectModal triggerId={`trigger-${i}-${j}`} {project} />
       </article>

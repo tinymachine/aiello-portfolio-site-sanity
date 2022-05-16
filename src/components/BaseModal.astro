@@ -16,9 +16,9 @@ const {
 <div class="modal" role="dialog" aria-labelledby={triggerId}>
   <div class="modal__inner">
     <div class="modal__content">
-      <h3 tabindex="-1">
+      <!-- <h3 tabindex="-1">
         {title}
-      </h3>
+      </h3> -->
       <slot>Modal description.</slot>
     </div>
     <div class="modal__close">
@@ -34,9 +34,11 @@ const {
   */
   const body = document.querySelector('body')
   const modal = document.querySelector('.modal')
-  const modalId = modal.getAttribute('aria-labelledby')
+  const triggerId = modal.getAttribute('aria-labelledby')
   const modalCloseButton = modal.querySelector('.modal__close button')
-  const modalTrigger = document.querySelector(`#${modalId}`)
+  const modalTrigger = document.querySelector(`#${triggerId}`)
+  const images = modal.querySelectorAll('img')
+  const iframes = modal.querySelectorAll('iframe')
   
   /* -------------------------------------------------------------
   | functions
@@ -70,27 +72,58 @@ const {
     }
   }
 
+  const closeOnEsc = event => {
+    if (event.key === 'Escape') {
+      closeModal()
+    }
+  }
+
   const openModal = event => {
-    event.preventDefault()
+    event && event.preventDefault()
+
+    // Make body stop scrolling
+    body.style.overflow = 'hidden'
+
+    // Load all still images (previously set to lazy)
+    images && images.forEach(image => image.setAttribute('loading', 'eager'))
+
     const modalTitle = modal.querySelector('h3')
 
     modal.classList.add('show')
     body.classList.add('modal-is-active')
     modalTitle.focus()
+    
     document.addEventListener('keydown', trapFocus)
-
-    modal.addEventListener('keydown', event => {
-      if (event.key === 'Escape') {
-        closeModal()
-      }
-    })
+    document.addEventListener('keydown', closeOnEsc)
   }
 
   const closeModal = _ => {
+    // reset to lazy in case some didn't load before user closed modal
+    images && images.forEach(image => image.setAttribute('loading', 'lazy'))
+
+    pauseIframeVideos()
+
     modal.classList.remove('show')
     body.classList.remove('modal-is-active')
-    modalTrigger.focus()
+    modalTrigger.focus({ preventScroll: true })
+    body.style.overflow = 'visible'
+
     document.removeEventListener('keydown', trapFocus)
+    document.removeEventListener('keydown', closeOnEsc)
+  }
+
+  const pauseIframeVideos = () => {
+    iframes && iframes.forEach(iframe => {
+      if (
+        iframe.contentWindow &&
+        iframe.src.startsWith("https://player.vimeo.com/")
+      ) {
+        iframe.contentWindow.postMessage(
+          '{ "method": "pause" }', 
+          '*'
+        )
+      }
+    })
   }
 
   /* -------------------------------------------------------------
@@ -122,13 +155,14 @@ const {
     right: 0;
     visibility: hidden;
     z-index: -10;
+    // border: 6px solid green;
 
     &.show {
       display: grid;
       place-items: center;
       visibility: visible;
       height: auto;
-      background-color: rgba(0, 0, 0, 0.5);
+      // background-color: rgba(0, 0, 0, 0.5);
       inset: 0;
       z-index: 10;
       // border: 6px solid salmon;
@@ -142,12 +176,14 @@ const {
   .modal__inner {
     // width: clamp(30ch, 70%, 75ch);
     width: 100vw;
-    max-height: 100vh;
-    color: black;
-    background-color: var(--color-bg);
+    max-height: 100%;
+    // color: black;
+    // background-color: var(--color-bg);
+    background-color: rgb(10, 10, 10);
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     overflow-y: scroll;
+    // border: 6px solid purple;
   }
 
   .modal__content {
@@ -170,11 +206,16 @@ const {
     border-bottom-right-radius: 0.4rem;
     text-align: right;
     transition: background-color 0.15s ease-in-out;
+    opacity: 0.5;
 
     &:hover,
     &:focus {
       background-color: grey;
       text-decoration: underline;
     }
+  }
+
+  [tabindex="-1"] {
+    outline: none !important;
   }
 </style>

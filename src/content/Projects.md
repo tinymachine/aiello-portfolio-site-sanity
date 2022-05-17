@@ -96,7 +96,7 @@ projectSets:
     featuredStill: "/v1652514475/andrew-aiello/portfolio/bhinna-10_ymbkak.jpg"
     projectType: ''
   - title: Fallen Queen
-    director: ''
+    director: Joel Soisson
     clips: []
     featuredStill: "/v1652514691/andrew-aiello/portfolio/fallen-queen-10_u0zmjp.jpg"
     stills:
@@ -114,7 +114,7 @@ projectSets:
     - "/v1652514688/andrew-aiello/portfolio/fallen-queen-4_lb8wfx.jpg"
     - "/v1652514675/andrew-aiello/portfolio/fallen-queen-3_xklopb.jpg"
     - "/v1652514673/andrew-aiello/portfolio/fallen-queen-2_hpqayj.jpg"
-    projectType: ''
+    projectType: Feature Film
 - heading: Short Form
   projects:
   - title: 1916 — "For Whiskey"

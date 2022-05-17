@@ -15,7 +15,8 @@
   --color-strong: hsl(0, 0%, 75%);
   --color-default: hsl(0, 0%, 55%);
   --color-bg: black;
-  --color-vertical-rule: hsl(0, 0%, 20%);
+  --color-modal-bg: rgb(10, 10, 10);
+  --color-vertical-rule: hsl(0, 0%, 15%);
 
   --margin-body-top: clamp(
     1rem,
@@ -29,6 +30,8 @@
     2.75rem
   );
   --margin-h-inset: var(--margin-body-h);
+
+  --max-element-width: 96rem;
 
   --scroll-button-diameter: 2.75em;
 
@@ -153,7 +156,6 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: var(--color-strong);
-  background-color: var(--color-bg);
 }
 
 .still {
@@ -211,7 +213,7 @@ footer {
 body.home {
   position: relative;
 
-  main {
+  main.landing {
     padding-bottom: 8rem;
   }
 
@@ -247,6 +249,7 @@ body.home {
 .landing h3 {
   margin-left: calc(-1 * var(--margin-h-inset));
   margin-bottom: 3rem;
+  background-color: var(--color-bg);
 }
 
 .align-r {
@@ -257,9 +260,8 @@ body.home {
   margin: 0.25rem 0 0;
   width: 100vw;
   min-width: 100%;
-  max-width: min(120vh, 96rem);
+  max-width: min(120vh, var(--max-element-width)); 
   align-self: center;
-  // background-color: gray;
 }
 
 .bleed-r {

@@ -1,6 +1,6 @@
 ---
 projectSets:
-- heading: Features
+- heading: Feature
   projects:
   - title: We Broke Up
     director: Jeff Rosenberg
@@ -113,7 +113,7 @@ projectSets:
     - /v1652514673/andrew-aiello/portfolio/fallen-queen-2_hpqayj.jpg
 - heading: Short Form
   projects:
-  - title: For Whiskey
+  - title: 1916 — "For Whiskey"
     director: ''
     clips: []
     featuredStill: /v1652516685/andrew-aiello/portfolio/for-whiskey-10_r4wsbd.jpg

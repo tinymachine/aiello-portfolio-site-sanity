@@ -16,9 +16,13 @@ import { imagePath } from '../data/siteInfo'
             <img class="still bleed-r" src={imagePath + project.featuredStill} alt="" />
           </div>
 
-          <h4><Markdown content={project.title} inline /> →</h4>
+          <h4><Markdown content={project.title} inline /> <span class="ornament"></span></h4>
         </a>
-        <ProjectModal triggerId={`trigger-${i}-${j}`} {project} />
+
+        <ProjectModal 
+          triggerId={`trigger-${i}-${j}`}
+          {project} projectSetTitle={set.heading}
+        />
       </article>
     ))}
   </section>
@@ -31,6 +35,11 @@ a {
   opacity: 0.85;
   transition: opacity 0.5s linear;
   text-decoration: none;
+    
+  .ornament {
+    display: inline-block;
+    transition: transform 0.5s;    
+  }
 }
 
 h4 {
@@ -49,9 +58,17 @@ a:hover {
   h4 {
     opacity: 1;
   }
+
+  .ornament {
+    transform: translateX(4px);
+  }
 }
 
 article {
   margin-bottom: 4em;
+}
+
+article a:focus{
+  outline: none !important; // this is bad
 }
 </style>

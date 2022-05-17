@@ -22,7 +22,9 @@ const {
       <slot>Modal description.</slot>
     </div>
     <div class="modal__close">
-      <button>{closeText}</button>
+      <button aria-label={closeText}>
+        <img src="/img/close-button.svg" alt="" title="Press Esc to close" />
+      </button>
     </div>
   </div>
 </div>
@@ -34,11 +36,14 @@ const {
   */
   const body = document.querySelector('body')
   const modal = document.querySelector('.modal')
+  const modalInner = modal.querySelector('.modal__inner')
   const triggerId = modal.getAttribute('aria-labelledby')
   const modalCloseButton = modal.querySelector('.modal__close button')
   const modalTrigger = document.querySelector(`#${triggerId}`)
   const images = modal.querySelectorAll('img')
   const iframes = modal.querySelectorAll('iframe')
+
+  console.log(modalInner)
   
   /* -------------------------------------------------------------
   | functions
@@ -103,13 +108,19 @@ const {
 
     pauseIframeVideos()
 
-    modal.classList.remove('show')
-    body.classList.remove('modal-is-active')
-    modalTrigger.focus({ preventScroll: true })
-    body.style.overflow = 'visible'
+    modalInner.classList.add('closing')
 
-    document.removeEventListener('keydown', trapFocus)
-    document.removeEventListener('keydown', closeOnEsc)
+    setTimeout(()=>{
+      modalInner.scrollTop = 0
+      modalInner.classList.remove('closing')
+      modal.classList.remove('show')
+      body.classList.remove('modal-is-active')
+      modalTrigger.focus({ preventScroll: true })
+      body.style.overflow = 'visible'
+  
+      document.removeEventListener('keydown', trapFocus)
+      document.removeEventListener('keydown', closeOnEsc)
+    }, 500)
   }
 
   const pauseIframeVideos = () => {
@@ -169,6 +180,12 @@ const {
 
       .modal__inner {
         opacity: 1;
+        // transform: translateY(0);
+
+        &.closing {
+          // transform: translateY(2%);
+          opacity: 0;
+        }
       }
     }
   }
@@ -177,14 +194,17 @@ const {
     // width: clamp(30ch, 70%, 75ch);
     width: 100vw;
     max-height: 100%;
+    position: relative;
     // color: black;
-    // background-color: var(--color-bg);
-    background-color: rgb(10, 10, 10);
+    background-color: var(--color-modal-bg);
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    // transform: translateY(2%);
+    transition: 
+      opacity 0.5s ease-in-out,
+      transform 0.5s ease-out;
     overflow-y: scroll;
     // border: 6px solid purple;
-    padding: 3rem 0 6rem;
+    padding: var(--margin-body-top) 0 6rem;
   }
 
   .modal__content {
@@ -192,31 +212,32 @@ const {
     flex-direction: column;
     align-items: flex-start;
     // gap: 0.75rem;
-    max-width: 96rem;
+    width: 100%;
     margin: 0 auto;
   }
 
-  .modal__close button {
+  .modal__close {
     position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    border: none;
-    // background-color: lightgrey;
-    border-bottom-left-radius: 0.4rem;
-    border-bottom-right-radius: 0.4rem;
-    text-align: right;
-    transition: background-color 0.15s ease-in-out;
-    opacity: 0.5;
+    top: 0rem;
+    right: 0rem;
+    z-index: 100;
 
-    &:hover,
-    &:focus {
-      background-color: grey;
-      text-decoration: underline;
+    button {
+      padding: 2rem;
+      border: none;
+      background-color: transparent;
+      opacity: 0.5;
+      transition: opacity 0.25s ease-in-out;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        opacity: 0.75;
+      }
+
+      img {
+        width: 2.75em;
+      }
     }
-  }
-
-  [tabindex="-1"] {
-    outline: none !important;
   }
 </style>

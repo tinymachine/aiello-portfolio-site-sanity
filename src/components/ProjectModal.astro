@@ -3,32 +3,38 @@ import BaseModal from './BaseModal.astro'
 import VimeoPlayer from './VimeoPlayer.astro';
 import { imagePath } from '../data/siteInfo'
 
-const { triggerId, project: {title, director, clips, stills } } = Astro.props
+const { triggerId, project: {title, director, clips, stills }, projectSetTitle } = Astro.props
 ---
 
 <BaseModal {triggerId}>
   <header>
     <h3 tabindex="-1">{title}</h3>
-    {director && <h4>Director: {director}</h4>}
+    <h4>
+      {projectSetTitle}{director && <>. Director: {director}</>}
+    </h4>
   </header>
 
-  {clips && 
-    <section class="clips bleed">
-      {clips.map(clip => (
-        <div class="clip">
-          <VimeoPlayer url={clip} />
-        </div>
-      ))}
-    </section>
-  }
+  <main class="content">
+    <div class="content-inner">
+      {clips && 
+        <section class="clips">
+          {clips.map(clip => (
+            <div class="clip bleed">
+              <VimeoPlayer url={clip} />
+            </div>
+          ))}
+        </section>
+      }
 
-  {stills && 
-    <section class="stills">
-      {stills.map(still => (
-        <img src={imagePath + still} alt="" loading="lazy"/>
-      ))}
-    </section>
-  }
+      {stills && 
+        <section class="stills">
+          {stills.map(still => (
+            <img src={imagePath + still} alt="" loading="lazy" />
+          ))}
+        </section>
+      }
+    </div>
+  </main>
   
 </BaseModal>
 
@@ -36,15 +42,36 @@ const { triggerId, project: {title, director, clips, stills } } = Astro.props
 header {
   padding-left: 2rem;
   margin-bottom: 2rem;
+  position: sticky;
+  z-index: 0;
+  top: 0;
 
   h3 {
     padding: 0;
     margin-bottom: 0;
   }
 
+  [tabindex="-1"] {
+    outline: none;
+  }
+
   h4 {
     font-weight: 400;
+    font-size: 0.8125em;
+    letter-spacing: 0.05ch;
   }
+}
+
+.content {
+  z-index: 1;
+  background-color: var(--color-modal-bg);
+  box-shadow: 0 -1rem 1rem var(--color-modal-bg);
+  width: 100vw;
+}
+
+.content-inner {
+  max-width: min(170vh, var(--max-element-width));
+  margin: 0 auto;
 }
 
 img {
@@ -52,11 +79,12 @@ img {
   width: 100%;
 }
 
-.clip, img {
-  margin-bottom: 6rem;
+.clip, img  {
+  max-width: min(170vh, var(--max-element-width));
+  margin: 0 auto;
 }
 
-.clip iframe {
-  cursor: pointer;
+.clip, img {
+  margin-bottom: clamp(2rem, calc(1rem + 3vw), 4rem);
 }
 </style>

@@ -11,6 +11,13 @@ fields:
     label: Heading
     config:
       required: true
+  - name: fallbackProjectTypeLabel
+    type: text
+    config:
+      required: true
+    label: Fallback Project-Type Label
+    description: For example, "Feature Film" for the Features project set. This label
+      that will appear on if you don't set a project type on a specific project.
   - type: field_group_list
     name: projects
     label: Projects

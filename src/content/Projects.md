@@ -164,7 +164,7 @@ projectSets:
     - "/v1652517137/andrew-aiello/portfolio/nothingman-07_tszema.jpg"
     title: Nothingman
     projectType: Short Film
-    colorAccent: ''
+    colorAccent: rgb(138, 125, 91)
   - title: Strip
     director: Maxwell Addae
     clips: []

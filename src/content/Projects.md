@@ -163,16 +163,16 @@ projectSets:
     featuredStill: "/v1652517264/andrew-aiello/portfolio/strip-08_v6dray.jpg"
     stills:
     - "/v1652517264/andrew-aiello/portfolio/strip-12_mvmnwq.jpg"
+    - "/v1652517263/andrew-aiello/portfolio/strip-04_hxsbta.jpg"
     - "/v1652517264/andrew-aiello/portfolio/strip-11_sbx7wl.jpg"
-    - "/v1652517264/andrew-aiello/portfolio/strip-10_cerg9a.jpg"
+    - "/v1652517263/andrew-aiello/portfolio/strip-02_gp5nek.jpg"
     - "/v1652517264/andrew-aiello/portfolio/strip-09_yu7h6j.jpg"
+    - "/v1652517264/andrew-aiello/portfolio/strip-05_ekojip.jpg"
     - "/v1652517264/andrew-aiello/portfolio/strip-08_v6dray.jpg"
     - "/v1652517263/andrew-aiello/portfolio/strip-07_oz1mad.jpg"
     - "/v1652517264/andrew-aiello/portfolio/strip-06_bxnsb4.jpg"
-    - "/v1652517264/andrew-aiello/portfolio/strip-05_ekojip.jpg"
-    - "/v1652517263/andrew-aiello/portfolio/strip-04_hxsbta.jpg"
     - "/v1652517263/andrew-aiello/portfolio/strip-03_ufnal1.jpg"
-    - "/v1652517263/andrew-aiello/portfolio/strip-02_gp5nek.jpg"
+    - "/v1652517264/andrew-aiello/portfolio/strip-10_cerg9a.jpg"
     - "/v1652517262/andrew-aiello/portfolio/strip-01_onr8dh.jpg"
     projectType: Short Film
   - title: Sound of Fear

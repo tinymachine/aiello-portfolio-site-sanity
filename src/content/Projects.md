@@ -98,7 +98,7 @@ projectSets:
   - title: Fallen Queen
     director: ''
     clips: []
-    featuredStill: "/v1652514684/andrew-aiello/portfolio/fallen-queen-1_vp99s3.jpg"
+    featuredStill: "/v1652514691/andrew-aiello/portfolio/fallen-queen-10_u0zmjp.jpg"
     stills:
     - "/v1652514684/andrew-aiello/portfolio/fallen-queen-1_vp99s3.jpg"
     - "/v1652514680/andrew-aiello/portfolio/fallen-queen-14_itoojv.jpg"

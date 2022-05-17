@@ -26,7 +26,7 @@ projectSets:
     - "/v1652516265/andrew-aiello/portfolio/we-broke-up-02_x2tms1.jpg"
     - "/v1652516262/andrew-aiello/portfolio/we-broke-up-01_d4scf5.jpg"
     featuredStill: "/v1652516278/andrew-aiello/portfolio/we-broke-up-19_mn8ikn.jpg"
-    projectType: ''
+    projectType: Feature Film
   - title: Shuddhi
     director: Adarsh Eshwarappa
     clips:

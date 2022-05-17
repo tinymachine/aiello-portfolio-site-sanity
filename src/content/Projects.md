@@ -94,7 +94,7 @@ projectSets:
     - "/v1652514411/andrew-aiello/portfolio/bhinna-3_m5lyyf.jpg"
     - "/v1652514407/andrew-aiello/portfolio/bhinna-2_p00hc3.jpg"
     featuredStill: "/v1652514475/andrew-aiello/portfolio/bhinna-10_ymbkak.jpg"
-    projectType: ''
+    projectType: Feature Film
   - title: Fallen Queen
     director: Joel Soisson
     clips: []

@@ -6,6 +6,8 @@ import AboutSection from '../components/AboutSection.astro'
 import ProjectSets from '../components/ProjectSets.astro'
 import VimeoPlayer from '../components/VimeoPlayer.astro'
 import ScrollButton from '../components/ScrollButton.astro'
+
+const colorThemeVerticalRule = site.themeColors.verticalRule
 ---
 
 <Layout>
@@ -29,3 +31,9 @@ import ScrollButton from '../components/ScrollButton.astro'
     <AboutSection />
   </main>
 </Layout>
+
+<style is:global define:vars={{ colorThemeVerticalRule }}>
+:root {
+  --color-vertical-rule: var(--colorThemeVerticalRule);
+}  
+</style>

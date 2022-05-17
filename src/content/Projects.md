@@ -72,7 +72,7 @@ projectSets:
     - "/v1652516013/andrew-aiello/portfolio/shuddhi-03_wcogny.jpg"
     - "/v1652516014/andrew-aiello/portfolio/shuddhi-02_eajqf5.jpg"
     - "/v1652516014/andrew-aiello/portfolio/shuddhi-01_xb3odw.jpg"
-    projectType: ''
+    projectType: Feature Film
   - title: Bhinna
     director: Adarsh Eshwarappa
     clips:

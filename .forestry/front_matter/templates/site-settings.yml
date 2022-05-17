@@ -4,24 +4,34 @@ hide_body: true
 fields:
 - type: text
   name: name
-  label: name
+  label: Name
+  config:
+    required: true
 - type: text
   name: title
-  label: title
+  label: Role
+  config:
+    required: true
 - type: field_group
   name: reel
-  label: reel
+  label: Reel Settings
   fields:
   - type: text
     name: vimeoUrl
-    label: vimeoUrl
+    label: Vimeo URL
+    description: "<em>Note: the site currently only works with video URLs from Vimeo
+      that end with the video's ID number (e.g. </em><code><em>https://vimeo.com/manage/videos/644686119</em></code><em>)</em>"
+    config:
+      required: true
   - type: list
     name: placeholderStills
     label: placeholderStills
 - type: field_group
   name: projectSettings
-  label: projectSettings
+  label: Project Settings
   fields:
   - type: text
     name: featureProjectTypeLabel
-    label: featureProjectTypeLabel
+    label: Feature Films Project-Type Label
+    description: All feature films will show this same project type (e.g. "Feature
+      Film") on project detail pages.

@@ -174,17 +174,17 @@ projectSets:
     clips: []
     featuredStill: "/v1652516962/andrew-aiello/portfolio/lil-squid-ek-11_lq2kfb.jpg"
     stills:
+    - "/v1652516957/andrew-aiello/portfolio/lil-squid-ek-04_jrrmxn.jpg"
+    - "/v1652516961/andrew-aiello/portfolio/lil-squid-ek-03_y0h9oz.jpg"
     - "/v1652516962/andrew-aiello/portfolio/lil-squid-ek-11_lq2kfb.jpg"
+    - "/v1652516963/andrew-aiello/portfolio/lil-squid-ek-05_b8mq2l.jpg"
+    - "/v1652516950/andrew-aiello/portfolio/lil-squid-ek-01_vlw552.jpg"
+    - "/v1652516962/andrew-aiello/portfolio/lil-squid-ek-06_ofedkj.jpg"
     - "/v1652516962/andrew-aiello/portfolio/lil-squid-ek-10_gantzc.jpg"
+    - "/v1652516956/andrew-aiello/portfolio/lil-squid-ek-02_hvylw7.jpg"
     - "/v1652516963/andrew-aiello/portfolio/lil-squid-ek-09_pfkllr.jpg"
     - "/v1652516963/andrew-aiello/portfolio/lil-squid-ek-08_g2hgls.jpg"
     - "/v1652516963/andrew-aiello/portfolio/lil-squid-ek-07_l6wykv.jpg"
-    - "/v1652516962/andrew-aiello/portfolio/lil-squid-ek-06_ofedkj.jpg"
-    - "/v1652516963/andrew-aiello/portfolio/lil-squid-ek-05_b8mq2l.jpg"
-    - "/v1652516957/andrew-aiello/portfolio/lil-squid-ek-04_jrrmxn.jpg"
-    - "/v1652516961/andrew-aiello/portfolio/lil-squid-ek-03_y0h9oz.jpg"
-    - "/v1652516956/andrew-aiello/portfolio/lil-squid-ek-02_hvylw7.jpg"
-    - "/v1652516950/andrew-aiello/portfolio/lil-squid-ek-01_vlw552.jpg"
     projectType: Music Video
   - title: Lizzy Powers
     director: Sigurd Culhane

@@ -222,7 +222,7 @@ projectSets:
     - "/v1652517292/andrew-aiello/portfolio/vertis-01_ab6mdw.jpg"
     - "/v1652517292/andrew-aiello/portfolio/vertis-02_c2zwvl.jpg"
     projectType: Commercial
-    colorAccent: ''
+    colorAccent: rgb(125, 113, 111)
   - title: Komb
     director: Sigurd Culhane
     clips: []

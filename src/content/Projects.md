@@ -143,18 +143,18 @@ projectSets:
     featuredStill: "/v1652517138/andrew-aiello/portfolio/nothingman-13_whe3nh.jpg"
     stills:
     - "/v1652517138/andrew-aiello/portfolio/nothingman-13_whe3nh.jpg"
+    - "/v1652517137/andrew-aiello/portfolio/nothingman-05_wh5jsy.jpg"
+    - "/v1652517138/andrew-aiello/portfolio/nothingman-04_plma3z.jpg"
+    - "/v1652517137/andrew-aiello/portfolio/nothingman-01_wc9q0w.jpg"
+    - "/v1652517137/andrew-aiello/portfolio/nothingman-02_u96c7b.jpg"
+    - "/v1652517138/andrew-aiello/portfolio/nothingman-03_ruq93t.jpg"
+    - "/v1652517136/andrew-aiello/portfolio/nothingman-08_lgd17u.jpg"
     - "/v1652517138/andrew-aiello/portfolio/nothingman-12_jz9vdm.jpg"
     - "/v1652517138/andrew-aiello/portfolio/nothingman-11_l4op9t.jpg"
     - "/v1652517138/andrew-aiello/portfolio/nothingman-10_yh9bjk.jpg"
     - "/v1652517138/andrew-aiello/portfolio/nothingman-09_siag3p.jpg"
-    - "/v1652517136/andrew-aiello/portfolio/nothingman-08_lgd17u.jpg"
-    - "/v1652517137/andrew-aiello/portfolio/nothingman-07_tszema.jpg"
     - "/v1652517135/andrew-aiello/portfolio/nothingman-06_zwaqfl.jpg"
-    - "/v1652517137/andrew-aiello/portfolio/nothingman-05_wh5jsy.jpg"
-    - "/v1652517138/andrew-aiello/portfolio/nothingman-04_plma3z.jpg"
-    - "/v1652517138/andrew-aiello/portfolio/nothingman-03_ruq93t.jpg"
-    - "/v1652517137/andrew-aiello/portfolio/nothingman-02_u96c7b.jpg"
-    - "/v1652517137/andrew-aiello/portfolio/nothingman-01_wc9q0w.jpg"
+    - "/v1652517137/andrew-aiello/portfolio/nothingman-07_tszema.jpg"
     title: Nothingman
     projectType: Short Film
   - title: Strip

@@ -218,15 +218,15 @@ projectSets:
     featuredStill: "/v1652516789/andrew-aiello/portfolio/komb-10_ljno3t.jpg"
     stills:
     - "/v1652516789/andrew-aiello/portfolio/komb-10_ljno3t.jpg"
+    - "/v1652516788/andrew-aiello/portfolio/komb-04_bufw7x.jpg"
+    - "/v1652516788/andrew-aiello/portfolio/komb-05_b33bnm.jpg"
+    - "/v1652516787/andrew-aiello/portfolio/komb-06_kf4auh.jpg"
+    - "/v1652516786/andrew-aiello/portfolio/komb-02_y1j8ve.jpg"
+    - "/v1652516786/andrew-aiello/portfolio/komb-01_pnldfx.jpg"
+    - "/v1652516788/andrew-aiello/portfolio/komb-03_ohpi1a.jpg"
     - "/v1652516789/andrew-aiello/portfolio/komb-09_i3a2gd.jpg"
     - "/v1652516789/andrew-aiello/portfolio/komb-08_donasg.jpg"
     - "/v1652516789/andrew-aiello/portfolio/komb-07_p7ihb2.jpg"
-    - "/v1652516787/andrew-aiello/portfolio/komb-06_kf4auh.jpg"
-    - "/v1652516788/andrew-aiello/portfolio/komb-05_b33bnm.jpg"
-    - "/v1652516788/andrew-aiello/portfolio/komb-04_bufw7x.jpg"
-    - "/v1652516788/andrew-aiello/portfolio/komb-03_ohpi1a.jpg"
-    - "/v1652516786/andrew-aiello/portfolio/komb-02_y1j8ve.jpg"
-    - "/v1652516786/andrew-aiello/portfolio/komb-01_pnldfx.jpg"
     projectType: Commercial
   - title: Lizzy Powers
     director: Sigurd Culhane
@@ -237,13 +237,13 @@ projectSets:
     featuredStill: "/v1652517042/andrew-aiello/portfolio/lizzy-powers-09_fdxaga.jpg"
     stills:
     - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-09_fdxaga.jpg"
-    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-08_hetvg3.jpg"
+    - "/v1652517041/andrew-aiello/portfolio/lizzy-powers-03_kkrpem.jpg"
+    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-04_auf4th.jpg"
+    - "/v1652517041/andrew-aiello/portfolio/lizzy-powers-02_lif4o3.jpg"
     - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-07_t4vp6g.jpg"
+    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-08_hetvg3.jpg"
     - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-06_sjxuzf.jpg"
     - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-05_qnqz2n.jpg"
-    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-04_auf4th.jpg"
-    - "/v1652517041/andrew-aiello/portfolio/lizzy-powers-03_kkrpem.jpg"
-    - "/v1652517041/andrew-aiello/portfolio/lizzy-powers-02_lif4o3.jpg"
     - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-01_vvknw4.jpg"
     projectType: Commercials
   - title: Lil Sqwid — "Everybody Know"

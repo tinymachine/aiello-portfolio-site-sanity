@@ -293,7 +293,7 @@ projectSets:
     - "/v1652516685/andrew-aiello/portfolio/for-whiskey-08_nivrn8.jpg"
     - "/v1652516684/andrew-aiello/portfolio/for-whiskey-05_ii682j.jpg"
     projectType: Music Video
-    colorAccent: ''
+    colorAccent: rgb(195, 140, 133)
   fallbackProjectTypeLabel: Short Form
 
 ---

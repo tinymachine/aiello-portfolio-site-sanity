@@ -201,7 +201,7 @@ projectSets:
     - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-06_b0zyyj.jpg"
     - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-05_c9vcmg.jpg"
     projectType: Short Film
-    colorAccent: ''
+    colorAccent: rgb(17, 60, 75)
   - title: Vertis
     director: Peter Sestina
     clips: []

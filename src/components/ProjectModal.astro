@@ -4,7 +4,7 @@ import VimeoPlayer from './VimeoPlayer.astro';
 import { imagePath } from '../data/siteInfo'
 import Markdown from './Markdown.astro'
 
-const { triggerId, project: {title, director, clips, stills }, projectSetTitle } = Astro.props
+const { triggerId, project: {title, director, clips, stills }, projectType } = Astro.props
 ---
 
 <BaseModal {triggerId}>
@@ -13,7 +13,8 @@ const { triggerId, project: {title, director, clips, stills }, projectSetTitle }
       <Markdown content={title} inline />
     </h3>
     <h4>
-      {projectSetTitle}{director && <>. Director: {director}</>}
+      {projectType}
+      {director && <><br>Director: {director}</>}
     </h4>
   </header>
 

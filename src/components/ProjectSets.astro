@@ -21,7 +21,12 @@ import { imagePath } from '../data/siteInfo'
 
         <ProjectModal 
           triggerId={`trigger-${i}-${j}`}
-          {project} projectSetTitle={set.heading}
+          {project}
+          projectType={
+            set.heading.startsWith('Feature')
+              ? 'Feature Film'
+              : project.projectType || set.heading
+          }
         />
       </article>
     ))}

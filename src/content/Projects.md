@@ -276,7 +276,7 @@ projectSets:
     - "/v1652516963/andrew-aiello/portfolio/lil-squid-ek-08_g2hgls.jpg"
     - "/v1652516963/andrew-aiello/portfolio/lil-squid-ek-07_l6wykv.jpg"
     projectType: Music Video
-    colorAccent: ''
+    colorAccent: rgb(167, 116, 61)
   - title: 1916 — "For Whiskey"
     director: Sigurd Culhane
     clips: []

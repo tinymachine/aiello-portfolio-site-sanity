@@ -128,14 +128,14 @@ projectSets:
     - "/v1652516747/andrew-aiello/portfolio/green-cobra-11_ogwgpb.jpg"
     - "/v1652516747/andrew-aiello/portfolio/green-cobra-10_bkfu3q.jpg"
     - "/v1652516746/andrew-aiello/portfolio/green-cobra-09_hqfeoc.jpg"
-    - "/v1652516746/andrew-aiello/portfolio/green-cobra-08_bkwwec.jpg"
-    - "/v1652516746/andrew-aiello/portfolio/green-cobra-07_elz7ao.jpg"
-    - "/v1652516746/andrew-aiello/portfolio/green-cobra-06_veo9zp.jpg"
     - "/v1652516742/andrew-aiello/portfolio/green-cobra-05_qoskqn.jpg"
+    - "/v1652516746/andrew-aiello/portfolio/green-cobra-08_bkwwec.jpg"
+    - "/v1652516742/andrew-aiello/portfolio/green-cobra-02_rvilp9.jpg"
+    - "/v1652516746/andrew-aiello/portfolio/green-cobra-07_elz7ao.jpg"
+    - "/v1652516741/andrew-aiello/portfolio/green-cobra-01_ektji2.jpg"
+    - "/v1652516746/andrew-aiello/portfolio/green-cobra-06_veo9zp.jpg"
     - "/v1652516742/andrew-aiello/portfolio/green-cobra-04_f7srga.jpg"
     - "/v1652516742/andrew-aiello/portfolio/green-cobra-03_rqkbqs.jpg"
-    - "/v1652516742/andrew-aiello/portfolio/green-cobra-02_rvilp9.jpg"
-    - "/v1652516741/andrew-aiello/portfolio/green-cobra-01_ektji2.jpg"
     projectType: Short Film
   - director: Eli Kooris and Joshua Shaffer
     clips:

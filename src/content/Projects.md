@@ -26,6 +26,7 @@ projectSets:
     - "/v1652516265/andrew-aiello/portfolio/we-broke-up-02_x2tms1.jpg"
     - "/v1652516262/andrew-aiello/portfolio/we-broke-up-01_d4scf5.jpg"
     featuredStill: "/v1652516278/andrew-aiello/portfolio/we-broke-up-19_mn8ikn.jpg"
+    projectType: ''
   - title: Shuddhi
     director: Adarsh Eshwarappa
     clips:
@@ -47,6 +48,7 @@ projectSets:
     - "/v1652516013/andrew-aiello/portfolio/shuddhi-03_wcogny.jpg"
     - "/v1652516014/andrew-aiello/portfolio/shuddhi-02_eajqf5.jpg"
     - "/v1652516014/andrew-aiello/portfolio/shuddhi-01_xb3odw.jpg"
+    projectType: ''
   - title: International Falls
     director: Amber McGinnis
     clips:
@@ -70,6 +72,7 @@ projectSets:
     - "/v1652515866/andrew-aiello/portfolio/intl-falls-03_auoucp.jpg"
     - "/v1652515866/andrew-aiello/portfolio/intl-falls-02_szll98.jpg"
     - "/v1652515866/andrew-aiello/portfolio/intl-falls-01_wrttv6.jpg"
+    projectType: ''
   - title: Bhinna
     director: Adarsh Eshwarappa
     clips:
@@ -91,6 +94,7 @@ projectSets:
     - "/v1652514411/andrew-aiello/portfolio/bhinna-3_m5lyyf.jpg"
     - "/v1652514407/andrew-aiello/portfolio/bhinna-2_p00hc3.jpg"
     featuredStill: "/v1652514412/andrew-aiello/portfolio/bhinna-1_imfvxn.jpg"
+    projectType: ''
   - title: Fallen Queen
     director: ''
     clips: []
@@ -110,6 +114,7 @@ projectSets:
     - "/v1652514688/andrew-aiello/portfolio/fallen-queen-4_lb8wfx.jpg"
     - "/v1652514675/andrew-aiello/portfolio/fallen-queen-3_xklopb.jpg"
     - "/v1652514673/andrew-aiello/portfolio/fallen-queen-2_hpqayj.jpg"
+    projectType: ''
 - heading: Short Form
   projects:
   - title: 1916 — "For Whiskey"
@@ -127,6 +132,7 @@ projectSets:
     - "/v1652516684/andrew-aiello/portfolio/for-whiskey-03_iozcsh.jpg"
     - "/v1652516684/andrew-aiello/portfolio/for-whiskey-02_zo8wra.jpg"
     - "/v1652516684/andrew-aiello/portfolio/for-whiskey-01_kaip5v.jpg"
+    projectType: ''
   - title: Green Cobra
     director: Sigurd Culhane
     clips:
@@ -146,6 +152,7 @@ projectSets:
     - "/v1652516742/andrew-aiello/portfolio/green-cobra-03_rqkbqs.jpg"
     - "/v1652516742/andrew-aiello/portfolio/green-cobra-02_rvilp9.jpg"
     - "/v1652516741/andrew-aiello/portfolio/green-cobra-01_ektji2.jpg"
+    projectType: ''
   - title: Komb
     director: ''
     clips: []
@@ -161,6 +168,7 @@ projectSets:
     - "/v1652516788/andrew-aiello/portfolio/komb-03_ohpi1a.jpg"
     - "/v1652516786/andrew-aiello/portfolio/komb-02_y1j8ve.jpg"
     - "/v1652516786/andrew-aiello/portfolio/komb-01_pnldfx.jpg"
+    projectType: ''
   - title: Lil Sqwid — "Everybody Know"
     director: ''
     clips: []
@@ -177,6 +185,7 @@ projectSets:
     - "/v1652516961/andrew-aiello/portfolio/lil-squid-ek-03_y0h9oz.jpg"
     - "/v1652516956/andrew-aiello/portfolio/lil-squid-ek-02_hvylw7.jpg"
     - "/v1652516950/andrew-aiello/portfolio/lil-squid-ek-01_vlw552.jpg"
+    projectType: Music Video
   - title: Lizzy Powers
     director: ''
     clips:
@@ -194,6 +203,7 @@ projectSets:
     - "/v1652517041/andrew-aiello/portfolio/lizzy-powers-03_kkrpem.jpg"
     - "/v1652517041/andrew-aiello/portfolio/lizzy-powers-02_lif4o3.jpg"
     - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-01_vvknw4.jpg"
+    projectType: ''
   - director: ''
     clips:
     - https://vimeo.com/manage/videos/673804873
@@ -213,6 +223,7 @@ projectSets:
     - "/v1652517137/andrew-aiello/portfolio/nothingman-02_u96c7b.jpg"
     - "/v1652517137/andrew-aiello/portfolio/nothingman-01_wc9q0w.jpg"
     title: Nothingman
+    projectType: ''
   - title: Sound of Fear
     director: ''
     clips: []
@@ -229,6 +240,7 @@ projectSets:
     - "/v1652517206/andrew-aiello/portfolio/sound-of-fear-03_zxt3yu.jpg"
     - "/v1652517206/andrew-aiello/portfolio/sound-of-fear-02_y0emjn.jpg"
     - "/v1652517205/andrew-aiello/portfolio/sound-of-fear-01_mrv1se.jpg"
+    projectType: ''
   - title: Strip
     director: ''
     clips: []
@@ -246,6 +258,7 @@ projectSets:
     - "/v1652517263/andrew-aiello/portfolio/strip-03_ufnal1.jpg"
     - "/v1652517263/andrew-aiello/portfolio/strip-02_gp5nek.jpg"
     - "/v1652517262/andrew-aiello/portfolio/strip-01_onr8dh.jpg"
+    projectType: ''
   - title: Vertis
     director: ''
     clips: []
@@ -265,5 +278,6 @@ projectSets:
     - "/v1652517293/andrew-aiello/portfolio/vertis-03_lpyfp8.jpg"
     - "/v1652517292/andrew-aiello/portfolio/vertis-02_c2zwvl.jpg"
     - "/v1652517292/andrew-aiello/portfolio/vertis-01_ab6mdw.jpg"
+    projectType: ''
 
 ---

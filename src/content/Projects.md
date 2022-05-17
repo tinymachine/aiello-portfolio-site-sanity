@@ -102,8 +102,8 @@ projectSets:
     stills:
     - "/v1652514684/andrew-aiello/portfolio/fallen-queen-1_vp99s3.jpg"
     - "/v1652514680/andrew-aiello/portfolio/fallen-queen-14_itoojv.jpg"
-    - "/v1652514690/andrew-aiello/portfolio/fallen-queen-13_rtm8bx.jpg"
     - "/v1652514683/andrew-aiello/portfolio/fallen-queen-12_wzivjb.jpg"
+    - "/v1652514690/andrew-aiello/portfolio/fallen-queen-13_rtm8bx.jpg"
     - "/v1652514688/andrew-aiello/portfolio/fallen-queen-11_pvy9jh.jpg"
     - "/v1652514691/andrew-aiello/portfolio/fallen-queen-10_u0zmjp.jpg"
     - "/v1652514682/andrew-aiello/portfolio/fallen-queen-9_fhsnuh.jpg"

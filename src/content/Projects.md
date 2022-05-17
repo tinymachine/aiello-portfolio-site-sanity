@@ -225,7 +225,7 @@ projectSets:
     title: Nothingman
     projectType: Short Film
   - title: Sound of Fear
-    director: ''
+    director: Colin Campbell
     clips: []
     featuredStill: "/v1652517210/andrew-aiello/portfolio/sound-of-fear-11_eoijg7.jpg"
     stills:
@@ -240,7 +240,7 @@ projectSets:
     - "/v1652517206/andrew-aiello/portfolio/sound-of-fear-03_zxt3yu.jpg"
     - "/v1652517206/andrew-aiello/portfolio/sound-of-fear-02_y0emjn.jpg"
     - "/v1652517205/andrew-aiello/portfolio/sound-of-fear-01_mrv1se.jpg"
-    projectType: ''
+    projectType: Short Film
   - title: Strip
     director: ''
     clips: []

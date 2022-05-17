@@ -152,7 +152,7 @@ projectSets:
     - "/v1652516742/andrew-aiello/portfolio/green-cobra-03_rqkbqs.jpg"
     - "/v1652516742/andrew-aiello/portfolio/green-cobra-02_rvilp9.jpg"
     - "/v1652516741/andrew-aiello/portfolio/green-cobra-01_ektji2.jpg"
-    projectType: ''
+    projectType: Short Film
   - title: Komb
     director: Sigurd Culhane
     clips: []

@@ -143,7 +143,7 @@ projectSets:
     - "/v1652516742/andrew-aiello/portfolio/green-cobra-04_f7srga.jpg"
     - "/v1652516742/andrew-aiello/portfolio/green-cobra-03_rqkbqs.jpg"
     projectType: Short Film
-    colorAccent: rgb(3, 59, 34)
+    colorAccent: rgb(81, 191, 160)
   - director: Eli Kooris and Joshua Shaffer
     clips:
     - https://vimeo.com/manage/videos/673804873

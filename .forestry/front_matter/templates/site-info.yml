@@ -9,4 +9,4 @@ fields:
   name: title
   label: title
 pages:
-- src/data/Meta.md
+- src/data/Settings.md

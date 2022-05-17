@@ -1,11 +1,12 @@
 ---
-import { frontmatter } from '../content/Projects.md'
+import { frontmatter as projectData } from '../content/Projects.md'
+import { frontmatter as settings } from '../settings/Settings.md'
 import Markdown from './Markdown.astro'
 import ProjectModal from './ProjectModal.astro'
-import { imagePath } from '../data/siteInfo'
+import { imagePath } from '../settings/siteInfo'
 ---
 
-{frontmatter.projectSets.map((set, i) => (
+{projectData.projectSets.map((set, i) => (
   <section class="section" id={i === 0 && 'first-section'}>
     <h3>{set.heading}</h3>
 
@@ -24,7 +25,7 @@ import { imagePath } from '../data/siteInfo'
           {project}
           projectType={
             set.heading.startsWith('Feature')
-              ? 'Feature Film'
+              ? settings.projectSettings.featureProjectTypeLabel
               : project.projectType || set.heading
           }
         />

@@ -1,6 +1,5 @@
 ---
-import { frontmatter as metadata } from '../data/Meta.md'
-import { frontmatter as reel } from '../content/Reel.md'
+import { frontmatter as site } from '../settings/Settings.md'
 
 import Layout from '../layout/Layout.astro'  
 import AboutSection from '../components/AboutSection.astro'
@@ -12,12 +11,12 @@ import ScrollButton from '../components/ScrollButton.astro'
 <Layout>
   <div class="initial-view">
     <header class="landing">
-      <h1>{metadata.name}</h1>
-      <h2>{metadata.title}</h2>
+      <h1>{site.name}</h1>
+      <h2>{site.title}</h2>
     </header>
 
     <div class="bleed video-fade-in">
-      <VimeoPlayer url={reel.vimeoUrl} />
+      <VimeoPlayer url={site.reel.vimeoUrl} />
     </div>
 
     <div class="align-r scroller-fade-in" style="padding-top: 1rem;">

@@ -27,7 +27,7 @@ projectSets:
     - "/v1652516262/andrew-aiello/portfolio/we-broke-up-01_d4scf5.jpg"
     featuredStill: "/v1652516278/andrew-aiello/portfolio/we-broke-up-19_mn8ikn.jpg"
     projectType: Feature Film
-    colorAccent: rgb(61, 135, 117)
+    colorAccent: rgb(108, 69, 30)
   - title: International Falls
     director: Amber McGinnis
     clips:

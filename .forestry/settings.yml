@@ -5,11 +5,8 @@ admin_path: public/admin
 webhook_url: 
 sections:
 - type: document
-  path: src/data/Settings.md
-  label: Site Info
-- type: document
-  path: src/content/Reel.md
-  label: Reel
+  path: src/settings/Settings.md
+  label: Site Settings
 - type: document
   path: src/content/Projects.md
   label: Projects

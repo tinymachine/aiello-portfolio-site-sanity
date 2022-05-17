@@ -2,13 +2,16 @@
 import BaseModal from './BaseModal.astro'
 import VimeoPlayer from './VimeoPlayer.astro';
 import { imagePath } from '../data/siteInfo'
+import Markdown from './Markdown.astro'
 
 const { triggerId, project: {title, director, clips, stills }, projectSetTitle } = Astro.props
 ---
 
 <BaseModal {triggerId}>
   <header>
-    <h3 tabindex="-1">{title}</h3>
+    <h3 tabindex="-1">
+      <Markdown content={title} inline />
+    </h3>
     <h4>
       {projectSetTitle}{director && <>. Director: {director}</>}
     </h4>
@@ -28,9 +31,11 @@ const { triggerId, project: {title, director, clips, stills }, projectSetTitle }
 
       {stills && 
         <section class="stills">
-          {stills.map(still => (
-            <img src={imagePath + still} alt="" loading="lazy" />
-          ))}
+          <div class="still-thumbs">
+            {stills.map(still => (
+              <img src={imagePath + still} alt="" loading="lazy" />
+            ))}
+          </div>
         </section>
       }
     </div>
@@ -43,8 +48,9 @@ header {
   padding-left: 2rem;
   margin-bottom: 2rem;
   position: sticky;
-  z-index: 0;
+  z-index: 100;
   top: 0;
+  mix-blend-mode: screen;
 
   h3 {
     padding: 0;
@@ -74,17 +80,23 @@ header {
   margin: 0 auto;
 }
 
-img {
-  display: block;
-  width: 100%;
+.still-thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(0.5rem, calc(2 * calc(0.125rem + 3vw)), 1.5rem);
+
+  img {
+    width: calc(50% - clamp(0.25rem, calc(0.125rem + 2vw), 0.75rem));
+  }
 }
 
-.clip, img  {
+
+.clip {
   max-width: min(170vh, var(--max-element-width));
   margin: 0 auto;
 }
 
-.clip, img {
+.clip {
   margin-bottom: clamp(2rem, calc(1rem + 3vw), 4rem);
 }
 </style>

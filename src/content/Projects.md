@@ -204,7 +204,7 @@ projectSets:
     - "/v1652517041/andrew-aiello/portfolio/lizzy-powers-02_lif4o3.jpg"
     - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-01_vvknw4.jpg"
     projectType: Commercials
-  - director: ''
+  - director: Eli Kooris and Joshua Shaffer
     clips:
     - https://vimeo.com/manage/videos/673804873
     featuredStill: "/v1652517138/andrew-aiello/portfolio/nothingman-13_whe3nh.jpg"
@@ -223,7 +223,7 @@ projectSets:
     - "/v1652517137/andrew-aiello/portfolio/nothingman-02_u96c7b.jpg"
     - "/v1652517137/andrew-aiello/portfolio/nothingman-01_wc9q0w.jpg"
     title: Nothingman
-    projectType: ''
+    projectType: Short Film
   - title: Sound of Fear
     director: ''
     clips: []

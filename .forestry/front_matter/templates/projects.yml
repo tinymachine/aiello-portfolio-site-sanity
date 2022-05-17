@@ -20,6 +20,13 @@ fields:
       label: Project Title
       config:
         required: true
+    - name: projectType
+      type: text
+      config:
+        required: false
+      label: Project Type
+      description: E.g. "Commercial", "Music Video", etc. Leave this blank for feature
+        films.
     - type: text
       name: director
       label: Director

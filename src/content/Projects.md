@@ -52,7 +52,7 @@ projectSets:
     - "/v1652515874/andrew-aiello/portfolio/intl-falls-04_a0iq0w.jpg"
     - "/v1652515877/andrew-aiello/portfolio/intl-falls-14_ws2w2r.jpg"
     projectType: Feature Film
-    colorAccent: ''
+    colorAccent: rgb(178, 182, 177)
   - title: Shuddhi
     director: Adarsh Eshwarappa
     clips:

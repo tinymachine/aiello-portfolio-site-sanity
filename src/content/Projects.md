@@ -181,16 +181,16 @@ projectSets:
     featuredStill: "/v1652517210/andrew-aiello/portfolio/sound-of-fear-11_eoijg7.jpg"
     stills:
     - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-11_eoijg7.jpg"
+    - "/v1652517206/andrew-aiello/portfolio/sound-of-fear-03_zxt3yu.jpg"
+    - "/v1652517205/andrew-aiello/portfolio/sound-of-fear-01_mrv1se.jpg"
+    - "/v1652517208/andrew-aiello/portfolio/sound-of-fear-04_mbbj7q.jpg"
+    - "/v1652517206/andrew-aiello/portfolio/sound-of-fear-02_y0emjn.jpg"
     - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-10_fgiuwe.jpg"
     - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-09_paatvz.jpg"
     - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-08_n1y6qg.jpg"
     - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-07_ely5rr.jpg"
     - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-06_b0zyyj.jpg"
     - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-05_c9vcmg.jpg"
-    - "/v1652517208/andrew-aiello/portfolio/sound-of-fear-04_mbbj7q.jpg"
-    - "/v1652517206/andrew-aiello/portfolio/sound-of-fear-03_zxt3yu.jpg"
-    - "/v1652517206/andrew-aiello/portfolio/sound-of-fear-02_y0emjn.jpg"
-    - "/v1652517205/andrew-aiello/portfolio/sound-of-fear-01_mrv1se.jpg"
     projectType: Short Film
   - title: Vertis
     director: Peter Sestina

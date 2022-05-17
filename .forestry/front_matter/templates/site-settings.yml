@@ -12,6 +12,18 @@ fields:
   label: Role
   config:
     required: true
+- name: themeColors
+  type: field_group
+  config: {}
+  fields:
+  - name: verticalRule
+    type: color
+    label: Vertical Line Color
+    config:
+      required: true
+      color_format: RGB
+  label: Theme Colors
+  description: Edit site colors (like the vertical line)
 - type: field_group
   name: reel
   label: Reel Settings

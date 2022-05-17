@@ -170,7 +170,7 @@ projectSets:
     - "/v1652516786/andrew-aiello/portfolio/komb-01_pnldfx.jpg"
     projectType: Commercial
   - title: Lil Sqwid — "Everybody Know"
-    director: ''
+    director: Erin Elders
     clips: []
     featuredStill: "/v1652516962/andrew-aiello/portfolio/lil-squid-ek-11_lq2kfb.jpg"
     stills:

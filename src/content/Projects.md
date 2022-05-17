@@ -187,7 +187,7 @@ projectSets:
     - "/v1652516950/andrew-aiello/portfolio/lil-squid-ek-01_vlw552.jpg"
     projectType: Music Video
   - title: Lizzy Powers
-    director: ''
+    director: Sigurd Culhane
     clips:
     - https://vimeo.com/manage/videos/169914293
     - https://vimeo.com/manage/videos/169913997
@@ -203,7 +203,7 @@ projectSets:
     - "/v1652517041/andrew-aiello/portfolio/lizzy-powers-03_kkrpem.jpg"
     - "/v1652517041/andrew-aiello/portfolio/lizzy-powers-02_lif4o3.jpg"
     - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-01_vvknw4.jpg"
-    projectType: ''
+    projectType: Commercials
   - director: ''
     clips:
     - https://vimeo.com/manage/videos/673804873

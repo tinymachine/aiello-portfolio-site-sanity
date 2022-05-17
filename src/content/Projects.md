@@ -117,22 +117,6 @@ projectSets:
     projectType: Feature Film
 - heading: Short Form
   projects:
-  - title: 1916 — "For Whiskey"
-    director: Sigurd Culhane
-    clips: []
-    featuredStill: "/v1652516685/andrew-aiello/portfolio/for-whiskey-10_r4wsbd.jpg"
-    stills:
-    - "/v1652516685/andrew-aiello/portfolio/for-whiskey-10_r4wsbd.jpg"
-    - "/v1652516685/andrew-aiello/portfolio/for-whiskey-09_te83eg.jpg"
-    - "/v1652516685/andrew-aiello/portfolio/for-whiskey-08_nivrn8.jpg"
-    - "/v1652516685/andrew-aiello/portfolio/for-whiskey-07_vom7y6.jpg"
-    - "/v1652516685/andrew-aiello/portfolio/for-whiskey-06_tv3y9n.jpg"
-    - "/v1652516684/andrew-aiello/portfolio/for-whiskey-05_ii682j.jpg"
-    - "/v1652516684/andrew-aiello/portfolio/for-whiskey-04_xm9agy.jpg"
-    - "/v1652516684/andrew-aiello/portfolio/for-whiskey-03_iozcsh.jpg"
-    - "/v1652516684/andrew-aiello/portfolio/for-whiskey-02_zo8wra.jpg"
-    - "/v1652516684/andrew-aiello/portfolio/for-whiskey-01_kaip5v.jpg"
-    projectType: Music Video
   - title: Green Cobra
     director: Sigurd Culhane
     clips:
@@ -153,57 +137,6 @@ projectSets:
     - "/v1652516742/andrew-aiello/portfolio/green-cobra-02_rvilp9.jpg"
     - "/v1652516741/andrew-aiello/portfolio/green-cobra-01_ektji2.jpg"
     projectType: Short Film
-  - title: Komb
-    director: Sigurd Culhane
-    clips: []
-    featuredStill: "/v1652516789/andrew-aiello/portfolio/komb-10_ljno3t.jpg"
-    stills:
-    - "/v1652516789/andrew-aiello/portfolio/komb-10_ljno3t.jpg"
-    - "/v1652516789/andrew-aiello/portfolio/komb-09_i3a2gd.jpg"
-    - "/v1652516789/andrew-aiello/portfolio/komb-08_donasg.jpg"
-    - "/v1652516789/andrew-aiello/portfolio/komb-07_p7ihb2.jpg"
-    - "/v1652516787/andrew-aiello/portfolio/komb-06_kf4auh.jpg"
-    - "/v1652516788/andrew-aiello/portfolio/komb-05_b33bnm.jpg"
-    - "/v1652516788/andrew-aiello/portfolio/komb-04_bufw7x.jpg"
-    - "/v1652516788/andrew-aiello/portfolio/komb-03_ohpi1a.jpg"
-    - "/v1652516786/andrew-aiello/portfolio/komb-02_y1j8ve.jpg"
-    - "/v1652516786/andrew-aiello/portfolio/komb-01_pnldfx.jpg"
-    projectType: Commercial
-  - title: Lil Sqwid — "Everybody Know"
-    director: Erin Elders
-    clips: []
-    featuredStill: "/v1652516962/andrew-aiello/portfolio/lil-squid-ek-11_lq2kfb.jpg"
-    stills:
-    - "/v1652516957/andrew-aiello/portfolio/lil-squid-ek-04_jrrmxn.jpg"
-    - "/v1652516961/andrew-aiello/portfolio/lil-squid-ek-03_y0h9oz.jpg"
-    - "/v1652516962/andrew-aiello/portfolio/lil-squid-ek-11_lq2kfb.jpg"
-    - "/v1652516963/andrew-aiello/portfolio/lil-squid-ek-05_b8mq2l.jpg"
-    - "/v1652516950/andrew-aiello/portfolio/lil-squid-ek-01_vlw552.jpg"
-    - "/v1652516962/andrew-aiello/portfolio/lil-squid-ek-06_ofedkj.jpg"
-    - "/v1652516962/andrew-aiello/portfolio/lil-squid-ek-10_gantzc.jpg"
-    - "/v1652516956/andrew-aiello/portfolio/lil-squid-ek-02_hvylw7.jpg"
-    - "/v1652516963/andrew-aiello/portfolio/lil-squid-ek-09_pfkllr.jpg"
-    - "/v1652516963/andrew-aiello/portfolio/lil-squid-ek-08_g2hgls.jpg"
-    - "/v1652516963/andrew-aiello/portfolio/lil-squid-ek-07_l6wykv.jpg"
-    projectType: Music Video
-  - title: Lizzy Powers
-    director: Sigurd Culhane
-    clips:
-    - https://vimeo.com/manage/videos/169914293
-    - https://vimeo.com/manage/videos/169913997
-    - https://vimeo.com/manage/videos/169913530
-    featuredStill: "/v1652517042/andrew-aiello/portfolio/lizzy-powers-09_fdxaga.jpg"
-    stills:
-    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-09_fdxaga.jpg"
-    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-08_hetvg3.jpg"
-    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-07_t4vp6g.jpg"
-    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-06_sjxuzf.jpg"
-    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-05_qnqz2n.jpg"
-    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-04_auf4th.jpg"
-    - "/v1652517041/andrew-aiello/portfolio/lizzy-powers-03_kkrpem.jpg"
-    - "/v1652517041/andrew-aiello/portfolio/lizzy-powers-02_lif4o3.jpg"
-    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-01_vvknw4.jpg"
-    projectType: Commercials
   - director: Eli Kooris and Joshua Shaffer
     clips:
     - https://vimeo.com/manage/videos/673804873
@@ -224,23 +157,6 @@ projectSets:
     - "/v1652517137/andrew-aiello/portfolio/nothingman-01_wc9q0w.jpg"
     title: Nothingman
     projectType: Short Film
-  - title: Sound of Fear
-    director: Colin Campbell
-    clips: []
-    featuredStill: "/v1652517210/andrew-aiello/portfolio/sound-of-fear-11_eoijg7.jpg"
-    stills:
-    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-11_eoijg7.jpg"
-    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-10_fgiuwe.jpg"
-    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-09_paatvz.jpg"
-    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-08_n1y6qg.jpg"
-    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-07_ely5rr.jpg"
-    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-06_b0zyyj.jpg"
-    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-05_c9vcmg.jpg"
-    - "/v1652517208/andrew-aiello/portfolio/sound-of-fear-04_mbbj7q.jpg"
-    - "/v1652517206/andrew-aiello/portfolio/sound-of-fear-03_zxt3yu.jpg"
-    - "/v1652517206/andrew-aiello/portfolio/sound-of-fear-02_y0emjn.jpg"
-    - "/v1652517205/andrew-aiello/portfolio/sound-of-fear-01_mrv1se.jpg"
-    projectType: Short Film
   - title: Strip
     director: Maxwell Addae
     clips: []
@@ -258,6 +174,23 @@ projectSets:
     - "/v1652517263/andrew-aiello/portfolio/strip-03_ufnal1.jpg"
     - "/v1652517263/andrew-aiello/portfolio/strip-02_gp5nek.jpg"
     - "/v1652517262/andrew-aiello/portfolio/strip-01_onr8dh.jpg"
+    projectType: Short Film
+  - title: Sound of Fear
+    director: Colin Campbell
+    clips: []
+    featuredStill: "/v1652517210/andrew-aiello/portfolio/sound-of-fear-11_eoijg7.jpg"
+    stills:
+    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-11_eoijg7.jpg"
+    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-10_fgiuwe.jpg"
+    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-09_paatvz.jpg"
+    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-08_n1y6qg.jpg"
+    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-07_ely5rr.jpg"
+    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-06_b0zyyj.jpg"
+    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-05_c9vcmg.jpg"
+    - "/v1652517208/andrew-aiello/portfolio/sound-of-fear-04_mbbj7q.jpg"
+    - "/v1652517206/andrew-aiello/portfolio/sound-of-fear-03_zxt3yu.jpg"
+    - "/v1652517206/andrew-aiello/portfolio/sound-of-fear-02_y0emjn.jpg"
+    - "/v1652517205/andrew-aiello/portfolio/sound-of-fear-01_mrv1se.jpg"
     projectType: Short Film
   - title: Vertis
     director: Peter Sestina
@@ -279,5 +212,72 @@ projectSets:
     - "/v1652517292/andrew-aiello/portfolio/vertis-02_c2zwvl.jpg"
     - "/v1652517292/andrew-aiello/portfolio/vertis-01_ab6mdw.jpg"
     projectType: Commercial
+  - title: Komb
+    director: Sigurd Culhane
+    clips: []
+    featuredStill: "/v1652516789/andrew-aiello/portfolio/komb-10_ljno3t.jpg"
+    stills:
+    - "/v1652516789/andrew-aiello/portfolio/komb-10_ljno3t.jpg"
+    - "/v1652516789/andrew-aiello/portfolio/komb-09_i3a2gd.jpg"
+    - "/v1652516789/andrew-aiello/portfolio/komb-08_donasg.jpg"
+    - "/v1652516789/andrew-aiello/portfolio/komb-07_p7ihb2.jpg"
+    - "/v1652516787/andrew-aiello/portfolio/komb-06_kf4auh.jpg"
+    - "/v1652516788/andrew-aiello/portfolio/komb-05_b33bnm.jpg"
+    - "/v1652516788/andrew-aiello/portfolio/komb-04_bufw7x.jpg"
+    - "/v1652516788/andrew-aiello/portfolio/komb-03_ohpi1a.jpg"
+    - "/v1652516786/andrew-aiello/portfolio/komb-02_y1j8ve.jpg"
+    - "/v1652516786/andrew-aiello/portfolio/komb-01_pnldfx.jpg"
+    projectType: Commercial
+  - title: Lizzy Powers
+    director: Sigurd Culhane
+    clips:
+    - https://vimeo.com/manage/videos/169914293
+    - https://vimeo.com/manage/videos/169913997
+    - https://vimeo.com/manage/videos/169913530
+    featuredStill: "/v1652517042/andrew-aiello/portfolio/lizzy-powers-09_fdxaga.jpg"
+    stills:
+    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-09_fdxaga.jpg"
+    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-08_hetvg3.jpg"
+    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-07_t4vp6g.jpg"
+    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-06_sjxuzf.jpg"
+    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-05_qnqz2n.jpg"
+    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-04_auf4th.jpg"
+    - "/v1652517041/andrew-aiello/portfolio/lizzy-powers-03_kkrpem.jpg"
+    - "/v1652517041/andrew-aiello/portfolio/lizzy-powers-02_lif4o3.jpg"
+    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-01_vvknw4.jpg"
+    projectType: Commercials
+  - title: Lil Sqwid — "Everybody Know"
+    director: Erin Elders
+    clips: []
+    featuredStill: "/v1652516962/andrew-aiello/portfolio/lil-squid-ek-11_lq2kfb.jpg"
+    stills:
+    - "/v1652516957/andrew-aiello/portfolio/lil-squid-ek-04_jrrmxn.jpg"
+    - "/v1652516961/andrew-aiello/portfolio/lil-squid-ek-03_y0h9oz.jpg"
+    - "/v1652516962/andrew-aiello/portfolio/lil-squid-ek-11_lq2kfb.jpg"
+    - "/v1652516963/andrew-aiello/portfolio/lil-squid-ek-05_b8mq2l.jpg"
+    - "/v1652516950/andrew-aiello/portfolio/lil-squid-ek-01_vlw552.jpg"
+    - "/v1652516962/andrew-aiello/portfolio/lil-squid-ek-06_ofedkj.jpg"
+    - "/v1652516962/andrew-aiello/portfolio/lil-squid-ek-10_gantzc.jpg"
+    - "/v1652516956/andrew-aiello/portfolio/lil-squid-ek-02_hvylw7.jpg"
+    - "/v1652516963/andrew-aiello/portfolio/lil-squid-ek-09_pfkllr.jpg"
+    - "/v1652516963/andrew-aiello/portfolio/lil-squid-ek-08_g2hgls.jpg"
+    - "/v1652516963/andrew-aiello/portfolio/lil-squid-ek-07_l6wykv.jpg"
+    projectType: Music Video
+  - title: 1916 — "For Whiskey"
+    director: Sigurd Culhane
+    clips: []
+    featuredStill: "/v1652516685/andrew-aiello/portfolio/for-whiskey-10_r4wsbd.jpg"
+    stills:
+    - "/v1652516685/andrew-aiello/portfolio/for-whiskey-10_r4wsbd.jpg"
+    - "/v1652516685/andrew-aiello/portfolio/for-whiskey-09_te83eg.jpg"
+    - "/v1652516685/andrew-aiello/portfolio/for-whiskey-08_nivrn8.jpg"
+    - "/v1652516685/andrew-aiello/portfolio/for-whiskey-07_vom7y6.jpg"
+    - "/v1652516685/andrew-aiello/portfolio/for-whiskey-06_tv3y9n.jpg"
+    - "/v1652516684/andrew-aiello/portfolio/for-whiskey-05_ii682j.jpg"
+    - "/v1652516684/andrew-aiello/portfolio/for-whiskey-04_xm9agy.jpg"
+    - "/v1652516684/andrew-aiello/portfolio/for-whiskey-03_iozcsh.jpg"
+    - "/v1652516684/andrew-aiello/portfolio/for-whiskey-02_zo8wra.jpg"
+    - "/v1652516684/andrew-aiello/portfolio/for-whiskey-01_kaip5v.jpg"
+    projectType: Music Video
 
 ---

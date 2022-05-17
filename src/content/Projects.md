@@ -242,7 +242,7 @@ projectSets:
     - "/v1652517205/andrew-aiello/portfolio/sound-of-fear-01_mrv1se.jpg"
     projectType: Short Film
   - title: Strip
-    director: ''
+    director: Maxwell Addae
     clips: []
     featuredStill: "/v1652517264/andrew-aiello/portfolio/strip-12_mvmnwq.jpg"
     stills:
@@ -258,7 +258,7 @@ projectSets:
     - "/v1652517263/andrew-aiello/portfolio/strip-03_ufnal1.jpg"
     - "/v1652517263/andrew-aiello/portfolio/strip-02_gp5nek.jpg"
     - "/v1652517262/andrew-aiello/portfolio/strip-01_onr8dh.jpg"
-    projectType: ''
+    projectType: Short Film
   - title: Vertis
     director: ''
     clips: []

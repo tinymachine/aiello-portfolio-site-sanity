@@ -258,7 +258,7 @@ projectSets:
     - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-05_qnqz2n.jpg"
     - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-01_vvknw4.jpg"
     projectType: Commercials
-    colorAccent: ''
+    colorAccent: rgb(137, 104, 107)
   - title: Lil Sqwid — "Everybody Know"
     director: Erin Elders
     clips: []

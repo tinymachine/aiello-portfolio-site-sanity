@@ -183,8 +183,8 @@ projectSets:
     - "/v1652517264/andrew-aiello/portfolio/strip-10_cerg9a.jpg"
     - "/v1652517262/andrew-aiello/portfolio/strip-01_onr8dh.jpg"
     projectType: Short Film
-    colorAccent: ''
-  - title: Sound of Fear
+    colorAccent: rgb(59, 75, 23)
+  - title: The Sound of Fear
     director: Colin Campbell
     clips: []
     featuredStill: "/v1652517210/andrew-aiello/portfolio/sound-of-fear-11_eoijg7.jpg"

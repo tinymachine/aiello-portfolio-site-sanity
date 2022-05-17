@@ -260,7 +260,7 @@ projectSets:
     - "/v1652517262/andrew-aiello/portfolio/strip-01_onr8dh.jpg"
     projectType: Short Film
   - title: Vertis
-    director: ''
+    director: Peter Sestina
     clips: []
     featuredStill: "/v1652517293/andrew-aiello/portfolio/vertis-14_abejkz.jpg"
     stills:
@@ -278,6 +278,6 @@ projectSets:
     - "/v1652517293/andrew-aiello/portfolio/vertis-03_lpyfp8.jpg"
     - "/v1652517292/andrew-aiello/portfolio/vertis-02_c2zwvl.jpg"
     - "/v1652517292/andrew-aiello/portfolio/vertis-01_ab6mdw.jpg"
-    projectType: ''
+    projectType: Commercial
 
 ---

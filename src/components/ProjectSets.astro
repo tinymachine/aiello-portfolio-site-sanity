@@ -1,32 +1,36 @@
 ---
 import { frontmatter as projectData } from '../content/Projects.md'
-import { frontmatter as settings } from '../settings/Settings.md'
 import Markdown from './Markdown.astro'
 import ProjectModal from './ProjectModal.astro'
 import { imagePath } from '../settings/siteInfo'
 ---
 
-{projectData.projectSets.map((set, i) => (
+{projectData.projectSets.map((projectSet, i) => (
   <section class="section" id={i === 0 && 'first-section'}>
-    <h3>{set.heading}</h3>
+    <h3>{projectSet.heading}</h3>
 
-    {set.projects.map((project, j) => (
+    {projectSet.projects.map((project, j) => (
       <article>
         <a href="#" id={`trigger-${i}-${j}`}>
           <div class="bleed-r">
-            <img class="still bleed-r" src={imagePath + project.featuredStill} alt="" />
+            <img
+              class="still bleed-r"
+              src={imagePath + project.featuredStill}
+              alt=""
+            />
           </div>
 
-          <h4><Markdown content={project.title} inline /> <span class="ornament"></span></h4>
+          <h4 style={`color: ${ project.colorAccent || 'var(--color-default'}`}>
+            <Markdown content={project.title} inline />
+          </h4>
         </a>
 
         <ProjectModal 
           triggerId={`trigger-${i}-${j}`}
           {project}
-          projectType={
-            set.heading.startsWith('Feature')
-              ? settings.projectSettings.featureProjectTypeLabel
-              : project.projectType || set.heading
+          projectTypeLabel={ 
+            project.projectType ||
+            projectSet.fallbackProjectTypeLabel
           }
         />
       </article>
@@ -42,9 +46,8 @@ a {
   transition: opacity 0.5s linear;
   text-decoration: none;
     
-  .ornament {
-    display: inline-block;
-    transition: transform 0.5s;    
+  :hover {
+    opacity: 1;
   }
 }
 
@@ -53,21 +56,8 @@ h4 {
   font-size: 0.875em;
   margin: 0;
   padding: 0;
-  opacity: 0.75;
   color: var(--color-strong);
   transition: opacity 0.5s linear;
-}
-
-a:hover {
-  opacity: 1;
-
-  h4 {
-    opacity: 1;
-  }
-
-  .ornament {
-    transform: translateX(4px);
-  }
 }
 
 article {

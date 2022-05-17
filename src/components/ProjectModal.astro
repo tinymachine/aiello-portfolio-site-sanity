@@ -4,16 +4,29 @@ import VimeoPlayer from './VimeoPlayer.astro';
 import { imagePath } from '../settings/siteInfo'
 import Markdown from './Markdown.astro'
 
-const { triggerId, project: {title, director, clips, stills }, projectType } = Astro.props
+const { 
+  triggerId,
+  project: {
+    title,
+    director,
+    clips,
+    stills,
+    colorAccent
+  },
+  projectTypeLabel
+} = Astro.props
 ---
 
 <BaseModal {triggerId}>
   <header>
-    <h3 tabindex="-1">
+    <h3 
+      style={`color: ${colorAccent || 'var(--color-strong'}`}
+      tabindex="-1"
+    >
       <Markdown content={title} inline />
     </h3>
     <h4>
-      {projectType}
+      {projectTypeLabel}
       {director && <><br>Director: {director}</>}
     </h4>
   </header>

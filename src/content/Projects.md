@@ -154,7 +154,7 @@ projectSets:
     - "/v1652516741/andrew-aiello/portfolio/green-cobra-01_ektji2.jpg"
     projectType: ''
   - title: Komb
-    director: ''
+    director: Sigurd Culhane
     clips: []
     featuredStill: "/v1652516789/andrew-aiello/portfolio/komb-10_ljno3t.jpg"
     stills:
@@ -168,7 +168,7 @@ projectSets:
     - "/v1652516788/andrew-aiello/portfolio/komb-03_ohpi1a.jpg"
     - "/v1652516786/andrew-aiello/portfolio/komb-02_y1j8ve.jpg"
     - "/v1652516786/andrew-aiello/portfolio/komb-01_pnldfx.jpg"
-    projectType: ''
+    projectType: Commercial
   - title: Lil Sqwid — "Everybody Know"
     director: ''
     clips: []

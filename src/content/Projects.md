@@ -98,7 +98,7 @@ projectSets:
     - "/v1652514474/andrew-aiello/portfolio/bhinna-11_xb4ydg.jpg"
     featuredStill: "/v1652514475/andrew-aiello/portfolio/bhinna-10_ymbkak.jpg"
     projectType: Feature Film
-    colorAccent: rgb(24, 39, 51)
+    colorAccent: rgb(116, 136, 149)
   - title: Fallen Queen
     director: Joel Soisson
     clips: []

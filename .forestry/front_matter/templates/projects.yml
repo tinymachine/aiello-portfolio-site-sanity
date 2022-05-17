@@ -30,6 +30,13 @@ fields:
     - type: text
       name: director
       label: Director
+    - name: colorAccent
+      type: color
+      label: Accent Color
+      config:
+        required: false
+        color_format: RGB
+      description: This sets the color of the project’s title text.
     - type: list
       name: clips
       label: Clips

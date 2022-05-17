@@ -118,7 +118,7 @@ projectSets:
 - heading: Short Form
   projects:
   - title: 1916 — "For Whiskey"
-    director: ''
+    director: Sigurd Culhane
     clips: []
     featuredStill: "/v1652516685/andrew-aiello/portfolio/for-whiskey-10_r4wsbd.jpg"
     stills:
@@ -132,7 +132,7 @@ projectSets:
     - "/v1652516684/andrew-aiello/portfolio/for-whiskey-03_iozcsh.jpg"
     - "/v1652516684/andrew-aiello/portfolio/for-whiskey-02_zo8wra.jpg"
     - "/v1652516684/andrew-aiello/portfolio/for-whiskey-01_kaip5v.jpg"
-    projectType: ''
+    projectType: Music Video
   - title: Green Cobra
     director: Sigurd Culhane
     clips:

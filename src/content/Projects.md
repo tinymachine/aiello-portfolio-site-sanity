@@ -239,7 +239,7 @@ projectSets:
     - "/v1652516789/andrew-aiello/portfolio/komb-08_donasg.jpg"
     - "/v1652516789/andrew-aiello/portfolio/komb-07_p7ihb2.jpg"
     projectType: Commercial
-    colorAccent: ''
+    colorAccent: rgb(81, 55, 22)
   - title: Lizzy Powers
     director: Sigurd Culhane
     clips:

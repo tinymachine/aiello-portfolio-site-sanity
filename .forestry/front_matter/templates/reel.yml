@@ -2,8 +2,8 @@
 label: Reel
 hide_body: true
 fields:
-- type: number
-  name: vimeo_id
-  label: vimeo_id
+- type: text
+  name: vimeoUrl
+  label: Vimeo URL
 pages:
 - src/content/Reel.md

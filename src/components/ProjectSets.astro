@@ -1,0 +1,74 @@
+---
+import { frontmatter } from '../content/Projects.md'
+import Markdown from './Markdown.astro'
+import ProjectModal from './ProjectModal.astro'
+import { imagePath } from '../data/siteInfo'
+---
+
+{frontmatter.projectSets.map((set, i) => (
+  <section class="section" id={i === 0 && 'first-section'}>
+    <h3>{set.heading}</h3>
+
+    {set.projects.map((project, j) => (
+      <article>
+        <a href="#" id={`trigger-${i}-${j}`}>
+          <div class="bleed-r">
+            <img class="still bleed-r" src={imagePath + project.featuredStill} alt="" />
+          </div>
+
+          <h4><Markdown content={project.title} inline /> <span class="ornament"></span></h4>
+        </a>
+
+        <ProjectModal 
+          triggerId={`trigger-${i}-${j}`}
+          {project} projectSetTitle={set.heading}
+        />
+      </article>
+    ))}
+  </section>
+))}
+
+<style lang="scss">
+a {
+  display: block;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.5s linear;
+  text-decoration: none;
+    
+  .ornament {
+    display: inline-block;
+    transition: transform 0.5s;    
+  }
+}
+
+h4 {
+  font-weight: normal;
+  font-size: 0.875em;
+  margin: 0;
+  padding: 0;
+  opacity: 0.75;
+  color: var(--color-strong);
+  transition: opacity 0.5s linear;
+}
+
+a:hover {
+  opacity: 1;
+
+  h4 {
+    opacity: 1;
+  }
+
+  .ornament {
+    transform: translateX(4px);
+  }
+}
+
+article {
+  margin-bottom: clamp(2.25em, 4vw, 4em)
+}
+
+article a:focus{
+  outline: none !important; // this is bad
+}
+</style>

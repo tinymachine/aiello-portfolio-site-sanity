@@ -15,6 +15,7 @@
   --color-strong: hsl(0, 0%, 75%);
   --color-default: hsl(0, 0%, 55%);
   --color-bg: black;
+  --color-modal-bg: rgb(10, 10, 10);
   --color-vertical-rule: hsl(0, 0%, 20%);
 
   --margin-body-top: clamp(
@@ -26,11 +27,13 @@
   --margin-body-h: clamp(
     1rem,
     1rem + 2.125vw,
-    2.25rem
+    2.75rem
   );
   --margin-h-inset: var(--margin-body-h);
 
-  --scroll-button-diameter: calc(1.5 * var(--margin-h-inset));
+  --max-element-width: 96rem;
+
+  --scroll-button-diameter: 2.75em;
 
   font-family: var(--font-accent);
   font-size: clamp(
@@ -50,6 +53,7 @@
 
 html {
   background-color: var(--color-bg);
+  -webkit-text-size-adjust: none;
 
   @media (prefers-reduced-motion: no-preference) {
     & {
@@ -62,7 +66,7 @@ body {
   padding: 0 var(--margin-body-h) var(--margin-body-bottom);
   width: 100%;
   margin: 0 auto;
-  max-width: 36rem;
+  max-width: 48rem;
   min-height: 100vh;
 }
 
@@ -108,7 +112,7 @@ a {
   }
 }
 
-header {
+header.landing {
   padding-bottom: 0.75em;
   background-color: var(--color-bg);
 
@@ -152,7 +156,12 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: var(--color-strong);
-  background-color: var(--color-bg);
+}
+
+.still {
+  display: block;
+  margin-bottom: 0.5em;
+  width: 100%;
 }
 
 .portrait {
@@ -204,7 +213,7 @@ footer {
 body.home {
   position: relative;
 
-  main {
+  main.landing {
     padding-bottom: 8rem;
   }
 
@@ -230,15 +239,17 @@ body.home {
     }
   }
 
-  article {
-    padding-top: 2rem;
-    padding-left: var(--margin-h-inset);
-  }
+}
 
-  h3 {
-    margin-left: calc(-1 * var(--margin-h-inset));
-    margin-bottom: 2rem;
-  }
+.landing .section {
+  padding-top: 2rem;
+  padding-left: var(--margin-h-inset);
+}
+
+.landing h3 {
+  margin-left: calc(-1 * var(--margin-h-inset));
+  margin-bottom: 3rem;
+  background-color: var(--color-bg);
 }
 
 .align-r {
@@ -249,7 +260,7 @@ body.home {
   margin: 0.25rem 0 0;
   width: 100vw;
   min-width: 100%;
-  max-width: min(120vh, 72rem);
+  max-width: min(120vh, var(--max-element-width)); 
   align-self: center;
 }
 

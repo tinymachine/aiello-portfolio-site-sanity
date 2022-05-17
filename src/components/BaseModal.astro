@@ -1,0 +1,243 @@
+---
+/**
+ * Based heavily on the Modal component from Mark Teekman's
+ * [`accessible-astro-components`][1]
+ * 
+ * [1]: https://www.npmjs.com/package/accessible-astro-components#Modal
+ */
+
+const {
+  triggerId,
+  title,
+  closeText = 'Close'
+} = Astro.props
+---
+
+<div class="modal" role="dialog" aria-labelledby={triggerId}>
+  <div class="modal__inner">
+    <div class="modal__content">
+      <!-- <h3 tabindex="-1">
+        {title}
+      </h3> -->
+      <slot>Modal description.</slot>
+    </div>
+    <div class="modal__close">
+      <button aria-label={closeText}>
+        <img src="/img/close-button.svg" alt="" title="Press Esc to close" />
+      </button>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+  /* -------------------------------------------------------------
+  | variables
+  | -------------------------------------------------------------
+  */
+  const body = document.querySelector('body')
+  const modal = document.querySelector('.modal')
+  const modalInner = modal.querySelector('.modal__inner')
+  const triggerId = modal.getAttribute('aria-labelledby')
+  const modalCloseButton = modal.querySelector('.modal__close button')
+  const modalTrigger = document.querySelector(`#${triggerId}`)
+  const images = modal.querySelectorAll('img')
+  const iframes = modal.querySelectorAll('iframe')
+
+  console.log(modalInner)
+  
+  /* -------------------------------------------------------------
+  | functions
+  | -------------------------------------------------------------
+  */
+  const teleportToRoot = element => {
+    element.remove()
+    body.appendChild(element)
+  }
+
+  const getKeyboardFocusableElements = element => {
+    return [...element.querySelectorAll(
+      'a, button, input, textarea, select, details,[tabindex]:not([tabindex="-1"])'
+    )]
+      .filter(el => !el.hasAttribute('disabled'))
+  }
+
+  const trapFocus = event => {
+    const focusables = getKeyboardFocusableElements(modal)
+    const firstFocusable = focusables[0]
+    const lastFocusable = focusables[focusables.length - 1]
+
+    if (document.activeElement === lastFocusable && event.key === 'Tab' && !event.shiftKey) {
+      event.preventDefault()
+      firstFocusable.focus()
+    }
+
+    if (document.activeElement === firstFocusable && event.key === 'Tab' && event.shiftKey) {
+      event.preventDefault()
+      lastFocusable.focus()
+    }
+  }
+
+  const closeOnEsc = event => {
+    if (event.key === 'Escape') {
+      closeModal()
+    }
+  }
+
+  const openModal = event => {
+    event && event.preventDefault()
+
+    // Make body stop scrolling
+    body.style.overflow = 'hidden'
+
+    // Load all still images (previously set to lazy)
+    images && images.forEach(image => image.setAttribute('loading', 'eager'))
+
+    const modalTitle = modal.querySelector('h3')
+
+    modal.classList.add('show')
+    body.classList.add('modal-is-active')
+    modalTitle.focus()
+
+    document.addEventListener('keydown', trapFocus)
+    document.addEventListener('keydown', closeOnEsc)
+  }
+
+  const closeModal = _ => {
+    // reset to lazy in case some didn't load before user closed modal
+    images && images.forEach(image => image.setAttribute('loading', 'lazy'))
+
+    pauseIframeVideos()
+
+    modalInner.classList.add('closing')
+
+    setTimeout(()=>{
+      modalInner.scrollTop = 0
+      modalInner.classList.remove('closing')
+      modal.classList.remove('show')
+      body.classList.remove('modal-is-active')
+      modalTrigger.focus({ preventScroll: true })
+      body.style.overflow = 'visible'
+  
+      document.removeEventListener('keydown', trapFocus)
+      document.removeEventListener('keydown', closeOnEsc)
+    }, 500)
+  }
+
+  const pauseIframeVideos = () => {
+    iframes && iframes.forEach(iframe => {
+      if (
+        iframe.contentWindow &&
+        iframe.src.startsWith("https://player.vimeo.com/")
+      ) {
+        iframe.contentWindow.postMessage(
+          '{ "method": "pause" }', 
+          '*'
+        )
+      }
+    })
+  }
+
+  /* -------------------------------------------------------------
+  | execution
+  | -------------------------------------------------------------
+  */
+  teleportToRoot(modal)
+
+  modalTrigger.addEventListener('click', openModal)
+
+  modalCloseButton.addEventListener('click', closeModal)
+
+  modal.addEventListener('click', event => { 
+    if (!event.target.closest('.modal__content')) {
+      closeModal()
+    }
+  })
+
+  window.closeModal = closeModal
+</script>
+
+<style lang="scss">
+  .modal {
+    height: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+    z-index: -10;
+    // border: 6px solid green;
+
+    &.show {
+      display: grid;
+      place-items: center;
+      visibility: visible;
+      height: auto;
+      // background-color: rgba(0, 0, 0, 0.5);
+      inset: 0;
+      z-index: 10;
+      // border: 6px solid salmon;
+
+      .modal__inner {
+        opacity: 1;
+        // transform: translateY(0);
+
+        &.closing {
+          // transform: translateY(2%);
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  .modal__inner {
+    // width: clamp(30ch, 70%, 75ch);
+    width: 100vw;
+    max-height: 100%;
+    position: relative;
+    // color: black;
+    background-color: var(--color-modal-bg);
+    opacity: 0;
+    // transform: translateY(2%);
+    transition: 
+      opacity 0.5s ease-in-out,
+      transform 0.5s ease-out;
+    overflow-y: scroll;
+    // border: 6px solid purple;
+    padding: var(--margin-body-top) 0 6rem;
+  }
+
+  .modal__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    // gap: 0.75rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .modal__close {
+    position: fixed;
+    top: 0rem;
+    right: 0rem;
+    z-index: 100;
+
+    button {
+      padding: var(--margin-body-top);
+      border: none;
+      background-color: transparent;
+      opacity: 0.5;
+      transition: opacity 0.25s ease-in-out;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        opacity: 0.75;
+      }
+
+      img {
+        width: 2.25rem;
+      }
+    }
+  }
+</style>

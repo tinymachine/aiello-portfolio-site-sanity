@@ -27,28 +27,6 @@ projectSets:
     - "/v1652516262/andrew-aiello/portfolio/we-broke-up-01_d4scf5.jpg"
     featuredStill: "/v1652516278/andrew-aiello/portfolio/we-broke-up-19_mn8ikn.jpg"
     projectType: Feature Film
-  - title: Shuddhi
-    director: Adarsh Eshwarappa
-    clips:
-    - https://vimeo.com/manage/videos/674010829
-    featuredStill: "/v1652516014/andrew-aiello/portfolio/shuddhi-07_uw8kyy.jpg"
-    stills:
-    - "/v1652516014/andrew-aiello/portfolio/shuddhi-15_ktoxgh.jpg"
-    - "/v1652516014/andrew-aiello/portfolio/shuddhi-14_yarqpa.jpg"
-    - "/v1652516015/andrew-aiello/portfolio/shuddhi-13_hfpjnm.jpg"
-    - "/v1652516014/andrew-aiello/portfolio/shuddhi-12_azb0ny.jpg"
-    - "/v1652516015/andrew-aiello/portfolio/shuddhi-11_zcdzd3.jpg"
-    - "/v1652516014/andrew-aiello/portfolio/shuddhi-10_bbgwqa.jpg"
-    - "/v1652516014/andrew-aiello/portfolio/shuddhi-09_hmymbx.jpg"
-    - "/v1652516014/andrew-aiello/portfolio/shuddhi-08_ft29il.jpg"
-    - "/v1652516014/andrew-aiello/portfolio/shuddhi-07_uw8kyy.jpg"
-    - "/v1652516014/andrew-aiello/portfolio/shuddhi-06_qtugrk.jpg"
-    - "/v1652516013/andrew-aiello/portfolio/shuddhi-05_vwlcxl.jpg"
-    - "/v1652516014/andrew-aiello/portfolio/shuddhi-04_kznohd.jpg"
-    - "/v1652516013/andrew-aiello/portfolio/shuddhi-03_wcogny.jpg"
-    - "/v1652516014/andrew-aiello/portfolio/shuddhi-02_eajqf5.jpg"
-    - "/v1652516014/andrew-aiello/portfolio/shuddhi-01_xb3odw.jpg"
-    projectType: ''
   - title: International Falls
     director: Amber McGinnis
     clips:
@@ -72,6 +50,28 @@ projectSets:
     - "/v1652515866/andrew-aiello/portfolio/intl-falls-03_auoucp.jpg"
     - "/v1652515866/andrew-aiello/portfolio/intl-falls-02_szll98.jpg"
     - "/v1652515866/andrew-aiello/portfolio/intl-falls-01_wrttv6.jpg"
+    projectType: ''
+  - title: Shuddhi
+    director: Adarsh Eshwarappa
+    clips:
+    - https://vimeo.com/manage/videos/674010829
+    featuredStill: "/v1652516014/andrew-aiello/portfolio/shuddhi-07_uw8kyy.jpg"
+    stills:
+    - "/v1652516014/andrew-aiello/portfolio/shuddhi-15_ktoxgh.jpg"
+    - "/v1652516014/andrew-aiello/portfolio/shuddhi-14_yarqpa.jpg"
+    - "/v1652516015/andrew-aiello/portfolio/shuddhi-13_hfpjnm.jpg"
+    - "/v1652516014/andrew-aiello/portfolio/shuddhi-12_azb0ny.jpg"
+    - "/v1652516015/andrew-aiello/portfolio/shuddhi-11_zcdzd3.jpg"
+    - "/v1652516014/andrew-aiello/portfolio/shuddhi-10_bbgwqa.jpg"
+    - "/v1652516014/andrew-aiello/portfolio/shuddhi-09_hmymbx.jpg"
+    - "/v1652516014/andrew-aiello/portfolio/shuddhi-08_ft29il.jpg"
+    - "/v1652516014/andrew-aiello/portfolio/shuddhi-07_uw8kyy.jpg"
+    - "/v1652516014/andrew-aiello/portfolio/shuddhi-06_qtugrk.jpg"
+    - "/v1652516013/andrew-aiello/portfolio/shuddhi-05_vwlcxl.jpg"
+    - "/v1652516014/andrew-aiello/portfolio/shuddhi-04_kznohd.jpg"
+    - "/v1652516013/andrew-aiello/portfolio/shuddhi-03_wcogny.jpg"
+    - "/v1652516014/andrew-aiello/portfolio/shuddhi-02_eajqf5.jpg"
+    - "/v1652516014/andrew-aiello/portfolio/shuddhi-01_xb3odw.jpg"
     projectType: ''
   - title: Bhinna
     director: Adarsh Eshwarappa

@@ -35,3 +35,5 @@ fields:
     label: Feature Films Project-Type Label
     description: All feature films will show this same project type (e.g. "Feature
       Film") on project detail pages.
+pages:
+- src/settings/Settings.md

@@ -26,14 +26,5 @@ fields:
   - type: list
     name: placeholderStills
     label: placeholderStills
-- type: field_group
-  name: projectSettings
-  label: Project Settings
-  fields:
-  - type: text
-    name: featureProjectTypeLabel
-    label: Feature Films Project-Type Label
-    description: All feature films will show this same project type (e.g. "Feature
-      Film") on project detail pages.
 pages:
 - src/settings/Settings.md

@@ -27,6 +27,7 @@ projectSets:
     - "/v1652516262/andrew-aiello/portfolio/we-broke-up-01_d4scf5.jpg"
     featuredStill: "/v1652516278/andrew-aiello/portfolio/we-broke-up-19_mn8ikn.jpg"
     projectType: Feature Film
+    colorAccent: ''
   - title: International Falls
     director: Amber McGinnis
     clips:
@@ -51,6 +52,7 @@ projectSets:
     - "/v1652515874/andrew-aiello/portfolio/intl-falls-04_a0iq0w.jpg"
     - "/v1652515877/andrew-aiello/portfolio/intl-falls-14_ws2w2r.jpg"
     projectType: Feature Film
+    colorAccent: ''
   - title: Shuddhi
     director: Adarsh Eshwarappa
     clips:
@@ -73,6 +75,7 @@ projectSets:
     - "/v1652516014/andrew-aiello/portfolio/shuddhi-10_bbgwqa.jpg"
     - "/v1652516014/andrew-aiello/portfolio/shuddhi-09_hmymbx.jpg"
     projectType: Feature Film
+    colorAccent: ''
   - title: Bhinna
     director: Adarsh Eshwarappa
     clips:
@@ -95,6 +98,7 @@ projectSets:
     - "/v1652514474/andrew-aiello/portfolio/bhinna-11_xb4ydg.jpg"
     featuredStill: "/v1652514475/andrew-aiello/portfolio/bhinna-10_ymbkak.jpg"
     projectType: Feature Film
+    colorAccent: ''
   - title: Fallen Queen
     director: Joel Soisson
     clips: []
@@ -115,6 +119,8 @@ projectSets:
     - "/v1652514683/andrew-aiello/portfolio/fallen-queen-6_vfqe9y.jpg"
     - "/v1652514681/andrew-aiello/portfolio/fallen-queen-5_xeeeui.jpg"
     projectType: Feature Film
+    colorAccent: ''
+  fallbackProjectTypeLabel: Feature Film
 - heading: Short Form
   projects:
   - title: Green Cobra
@@ -137,6 +143,7 @@ projectSets:
     - "/v1652516742/andrew-aiello/portfolio/green-cobra-04_f7srga.jpg"
     - "/v1652516742/andrew-aiello/portfolio/green-cobra-03_rqkbqs.jpg"
     projectType: Short Film
+    colorAccent: ''
   - director: Eli Kooris and Joshua Shaffer
     clips:
     - https://vimeo.com/manage/videos/673804873
@@ -157,6 +164,7 @@ projectSets:
     - "/v1652517137/andrew-aiello/portfolio/nothingman-07_tszema.jpg"
     title: Nothingman
     projectType: Short Film
+    colorAccent: ''
   - title: Strip
     director: Maxwell Addae
     clips: []
@@ -175,6 +183,7 @@ projectSets:
     - "/v1652517264/andrew-aiello/portfolio/strip-10_cerg9a.jpg"
     - "/v1652517262/andrew-aiello/portfolio/strip-01_onr8dh.jpg"
     projectType: Short Film
+    colorAccent: ''
   - title: Sound of Fear
     director: Colin Campbell
     clips: []
@@ -192,6 +201,7 @@ projectSets:
     - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-06_b0zyyj.jpg"
     - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-05_c9vcmg.jpg"
     projectType: Short Film
+    colorAccent: ''
   - title: Vertis
     director: Peter Sestina
     clips: []
@@ -212,6 +222,7 @@ projectSets:
     - "/v1652517292/andrew-aiello/portfolio/vertis-01_ab6mdw.jpg"
     - "/v1652517292/andrew-aiello/portfolio/vertis-02_c2zwvl.jpg"
     projectType: Commercial
+    colorAccent: ''
   - title: Komb
     director: Sigurd Culhane
     clips: []
@@ -228,6 +239,7 @@ projectSets:
     - "/v1652516789/andrew-aiello/portfolio/komb-08_donasg.jpg"
     - "/v1652516789/andrew-aiello/portfolio/komb-07_p7ihb2.jpg"
     projectType: Commercial
+    colorAccent: ''
   - title: Lizzy Powers
     director: Sigurd Culhane
     clips:
@@ -246,6 +258,7 @@ projectSets:
     - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-05_qnqz2n.jpg"
     - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-01_vvknw4.jpg"
     projectType: Commercials
+    colorAccent: ''
   - title: Lil Sqwid — "Everybody Know"
     director: Erin Elders
     clips: []
@@ -263,6 +276,7 @@ projectSets:
     - "/v1652516963/andrew-aiello/portfolio/lil-squid-ek-08_g2hgls.jpg"
     - "/v1652516963/andrew-aiello/portfolio/lil-squid-ek-07_l6wykv.jpg"
     projectType: Music Video
+    colorAccent: ''
   - title: 1916 — "For Whiskey"
     director: Sigurd Culhane
     clips: []
@@ -279,5 +293,7 @@ projectSets:
     - "/v1652516685/andrew-aiello/portfolio/for-whiskey-08_nivrn8.jpg"
     - "/v1652516684/andrew-aiello/portfolio/for-whiskey-05_ii682j.jpg"
     projectType: Music Video
+    colorAccent: ''
+  fallbackProjectTypeLabel: Short Form
 
 ---

@@ -93,7 +93,7 @@ projectSets:
     - "/v1652514505/andrew-aiello/portfolio/bhinna-4_bc0q4c.jpg"
     - "/v1652514411/andrew-aiello/portfolio/bhinna-3_m5lyyf.jpg"
     - "/v1652514407/andrew-aiello/portfolio/bhinna-2_p00hc3.jpg"
-    featuredStill: "/v1652514412/andrew-aiello/portfolio/bhinna-1_imfvxn.jpg"
+    featuredStill: "/v1652514505/andrew-aiello/portfolio/bhinna-4_bc0q4c.jpg"
     projectType: ''
   - title: Fallen Queen
     director: ''

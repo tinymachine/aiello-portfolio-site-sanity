@@ -198,19 +198,19 @@ projectSets:
     featuredStill: "/v1652517293/andrew-aiello/portfolio/vertis-14_abejkz.jpg"
     stills:
     - "/v1652517293/andrew-aiello/portfolio/vertis-14_abejkz.jpg"
-    - "/v1652517294/andrew-aiello/portfolio/vertis-13_hk8qyh.jpg"
-    - "/v1652517293/andrew-aiello/portfolio/vertis-12_wvn3fz.jpg"
-    - "/v1652517293/andrew-aiello/portfolio/vertis-11_fu3nuw.jpg"
     - "/v1652517292/andrew-aiello/portfolio/vertis-10_hkue5g.jpg"
-    - "/v1652517293/andrew-aiello/portfolio/vertis-09_kjws9s.jpg"
+    - "/v1652517293/andrew-aiello/portfolio/vertis-05_zcdvkz.jpg"
+    - "/v1652517292/andrew-aiello/portfolio/vertis-06_bstlrr.jpg"
     - "/v1652517292/andrew-aiello/portfolio/vertis-08_qkrhix.jpg"
     - "/v1652517292/andrew-aiello/portfolio/vertis-07_jc6h4t.jpg"
-    - "/v1652517292/andrew-aiello/portfolio/vertis-06_bstlrr.jpg"
-    - "/v1652517293/andrew-aiello/portfolio/vertis-05_zcdvkz.jpg"
-    - "/v1652517293/andrew-aiello/portfolio/vertis-04_ozevex.jpg"
+    - "/v1652517293/andrew-aiello/portfolio/vertis-09_kjws9s.jpg"
     - "/v1652517293/andrew-aiello/portfolio/vertis-03_lpyfp8.jpg"
-    - "/v1652517292/andrew-aiello/portfolio/vertis-02_c2zwvl.jpg"
+    - "/v1652517293/andrew-aiello/portfolio/vertis-04_ozevex.jpg"
+    - "/v1652517293/andrew-aiello/portfolio/vertis-11_fu3nuw.jpg"
+    - "/v1652517294/andrew-aiello/portfolio/vertis-13_hk8qyh.jpg"
+    - "/v1652517293/andrew-aiello/portfolio/vertis-12_wvn3fz.jpg"
     - "/v1652517292/andrew-aiello/portfolio/vertis-01_ab6mdw.jpg"
+    - "/v1652517292/andrew-aiello/portfolio/vertis-02_c2zwvl.jpg"
     projectType: Commercial
   - title: Komb
     director: Sigurd Culhane

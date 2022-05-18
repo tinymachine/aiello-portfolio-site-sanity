@@ -135,11 +135,11 @@ projectSets:
     - "/v1652516747/andrew-aiello/portfolio/green-cobra-11_ogwgpb.jpg"
     - "/v1652516746/andrew-aiello/portfolio/green-cobra-09_hqfeoc.jpg"
     - "/v1652516747/andrew-aiello/portfolio/green-cobra-10_bkfu3q.jpg"
+    - "/v1652516746/andrew-aiello/portfolio/green-cobra-06_veo9zp.jpg"
     - "/v1652516742/andrew-aiello/portfolio/green-cobra-05_qoskqn.jpg"
     - "/v1652516746/andrew-aiello/portfolio/green-cobra-08_bkwwec.jpg"
-    - "/v1652516741/andrew-aiello/portfolio/green-cobra-01_ektji2.jpg"
-    - "/v1652516746/andrew-aiello/portfolio/green-cobra-06_veo9zp.jpg"
     - "/v1652516742/andrew-aiello/portfolio/green-cobra-03_rqkbqs.jpg"
+    - "/v1652516741/andrew-aiello/portfolio/green-cobra-01_ektji2.jpg"
     projectType: Short Film
     colorAccent: rgb(81, 191, 160)
   - director: Eli Kooris and Joshua Shaffer

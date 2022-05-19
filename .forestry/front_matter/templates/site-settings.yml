@@ -34,8 +34,11 @@ fields:
       that end with the video's ID number (e.g. </em><code><em>https://vimeo.com/manage/videos/644686119</em></code><em>)</em>"
     config:
       required: true
-  - type: list
-    name: placeholderStills
-    label: placeholderStills
+  - name: placeholderStills
+    type: image_gallery
+    config: {}
+    label: Placeholder Stills
+    description: These images will display as a rotating set before you click to view
+      the reel.
 pages:
 - src/settings/Settings.md

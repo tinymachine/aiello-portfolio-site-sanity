@@ -15,18 +15,22 @@ const {
   },
   projectTypeLabel
 } = Astro.props
+
+const getAccentColor = () => colorAccent || 'var(--color-strong)'
 ---
 
 <BaseModal {triggerId}>
   <header>
     <h3 
-      style={`color: ${colorAccent || 'var(--color-strong'}`}
+      style={`color: ${getAccentColor()}`}
       tabindex="-1"
     >
       <Markdown content={title} inline />
     </h3>
     <h4>
-      {projectTypeLabel}
+      <span style={`color: ${getAccentColor()}`}>
+        {projectTypeLabel}
+      </span>
       {director && <><br>Director: {director}</>}
     </h4>
   </header>
@@ -76,7 +80,7 @@ header {
   }
 
   h4 {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 0.8125em;
     letter-spacing: 0.05ch;
   }

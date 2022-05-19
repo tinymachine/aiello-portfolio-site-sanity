@@ -13,7 +13,12 @@ const {
 } = Astro.props
 ---
 
-<div class="modal" role="dialog" aria-labelledby={triggerId}>
+<div
+  class="modal"
+  role="dialog"
+  aria-labelledby={triggerId}
+  aria-hidden="true"
+>
   <div class="modal__inner">
     <div class="modal__content">
       <!-- <h3 tabindex="-1">
@@ -43,8 +48,6 @@ const {
   const images = modal.querySelectorAll('img')
   const iframes = modal.querySelectorAll('iframe')
 
-  console.log(modalInner)
-  
   /* -------------------------------------------------------------
   | functions
   | -------------------------------------------------------------
@@ -95,6 +98,7 @@ const {
     const modalTitle = modal.querySelector('h3')
 
     modal.classList.add('show')
+    modal.setAttribute('aria-hidden', false)
     body.classList.add('modal-is-active')
     modalTitle.focus()
 
@@ -114,6 +118,7 @@ const {
       modalInner.scrollTop = 0
       modalInner.classList.remove('closing')
       modal.classList.remove('show')
+      modal.setAttribute('aria-hidden', true)
       body.classList.remove('modal-is-active')
       modalTrigger.focus({ preventScroll: true })
       body.style.overflow = 'visible'

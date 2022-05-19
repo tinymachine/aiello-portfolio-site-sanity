@@ -17,6 +17,13 @@ const {
 } = Astro.props
 
 const getAccentColor = () => colorAccent || 'var(--color-strong)'
+
+const getDirectorLabel = () =>
+  `Director${
+    (director.includes('and') || director.includes(','))
+    ? 's'
+    : ''
+  }`
 ---
 
 <BaseModal {triggerId}>
@@ -31,7 +38,7 @@ const getAccentColor = () => colorAccent || 'var(--color-strong)'
       <span style={`color: ${getAccentColor()}`}>
         {projectTypeLabel}
       </span>
-      {director && <><br>Director: {director}</>}
+      {director && <><br>{getDirectorLabel()}: {director}</>}
     </h4>
   </header>
 

@@ -22,6 +22,18 @@ import { imagePath } from '../settings/siteInfo'
 
           <h4 style={`color: ${ project.colorAccent || 'var(--color-default'}`}>
             <Markdown content={project.title} inline />
+            {
+              // Show projectType labels but not for features,
+              // which all share the same type
+              project.projectType &&
+              !project.projectType.toLowerCase().startsWith('feature') &&
+              (
+                <span class="type">
+                  <span aria-hidden="true">/</span>
+                  {project.projectType}
+                </span>
+              )
+            }
           </h4>
         </a>
 
@@ -66,5 +78,10 @@ article {
 
 article a:focus{
   outline: none !important; // this is bad
+}
+
+.type {
+  white-space: nowrap;
+  opacity: 0.7;
 }
 </style>

@@ -26,7 +26,7 @@ projectSets:
     - "/v1652516265/andrew-aiello/portfolio/we-broke-up-02_x2tms1.jpg"
     - "/v1652516262/andrew-aiello/portfolio/we-broke-up-01_d4scf5.jpg"
     featuredStill: "/v1652516278/andrew-aiello/portfolio/we-broke-up-19_mn8ikn.jpg"
-    projectType: Feature Film
+    projectType: 
     colorAccent: rgb(180, 167, 128)
   - title: International Falls
     director: Amber McGinnis
@@ -51,7 +51,7 @@ projectSets:
     - "/v1652515866/andrew-aiello/portfolio/intl-falls-02_szll98.jpg"
     - "/v1652515874/andrew-aiello/portfolio/intl-falls-04_a0iq0w.jpg"
     - "/v1652515877/andrew-aiello/portfolio/intl-falls-14_ws2w2r.jpg"
-    projectType: Feature Film
+    projectType: 
     colorAccent: rgb(178, 182, 177)
   - title: Shuddhi
     director: Adarsh Eshwarappa
@@ -74,7 +74,7 @@ projectSets:
     - "/v1652516014/andrew-aiello/portfolio/shuddhi-14_yarqpa.jpg"
     - "/v1652516014/andrew-aiello/portfolio/shuddhi-10_bbgwqa.jpg"
     - "/v1652516014/andrew-aiello/portfolio/shuddhi-09_hmymbx.jpg"
-    projectType: Feature Film
+    projectType: 
     colorAccent: rgb(147, 140, 123)
   - title: Bhinna
     director: Adarsh Eshwarappa
@@ -97,7 +97,7 @@ projectSets:
     - "/v1652514475/andrew-aiello/portfolio/bhinna-10_ymbkak.jpg"
     - "/v1652514474/andrew-aiello/portfolio/bhinna-11_xb4ydg.jpg"
     featuredStill: "/v1652514475/andrew-aiello/portfolio/bhinna-10_ymbkak.jpg"
-    projectType: Feature Film
+    projectType: 
     colorAccent: rgb(116, 136, 149)
   - title: Fallen Queen
     director: Joel Soisson
@@ -118,7 +118,7 @@ projectSets:
     - "/v1652514684/andrew-aiello/portfolio/fallen-queen-7_cczabq.jpg"
     - "/v1652514683/andrew-aiello/portfolio/fallen-queen-6_vfqe9y.jpg"
     - "/v1652514681/andrew-aiello/portfolio/fallen-queen-5_xeeeui.jpg"
-    projectType: Feature Film
+    projectType: 
     colorAccent: rgb(124, 146, 164)
   fallbackProjectTypeLabel: Feature Film
 - heading: Short Form

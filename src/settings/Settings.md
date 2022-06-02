@@ -12,7 +12,6 @@ reel:
   - "/v1652980875/andrew-aiello/portfolio/A086C017_141121Q1.16_25_52_16.Still001_kg6zsz.jpg"
   - "/v1652980876/andrew-aiello/portfolio/stripthumbnailcrop_z0sfr0.jpg"
   - "/v1652980877/andrew-aiello/portfolio/lizzypowersthumbnailcrop_yfqzgu.jpg"
-  - ''
 themeColors:
   verticalRule: rgb(75, 75, 75)
 projectSettings:

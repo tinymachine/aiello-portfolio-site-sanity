@@ -1,0 +1,121 @@
+---
+import { frontmatter } from '../settings/Settings.md'
+import { imagePath } from '../settings/siteInfo'
+
+const stills = frontmatter.reel.placeholderStills
+---
+<div class="slideshow" data-slideshow>
+  <div class="slide-container">
+    {stills.map((still, i) => (
+      <img
+        src={imagePath + still}
+        alt=""
+        class="slide"
+        width="1796"
+        height="1010"
+        data-slide-index={i}
+      >
+    ))}
+  </div>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('[data-slide-index]')
+  // const slideshow = document.querySelector('[data-slideshow]')
+  // slideshow.style.setProperty('--bg-img', `url(${slides[0].src})`)
+
+  let i = 0
+  const interval = 4000
+  const crossfadeDuration = 3000
+
+  const advanceSlideshow = () => {
+    const thisSlide = slides[i % slides.length]
+    // slideshow.style.setProperty('--bg-img', `url(${thisSlide.src})`)
+
+    // Start in-transition
+    thisSlide.style.visibility = 'visible'
+    thisSlide.classList.add('intro')
+    
+    // Begin out-transition
+    setTimeout(() => {
+      thisSlide.classList.replace('intro', 'outro')
+    }, interval)
+    
+    // Complete out-transition
+    setTimeout(() => {
+      thisSlide.style.visibility = 'hidden'
+      thisSlide.classList.remove('outro')
+    }, interval + crossfadeDuration)
+    
+    i++
+  }
+
+  advanceSlideshow()
+  setInterval(() => advanceSlideshow(), interval)
+</script>
+
+<style lang="scss">
+  .slideshow {
+    --test-color: red;
+    position: relative;
+    margin: 0;
+    width: 100vw;
+    min-width: 100%;
+    max-width: min(120vh, var(--max-element-width));
+    aspect-ratio: 1796 / 1005; /** 
+                                * Intentionally shorter than 1010 intrinsic
+                                * image height to workaround Safari height miscalculation:
+                                */
+    align-self: center; 
+  }
+
+  // backdrop bleeding left and right
+  .slideshow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    background: rgb(20 20 20);
+    // background: var(--test-color);
+    // background-image: var(--bg-img);
+    // background-size: cover;
+    // filter: blur(1em);
+    // overflow: hidden;
+    // opacity: 0.5;
+    height: calc(100%);
+    z-index: -1;
+  }
+
+  .slide-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    // overflow: hidden;
+  }
+
+  .slide {
+    position: absolute;
+    display: block;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    filter: blur(2em);
+    transition: opacity 1.5s, filter 1.5s;
+    // box-shadow: 0 8px 96px 48px rgb(0, 0, 0, 1)
+
+    &.intro {
+      opacity: 1;
+      filter: blur(0);
+    }
+
+    &.outro {
+      opacity: 0;
+      filter: blur(2em);
+    }
+  }
+</style>

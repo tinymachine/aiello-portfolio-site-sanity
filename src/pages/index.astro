@@ -1,11 +1,11 @@
 ---
 import { frontmatter as site } from '../settings/Settings.md'
-
 import Layout from '../layout/Layout.astro'  
 import AboutSection from '../components/AboutSection.astro'
 import ProjectSets from '../components/ProjectSets.astro'
-import VimeoPlayer from '../components/VimeoPlayer.astro'
+import ReelPlaceholder from '../components/ReelPlaceholder.astro'
 import ScrollButton from '../components/ScrollButton.astro'
+import VimeoPlayer from '../components/VimeoPlayer.astro'
 
 const colorThemeVerticalRule = site.themeColors.verticalRule
 ---
@@ -17,9 +17,11 @@ const colorThemeVerticalRule = site.themeColors.verticalRule
       <h2>{site.title}</h2>
     </header>
 
-    <div class="bleed video-fade-in">
+    <ReelPlaceholder />
+
+    <!-- <div class="bleed video-fade-in">
       <VimeoPlayer url={site.reel.vimeoUrl} />
-    </div>
+    </div> -->
 
     <div class="align-r scroller-fade-in" style="padding-top: 1rem;">
       <ScrollButton targetId="first-section" />

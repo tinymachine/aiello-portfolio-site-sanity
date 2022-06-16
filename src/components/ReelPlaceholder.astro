@@ -45,9 +45,27 @@ const reelModalTriggerId = 'reel-slideshow'
   </a>
 
   <BaseModal triggerId={reelModalTriggerId} autoplayVimeoPlayer>
-    <div style="width: 100%;">
-      <h3 tabindex="-1"></h3>
-      <VimeoPlayer url={frontmatter.reel.vimeoUrl} />
+    <div
+      style="
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+        right: 0;
+        bottom: 0;
+      "
+    >
+      <div style="
+        display: grid; /* centers player vertically */
+        width: 100%;
+        max-width: min(16 / 9 * 100vh - 4vh, var(--max-element-width));
+      ">
+        <VimeoPlayer url={frontmatter.reel.vimeoUrl} />
+      </div>
     </div>
   </BaseModal>
 </>
@@ -178,7 +196,9 @@ const reelModalTriggerId = 'reel-slideshow'
     display: flex;
     padding: 0.825em;
     border-radius: 999px;
-    transition: opacity 0.25s ease-out, background-color 0.25s ease-out;
+    transition: 
+      opacity 0.25s ease-out,
+      background-color 0.25s ease-out;
     
     .slideshow:hover & {
       background-color: rgb(0 0 0 / 60%);

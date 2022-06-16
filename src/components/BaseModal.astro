@@ -7,8 +7,9 @@
  */
 
 const {
-  triggerId,
-  closeText = 'Close'
+  autoplayVimeoPlayer,
+  closeText = 'Close',
+  triggerId
 } = Astro.props
 ---
 
@@ -17,15 +18,17 @@ const {
   role="dialog"
   aria-labelledby={triggerId}
   aria-hidden="true"
+  data-autoplay-vimeo-player={autoplayVimeoPlayer}
 >
   <div class="modal__inner">
-    <div class="modal__content">
-      <slot>Modal description.</slot>
-    </div>
     <div class="modal__close">
-      <button aria-label={closeText}>
+      <button aria-label={closeText} class="modal__close__button">
         <img src="/img/close-button.svg" alt="" title="Press Esc to close" />
       </button>
+    </div>
+
+    <div class="modal__content">
+      <slot>Modal description.</slot>
     </div>
   </div>
 </div>
@@ -43,6 +46,8 @@ const {
   const modalTrigger = document.querySelector(`#${triggerId}`)
   const images = modal.querySelectorAll('img')
   const iframes = modal.querySelectorAll('iframe')
+  const shouldAutoplay = modal.hasAttribute('data-autoplay-vimeo-player')
+  // let isPaused = false
 
   /* -------------------------------------------------------------
   | functions
@@ -91,15 +96,23 @@ const {
     // Load all still images (previously set to lazy)
     images && images.forEach(image => image.setAttribute('loading', 'eager'))
 
-    const modalTitle = modal.querySelector('h3')
+    const modalCloseButton = modal.querySelector('.modal__close__button')
 
     modal.classList.add('show')
     modal.setAttribute('aria-hidden', false)
     body.classList.add('modal-is-active')
-    modalTitle.focus()
-
+    modalCloseButton.focus()
+    
+    // Set up keyboard functions
     document.addEventListener('keydown', trapFocus)
     document.addEventListener('keydown', closeOnEsc)
+
+    // Autoplay Vimeo video if indicated by prop
+    if (shouldAutoplay) {
+      const vimeoPlayerIframe = modal.querySelector('iframe');
+      const player = new Vimeo.Player(vimeoPlayerIframe);
+      player.play()
+    }
   }
 
   const closeModal = _ => {
@@ -187,8 +200,8 @@ const {
   }
 
   .modal__inner {
-    width: 100vw;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
     position: relative;
     background-color: var(--color-modal-bg);
     opacity: 0;
@@ -224,6 +237,10 @@ const {
       &:hover,
       &:focus {
         opacity: 0.75;
+      }
+
+      &:focus {
+        outline: none; // this is bad
       }
 
       img {

@@ -1,40 +1,56 @@
 ---
 import { frontmatter } from '../settings/Settings.md'
 import { imagePath } from '../settings/siteInfo'
+import BaseModal from './BaseModal.astro'
+import VimeoPlayer from './VimeoPlayer.astro'
 
-const stills = frontmatter.reel.placeholderStills
+const reelModalTriggerId = 'reel-slideshow'
 ---
-<a class="slideshow" data-slideshow>
-  <div class="slide-container">
-    {stills.map((still, i) => (
-      <img
-        src={imagePath + still}
-        alt=""
-        class="slide-bg"
-        width="1796"
-        height="1010"
-        data-slide-bg-index={i}
-      >
+<>
+  <a
+    class="slideshow"
+    href={frontmatter.reel.vimeoUrl}
+    data-slideshow
+    id={reelModalTriggerId}
+  >
+    <div class="slide-container">
+      {frontmatter.reel.placeholderStills.map((still, i) => (
+        <img
+          src={imagePath + still}
+          alt=""
+          class="slide-bg"
+          width="1796"
+          height="1010"
+          data-slide-bg-index={i}
+        >
 
-      <img
-        src={imagePath + still}
-        alt=""
-        class="slide"
-        width="1796"
-        height="1010"
-        data-slide-index={i}
-      >
-    ))}
-  </div>
+        <img
+          src={imagePath + still}
+          alt=""
+          class="slide"
+          width="1796"
+          height="1010"
+          data-slide-index={i}
+        >
+      ))}
+    </div>
 
-  <div class="play-button">
-    <img
-      src="/img/play.svg"
-      alt=""
-      class="play-button-icon"
-    >
-  </div>
-</a>
+    <div class="play-button">
+      <img
+        src="/img/play.svg"
+        alt=""
+        class="play-button-icon"
+      >
+    </div>
+  </a>
+
+  <BaseModal triggerId={reelModalTriggerId} autoplayVimeoPlayer>
+    <div style="width: 100%;">
+      <h3 tabindex="-1"></h3>
+      <VimeoPlayer url={frontmatter.reel.vimeoUrl} />
+    </div>
+  </BaseModal>
+</>
 
 <script>
   const slides = document.querySelectorAll('[data-slide-index]')
@@ -75,6 +91,14 @@ const stills = frontmatter.reel.placeholderStills
 </script>
 
 <style lang="scss">
+  [tabindex="-1"] {
+    outline: none;
+  }
+
+  .slideshow:focus {
+    outline: none; // this is bad
+  }
+
   .slideshow {
     position: relative;
     margin: 0;
@@ -157,7 +181,7 @@ const stills = frontmatter.reel.placeholderStills
     transition: opacity 0.25s ease-out, background-color 0.25s ease-out;
     
     .slideshow:hover & {
-      background-color: rgb(0 0 0 / 40%);
+      background-color: rgb(0 0 0 / 60%);
       opacity: 1;
     }
   }

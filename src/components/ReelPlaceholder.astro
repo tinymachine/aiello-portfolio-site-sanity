@@ -57,17 +57,14 @@ const stills = frontmatter.reel.placeholderStills
     
     // Begin out-transition
     setTimeout(() => {
-      thisSlide.classList.replace('intro', 'outro')
-      thisSlideBg.classList.replace('intro', 'outro')
+      thisSlide.classList.remove('intro')
+      thisSlideBg.classList.remove('intro')
     }, interval)
     
     // Complete out-transition
     setTimeout(() => {
       thisSlide.style.visibility = 'hidden'
-      thisSlide.classList.remove('outro')
-    
       thisSlideBg.style.visibility = 'hidden'
-      thisSlideBg.classList.remove('outro')
     }, interval + crossfadeDuration)
     
     i++

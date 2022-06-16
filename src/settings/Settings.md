@@ -2,7 +2,7 @@
 name: Andrew Aiello
 title: Director of Photography
 reel:
-  vimeoUrl: https://vimeo.com/manage/videos/644686119
+  vimeoUrl: https://vimeo.com/644686119 
   placeholderStills:
   - "/v1652980875/andrew-aiello/portfolio/vertisthumbnailcrop_tdsqpi.jpg"
   - "/v1652980873/andrew-aiello/portfolio/greencobrathumbnailcrop_i6ywjp.jpg"

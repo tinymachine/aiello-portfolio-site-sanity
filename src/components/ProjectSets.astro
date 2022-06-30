@@ -3,6 +3,8 @@ import { frontmatter as projectData } from '../content/Projects.md'
 import Markdown from './Markdown.astro'
 import ProjectModal from './ProjectModal.astro'
 import { imagePath } from '../settings/siteInfo'
+
+const cloudinaryFeaturedStillTransforms = '/c_limit,w_1280'
 ---
 
 {projectData.projectSets.map((projectSet, i) => (
@@ -15,7 +17,7 @@ import { imagePath } from '../settings/siteInfo'
           <div class="bleed-r">
             <img
               class="still bleed-r"
-              src={imagePath + project.featuredStill}
+              src={imagePath + cloudinaryFeaturedStillTransforms + project.featuredStill}
               alt=""
             />
           </div>

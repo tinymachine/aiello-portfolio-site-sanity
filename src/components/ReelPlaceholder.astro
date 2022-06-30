@@ -5,6 +5,8 @@ import BaseModal from './BaseModal.astro'
 import VimeoPlayer from './VimeoPlayer.astro'
 
 const reelModalTriggerId = 'reel-slideshow'
+// const slideBgCloudinaryTransforms = '/e_blur:5000/e_vibrance:100/w_150'
+const slideBgCloudinaryTransforms = '/w_48'
 ---
 <>
   <a
@@ -16,7 +18,7 @@ const reelModalTriggerId = 'reel-slideshow'
     <div class="slide-container">
       {frontmatter.reel.placeholderStills.map((still, i) => (
         <img
-          src={imagePath + still}
+          src={imagePath + slideBgCloudinaryTransforms + still}
           alt=""
           class="slide-bg"
           width="1796"
@@ -91,14 +93,17 @@ const reelModalTriggerId = 'reel-slideshow'
     
     // Begin out-transition
     setTimeout(() => {
-      thisSlide.classList.remove('intro')
-      thisSlideBg.classList.remove('intro')
+      thisSlide.classList.replace('intro', 'outro')
+      thisSlideBg.classList.replace('intro', 'outro')
     }, interval)
     
     // Complete out-transition
     setTimeout(() => {
       thisSlide.style.visibility = 'hidden'
       thisSlideBg.style.visibility = 'hidden'
+
+      thisSlide.classList.remove('outro')
+      thisSlideBg.classList.remove('outro')
     }, interval + crossfadeDuration)
     
     i++
@@ -153,10 +158,10 @@ const reelModalTriggerId = 'reel-slideshow'
       opacity: 1;
     }
     
-    &.outro {
-      opacity: 1;
-      z-index: -1;
-    }
+    // &.outro {
+    //   opacity: 1;
+    //   z-index: -1;
+    // }
   }
 
   .slide-bg {
@@ -171,13 +176,11 @@ const reelModalTriggerId = 'reel-slideshow'
     z-index: -10;
     filter: blur(8em) saturate(2);
     opacity: 0;
-    transition: opacity 3s linear;
+    transition: opacity 1.5s;
+    will-change: opacity;
 
     &.intro {
       opacity: 0.5;
-    }
-
-    &.outro {
     }
   }
 

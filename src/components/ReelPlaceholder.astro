@@ -6,7 +6,10 @@ import VimeoPlayer from './VimeoPlayer.astro'
 
 const reelModalTriggerId = 'reel-slideshow'
 // const slideBgCloudinaryTransforms = '/e_blur:5000/e_vibrance:100/w_150'
-const slideBgCloudinaryTransforms = '/w_48'
+const cloudinaryTransforms = {
+  slide: '/c_limit,w_1920', // limit to 1080p width
+  slideBg: '/w_48'
+}
 ---
 <>
   <a
@@ -18,7 +21,7 @@ const slideBgCloudinaryTransforms = '/w_48'
     <div class="slide-container">
       {frontmatter.reel.placeholderStills.map((still, i) => (
         <img
-          src={imagePath + slideBgCloudinaryTransforms + still}
+          src={imagePath + cloudinaryTransforms.slideBg + still}
           alt=""
           class="slide-bg"
           width="1796"
@@ -27,7 +30,7 @@ const slideBgCloudinaryTransforms = '/w_48'
         >
 
         <img
-          src={imagePath + still}
+          src={imagePath + cloudinaryTransforms.slide + still}
           alt=""
           class="slide"
           width="1796"

@@ -4,7 +4,7 @@ import Markdown from './Markdown.astro'
 import ProjectModal from './ProjectModal.astro'
 import { imagePath } from '../settings/siteInfo'
 
-const cloudinaryFeaturedStillTransforms = '/c_limit,w_1280'
+const cloudinaryFeaturedStillTransforms = '/c_limit,w_1280' // `c_limit` = shrink to fit
 ---
 
 {projectData.projectSets.map((projectSet, i) => (

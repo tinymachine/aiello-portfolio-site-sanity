@@ -24,6 +24,8 @@ const getDirectorLabel = () =>
     ? 's'
     : ''
   }`
+
+const cloudinaryStillTransforms = '/c_limit,w_1800' // `c_limit` = shrink to fit
 ---
 
 <BaseModal {triggerId}>
@@ -58,7 +60,15 @@ const getDirectorLabel = () =>
         <section class="stills">
           <div class="still-thumbs">
             {stills.map(still => (
-              <img src={imagePath + still} alt="" loading="lazy" />
+              <img
+                src={
+                  imagePath +
+                  cloudinaryStillTransforms +
+                  still
+                }
+                alt=""
+                loading="lazy" 
+              />
             ))}
           </div>
         </section>

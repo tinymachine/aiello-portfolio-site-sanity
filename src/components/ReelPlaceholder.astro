@@ -2,10 +2,9 @@
 import { frontmatter } from '../settings/Settings.md'
 import { imagePath } from '../settings/siteInfo'
 import BaseModal from './BaseModal.astro'
-import VimeoPlayer from './VimeoPlayer.astro'
+import VimeoPlayer from './VimeoPlayer.svelte'
 
 const reelModalTriggerId = 'reel-slideshow'
-// const slideBgCloudinaryTransforms = '/e_blur:5000/e_vibrance:100/w_150'
 const cloudinaryTransforms = {
   slide: '/c_limit,w_1920', // limit to 1080p width
   slideBg: '/w_48'
@@ -69,7 +68,11 @@ const cloudinaryTransforms = {
         width: 100%;
         max-width: min(16 / 9 * 100vh - 4vh, var(--max-element-width));
       ">
-        <VimeoPlayer url={frontmatter.reel.vimeoUrl} />
+        <VimeoPlayer
+          url={frontmatter.reel.vimeoUrl}
+          title="Andrew Aiello Reel"
+          autoplay={false}
+        />
       </div>
     </div>
   </BaseModal>

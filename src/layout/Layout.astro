@@ -33,12 +33,14 @@ import '../styles/global.scss';
 </head>
 
 <body class="home">
-  <slot />
+  <div class="container">
+    <slot />
 
-  <footer>
-    <Monogram />
-    <p>&copy; {metadata.name}</p>
-  </footer>
+    <footer>
+      <Monogram />
+      <p>&copy; {metadata.name}</p>
+    </footer>
+  </div>
 
   <script src="https://player.vimeo.com/api/player.js"></script>
 </body>

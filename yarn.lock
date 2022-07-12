@@ -673,7 +673,7 @@ ast-types@0.14.2, ast-types@^0.14.2:
   dependencies:
     tslib "^2.0.1"
 
-astro@^1.0.0-beta.40:
+astro@^1.0.0-beta.64:
   version "1.0.0-beta.64"
   resolved "https://registry.yarnpkg.com/astro/-/astro-1.0.0-beta.64.tgz#5f9349872038a69394af8f4b268e344be34c7435"
   integrity sha512-c6Lv6KIE1LZgZ1uu4lYt/uFrTl+o1iq4udyBuadxVFMg3Kf7Wl0rGNLI31hqUoPIli9s0lJibCNuzHT+ab2vRw==
@@ -3458,6 +3458,11 @@ supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
+
+svelte-accessible-dialog@^2.1.3:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/svelte-accessible-dialog/-/svelte-accessible-dialog-2.1.3.tgz#ba1a32475e270cd25ba5b66e6c00b6e8bab75917"
+  integrity sha512-W3JVaPgLznHn297uTF32Ybp5FUYr7Mm9Geiu8zhQvOTIkLdo/iLpOeytTaD7U/8CdNFx8YWJayBCnAXJvxdLew==
 
 svelte-hmr@^0.14.12:
   version "0.14.12"

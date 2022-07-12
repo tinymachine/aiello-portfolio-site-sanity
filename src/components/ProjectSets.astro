@@ -1,90 +1,21 @@
 ---
 import { frontmatter as projectData } from '../content/Projects.md'
-import Markdown from './Markdown.astro'
-import ProjectModal from './ProjectModal.astro'
-import { imagePath } from '../settings/siteInfo'
-
-const cloudinaryFeaturedStillTransforms = '/c_limit,w_1280' // `c_limit` = shrink to fit
+import Project from './Project.svelte'
 ---
 
 {projectData.projectSets.map((projectSet, i) => (
   <section class="section" id={i === 0 && 'first-section'}>
     <h3>{projectSet.heading}</h3>
 
-    {projectSet.projects.map((project, j) => (
-      <article>
-        <a href="#" id={`trigger-${i}-${j}`}>
-          <div class="bleed-r">
-            <img
-              class="still bleed-r"
-              src={imagePath + cloudinaryFeaturedStillTransforms + project.featuredStill}
-              alt=""
-            />
-          </div>
-
-          <h4 style={`color: ${ project.colorAccent || 'var(--color-default'}`}>
-            <Markdown content={project.title} inline />
-            {
-              // Show projectType labels but not for features,
-              // which all share the same type
-              project.projectType &&
-              !project.projectType.toLowerCase().startsWith('feature') &&
-              (
-                <span class="type">
-                  <span aria-hidden="true">/</span>
-                  {project.projectType}
-                </span>
-              )
-            }
-          </h4>
-        </a>
-
-        <ProjectModal 
-          triggerId={`trigger-${i}-${j}`}
-          {project}
-          projectTypeLabel={ 
-            project.projectType ||
-            projectSet.fallbackProjectTypeLabel
-          }
-        />
-      </article>
+    {projectSet.projects.map((project) => (
+      <Project
+        {project}
+        projectTypeLabel={ 
+          project.projectType ||
+          projectSet.fallbackProjectTypeLabel
+        }
+        client:visible
+      />
     ))}
   </section>
 ))}
-
-<style lang="scss">
-a {
-  display: block;
-  text-decoration: none;
-  opacity: 0.85;
-  transition: opacity 0.5s linear;
-  text-decoration: none;
-    
-  &:hover {
-    opacity: 1;
-  }
-}
-
-h4 {
-  font-weight: normal;
-  font-size: 0.875em;
-  margin: 0;
-  padding: 0;
-  color: var(--color-strong);
-  transition: opacity 0.5s linear;
-}
-
-article {
-  margin-bottom: 3.5em;
-  // margin-bottom: clamp(3.25em, 4vw, 4em)
-}
-
-article a:focus{
-  outline: none !important; // this is bad
-}
-
-.type {
-  white-space: nowrap;
-  opacity: 0.7;
-}
-</style>

@@ -5,7 +5,6 @@ import AboutSection from '../components/AboutSection.astro'
 import ProjectSets from '../components/ProjectSets.astro'
 import ReelPlaceholder from '../components/ReelPlaceholder.astro'
 import ScrollButton from '../components/ScrollButton.astro'
-import VimeoPlayer from '../components/VimeoPlayer.astro'
 
 const colorThemeVerticalRule = site.themeColors.verticalRule
 ---
@@ -19,10 +18,6 @@ const colorThemeVerticalRule = site.themeColors.verticalRule
       </header>
       
       <ReelPlaceholder />
-      
-      <!-- <div class="bleed video-fade-in">
-        <VimeoPlayer url={site.reel.vimeoUrl} />
-      </div> -->
       
       <div class="align-r scroller-fade-in" style="padding-top: 1rem;">
         <ScrollButton targetId="first-section" />

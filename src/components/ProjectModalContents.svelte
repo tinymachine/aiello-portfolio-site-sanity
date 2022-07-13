@@ -1,6 +1,6 @@
 <script>
   import VimeoPlayer from './VimeoPlayer.svelte'
-  import ProjectModalStills from './ProjectModalStills.svelte'
+  import ProjectModalGallery from './ProjectModalGallery.svelte'
   import { onMount } from 'svelte';
 
   export let project
@@ -68,7 +68,7 @@
     {/if}
 
     {#if stills}
-      <ProjectModalStills
+      <ProjectModalGallery
         {stills}
         {bpAnchor}
         {bpAnchorMounted}

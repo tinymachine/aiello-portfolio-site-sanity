@@ -100,4 +100,34 @@
       display: block;
     }
   }
+
+  // darken BP's scrim so modal contents don't appear beneath
+  :global(.bp-wrap > div:first-child) {
+		background: rgb(0, 0, 0);
+	}
+
+  // align image count (e.g. '1 / 16') with modal header
+  :global(.bp-count) {
+    margin-top: var(--margin-body-top);
+    margin-left: var(--modal-h-margin);
+    font-size: 0.8125em;
+  }
+
+  // align X button with modal's X button
+  :global(.bp-controls button.bp-x) {
+    top: calc(var(--margin-body-top) + 0.5px);
+    right: calc(var(--modal-h-margin));
+    border-radius: 999px;
+    width: 48px;
+    height: 48px;
+    background-color: rgb(0, 0, 0, 0.25);
+  }
+
+  // change icon from X to opposing arrows
+  :global(.bp-x::before) {
+    content: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMjIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMC4wNzEgMTEuOTI4SDEuOTI4djIuNDNoMy45OTdMLjI5MyAxOS45ODVsMS43MTYgMS43MjIgNS42MzQtNS42MzR2My45OTdoMi40Mjh2LTguMTQzWm02LjAwMy00LjI4NSA1LjYzMi01LjYzLTEuNzEtMS43MjEtNS42NCA1LjYzNFYxLjkzaC0yLjQyOHY4LjE0Mmg4LjE0M1Y3LjY0M2gtMy45OTdaIiBmaWxsPSIjZmZmIi8+PC9zdmc+');
+    width: 22px;
+    top: 13px;
+    left: 13px;
+  }
 </style>

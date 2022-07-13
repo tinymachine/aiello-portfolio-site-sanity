@@ -69,7 +69,7 @@
     z-index: 2;
 
     button {
-      padding: var(--margin-body-top);
+      padding: var(--margin-body-top) var(--modal-h-margin);
       border: none;
       background-color: transparent;
       opacity: 0.5;
@@ -85,7 +85,7 @@
 
       &:hover,
       &:focus {
-        opacity: 0.75;
+        opacity: 0.625;
       }
 
       img {

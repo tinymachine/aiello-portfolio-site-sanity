@@ -83,7 +83,7 @@
 
 <style lang="scss">
   header {
-    padding-left: 2rem;
+    padding-left: var(--modal-h-margin);
     margin-bottom: 2rem;
     position: sticky;
     z-index: 1;

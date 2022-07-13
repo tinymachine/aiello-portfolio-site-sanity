@@ -8,11 +8,17 @@
   export let onDismiss
   export let project
   export let projectTypeLabel
+
+  let modalDismissEnabled = true
+
+  const handleDismiss = () => {
+    modalDismissEnabled && onDismiss()
+  }
 </script>
 
 <DialogOverlay
   {isOpen}
-  {onDismiss}
+  onDismiss={handleDismiss}
   style="z-index: 10; background: transparent; overflow: visible;"
 >
 
@@ -42,6 +48,7 @@
         <ProjectModalContents
           {project}
           {projectTypeLabel}
+          bind:modalDismissEnabled
         />
 
       </DialogContent>

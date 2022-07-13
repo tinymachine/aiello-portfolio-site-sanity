@@ -20,6 +20,7 @@
     "sass": "1.51.0"
   },
   "dependencies": {
+    "bigger-picture": "^1.1.1",
     "svelte": "^3.49.0",
     "svelte-accessible-dialog": "^2.1.3"
   }

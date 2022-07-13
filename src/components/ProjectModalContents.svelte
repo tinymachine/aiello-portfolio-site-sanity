@@ -1,9 +1,14 @@
 <script>
-  import VimeoPlayer from "./VimeoPlayer.svelte"
+  import VimeoPlayer from './VimeoPlayer.svelte'
+  import BiggerPicture from 'bigger-picture/src/bigger-picture.js'
   import { imagePath } from '../settings/siteInfo'
+  import { onMount } from 'svelte'
   
+  import 'bigger-picture/dist/bigger-picture.css'
+
   export let project
   export let projectTypeLabel
+  export let modalDismissEnabled
 
   const {
     title,
@@ -23,8 +28,30 @@
     }`
 
   const cloudinaryStillTransforms = '/c_limit,w_1800' // `c_limit` = shrink to fit
-</script>
 
+  let bp
+  let bpLightboxAnchor
+
+  onMount(() => {
+    bp = BiggerPicture({
+      target: bpLightboxAnchor,
+    })
+  })
+
+  const openGallery = (e) => {
+    if (bp && bpLightboxAnchor) {
+      e.preventDefault()
+      modalDismissEnabled = false // prevent project modal from closing when hitting Esc
+
+      bp.open({
+        items: bpLightboxAnchor.querySelectorAll('#images a'),
+        el: e.currentTarget,
+        intro: 'fadeup',
+        onClose: () => { modalDismissEnabled = true }
+      })
+    }
+  }
+</script>
 
 
 <header>
@@ -43,7 +70,7 @@
   </h4>
 </header>
 
-<main class="content">
+<main class="content" bind:this={bpLightboxAnchor}>
   <div class="content-inner">
 
     {#if clips}
@@ -63,18 +90,40 @@
 
     {#if stills}
       <section class="stills">
-        <div class="still-thumbs">
+        <div class="still-thumbs" id="images">
 
           {#each stills as still}
-            <img
-              src={
+            <a  
+              href={
                 imagePath +
                 cloudinaryStillTransforms +
                 still
               }
-              alt=""
-              loading="lazy" 
-            />
+              data-img={
+                imagePath +
+                cloudinaryStillTransforms +
+                still
+              }
+              data-thumb={
+                imagePath +
+                cloudinaryStillTransforms +
+                still
+              }
+              data-width="1920"
+              data-height="1080"
+              data-alt=""
+              on:click={openGallery}
+            >
+              <img
+                src={
+                  imagePath +
+                  cloudinaryStillTransforms +
+                  still
+                }
+                alt=""
+                loading="lazy" 
+              />
+            </a>
           {/each}
 
         </div>
@@ -128,17 +177,22 @@
     flex-wrap: wrap;
     gap: clamp(0.5rem, 4vw, 1.5rem);
   
-    img {
+    a {
+      display: block;
       width: calc(50% - clamp(0.25rem, 2vw, 0.75rem));
+    }
+
+    img {
+      width: 100%;
+      display: block;
     }
   }
   
   .clip {
     max-width: min(170vh, var(--max-element-width));
-    margin: 0 auto;
-  }
-  
-  .clip {
-    margin-bottom: clamp(2rem, calc(1rem + 3vw), 4rem);
+    margin: 
+      0
+      auto
+      clamp(2rem, calc(1rem + 3vw), 4rem);
   }
 </style>

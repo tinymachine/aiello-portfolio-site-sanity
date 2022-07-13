@@ -19,14 +19,14 @@ const cloudinaryTransforms = {
   >
     <div class="slide-container">
       {frontmatter.reel.placeholderStills.map((still, i) => (
-        <img
-          src={imagePath + cloudinaryTransforms.slideBg + still}
-          alt=""
-          class="slide-bg"
-          width="1796"
-          height="1010"
-          data-slide-bg-index={i}
-        >
+        // <img
+        //   src={imagePath + cloudinaryTransforms.slideBg + still}
+        //   alt=""
+        //   class="slide-bg"
+        //   width="1796"
+        //   height="1010"
+        //   data-slide-bg-index={i}
+        // >
 
         <img
           src={imagePath + cloudinaryTransforms.slide + still}
@@ -80,7 +80,7 @@ const cloudinaryTransforms = {
 
 <script>
   const slides = document.querySelectorAll('[data-slide-index]')
-  const slideBgs = document.querySelectorAll('[data-slide-bg-index]')
+  // const slideBgs = document.querySelectorAll('[data-slide-bg-index]')
 
   let i = 0
   const interval = 3000
@@ -88,28 +88,28 @@ const cloudinaryTransforms = {
 
   const advanceSlideshow = () => {
     const thisSlide = slides[i % slides.length]
-    const thisSlideBg = slideBgs[i % slides.length]
+    // const thisSlideBg = slideBgs[i % slides.length]
 
     // Start in-transition
     thisSlide.style.visibility = 'visible'
     thisSlide.classList.add('intro')
 
-    thisSlideBg.style.visibility = 'visible'
-    thisSlideBg.classList.add('intro')
+    // thisSlideBg.style.visibility = 'visible'
+    // thisSlideBg.classList.add('intro')
     
     // Begin out-transition
     setTimeout(() => {
       thisSlide.classList.replace('intro', 'outro')
-      thisSlideBg.classList.replace('intro', 'outro')
+      // thisSlideBg.classList.replace('intro', 'outro')
     }, interval)
     
     // Complete out-transition
     setTimeout(() => {
       thisSlide.style.visibility = 'hidden'
-      thisSlideBg.style.visibility = 'hidden'
+      // thisSlideBg.style.visibility = 'hidden'
 
       thisSlide.classList.remove('outro')
-      thisSlideBg.classList.remove('outro')
+      // thisSlideBg.classList.remove('outro')
     }, interval + crossfadeDuration)
     
     i++
@@ -180,7 +180,7 @@ const cloudinaryTransforms = {
     height: 100%;
     object-fit: cover;
     z-index: -10;
-    filter: blur(8em) saturate(2);
+    // filter: blur(8em) saturate(2);
     opacity: 0;
     transition: opacity 1.5s;
     will-change: opacity;

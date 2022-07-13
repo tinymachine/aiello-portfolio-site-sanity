@@ -1,10 +1,7 @@
 <script>
   import VimeoPlayer from './VimeoPlayer.svelte'
-  import BiggerPicture from 'bigger-picture/src/bigger-picture.js'
-  import { imagePath } from '../settings/siteInfo'
-  import { onMount } from 'svelte'
-  
-  import 'bigger-picture/dist/bigger-picture.css'
+  import ProjectModalStills from './ProjectModalStills.svelte'
+  import { onMount } from 'svelte';
 
   export let project
   export let projectTypeLabel
@@ -26,31 +23,13 @@
       ? 's'
       : ''
     }`
-
-  const cloudinaryStillTransforms = '/c_limit,w_1800' // `c_limit` = shrink to fit
-
-  let bp
-  let bpLightboxAnchor
+  
+  let bpAnchor
+  let bpAnchorMounted = false
 
   onMount(() => {
-    bp = BiggerPicture({
-      target: bpLightboxAnchor,
-    })
+    bpAnchorMounted = true
   })
-
-  const openGallery = (e) => {
-    if (bp && bpLightboxAnchor) {
-      e.preventDefault()
-      modalDismissEnabled = false // prevent project modal from closing when hitting Esc
-
-      bp.open({
-        items: bpLightboxAnchor.querySelectorAll('#images a'),
-        el: e.currentTarget,
-        intro: 'fadeup',
-        onClose: () => { modalDismissEnabled = true }
-      })
-    }
-  }
 </script>
 
 
@@ -70,7 +49,7 @@
   </h4>
 </header>
 
-<main class="content" bind:this={bpLightboxAnchor}>
+<main class="content" bind:this={bpAnchor}>
   <div class="content-inner">
 
     {#if clips}
@@ -89,45 +68,12 @@
     {/if}
 
     {#if stills}
-      <section class="stills">
-        <div class="still-thumbs" id="images">
-
-          {#each stills as still}
-            <a  
-              href={
-                imagePath +
-                cloudinaryStillTransforms +
-                still
-              }
-              data-img={
-                imagePath +
-                cloudinaryStillTransforms +
-                still
-              }
-              data-thumb={
-                imagePath +
-                cloudinaryStillTransforms +
-                still
-              }
-              data-width="1920"
-              data-height="1080"
-              data-alt=""
-              on:click={openGallery}
-            >
-              <img
-                src={
-                  imagePath +
-                  cloudinaryStillTransforms +
-                  still
-                }
-                alt=""
-                loading="lazy" 
-              />
-            </a>
-          {/each}
-
-        </div>
-      </section>
+      <ProjectModalStills
+        {stills}
+        {bpAnchor}
+        {bpAnchorMounted}
+        bind:modalDismissEnabled
+      />
     {/if}
 
   </div>
@@ -149,10 +95,6 @@
       margin-bottom: 0;
     }
   
-    // [tabindex="-1"] {
-    //   outline: none;
-    // }
-  
     h4 {
       font-weight: 400;
       font-size: 0.8125em;
@@ -170,22 +112,6 @@
   .content-inner {
     max-width: min(170vh, var(--max-element-width));
     margin: 0 auto;
-  }
-  
-  .still-thumbs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: clamp(0.5rem, 4vw, 1.5rem);
-  
-    a {
-      display: block;
-      width: calc(50% - clamp(0.25rem, 2vw, 0.75rem));
-    }
-
-    img {
-      width: 100%;
-      display: block;
-    }
   }
   
   .clip {

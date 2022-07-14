@@ -12,6 +12,7 @@
     director,
     clips,
     stills,
+    stillDims,
     colorAccent
   } = project
 
@@ -70,6 +71,7 @@
     {#if stills}
       <ProjectModalGallery
         {stills}
+        {stillDims}
         {bpAnchor}
         {bpAnchorMounted}
         bind:modalDismissEnabled

@@ -5,6 +5,7 @@
   
   import 'bigger-picture/dist/bigger-picture.css'
 
+  export let stillDims
   export let stills
   export let bpAnchor
   export let bpAnchorMounted
@@ -36,10 +37,14 @@
         items: bpAnchor.querySelectorAll('#images a'),
         el: e.currentTarget,
         intro: 'fadeup',
+        scale: 1,
         onClose: () => { modalDismissEnabled = true }
       })
     }
   }
+
+  const maxStillWidth = 1980
+  const maxStillHeight = Math.round(maxStillWidth / stillDims.aspect)
 </script>
 
 
@@ -63,8 +68,8 @@
           cloudinaryStillTransforms +
           still
         }
-        data-width="1920"
-        data-height="1080"
+        data-width={maxStillWidth}
+        data-height={maxStillHeight}
         data-alt=""
         on:click={openGallery}
       >

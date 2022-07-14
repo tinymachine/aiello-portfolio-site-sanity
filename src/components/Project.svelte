@@ -24,6 +24,8 @@
   const close = () => { isOpen = false }
 </script>
 
+
+
 <article>
   <a role="button" href="#" on:click={open}><!-- TODO: find accessible way of handling href -->
     <div class="bleed-r">
@@ -58,16 +60,8 @@
   {project}
   {projectTypeLabel}
 />
-            
-<!-- 
-// <ProjectModal 
-//           triggerId={`trigger-${i}-${j}`}
-//           {project}
-//           projectTypeLabel={ 
-//             project.projectType ||
-//             projectSet.fallbackProjectTypeLabel
-//           }
-//         /> -->
+
+
 
 <style lang="scss">
 a {
@@ -93,14 +87,10 @@ h4 {
 
 article {
   margin-bottom: 3.5em;
-  // margin-bottom: clamp(3.25em, 4vw, 4em)
 }
-
-// article a:focus{
-//   outline: none !important; // this is bad
-// }
 
 .type {
   white-space: nowrap;
   opacity: 0.7;
-}</style>
+}
+</style>

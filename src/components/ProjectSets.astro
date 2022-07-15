@@ -4,7 +4,13 @@ import { imagePath } from '../settings/siteInfo'
 import Project from './Project.svelte'
 import probeImageSize from 'probe-image-size'
 
-// Get still dimensions (as Promises) for all projects
+/**
+ * Get still image dimensions and calculate aspect ratio
+ * to prevent cumulative layout shift and set dimensions
+ * correctly in image galleries.
+ */
+
+  // Get still dimensions (as Promises) for all projects
 const imageDims = projectData.projectSets.map(projectSet => {
   return projectSet.projects.map(async (project) => {
     const result = await probeImageSize(imagePath + project.featuredStill)
@@ -12,11 +18,11 @@ const imageDims = projectData.projectSets.map(projectSet => {
   })
 })
 
-// Flatten array for use with Promise.all()
+  // Flatten array for use with Promise.all()
 const imageDimsFlat = imageDims.flat()
 const resolvedImageDims = await Promise.all(imageDimsFlat)
 
-// Add still image dimensions as property on `project` object
+  // Add still image dimensions as property on `project` object
 projectData.projectSets.forEach(projectSet => {
   projectSet.projects.forEach(project => {
     const thisDims = resolvedImageDims.find(

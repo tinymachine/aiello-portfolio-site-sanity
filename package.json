@@ -17,11 +17,11 @@
     "accessible-astro-components": "^1.4.7",
     "astro": "^1.0.0-beta.64",
     "marked": "^4.0.15",
+    "probe-image-size": "^7.2.3",
     "sass": "1.51.0"
   },
   "dependencies": {
     "bigger-picture": "^1.1.1",
-    "probe-image-size": "^7.2.3",
     "svelte": "^3.49.0",
     "svelte-accessible-dialog": "^2.1.3"
   }

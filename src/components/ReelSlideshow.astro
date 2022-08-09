@@ -1,4 +1,5 @@
 ---
+import { getAverageColor } from 'fast-average-color-node'
 import { frontmatter } from '../settings/Settings.md'
 import { imagePath } from '../settings/siteInfo'
 import BaseModal from './BaseModal.astro'
@@ -7,10 +8,41 @@ import VimeoPlayer from './VimeoPlayer.svelte'
 const reelModalTriggerId = 'reel-slideshow'
 const cloudinaryTransforms = {
   slide: '/c_limit,w_1920', // limit to 1080p width
-  slideBg: '/w_48'
+  thumbnail: '/c_limit,w_256' // smaller for color sampling
 }
+
+// Get dominant colors from reel slideshow images
+
+const thumbUrls = frontmatter.reel.placeholderStills.map(still => 
+  imagePath + cloudinaryTransforms.thumbnail + still
+)
+
+const getAverageRGBColor = async (imgUrl) => { // return as string `r, g, b` so alpha can easily be added
+  const color = await getAverageColor(imgUrl)
+  return `${color.value[0]}, ${color.value[1]}, ${color.value[2]}`
+}
+
+const slideAvgColorsRGB = await Promise.all(
+  thumbUrls.map(url => getAverageRGBColor(url))
+)
+
+const showVignette = true
+const backdropAlpha = showVignette ? 0.75 : 0.4
 ---
+
 <>
+  <div class="backdrop">
+    {frontmatter.reel.placeholderStills.map((still, i) => (
+      <div
+        data-slideshow-backdrop
+        style=`background-color: rgb(${slideAvgColorsRGB[i]}, ${backdropAlpha})`
+      ></div>
+    ))}
+    
+    {showVignette && <div class="vignette-effect"></div>}
+    <div data-slideshow-backdrop-mask></div>
+  </div>
+  
   <a
     class="slideshow"
     href={frontmatter.reel.vimeoUrl}
@@ -19,22 +51,13 @@ const cloudinaryTransforms = {
   >
     <div class="slide-container">
       {frontmatter.reel.placeholderStills.map((still, i) => (
-        // <img
-        //   src={imagePath + cloudinaryTransforms.slideBg + still}
-        //   alt=""
-        //   class="slide-bg"
-        //   width="1796"
-        //   height="1010"
-        //   data-slide-bg-index={i}
-        // >
-
         <img
           src={imagePath + cloudinaryTransforms.slide + still}
           alt=""
           class="slide"
           width="1796"
           height="1010"
-          data-slide-index={i}
+          data-slide
         >
       ))}
     </div>
@@ -78,46 +101,81 @@ const cloudinaryTransforms = {
   </BaseModal>
 </>
 
-<script>
-  const slides = document.querySelectorAll('[data-slide-index]')
-  // const slideBgs = document.querySelectorAll('[data-slide-bg-index]')
 
-  let i = 0
-  const interval = 3000
-  const crossfadeDuration = 3000
 
-  const advanceSlideshow = () => {
-    const thisSlide = slides[i % slides.length]
-    // const thisSlideBg = slideBgs[i % slides.length]
+<script define:vars={{showVignette}}>
+  const slideshow = () => {
+    let slideCounter = 0
+    const interval = 3000
 
-    // Start in-transition
-    thisSlide.style.visibility = 'visible'
-    thisSlide.classList.add('intro')
+    const slides = document.querySelectorAll('[data-slide]')
+    const backdrops = document.querySelectorAll('[data-slideshow-backdrop]')
 
-    // thisSlideBg.style.visibility = 'visible'
-    // thisSlideBg.classList.add('intro')
-    
-    // Begin out-transition
-    setTimeout(() => {
-      thisSlide.classList.replace('intro', 'outro')
-      // thisSlideBg.classList.replace('intro', 'outro')
-    }, interval)
-    
-    // Complete out-transition
-    setTimeout(() => {
-      thisSlide.style.visibility = 'hidden'
-      // thisSlideBg.style.visibility = 'hidden'
+    const advanceSlideshow = () => {
+      const slideIndex = slideCounter % slides.length
+      const thisSlide = slides[slideIndex]
+      const thisBackdrop = backdrops[slideIndex]
 
-      thisSlide.classList.remove('outro')
-      // thisSlideBg.classList.remove('outro')
-    }, interval + crossfadeDuration)
-    
-    i++
+      // Transition in
+      thisSlide.style.opacity = 1
+      thisBackdrop.style.opacity = 1
+
+      // Transition out
+      setTimeout(() => {
+        thisSlide.style.opacity = 0
+        thisBackdrop.style.opacity = 0
+      }, interval)
+      
+      slideCounter++
+    }
+
+    advanceSlideshow()
+    setInterval(() => advanceSlideshow(), interval)
   }
 
-  advanceSlideshow()
-  setInterval(() => advanceSlideshow(), interval)
+  const dynamicBackdropMask = () => {
+    const minMaskOpacity = 0
+    const maxMaskOpacity = showVignette ? 0.725 : 0.675
+    const initialView = document.querySelector('[data-initial-view]')
+    const initialViewHeight = initialView.offsetHeight
+    const backdropMask = document.querySelector('[data-slideshow-backdrop-mask]')
+
+    function throttle(func, wait = 25) {
+      let waiting = false
+
+      return function () {
+        if (waiting) {
+          return
+        }
+
+        waiting = true
+        setTimeout(() => {
+          func.apply(this, arguments)
+          waiting = false
+        }, wait)
+      }
+    }
+
+    const updateBackdropMaskOpacity = throttle(() => {
+      const scrollDist = document.documentElement.scrollTop
+
+      if (scrollDist >= initialViewHeight && backdropMask.style.opacity === 1) {
+        return
+      } else {
+        const opacity = 1 - ((initialViewHeight - scrollDist) / initialViewHeight)
+        backdropMask.style.opacity = Math.min(Math.max(opacity, minMaskOpacity), maxMaskOpacity)
+      }
+    })
+
+    updateBackdropMaskOpacity() // update opacity on load
+    window.addEventListener('scroll', updateBackdropMaskOpacity, {passive: true})
+  }
+
+  slideshow() // start slideshow
+  dynamicBackdropMask() // set up backdrop mask
 </script>
+
+
 
 <style lang="scss">
   [tabindex="-1"] {
@@ -125,7 +183,7 @@ const cloudinaryTransforms = {
   }
 
   .slideshow:focus {
-    outline: none; // this is bad
+    outline: none; // TODO: fix this. this is bad
   }
 
   .slideshow {
@@ -148,46 +206,53 @@ const cloudinaryTransforms = {
     overflow: hidden;
   }
 
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -5;
+  }
+  
+  [data-slideshow-backdrop],
+  .vignette-effect,
+  [data-slideshow-backdrop-mask] {
+    position: fixed;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    will-change: opacity; // improves performance?
+  }
+
+  .vignette-effect {
+    opacity: 1;
+    box-shadow: inset 0 0 50vw var(--color-bg);
+  }
+
+  [data-slideshow-backdrop] {
+    transition: opacity 1.5s ease-out;
+  }
+  
+  [data-slideshow-backdrop-mask] {
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.5s linear;
+  }
+
   .slide {
     position: absolute;
+    z-index: 2;
     display: block;
-    visibility: hidden;
     top: 0;
     left: 0;
     width: 100%;
     height: auto;
     opacity: 0;
-    transition: opacity 1.5s;
-    z-index: 2;
-
-    &.intro {
-      opacity: 1;
-    }
-    
-    // &.outro {
-    //   opacity: 1;
-    //   z-index: -1;
-    // }
-  }
-
-  .slide-bg {
-    position: fixed;
-    visibility: hidden;
-    top: -5%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100vw;
-    height: 100%;
-    object-fit: cover;
-    z-index: -10;
-    // filter: blur(8em) saturate(2);
-    opacity: 0;
-    transition: opacity 1.5s;
-    will-change: opacity;
-
-    &.intro {
-      opacity: 0.5;
-    }
+    transition: opacity 1.5s ease-out;
   }
 
   .slideshow:hover {

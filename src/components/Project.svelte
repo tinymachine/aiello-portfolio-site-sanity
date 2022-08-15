@@ -67,6 +67,7 @@
 a {
   display: block;
   text-decoration: none;
+  will-change: opacity;
   opacity: 0.85;
   transition: opacity 0.5s linear;
   text-decoration: none;

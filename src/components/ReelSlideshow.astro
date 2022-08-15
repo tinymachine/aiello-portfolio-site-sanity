@@ -1,0 +1,287 @@
+---
+import { getAverageColor } from 'fast-average-color-node'
+import { frontmatter } from '../settings/Settings.md'
+import { imagePath } from '../settings/siteInfo'
+import BaseModal from './BaseModal.astro'
+import VimeoPlayer from './VimeoPlayer.svelte'
+
+const reelModalTriggerId = 'reel-slideshow'
+const cloudinaryTransforms = {
+  slide: '/c_limit,w_1920', // limit to 1080p width
+  thumbnail: '/c_limit,w_256' // smaller for color sampling
+}
+
+// Get dominant colors from reel slideshow images
+
+const thumbUrls = frontmatter.reel.placeholderStills.map(still => 
+  imagePath + cloudinaryTransforms.thumbnail + still
+)
+
+const getAverageRGBColor = async (imgUrl) => { // return as string `r, g, b` so alpha can easily be added
+  const color = await getAverageColor(imgUrl)
+  return `${color.value[0]}, ${color.value[1]}, ${color.value[2]}`
+}
+
+const slideAvgColorsRGB = await Promise.all(
+  thumbUrls.map(url => getAverageRGBColor(url))
+)
+
+const showVignette = true
+const backdropAlpha = showVignette ? 0.75 : 0.4
+---
+
+<>
+  <div class="backdrop">
+    {frontmatter.reel.placeholderStills.map((still, i) => (
+      <div
+        data-slideshow-backdrop
+        style=`background-color: rgb(${slideAvgColorsRGB[i]}, ${backdropAlpha})`
+      ></div>
+    ))}
+    
+    {showVignette && <div class="vignette-effect"></div>}
+    <div data-slideshow-backdrop-mask></div>
+  </div>
+  
+  <a
+    class="slideshow"
+    href={frontmatter.reel.vimeoUrl}
+    data-slideshow
+    id={reelModalTriggerId}
+  >
+    <div class="slide-container">
+      {frontmatter.reel.placeholderStills.map((still, i) => (
+        <img
+          src={imagePath + cloudinaryTransforms.slide + still}
+          alt=""
+          class="slide"
+          width="1796"
+          height="1010"
+          data-slide
+        >
+      ))}
+    </div>
+
+    <div class="play-button">
+      <img
+        src="/img/play.svg"
+        alt=""
+        class="play-button-icon"
+      >
+    </div>
+  </a>
+
+  <BaseModal triggerId={reelModalTriggerId} autoplayVimeoPlayer>
+    <div
+      style="
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+        right: 0;
+        bottom: 0;
+      "
+    >
+      <div style="
+        display: grid; /* centers player vertically */
+        width: 100%;
+        max-width: min(16 / 9 * 100vh - 4vh, var(--max-element-width));
+      ">
+        <VimeoPlayer
+          url={frontmatter.reel.vimeoUrl}
+          title="Andrew Aiello Reel"
+          autoplay={false}
+        />
+      </div>
+    </div>
+  </BaseModal>
+</>
+
+
+
+<script define:vars={{showVignette}}>
+  const slideshow = () => {
+    let slideCounter = 0
+    const interval = 3000
+
+    const slides = document.querySelectorAll('[data-slide]')
+    const backdrops = document.querySelectorAll('[data-slideshow-backdrop]')
+
+    const advanceSlideshow = () => {
+      const slideIndex = slideCounter % slides.length
+      const thisSlide = slides[slideIndex]
+      const thisBackdrop = backdrops[slideIndex]
+
+      // Transition in
+      thisSlide.style.opacity = 1
+      thisBackdrop.style.opacity = 1
+
+      // Transition out
+      setTimeout(() => {
+        thisSlide.style.opacity = 0
+        thisBackdrop.style.opacity = 0
+      }, interval)
+      
+      slideCounter++
+    }
+
+    advanceSlideshow()
+    setInterval(() => advanceSlideshow(), interval)
+  }
+
+  const dynamicBackdropMask = () => {
+    const minMaskOpacity = 0
+    const maxMaskOpacity = showVignette ? 0.725 : 0.675
+    const initialView = document.querySelector('[data-initial-view]')
+    const initialViewHeight = initialView.offsetHeight
+    const backdropMask = document.querySelector('[data-slideshow-backdrop-mask]')
+
+    function throttle(func, wait = 25) {
+      let waiting = false
+
+      return function () {
+        if (waiting) {
+          return
+        }
+
+        waiting = true
+        setTimeout(() => {
+          func.apply(this, arguments)
+          waiting = false
+        }, wait)
+      }
+    }
+
+    const updateBackdropMaskOpacity = throttle(() => {
+      const scrollDist = document.documentElement.scrollTop
+
+      if (scrollDist >= initialViewHeight && backdropMask.style.opacity === 1) {
+        return
+      } else {
+        const opacity = 1 - ((initialViewHeight - scrollDist) / initialViewHeight)
+        backdropMask.style.opacity = Math.min(Math.max(opacity, minMaskOpacity), maxMaskOpacity)
+      }
+    })
+
+    updateBackdropMaskOpacity() // update opacity on load
+    window.addEventListener('scroll', updateBackdropMaskOpacity, {passive: true})
+  }
+
+  slideshow() // start slideshow
+  dynamicBackdropMask() // set up backdrop mask
+</script>
+
+
+
+<style lang="scss">
+  [tabindex="-1"] {
+    outline: none;
+  }
+
+  .slideshow:focus {
+    outline: none; // TODO: fix this. this is bad
+  }
+
+  .slideshow {
+    position: relative;
+    margin: 0;
+    width: 100vw;
+    min-width: 100%;
+    max-width: min(120vh, var(--max-element-width));
+    aspect-ratio: 1796 / 1005; /** 
+                                * Intentionally shorter than 1010 intrinsic
+                                * image height to workaround Safari height miscalculation:
+                                */
+    align-self: center; 
+  }
+
+  .slide-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -5;
+  }
+  
+  [data-slideshow-backdrop],
+  .vignette-effect,
+  [data-slideshow-backdrop-mask] {
+    position: fixed;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    will-change: opacity; // improves performance?
+  }
+
+  .vignette-effect {
+    opacity: 1;
+    box-shadow: inset 0 0 50vw var(--color-bg);
+  }
+
+  [data-slideshow-backdrop] {
+    transition: opacity 1.5s ease-out;
+  }
+  
+  [data-slideshow-backdrop-mask] {
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.5s linear;
+  }
+
+  .slide {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1.5s ease-out;
+  }
+
+  .slideshow:hover {
+    cursor: pointer;
+  }
+
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    opacity: 0.75;
+    background-color: rgb(0 0 0 / 20%);
+    display: flex;
+    padding: 0.825em;
+    border-radius: 999px;
+    transition: 
+      opacity 0.25s ease-out,
+      background-color 0.25s ease-out;
+    
+    .slideshow:hover & {
+      background-color: rgb(0 0 0 / 60%);
+      opacity: 1;
+    }
+  }
+
+  .play-button-icon {
+    width: 1.25em;
+    height: 1.25em;
+  }
+</style>

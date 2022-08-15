@@ -3,7 +3,7 @@ import { frontmatter as site } from '../settings/Settings.md'
 import Layout from '../layout/Layout.astro'  
 import AboutSection from '../components/AboutSection.astro'
 import ProjectSets from '../components/ProjectSets.astro'
-import ReelPlaceholder from '../components/ReelPlaceholder.astro'
+import ReelSlideshow from '../components/ReelSlideshow.astro'
 import ScrollButton from '../components/ScrollButton.astro'
 
 const colorThemeVerticalRule = site.themeColors.verticalRule
@@ -11,13 +11,13 @@ const colorThemeVerticalRule = site.themeColors.verticalRule
 
 <Layout>
   <div class="section top">
-    <div class="initial-view">
+    <div class="initial-view" data-initial-view>
       <header class="landing">
         <h1>{site.name}</h1>
         <h2 style="color: rgb(255 255 255 / 50%)">{site.title}</h2>
       </header>
       
-      <ReelPlaceholder />
+      <ReelSlideshow />
       
       <div class="align-r scroller-fade-in" style="padding-top: 1rem;">
         <ScrollButton targetId="first-section" />

@@ -68,7 +68,7 @@ const reverseClassName = 'reverse'
   }
 
   // flip scroll button direction when above viewport midline
-  window.addEventListener('scroll', function() { 
+  const flipScrollDirection = () => {
     const scrollPos = window.scrollY
     const viewportHeight = window.innerHeight
     const buttonEl = document.getElementById(buttonId)
@@ -81,5 +81,7 @@ const reverseClassName = 'reverse'
       buttonEl.classList.remove(reverseClassName)
       buttonEl.setAttribute('aria-label', scrollLabel.down)
     }
-  })
+  }
+
+  window.addEventListener('scroll', flipScrollDirection, {passive: true})
 </script>

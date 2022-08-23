@@ -260,20 +260,20 @@ projectSets:
   - title: Lil Sqwid — "Everybody Know"
     director: Erin Elders
     clips: []
-    featuredStill: ''
+    featuredStill: "/v1661283468/andrew-aiello/portfolio/Sequence_01.00_02_36_02.Still002_xicemk.jpg"
     stills:
-    - "/v1661283428/andrew-aiello/portfolio/Sequence_01.00_02_36_02.Still002_ztkxpg.jpg"
-    - "/v1661283428/andrew-aiello/portfolio/Sequence_01.00_02_22_06.Still004_fy3zzt.jpg"
-    - "/v1661283428/andrew-aiello/portfolio/Sequence_01.00_02_19_03.Still003_xp4cqa.jpg"
-    - "/v1661283428/andrew-aiello/portfolio/Sequence_01.00_02_02_12.Still017_v13v1u.jpg"
-    - "/v1661283428/andrew-aiello/portfolio/Sequence_01.00_01_56_06.Still015_e5lmev.jpg"
-    - "/v1661283428/andrew-aiello/portfolio/Sequence_01.00_01_22_23.Still010_crdspc.jpg"
-    - "/v1661283428/andrew-aiello/portfolio/Sequence_01.00_01_07_22.Still029_copmum.jpg"
-    - "/v1661283428/andrew-aiello/portfolio/Sequence_01.00_01_03_15.Still008_nkbqla.jpg"
-    - "/v1661283427/andrew-aiello/portfolio/Sequence_01.00_01_01_23.Still007_t8c5bj.jpg"
-    - "/v1661283427/andrew-aiello/portfolio/Sequence_01.00_00_53_18.Still004_ubo9wk.jpg"
     - "/v1661283421/andrew-aiello/portfolio/Sequence_01.00_00_43_07.Still024_ryd4aw.jpg"
+    - "/v1661283427/andrew-aiello/portfolio/Sequence_01.00_00_53_18.Still004_ubo9wk.jpg"
+    - "/v1661283427/andrew-aiello/portfolio/Sequence_01.00_01_01_23.Still007_t8c5bj.jpg"
     - "/v1661283416/andrew-aiello/portfolio/Sequence_01.00_00_42_13.Still023_h1xrdn.jpg"
+    - "/v1661283428/andrew-aiello/portfolio/Sequence_01.00_01_03_15.Still008_nkbqla.jpg"
+    - "/v1661283428/andrew-aiello/portfolio/Sequence_01.00_01_07_22.Still029_copmum.jpg"
+    - "/v1661283428/andrew-aiello/portfolio/Sequence_01.00_01_22_23.Still010_crdspc.jpg"
+    - "/v1661283428/andrew-aiello/portfolio/Sequence_01.00_01_56_06.Still015_e5lmev.jpg"
+    - "/v1661283428/andrew-aiello/portfolio/Sequence_01.00_02_02_12.Still017_v13v1u.jpg"
+    - "/v1661283428/andrew-aiello/portfolio/Sequence_01.00_02_19_03.Still003_xp4cqa.jpg"
+    - "/v1661283428/andrew-aiello/portfolio/Sequence_01.00_02_22_06.Still004_fy3zzt.jpg"
+    - "/v1661283428/andrew-aiello/portfolio/Sequence_01.00_02_36_02.Still002_ztkxpg.jpg"
     projectType: Music Video
     colorAccent: rgb(167, 116, 61)
   - title: 1916 — "For Whiskey"

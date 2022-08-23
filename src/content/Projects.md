@@ -26,7 +26,7 @@ projectSets:
     - "/v1652516265/andrew-aiello/portfolio/we-broke-up-02_x2tms1.jpg"
     - "/v1652516262/andrew-aiello/portfolio/we-broke-up-01_d4scf5.jpg"
     featuredStill: "/v1652516278/andrew-aiello/portfolio/we-broke-up-19_mn8ikn.jpg"
-    projectType: 
+    projectType: ''
     colorAccent: rgb(180, 167, 128)
   - title: International Falls
     director: Amber McGinnis
@@ -51,7 +51,7 @@ projectSets:
     - "/v1652515866/andrew-aiello/portfolio/intl-falls-02_szll98.jpg"
     - "/v1652515874/andrew-aiello/portfolio/intl-falls-04_a0iq0w.jpg"
     - "/v1652515877/andrew-aiello/portfolio/intl-falls-14_ws2w2r.jpg"
-    projectType: 
+    projectType: ''
     colorAccent: rgb(178, 182, 177)
   - title: Shuddhi
     director: Adarsh Eshwarappa
@@ -74,7 +74,7 @@ projectSets:
     - "/v1652516014/andrew-aiello/portfolio/shuddhi-14_yarqpa.jpg"
     - "/v1652516014/andrew-aiello/portfolio/shuddhi-10_bbgwqa.jpg"
     - "/v1652516014/andrew-aiello/portfolio/shuddhi-09_hmymbx.jpg"
-    projectType: 
+    projectType: ''
     colorAccent: rgb(147, 140, 123)
   - title: Bhinna
     director: Adarsh Eshwarappa
@@ -97,7 +97,7 @@ projectSets:
     - "/v1652514475/andrew-aiello/portfolio/bhinna-10_ymbkak.jpg"
     - "/v1652514474/andrew-aiello/portfolio/bhinna-11_xb4ydg.jpg"
     featuredStill: "/v1652514475/andrew-aiello/portfolio/bhinna-10_ymbkak.jpg"
-    projectType: 
+    projectType: ''
     colorAccent: rgb(116, 136, 149)
   - title: Fallen Queen
     director: Joel Soisson
@@ -118,7 +118,7 @@ projectSets:
     - "/v1652514684/andrew-aiello/portfolio/fallen-queen-7_cczabq.jpg"
     - "/v1652514683/andrew-aiello/portfolio/fallen-queen-6_vfqe9y.jpg"
     - "/v1652514681/andrew-aiello/portfolio/fallen-queen-5_xeeeui.jpg"
-    projectType: 
+    projectType: ''
     colorAccent: rgb(124, 146, 164)
   fallbackProjectTypeLabel: Feature Film
 - heading: Short Form
@@ -260,19 +260,20 @@ projectSets:
   - title: Lil Sqwid — "Everybody Know"
     director: Erin Elders
     clips: []
-    featuredStill: "/v1652516962/andrew-aiello/portfolio/lil-squid-ek-11_lq2kfb.jpg"
+    featuredStill: ''
     stills:
-    - "/v1652516957/andrew-aiello/portfolio/lil-squid-ek-04_jrrmxn.jpg"
-    - "/v1652516961/andrew-aiello/portfolio/lil-squid-ek-03_y0h9oz.jpg"
-    - "/v1652516962/andrew-aiello/portfolio/lil-squid-ek-11_lq2kfb.jpg"
-    - "/v1652516963/andrew-aiello/portfolio/lil-squid-ek-05_b8mq2l.jpg"
-    - "/v1652516962/andrew-aiello/portfolio/lil-squid-ek-06_ofedkj.jpg"
-    - "/v1652516950/andrew-aiello/portfolio/lil-squid-ek-01_vlw552.jpg"
-    - "/v1652516963/andrew-aiello/portfolio/lil-squid-ek-08_g2hgls.jpg"
-    - "/v1652516963/andrew-aiello/portfolio/lil-squid-ek-09_pfkllr.jpg"
-    - "/v1652516963/andrew-aiello/portfolio/lil-squid-ek-07_l6wykv.jpg"
-    - "/v1652516962/andrew-aiello/portfolio/lil-squid-ek-10_gantzc.jpg"
-    - "/v1652516956/andrew-aiello/portfolio/lil-squid-ek-02_hvylw7.jpg"
+    - "/v1661283428/andrew-aiello/portfolio/Sequence_01.00_02_36_02.Still002_ztkxpg.jpg"
+    - "/v1661283428/andrew-aiello/portfolio/Sequence_01.00_02_22_06.Still004_fy3zzt.jpg"
+    - "/v1661283428/andrew-aiello/portfolio/Sequence_01.00_02_19_03.Still003_xp4cqa.jpg"
+    - "/v1661283428/andrew-aiello/portfolio/Sequence_01.00_02_02_12.Still017_v13v1u.jpg"
+    - "/v1661283428/andrew-aiello/portfolio/Sequence_01.00_01_56_06.Still015_e5lmev.jpg"
+    - "/v1661283428/andrew-aiello/portfolio/Sequence_01.00_01_22_23.Still010_crdspc.jpg"
+    - "/v1661283428/andrew-aiello/portfolio/Sequence_01.00_01_07_22.Still029_copmum.jpg"
+    - "/v1661283428/andrew-aiello/portfolio/Sequence_01.00_01_03_15.Still008_nkbqla.jpg"
+    - "/v1661283427/andrew-aiello/portfolio/Sequence_01.00_01_01_23.Still007_t8c5bj.jpg"
+    - "/v1661283427/andrew-aiello/portfolio/Sequence_01.00_00_53_18.Still004_ubo9wk.jpg"
+    - "/v1661283421/andrew-aiello/portfolio/Sequence_01.00_00_43_07.Still024_ryd4aw.jpg"
+    - "/v1661283416/andrew-aiello/portfolio/Sequence_01.00_00_42_13.Still023_h1xrdn.jpg"
     projectType: Music Video
     colorAccent: rgb(167, 116, 61)
   - title: 1916 — "For Whiskey"

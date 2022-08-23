@@ -142,64 +142,6 @@ projectSets:
     - "/v1652516741/andrew-aiello/portfolio/green-cobra-01_ektji2.jpg"
     projectType: Short Film
     colorAccent: rgb(81, 191, 160)
-  - director: Eli Kooris and Joshua Shaffer
-    clips:
-    - https://vimeo.com/manage/videos/673804873
-    featuredStill: "/v1652517138/andrew-aiello/portfolio/nothingman-13_whe3nh.jpg"
-    stills:
-    - "/v1652517138/andrew-aiello/portfolio/nothingman-13_whe3nh.jpg"
-    - "/v1652517137/andrew-aiello/portfolio/nothingman-07_tszema.jpg"
-    - "/v1652517138/andrew-aiello/portfolio/nothingman-04_plma3z.jpg"
-    - "/v1652517137/andrew-aiello/portfolio/nothingman-01_wc9q0w.jpg"
-    - "/v1652517137/andrew-aiello/portfolio/nothingman-02_u96c7b.jpg"
-    - "/v1652517138/andrew-aiello/portfolio/nothingman-03_ruq93t.jpg"
-    - "/v1652517136/andrew-aiello/portfolio/nothingman-08_lgd17u.jpg"
-    - "/v1652517137/andrew-aiello/portfolio/nothingman-05_wh5jsy.jpg"
-    - "/v1652517138/andrew-aiello/portfolio/nothingman-11_l4op9t.jpg"
-    - "/v1652517138/andrew-aiello/portfolio/nothingman-12_jz9vdm.jpg"
-    - "/v1652517138/andrew-aiello/portfolio/nothingman-10_yh9bjk.jpg"
-    - "/v1652517138/andrew-aiello/portfolio/nothingman-09_siag3p.jpg"
-    - "/v1652517135/andrew-aiello/portfolio/nothingman-06_zwaqfl.jpg"
-    title: Nothingman
-    projectType: Short Film
-    colorAccent: rgb(138, 125, 91)
-  - title: Strip
-    director: Maxwell Addae
-    clips: []
-    featuredStill: "/v1652517264/andrew-aiello/portfolio/strip-08_v6dray.jpg"
-    stills:
-    - "/v1652517264/andrew-aiello/portfolio/strip-12_mvmnwq.jpg"
-    - "/v1652517263/andrew-aiello/portfolio/strip-04_hxsbta.jpg"
-    - "/v1652517264/andrew-aiello/portfolio/strip-08_v6dray.jpg"
-    - "/v1652517263/andrew-aiello/portfolio/strip-03_ufnal1.jpg"
-    - "/v1652517264/andrew-aiello/portfolio/strip-11_sbx7wl.jpg"
-    - "/v1652517264/andrew-aiello/portfolio/strip-06_bxnsb4.jpg"
-    - "/v1652517264/andrew-aiello/portfolio/strip-10_cerg9a.jpg"
-    - "/v1652517264/andrew-aiello/portfolio/strip-09_yu7h6j.jpg"
-    - "/v1652517264/andrew-aiello/portfolio/strip-05_ekojip.jpg"
-    - "/v1652517263/andrew-aiello/portfolio/strip-07_oz1mad.jpg"
-    - "/v1652517263/andrew-aiello/portfolio/strip-02_gp5nek.jpg"
-    - "/v1652517262/andrew-aiello/portfolio/strip-01_onr8dh.jpg"
-    projectType: Short Film
-    colorAccent: rgb(98, 107, 52)
-  - title: The Sound of Fear
-    director: Colin Campbell
-    clips: []
-    featuredStill: "/v1652517210/andrew-aiello/portfolio/sound-of-fear-11_eoijg7.jpg"
-    stills:
-    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-11_eoijg7.jpg"
-    - "/v1652517206/andrew-aiello/portfolio/sound-of-fear-03_zxt3yu.jpg"
-    - "/v1652517205/andrew-aiello/portfolio/sound-of-fear-01_mrv1se.jpg"
-    - "/v1652517208/andrew-aiello/portfolio/sound-of-fear-04_mbbj7q.jpg"
-    - "/v1652517206/andrew-aiello/portfolio/sound-of-fear-02_y0emjn.jpg"
-    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-10_fgiuwe.jpg"
-    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-09_paatvz.jpg"
-    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-08_n1y6qg.jpg"
-    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-07_ely5rr.jpg"
-    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-06_b0zyyj.jpg"
-    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-05_c9vcmg.jpg"
-    projectType: Short Film
-    colorAccent: rgb(28, 110, 144)
   - title: Vertis
     director: Peter Sestina
     clips: []
@@ -221,42 +163,27 @@ projectSets:
     - "/v1652517294/andrew-aiello/portfolio/vertis-13_hk8qyh.jpg"
     projectType: Commercial
     colorAccent: rgb(125, 113, 111)
-  - title: Komb
-    director: Sigurd Culhane
-    clips: []
-    featuredStill: "/v1652516789/andrew-aiello/portfolio/komb-10_ljno3t.jpg"
-    stills:
-    - "/v1652516789/andrew-aiello/portfolio/komb-10_ljno3t.jpg"
-    - "/v1652516788/andrew-aiello/portfolio/komb-04_bufw7x.jpg"
-    - "/v1652516788/andrew-aiello/portfolio/komb-05_b33bnm.jpg"
-    - "/v1652516787/andrew-aiello/portfolio/komb-06_kf4auh.jpg"
-    - "/v1652516786/andrew-aiello/portfolio/komb-02_y1j8ve.jpg"
-    - "/v1652516786/andrew-aiello/portfolio/komb-01_pnldfx.jpg"
-    - "/v1652516788/andrew-aiello/portfolio/komb-03_ohpi1a.jpg"
-    - "/v1652516789/andrew-aiello/portfolio/komb-09_i3a2gd.jpg"
-    - "/v1652516789/andrew-aiello/portfolio/komb-08_donasg.jpg"
-    - "/v1652516789/andrew-aiello/portfolio/komb-07_p7ihb2.jpg"
-    projectType: Commercial
-    colorAccent: rgb(166, 145, 98)
-  - title: Lizzy Powers
-    director: Sigurd Culhane
+  - director: Eli Kooris and Joshua Shaffer
     clips:
-    - https://vimeo.com/manage/videos/169914293
-    - https://vimeo.com/manage/videos/169913997
-    - https://vimeo.com/manage/videos/169913530
-    featuredStill: "/v1652517042/andrew-aiello/portfolio/lizzy-powers-09_fdxaga.jpg"
+    - https://vimeo.com/manage/videos/673804873
+    featuredStill: "/v1652517138/andrew-aiello/portfolio/nothingman-13_whe3nh.jpg"
     stills:
-    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-09_fdxaga.jpg"
-    - "/v1652517041/andrew-aiello/portfolio/lizzy-powers-03_kkrpem.jpg"
-    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-04_auf4th.jpg"
-    - "/v1652517041/andrew-aiello/portfolio/lizzy-powers-02_lif4o3.jpg"
-    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-07_t4vp6g.jpg"
-    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-08_hetvg3.jpg"
-    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-06_sjxuzf.jpg"
-    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-05_qnqz2n.jpg"
-    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-01_vvknw4.jpg"
-    projectType: Commercials
-    colorAccent: rgb(137, 104, 107)
+    - "/v1652517138/andrew-aiello/portfolio/nothingman-13_whe3nh.jpg"
+    - "/v1652517137/andrew-aiello/portfolio/nothingman-07_tszema.jpg"
+    - "/v1652517138/andrew-aiello/portfolio/nothingman-04_plma3z.jpg"
+    - "/v1652517137/andrew-aiello/portfolio/nothingman-01_wc9q0w.jpg"
+    - "/v1652517137/andrew-aiello/portfolio/nothingman-02_u96c7b.jpg"
+    - "/v1652517138/andrew-aiello/portfolio/nothingman-03_ruq93t.jpg"
+    - "/v1652517136/andrew-aiello/portfolio/nothingman-08_lgd17u.jpg"
+    - "/v1652517137/andrew-aiello/portfolio/nothingman-05_wh5jsy.jpg"
+    - "/v1652517138/andrew-aiello/portfolio/nothingman-11_l4op9t.jpg"
+    - "/v1652517138/andrew-aiello/portfolio/nothingman-12_jz9vdm.jpg"
+    - "/v1652517138/andrew-aiello/portfolio/nothingman-10_yh9bjk.jpg"
+    - "/v1652517138/andrew-aiello/portfolio/nothingman-09_siag3p.jpg"
+    - "/v1652517135/andrew-aiello/portfolio/nothingman-06_zwaqfl.jpg"
+    title: Nothingman
+    projectType: Short Film
+    colorAccent: rgb(138, 125, 91)
   - title: Lil Sqwid — "Everybody Know"
     director: Erin Elders
     clips: []
@@ -276,6 +203,44 @@ projectSets:
     - "/v1661283416/andrew-aiello/portfolio/Sequence_01.00_00_42_13.Still023_h1xrdn.jpg"
     projectType: Music Video
     colorAccent: rgb(167, 116, 61)
+  - title: Lizzy Powers
+    director: Sigurd Culhane
+    clips:
+    - https://vimeo.com/manage/videos/169914293
+    - https://vimeo.com/manage/videos/169913997
+    - https://vimeo.com/manage/videos/169913530
+    featuredStill: "/v1652517042/andrew-aiello/portfolio/lizzy-powers-09_fdxaga.jpg"
+    stills:
+    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-09_fdxaga.jpg"
+    - "/v1652517041/andrew-aiello/portfolio/lizzy-powers-03_kkrpem.jpg"
+    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-04_auf4th.jpg"
+    - "/v1652517041/andrew-aiello/portfolio/lizzy-powers-02_lif4o3.jpg"
+    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-07_t4vp6g.jpg"
+    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-08_hetvg3.jpg"
+    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-06_sjxuzf.jpg"
+    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-05_qnqz2n.jpg"
+    - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-01_vvknw4.jpg"
+    projectType: Commercials
+    colorAccent: rgb(137, 104, 107)
+  - title: Strip
+    director: Maxwell Addae
+    clips: []
+    featuredStill: "/v1652517264/andrew-aiello/portfolio/strip-08_v6dray.jpg"
+    stills:
+    - "/v1652517264/andrew-aiello/portfolio/strip-12_mvmnwq.jpg"
+    - "/v1652517263/andrew-aiello/portfolio/strip-04_hxsbta.jpg"
+    - "/v1652517264/andrew-aiello/portfolio/strip-08_v6dray.jpg"
+    - "/v1652517263/andrew-aiello/portfolio/strip-03_ufnal1.jpg"
+    - "/v1652517264/andrew-aiello/portfolio/strip-11_sbx7wl.jpg"
+    - "/v1652517264/andrew-aiello/portfolio/strip-06_bxnsb4.jpg"
+    - "/v1652517264/andrew-aiello/portfolio/strip-10_cerg9a.jpg"
+    - "/v1652517264/andrew-aiello/portfolio/strip-09_yu7h6j.jpg"
+    - "/v1652517264/andrew-aiello/portfolio/strip-05_ekojip.jpg"
+    - "/v1652517263/andrew-aiello/portfolio/strip-07_oz1mad.jpg"
+    - "/v1652517263/andrew-aiello/portfolio/strip-02_gp5nek.jpg"
+    - "/v1652517262/andrew-aiello/portfolio/strip-01_onr8dh.jpg"
+    projectType: Short Film
+    colorAccent: rgb(98, 107, 52)
   - title: 1916 — "For Whiskey"
     director: Sigurd Culhane
     clips: []
@@ -293,6 +258,41 @@ projectSets:
     - "/v1652516684/andrew-aiello/portfolio/for-whiskey-05_ii682j.jpg"
     projectType: Music Video
     colorAccent: rgb(195, 140, 133)
+  - title: The Sound of Fear
+    director: Colin Campbell
+    clips: []
+    featuredStill: "/v1652517210/andrew-aiello/portfolio/sound-of-fear-11_eoijg7.jpg"
+    stills:
+    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-11_eoijg7.jpg"
+    - "/v1652517206/andrew-aiello/portfolio/sound-of-fear-03_zxt3yu.jpg"
+    - "/v1652517205/andrew-aiello/portfolio/sound-of-fear-01_mrv1se.jpg"
+    - "/v1652517208/andrew-aiello/portfolio/sound-of-fear-04_mbbj7q.jpg"
+    - "/v1652517206/andrew-aiello/portfolio/sound-of-fear-02_y0emjn.jpg"
+    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-10_fgiuwe.jpg"
+    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-09_paatvz.jpg"
+    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-08_n1y6qg.jpg"
+    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-07_ely5rr.jpg"
+    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-06_b0zyyj.jpg"
+    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-05_c9vcmg.jpg"
+    projectType: Short Film
+    colorAccent: rgb(28, 110, 144)
+  - title: Komb
+    director: Sigurd Culhane
+    clips: []
+    featuredStill: "/v1652516789/andrew-aiello/portfolio/komb-10_ljno3t.jpg"
+    stills:
+    - "/v1652516789/andrew-aiello/portfolio/komb-10_ljno3t.jpg"
+    - "/v1652516788/andrew-aiello/portfolio/komb-04_bufw7x.jpg"
+    - "/v1652516788/andrew-aiello/portfolio/komb-05_b33bnm.jpg"
+    - "/v1652516787/andrew-aiello/portfolio/komb-06_kf4auh.jpg"
+    - "/v1652516786/andrew-aiello/portfolio/komb-02_y1j8ve.jpg"
+    - "/v1652516786/andrew-aiello/portfolio/komb-01_pnldfx.jpg"
+    - "/v1652516788/andrew-aiello/portfolio/komb-03_ohpi1a.jpg"
+    - "/v1652516789/andrew-aiello/portfolio/komb-09_i3a2gd.jpg"
+    - "/v1652516789/andrew-aiello/portfolio/komb-08_donasg.jpg"
+    - "/v1652516789/andrew-aiello/portfolio/komb-07_p7ihb2.jpg"
+    projectType: Commercial
+    colorAccent: rgb(166, 145, 98)
   fallbackProjectTypeLabel: Short Form
 
 ---

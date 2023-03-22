@@ -126,22 +126,25 @@ projectSets:
   - title: Coinbase
     projectType: Commercials
     director: Brian Mitchell and Ian Start
-    colorAccent: rgb(94, 23, 95)
+    colorAccent: rgb(179, 45, 180)
     clips:
     - https://vimeo.com/manage/videos/799693870
     - https://vimeo.com/manage/videos/799693021
     stills:
-    - "/v1679519102/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_07_00.Still001_acacet.jpg"
-    - "/v1679519102/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_13_08.Still003_egvqby.jpg"
-    - "/v1679519101/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_20_05.Still005_c1iiop.jpg"
-    - "/v1679519102/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_32_16.Still006_vmtz31.jpg"
-    - "/v1679519102/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_48_10.Still007_tdulxx.jpg"
-    - "/v1679519102/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_54_02.Still008_xizwct.jpg"
-    - "/v1679519101/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_03_17.Still010_p5udnq.jpg"
-    - "/v1679519097/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_11_00.Still011_kjujwz.jpg"
-    - "/v1679519097/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_33_12.Still012_pgx5yk.jpg"
-    - "/v1679519097/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_56_03.Still013_l831t8.jpg"
-    featuredStill: "/v1679519142/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_13_08.Still003_d4yzte.jpg"
+    - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_07_00.Still001_c5ytzs.jpg"
+    - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_09_11.Still002_orgmfj.jpg"
+    - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_13_08.Still003_he77sg.jpg"
+    - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_15_15.Still004_s7yht2.jpg"
+    - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_20_05.Still005_n9nafl.jpg"
+    - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_32_16.Still006_auedhy.jpg"
+    - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_48_10.Still007_rpyapp.jpg"
+    - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_54_02.Still008_xodnq3.jpg"
+    - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_56_21.Still009_m6zlkx.jpg"
+    - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_03_17.Still010_pro19k.jpg"
+    - "/v1679519602/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_11_00.Still011_nyu1l6.jpg"
+    - "/v1679519602/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_33_12.Still012_fhhzpc.jpg"
+    - "/v1679519602/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_56_03.Still013_lfek3q.jpg"
+    featuredStill: ''
   - title: Cafune - "Perspective"
     projectType: Music Video
     director: Erin Elders

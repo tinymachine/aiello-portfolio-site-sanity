@@ -39,17 +39,10 @@
     <h4 style={`color: ${ colorAccent || 'var(--color-default'}`}>
       {title} <!--  /* needs Markdown processing */ --> 
 
-      {#if
-        // Show projectType on home page for each except for features,
-        // which share the same type
-        projectType &&
-        !projectType.toLowerCase().startsWith('feature')
-      }
-        <span class="type">
-          <span aria-hidden="true">/</span>
-          {projectType}
-        </span>
-      {/if}
+      <span class="type">
+        <span aria-hidden="true">/</span>
+        {projectType}
+      </span>
     </h4>
   </a>
 </article>

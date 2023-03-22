@@ -120,6 +120,83 @@ projectSets:
     - "/v1652514681/andrew-aiello/portfolio/fallen-queen-5_xeeeui.jpg"
     projectType: Feature
     colorAccent: rgb(124, 146, 164)
+  - title: Green Cobra
+    director: Sigurd Culhane
+    clips:
+    - https://vimeo.com/manage/videos/673324430
+    featuredStill: "/v1652516746/andrew-aiello/portfolio/green-cobra-13_gvgt7c.jpg"
+    stills:
+    - "/v1652516746/andrew-aiello/portfolio/green-cobra-13_gvgt7c.jpg"
+    - "/v1652516747/andrew-aiello/portfolio/green-cobra-12_abxg3f.jpg"
+    - "/v1652516742/andrew-aiello/portfolio/green-cobra-02_rvilp9.jpg"
+    - "/v1652516747/andrew-aiello/portfolio/green-cobra-11_ogwgpb.jpg"
+    - "/v1652516746/andrew-aiello/portfolio/green-cobra-09_hqfeoc.jpg"
+    - "/v1652516747/andrew-aiello/portfolio/green-cobra-10_bkfu3q.jpg"
+    - "/v1652516746/andrew-aiello/portfolio/green-cobra-06_veo9zp.jpg"
+    - "/v1652516742/andrew-aiello/portfolio/green-cobra-05_qoskqn.jpg"
+    - "/v1652516746/andrew-aiello/portfolio/green-cobra-08_bkwwec.jpg"
+    - "/v1652516742/andrew-aiello/portfolio/green-cobra-03_rqkbqs.jpg"
+    - "/v1652516741/andrew-aiello/portfolio/green-cobra-01_ektji2.jpg"
+    projectType: Short
+    colorAccent: rgb(81, 191, 160)
+  - director: Eli Kooris and Joshua Shaffer
+    clips:
+    - https://vimeo.com/manage/videos/673804873
+    featuredStill: "/v1652517138/andrew-aiello/portfolio/nothingman-13_whe3nh.jpg"
+    stills:
+    - "/v1652517138/andrew-aiello/portfolio/nothingman-13_whe3nh.jpg"
+    - "/v1652517137/andrew-aiello/portfolio/nothingman-07_tszema.jpg"
+    - "/v1652517138/andrew-aiello/portfolio/nothingman-04_plma3z.jpg"
+    - "/v1652517137/andrew-aiello/portfolio/nothingman-01_wc9q0w.jpg"
+    - "/v1652517137/andrew-aiello/portfolio/nothingman-02_u96c7b.jpg"
+    - "/v1652517138/andrew-aiello/portfolio/nothingman-03_ruq93t.jpg"
+    - "/v1652517136/andrew-aiello/portfolio/nothingman-08_lgd17u.jpg"
+    - "/v1652517137/andrew-aiello/portfolio/nothingman-05_wh5jsy.jpg"
+    - "/v1652517138/andrew-aiello/portfolio/nothingman-11_l4op9t.jpg"
+    - "/v1652517138/andrew-aiello/portfolio/nothingman-12_jz9vdm.jpg"
+    - "/v1652517138/andrew-aiello/portfolio/nothingman-10_yh9bjk.jpg"
+    - "/v1652517138/andrew-aiello/portfolio/nothingman-09_siag3p.jpg"
+    - "/v1652517135/andrew-aiello/portfolio/nothingman-06_zwaqfl.jpg"
+    title: Nothingman
+    projectType: Short
+    colorAccent: rgb(138, 125, 91)
+  - title: Strip
+    director: Maxwell Addae
+    clips: []
+    featuredStill: "/v1652517264/andrew-aiello/portfolio/strip-08_v6dray.jpg"
+    stills:
+    - "/v1652517264/andrew-aiello/portfolio/strip-12_mvmnwq.jpg"
+    - "/v1652517263/andrew-aiello/portfolio/strip-04_hxsbta.jpg"
+    - "/v1652517264/andrew-aiello/portfolio/strip-08_v6dray.jpg"
+    - "/v1652517263/andrew-aiello/portfolio/strip-03_ufnal1.jpg"
+    - "/v1652517264/andrew-aiello/portfolio/strip-11_sbx7wl.jpg"
+    - "/v1652517264/andrew-aiello/portfolio/strip-06_bxnsb4.jpg"
+    - "/v1652517264/andrew-aiello/portfolio/strip-10_cerg9a.jpg"
+    - "/v1652517264/andrew-aiello/portfolio/strip-09_yu7h6j.jpg"
+    - "/v1652517264/andrew-aiello/portfolio/strip-05_ekojip.jpg"
+    - "/v1652517263/andrew-aiello/portfolio/strip-07_oz1mad.jpg"
+    - "/v1652517263/andrew-aiello/portfolio/strip-02_gp5nek.jpg"
+    - "/v1652517262/andrew-aiello/portfolio/strip-01_onr8dh.jpg"
+    projectType: Short
+    colorAccent: rgb(98, 107, 52)
+  - title: The Sound of Fear
+    director: Colin Campbell
+    clips: []
+    featuredStill: "/v1652517210/andrew-aiello/portfolio/sound-of-fear-11_eoijg7.jpg"
+    stills:
+    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-11_eoijg7.jpg"
+    - "/v1652517206/andrew-aiello/portfolio/sound-of-fear-03_zxt3yu.jpg"
+    - "/v1652517205/andrew-aiello/portfolio/sound-of-fear-01_mrv1se.jpg"
+    - "/v1652517208/andrew-aiello/portfolio/sound-of-fear-04_mbbj7q.jpg"
+    - "/v1652517206/andrew-aiello/portfolio/sound-of-fear-02_y0emjn.jpg"
+    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-10_fgiuwe.jpg"
+    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-09_paatvz.jpg"
+    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-08_n1y6qg.jpg"
+    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-07_ely5rr.jpg"
+    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-06_b0zyyj.jpg"
+    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-05_c9vcmg.jpg"
+    projectType: Short
+    colorAccent: rgb(28, 110, 144)  
   fallbackProjectTypeLabel: Feature
 - heading: Short Form
   projects:
@@ -255,83 +332,6 @@ projectSets:
     - "/v1652516789/andrew-aiello/portfolio/komb-07_p7ihb2.jpg"
     projectType: Commercial
     colorAccent: rgb(166, 145, 98)
-  - title: Green Cobra
-    director: Sigurd Culhane
-    clips:
-    - https://vimeo.com/manage/videos/673324430
-    featuredStill: "/v1652516746/andrew-aiello/portfolio/green-cobra-13_gvgt7c.jpg"
-    stills:
-    - "/v1652516746/andrew-aiello/portfolio/green-cobra-13_gvgt7c.jpg"
-    - "/v1652516747/andrew-aiello/portfolio/green-cobra-12_abxg3f.jpg"
-    - "/v1652516742/andrew-aiello/portfolio/green-cobra-02_rvilp9.jpg"
-    - "/v1652516747/andrew-aiello/portfolio/green-cobra-11_ogwgpb.jpg"
-    - "/v1652516746/andrew-aiello/portfolio/green-cobra-09_hqfeoc.jpg"
-    - "/v1652516747/andrew-aiello/portfolio/green-cobra-10_bkfu3q.jpg"
-    - "/v1652516746/andrew-aiello/portfolio/green-cobra-06_veo9zp.jpg"
-    - "/v1652516742/andrew-aiello/portfolio/green-cobra-05_qoskqn.jpg"
-    - "/v1652516746/andrew-aiello/portfolio/green-cobra-08_bkwwec.jpg"
-    - "/v1652516742/andrew-aiello/portfolio/green-cobra-03_rqkbqs.jpg"
-    - "/v1652516741/andrew-aiello/portfolio/green-cobra-01_ektji2.jpg"
-    projectType: Short Film
-    colorAccent: rgb(81, 191, 160)
-  - director: Eli Kooris and Joshua Shaffer
-    clips:
-    - https://vimeo.com/manage/videos/673804873
-    featuredStill: "/v1652517138/andrew-aiello/portfolio/nothingman-13_whe3nh.jpg"
-    stills:
-    - "/v1652517138/andrew-aiello/portfolio/nothingman-13_whe3nh.jpg"
-    - "/v1652517137/andrew-aiello/portfolio/nothingman-07_tszema.jpg"
-    - "/v1652517138/andrew-aiello/portfolio/nothingman-04_plma3z.jpg"
-    - "/v1652517137/andrew-aiello/portfolio/nothingman-01_wc9q0w.jpg"
-    - "/v1652517137/andrew-aiello/portfolio/nothingman-02_u96c7b.jpg"
-    - "/v1652517138/andrew-aiello/portfolio/nothingman-03_ruq93t.jpg"
-    - "/v1652517136/andrew-aiello/portfolio/nothingman-08_lgd17u.jpg"
-    - "/v1652517137/andrew-aiello/portfolio/nothingman-05_wh5jsy.jpg"
-    - "/v1652517138/andrew-aiello/portfolio/nothingman-11_l4op9t.jpg"
-    - "/v1652517138/andrew-aiello/portfolio/nothingman-12_jz9vdm.jpg"
-    - "/v1652517138/andrew-aiello/portfolio/nothingman-10_yh9bjk.jpg"
-    - "/v1652517138/andrew-aiello/portfolio/nothingman-09_siag3p.jpg"
-    - "/v1652517135/andrew-aiello/portfolio/nothingman-06_zwaqfl.jpg"
-    title: Nothingman
-    projectType: Short Film
-    colorAccent: rgb(138, 125, 91)
-  - title: Strip
-    director: Maxwell Addae
-    clips: []
-    featuredStill: "/v1652517264/andrew-aiello/portfolio/strip-08_v6dray.jpg"
-    stills:
-    - "/v1652517264/andrew-aiello/portfolio/strip-12_mvmnwq.jpg"
-    - "/v1652517263/andrew-aiello/portfolio/strip-04_hxsbta.jpg"
-    - "/v1652517264/andrew-aiello/portfolio/strip-08_v6dray.jpg"
-    - "/v1652517263/andrew-aiello/portfolio/strip-03_ufnal1.jpg"
-    - "/v1652517264/andrew-aiello/portfolio/strip-11_sbx7wl.jpg"
-    - "/v1652517264/andrew-aiello/portfolio/strip-06_bxnsb4.jpg"
-    - "/v1652517264/andrew-aiello/portfolio/strip-10_cerg9a.jpg"
-    - "/v1652517264/andrew-aiello/portfolio/strip-09_yu7h6j.jpg"
-    - "/v1652517264/andrew-aiello/portfolio/strip-05_ekojip.jpg"
-    - "/v1652517263/andrew-aiello/portfolio/strip-07_oz1mad.jpg"
-    - "/v1652517263/andrew-aiello/portfolio/strip-02_gp5nek.jpg"
-    - "/v1652517262/andrew-aiello/portfolio/strip-01_onr8dh.jpg"
-    projectType: Short Film
-    colorAccent: rgb(98, 107, 52)
-  - title: The Sound of Fear
-    director: Colin Campbell
-    clips: []
-    featuredStill: "/v1652517210/andrew-aiello/portfolio/sound-of-fear-11_eoijg7.jpg"
-    stills:
-    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-11_eoijg7.jpg"
-    - "/v1652517206/andrew-aiello/portfolio/sound-of-fear-03_zxt3yu.jpg"
-    - "/v1652517205/andrew-aiello/portfolio/sound-of-fear-01_mrv1se.jpg"
-    - "/v1652517208/andrew-aiello/portfolio/sound-of-fear-04_mbbj7q.jpg"
-    - "/v1652517206/andrew-aiello/portfolio/sound-of-fear-02_y0emjn.jpg"
-    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-10_fgiuwe.jpg"
-    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-09_paatvz.jpg"
-    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-08_n1y6qg.jpg"
-    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-07_ely5rr.jpg"
-    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-06_b0zyyj.jpg"
-    - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-05_c9vcmg.jpg"
-    projectType: Short Film
-    colorAccent: rgb(28, 110, 144)
   fallbackProjectTypeLabel: Short Form
 
 ---

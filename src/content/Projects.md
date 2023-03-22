@@ -126,7 +126,7 @@ projectSets:
   - title: Coinbase
     projectType: Commercials
     director: Brian Mitchell and Ian Start
-    colorAccent: ''
+    colorAccent: rgb(94, 23, 95)
     clips:
     - https://vimeo.com/manage/videos/799693870
     - https://vimeo.com/manage/videos/799693021

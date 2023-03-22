@@ -139,8 +139,8 @@ projectSets:
     - "/v1652516741/andrew-aiello/portfolio/green-cobra-01_ektji2.jpg"
     projectType: Short
     colorAccent: rgb(81, 191, 160)
-  - title: Vance And The Afterlife (coming soon)
-    projectType: Short Film
+  - title: Vance And The Afterlife
+    projectType: Short Film (coming soon)
     director: Sam Kimbrell
     colorAccent: rgb(242, 223, 169)
     clips: []

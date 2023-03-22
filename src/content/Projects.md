@@ -130,21 +130,19 @@ projectSets:
     clips:
     - https://vimeo.com/manage/videos/810675595
     stills:
+    - "/v1679517589/andrew-aiello/portfolio/cafune_perspective_422hq_Original_.00_01_58_04.Still012_h6qde7.jpg"
     - "/v1679517557/andrew-aiello/portfolio/cafune_perspective_422hq_Original_.00_00_24_18.Still005_ly44bm.jpg"
     - "/v1679517569/andrew-aiello/portfolio/cafune_perspective_422hq_Original_.00_00_18_21.Still004_v51a6n.jpg"
+    - "/v1679517589/andrew-aiello/portfolio/cafune_perspective_422hq_Original_.00_01_31_23.Still009_fw9jii.jpg"
+    - "/v1679517590/andrew-aiello/portfolio/cafune_perspective_422hq_Original_.00_01_51_00.Still010_hf07mp.jpg"
     - "/v1679517603/andrew-aiello/portfolio/cafune_perspective_422hq_Original_.00_02_30_19.Still019_ugwtfs.jpg"
     - "/v1679517598/andrew-aiello/portfolio/cafune_perspective_422hq_Original_.00_02_08_01.Still015_qxdina.jpg"
     - "/v1679517595/andrew-aiello/portfolio/cafune_perspective_422hq_Original_.00_02_19_00.Still016_rrvs9b.jpg"
     - "/v1679517589/andrew-aiello/portfolio/cafune_perspective_422hq_Original_.00_00_58_15.Still007_itztkj.jpg"
-    - "/v1679517589/andrew-aiello/portfolio/cafune_perspective_422hq_Original_.00_01_58_04.Still012_h6qde7.jpg"
-    - "/v1679517589/andrew-aiello/portfolio/cafune_perspective_422hq_Original_.00_01_08_00.Still008_yftzhe.jpg"
-    - "/v1679517581/andrew-aiello/portfolio/cafune_perspective_422hq_Original_.00_00_13_15.Still003_at0a3v.jpg"
     - "/v1679517601/andrew-aiello/portfolio/cafune_perspective_422hq_Original_.00_02_29_14.Still018_wwma4a.jpg"
     - "/v1679517605/andrew-aiello/portfolio/cafune_perspective_422hq_Original_.00_02_37_08.Still020_lzvbj4.jpg"
     - "/v1679517591/andrew-aiello/portfolio/cafune_perspective_422hq_Original_.00_02_03_19.Still014_ftcsfg.jpg"
     - "/v1679517590/andrew-aiello/portfolio/cafune_perspective_422hq_Original_.00_02_02_23.Still013_okrmwr.jpg"
-    - "/v1679517589/andrew-aiello/portfolio/cafune_perspective_422hq_Original_.00_01_31_23.Still009_fw9jii.jpg"
-    - "/v1679517590/andrew-aiello/portfolio/cafune_perspective_422hq_Original_.00_01_51_00.Still010_hf07mp.jpg"
     featuredStill: "/v1679517518/andrew-aiello/portfolio/cafune_perspective_422hq_Original_.00_01_56_00.Still011_l9jli2.jpg"
   - title: Green Cobra
     director: Sigurd Culhane

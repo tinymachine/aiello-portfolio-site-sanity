@@ -127,7 +127,8 @@ projectSets:
     projectType: Music Video
     director: Erin Elders
     colorAccent: ''
-    clips: []
+    clips:
+    - https://vimeo.com/manage/videos/810675595
     stills: []
     featuredStill: ''
   - title: Green Cobra

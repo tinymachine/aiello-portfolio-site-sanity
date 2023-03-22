@@ -131,7 +131,6 @@ projectSets:
     - https://vimeo.com/manage/videos/799693870
     - https://vimeo.com/manage/videos/799693021
     stills:
-    - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_07_00.Still001_c5ytzs.jpg"
     - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_09_11.Still002_orgmfj.jpg"
     - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_13_08.Still003_he77sg.jpg"
     - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_15_15.Still004_s7yht2.jpg"

@@ -332,7 +332,6 @@ projectSets:
     - "/v1679519798/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_03_17.Still010_ruvio0.jpg"
     - "/v1679519798/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_11_00.Still011_keap9y.jpg"
     - "/v1679519798/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_13_08.Still003_wkode4.jpg"
-    - "/v1679519798/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_48_10.Still007_dfjzn8.jpg"
     - "/v1679519798/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_20_05.Still005_twdvz6.jpg"
     - "/v1679527820/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_15_15.Still004_zl5mjj.jpg"
     - "/v1679519798/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_56_21.Still009_g63nlx.jpg"

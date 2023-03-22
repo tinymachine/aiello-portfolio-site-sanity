@@ -118,7 +118,7 @@ projectSets:
     - "/v1652514684/andrew-aiello/portfolio/fallen-queen-7_cczabq.jpg"
     - "/v1652514683/andrew-aiello/portfolio/fallen-queen-6_vfqe9y.jpg"
     - "/v1652514681/andrew-aiello/portfolio/fallen-queen-5_xeeeui.jpg"
-    projectType: ''
+    projectType: Feature
     colorAccent: rgb(124, 146, 164)
   fallbackProjectTypeLabel: Feature Film
 - heading: Short Form

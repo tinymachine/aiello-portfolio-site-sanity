@@ -120,7 +120,7 @@ projectSets:
     - "/v1652514681/andrew-aiello/portfolio/fallen-queen-5_xeeeui.jpg"
     projectType: Feature
     colorAccent: rgb(124, 146, 164)
-  fallbackProjectTypeLabel: Feature Film
+  fallbackProjectTypeLabel: Feature
 - heading: Short Form
   projects:
   - title: Cafune — "Perspective"

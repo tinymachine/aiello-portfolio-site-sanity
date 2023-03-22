@@ -124,8 +124,8 @@ projectSets:
 - heading: Short Form
   projects:
   - title: Cafune - "Perspective"
-    projectType: ''
-    director: ''
+    projectType: Music Video
+    director: Erin Elders
     colorAccent: ''
     clips: []
     stills: []

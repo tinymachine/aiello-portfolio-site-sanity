@@ -123,7 +123,7 @@ projectSets:
   fallbackProjectTypeLabel: Feature Film
 - heading: Short Form
   projects:
-  - title: Cafune - "Perspective"
+  - title: Cafune — "Perspective"
     projectType: Music Video
     director: Erin Elders
     colorAccent: rgb(247, 187, 101)

@@ -126,7 +126,7 @@ projectSets:
   - title: Cafune - "Perspective"
     projectType: Music Video
     director: Erin Elders
-    colorAccent: rgb(77, 143, 105)
+    colorAccent: rgb(247, 187, 101)
     clips:
     - https://vimeo.com/manage/videos/810675595
     stills:

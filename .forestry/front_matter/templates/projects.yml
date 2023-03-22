@@ -32,8 +32,7 @@ fields:
       config:
         required: false
       label: Project Type
-      description: E.g. "Commercial", "Music Video", etc. Leave this blank for feature
-        films.
+      description: E.g. "Feature", "Short", "Commercial", "Music Video", etc.
     - type: text
       name: director
       label: Director

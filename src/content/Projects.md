@@ -74,7 +74,7 @@ projectSets:
     - "/v1652516014/andrew-aiello/portfolio/shuddhi-14_yarqpa.jpg"
     - "/v1652516014/andrew-aiello/portfolio/shuddhi-10_bbgwqa.jpg"
     - "/v1652516014/andrew-aiello/portfolio/shuddhi-09_hmymbx.jpg"
-    projectType: ''
+    projectType: Feature
     colorAccent: rgb(147, 140, 123)
   - title: Bhinna
     director: Adarsh Eshwarappa

@@ -145,7 +145,6 @@ projectSets:
     colorAccent: rgb(242, 223, 169)
     clips: []
     stills:
-    - "/v1679527707/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_11_21.Still020_wdlntn.jpg"
     - "/v1679527301/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_07_38_23.Still016_une8bn.jpg"
     - "/v1679527343/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_00_26_15.Still002_oy8miq.jpg"
     - "/v1679527292/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_07_56_01.Still017_swiovr.jpg"

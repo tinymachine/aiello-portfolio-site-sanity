@@ -145,6 +145,7 @@ projectSets:
     colorAccent: rgb(242, 223, 169)
     clips: []
     stills:
+    - "/v1679527707/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_11_21.Still020_wdlntn.jpg"
     - "/v1679527301/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_07_38_23.Still016_une8bn.jpg"
     - "/v1679527343/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_00_26_15.Still002_oy8miq.jpg"
     - "/v1679527292/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_07_56_01.Still017_swiovr.jpg"
@@ -155,6 +156,7 @@ projectSets:
     - "/v1679527280/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_05_15_14.Still010_ewn78l.jpg"
     - "/v1679527284/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_05_51_20.Still012_qwghed.jpg"
     - "/v1679527327/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_05_39_23.Still011_o2ozun.jpg"
+    - "/v1679527690/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_20_21.Still022_go4imm.jpg"
     - "/v1679527258/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_07_23.Still019_cukivb.jpg"
     - "/v1679527238/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_39_23.Still032_txdcvo.jpg"
     - "/v1679527227/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_37_08.Still029_od9r5u.jpg"

@@ -196,7 +196,7 @@ projectSets:
     - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-06_b0zyyj.jpg"
     - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-05_c9vcmg.jpg"
     projectType: Short
-    colorAccent: rgb(28, 110, 144)  
+    colorAccent: rgb(28, 110, 144)
   fallbackProjectTypeLabel: Feature
 - heading: Short Form
   projects:
@@ -300,7 +300,7 @@ projectSets:
   - title: Coinbase
     projectType: Commercials
     director: Brian Mitchell and Ian Start
-    colorAccent: rgb(179, 45, 180)
+    colorAccent: rgb(101, 84, 140)
     clips:
     - https://vimeo.com/manage/videos/799693870
     - https://vimeo.com/manage/videos/799693021

@@ -131,19 +131,16 @@ projectSets:
     - https://vimeo.com/manage/videos/799693870
     - https://vimeo.com/manage/videos/799693021
     stills:
-    - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_09_11.Still002_orgmfj.jpg"
-    - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_13_08.Still003_he77sg.jpg"
-    - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_15_15.Still004_s7yht2.jpg"
-    - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_20_05.Still005_n9nafl.jpg"
-    - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_32_16.Still006_auedhy.jpg"
-    - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_48_10.Still007_rpyapp.jpg"
-    - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_54_02.Still008_xodnq3.jpg"
-    - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_56_21.Still009_m6zlkx.jpg"
-    - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_03_17.Still010_pro19k.jpg"
     - "/v1679519602/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_11_00.Still011_nyu1l6.jpg"
+    - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_03_17.Still010_pro19k.jpg"
     - "/v1679519602/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_33_12.Still012_fhhzpc.jpg"
     - "/v1679519602/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_56_03.Still013_lfek3q.jpg"
-    featuredStill: ''
+    - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_56_21.Still009_m6zlkx.jpg"
+    - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_48_10.Still007_rpyapp.jpg"
+    - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_20_05.Still005_n9nafl.jpg"
+    - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_32_16.Still006_auedhy.jpg"
+    - "/v1679519604/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_13_08.Still003_he77sg.jpg"
+    featuredStill: "/v1679519686/andrew-aiello/portfolio/02_CM_60sec_FINAL_MASTER_16x9_h264.00_00_13_08.Still003_nmlxxq.jpg"
   - title: Cafune - "Perspective"
     projectType: Music Video
     director: Erin Elders

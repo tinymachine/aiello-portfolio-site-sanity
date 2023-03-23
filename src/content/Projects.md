@@ -2,7 +2,7 @@
 projectSets:
 - heading: Narrative
   projects:
-  - title: WE BROKE UP
+  - title: We Broke Up
     director: Jeff Rosenberg
     clips:
     - https://vimeo.com/manage/videos/528548672

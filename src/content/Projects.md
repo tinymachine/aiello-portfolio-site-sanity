@@ -133,7 +133,6 @@ projectSets:
     - "/v1679527272/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_00_46_10.Still004_g9mmht.jpg"
     - "/v1679527263/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_00_40_18.Still003_eyi10c.jpg"
     - "/v1679527330/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_04_28_20.Still009_dh03mn.jpg"
-    - "/v1679527280/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_05_15_14.Still010_ewn78l.jpg"
     - "/v1679527284/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_05_51_20.Still012_qwghed.jpg"
     - "/v1679527327/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_05_39_23.Still011_o2ozun.jpg"
     - "/v1679527690/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_20_21.Still022_go4imm.jpg"

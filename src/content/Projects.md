@@ -140,7 +140,7 @@ projectSets:
     projectType: Short
     colorAccent: rgb(81, 191, 160)
   - title: Vance and The Afterlife
-    projectType: Short Film (coming soon)
+    projectType: Short (coming soon)
     director: Sam Kimbrell
     colorAccent: rgb(242, 223, 169)
     clips: []

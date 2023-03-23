@@ -12,6 +12,16 @@ fields:
   label: Role
   config:
     required: true
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Site Description (for search engines)
+  description: This won't appear on the website but may appear in Google search results.
 - name: themeColors
   type: field_group
   config: {}

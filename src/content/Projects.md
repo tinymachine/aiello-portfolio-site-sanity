@@ -242,7 +242,7 @@ projectSets:
     - "/v1679517591/andrew-aiello/portfolio/cafune_perspective_422hq_Original_.00_02_03_19.Still014_ftcsfg.jpg"
     - "/v1679517590/andrew-aiello/portfolio/cafune_perspective_422hq_Original_.00_02_02_23.Still013_okrmwr.jpg"
     featuredStill: "/v1679517518/andrew-aiello/portfolio/cafune_perspective_422hq_Original_.00_01_56_00.Still011_l9jli2.jpg"
-  - title: Lil Sqwid — "Everybody Know"
+  - title: Lil Sqwid — "Everybody Know" (coming soon)
     director: Erin Elders
     clips: []
     featuredStill: "/v1661283468/andrew-aiello/portfolio/Sequence_01.00_02_36_02.Still002_xicemk.jpg"

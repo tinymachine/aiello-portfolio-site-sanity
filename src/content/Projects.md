@@ -242,7 +242,7 @@ projectSets:
     - "/v1679517591/andrew-aiello/portfolio/cafune_perspective_422hq_Original_.00_02_03_19.Still014_ftcsfg.jpg"
     - "/v1679517590/andrew-aiello/portfolio/cafune_perspective_422hq_Original_.00_02_02_23.Still013_okrmwr.jpg"
     featuredStill: "/v1679517518/andrew-aiello/portfolio/cafune_perspective_422hq_Original_.00_01_56_00.Still011_l9jli2.jpg"
-  - title: Lil Sqwid — "Everybody Know" (coming soon)
+  - title: Lil Sqwid — "Everybody Know"
     director: Erin Elders
     clips: []
     featuredStill: "/v1661283468/andrew-aiello/portfolio/Sequence_01.00_02_36_02.Still002_xicemk.jpg"
@@ -259,7 +259,7 @@ projectSets:
     - "/v1661283416/andrew-aiello/portfolio/Sequence_01.00_00_42_13.Still023_h1xrdn.jpg"
     - "/v1661283427/andrew-aiello/portfolio/Sequence_01.00_01_01_23.Still007_t8c5bj.jpg"
     - "/v1661283427/andrew-aiello/portfolio/Sequence_01.00_00_53_18.Still004_ubo9wk.jpg"
-    projectType: Music Video
+    projectType: Music Video (coming soon)
     colorAccent: rgb(167, 116, 61)
   - title: 1916 — "For Whiskey"
     director: Sigurd Culhane

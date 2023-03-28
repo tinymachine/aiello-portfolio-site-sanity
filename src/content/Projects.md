@@ -337,7 +337,8 @@ projectSets:
     colorAccent: rgb(137, 104, 107)
   - title: Komb
     director: Sigurd Culhane
-    clips: []
+    clips:
+    - https://vimeo.com/manage/videos/673332936
     featuredStill: "/v1652516789/andrew-aiello/portfolio/komb-10_ljno3t.jpg"
     stills:
     - "/v1652516789/andrew-aiello/portfolio/komb-10_ljno3t.jpg"

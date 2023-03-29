@@ -178,7 +178,7 @@ projectSets:
     - "/v1652517263/andrew-aiello/portfolio/strip-02_gp5nek.jpg"
     - "/v1652517262/andrew-aiello/portfolio/strip-01_onr8dh.jpg"
     projectType: Short
-    colorAccent: rgb(98, 107, 52)
+    colorAccent: rgb(143, 156, 145)
   - director: Eli Kooris and Joshua Shaffer
     clips:
     - https://vimeo.com/manage/videos/673804873

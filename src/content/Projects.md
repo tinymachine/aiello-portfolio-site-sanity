@@ -140,7 +140,7 @@ projectSets:
     - "/v1679527335/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_00_51_02.Still005_mghjta.jpg"
     - "/v1679527292/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_07_56_01.Still017_swiovr.jpg"
     - "/v1679527301/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_07_38_23.Still016_une8bn.jpg"
-    featuredStill: "/v1679527101/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_20_21.Still022_etgiqe.jpg"
+    featuredStill: "/v1680121822/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_37_18.Still030_rzz6fh.jpg"
   - title: Green Cobra
     director: Sigurd Culhane
     clips:

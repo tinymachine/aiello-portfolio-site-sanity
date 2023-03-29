@@ -80,7 +80,7 @@ projectSets:
     director: Adarsh Eshwarappa
     clips:
     - https://vimeo.com/manage/videos/674010829
-    featuredStill: "/v1652516014/andrew-aiello/portfolio/shuddhi-07_uw8kyy.jpg"
+    featuredStill: "/v1652516015/andrew-aiello/portfolio/shuddhi-13_hfpjnm.jpg"
     stills:
     - "/v1652516015/andrew-aiello/portfolio/shuddhi-13_hfpjnm.jpg"
     - "/v1652516014/andrew-aiello/portfolio/shuddhi-07_uw8kyy.jpg"
@@ -98,7 +98,7 @@ projectSets:
     - "/v1652516014/andrew-aiello/portfolio/shuddhi-10_bbgwqa.jpg"
     - "/v1652516014/andrew-aiello/portfolio/shuddhi-09_hmymbx.jpg"
     projectType: Feature
-    colorAccent: rgb(147, 140, 123)
+    colorAccent: rgb(192, 184, 149)
   - title: Fallen Queen
     director: Joel Soisson
     clips: []

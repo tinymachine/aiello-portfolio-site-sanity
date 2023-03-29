@@ -160,25 +160,6 @@ projectSets:
     - "/v1679527292/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_07_56_01.Still017_swiovr.jpg"
     - "/v1679527301/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_07_38_23.Still016_une8bn.jpg"
     featuredStill: "/v1679527227/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_37_08.Still029_od9r5u.jpg"
-  - title: Strip
-    director: Maxwell Addae
-    clips: []
-    featuredStill: "/v1652517264/andrew-aiello/portfolio/strip-12_mvmnwq.jpg"
-    stills:
-    - "/v1652517264/andrew-aiello/portfolio/strip-12_mvmnwq.jpg"
-    - "/v1652517263/andrew-aiello/portfolio/strip-04_hxsbta.jpg"
-    - "/v1652517264/andrew-aiello/portfolio/strip-08_v6dray.jpg"
-    - "/v1652517263/andrew-aiello/portfolio/strip-03_ufnal1.jpg"
-    - "/v1652517264/andrew-aiello/portfolio/strip-11_sbx7wl.jpg"
-    - "/v1652517264/andrew-aiello/portfolio/strip-06_bxnsb4.jpg"
-    - "/v1652517264/andrew-aiello/portfolio/strip-10_cerg9a.jpg"
-    - "/v1652517264/andrew-aiello/portfolio/strip-09_yu7h6j.jpg"
-    - "/v1652517264/andrew-aiello/portfolio/strip-05_ekojip.jpg"
-    - "/v1652517263/andrew-aiello/portfolio/strip-07_oz1mad.jpg"
-    - "/v1652517263/andrew-aiello/portfolio/strip-02_gp5nek.jpg"
-    - "/v1652517262/andrew-aiello/portfolio/strip-01_onr8dh.jpg"
-    projectType: Short
-    colorAccent: rgb(143, 156, 145)
   - director: Eli Kooris and Joshua Shaffer
     clips:
     - https://vimeo.com/manage/videos/673804873
@@ -200,6 +181,25 @@ projectSets:
     title: Nothingman
     projectType: Short
     colorAccent: rgb(118, 149, 172)
+  - title: Strip
+    director: Maxwell Addae
+    clips: []
+    featuredStill: "/v1652517264/andrew-aiello/portfolio/strip-12_mvmnwq.jpg"
+    stills:
+    - "/v1652517264/andrew-aiello/portfolio/strip-12_mvmnwq.jpg"
+    - "/v1652517263/andrew-aiello/portfolio/strip-04_hxsbta.jpg"
+    - "/v1652517264/andrew-aiello/portfolio/strip-08_v6dray.jpg"
+    - "/v1652517263/andrew-aiello/portfolio/strip-03_ufnal1.jpg"
+    - "/v1652517264/andrew-aiello/portfolio/strip-11_sbx7wl.jpg"
+    - "/v1652517264/andrew-aiello/portfolio/strip-06_bxnsb4.jpg"
+    - "/v1652517264/andrew-aiello/portfolio/strip-10_cerg9a.jpg"
+    - "/v1652517264/andrew-aiello/portfolio/strip-09_yu7h6j.jpg"
+    - "/v1652517264/andrew-aiello/portfolio/strip-05_ekojip.jpg"
+    - "/v1652517263/andrew-aiello/portfolio/strip-07_oz1mad.jpg"
+    - "/v1652517263/andrew-aiello/portfolio/strip-02_gp5nek.jpg"
+    - "/v1652517262/andrew-aiello/portfolio/strip-01_onr8dh.jpg"
+    projectType: Short
+    colorAccent: rgb(143, 156, 145)
   - title: The Sound of Fear
     director: Colin Campbell
     clips: []

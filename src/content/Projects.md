@@ -126,20 +126,20 @@ projectSets:
     colorAccent: rgb(242, 223, 169)
     clips: []
     stills:
-    - "/v1679527301/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_07_38_23.Still016_une8bn.jpg"
-    - "/v1679527343/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_00_26_15.Still002_oy8miq.jpg"
-    - "/v1679527292/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_07_56_01.Still017_swiovr.jpg"
-    - "/v1679527335/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_00_51_02.Still005_mghjta.jpg"
-    - "/v1679527272/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_00_46_10.Still004_g9mmht.jpg"
-    - "/v1679527263/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_00_40_18.Still003_eyi10c.jpg"
-    - "/v1679527330/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_04_28_20.Still009_dh03mn.jpg"
-    - "/v1679527284/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_05_51_20.Still012_qwghed.jpg"
-    - "/v1679527327/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_05_39_23.Still011_o2ozun.jpg"
-    - "/v1679527690/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_20_21.Still022_go4imm.jpg"
-    - "/v1679527258/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_07_23.Still019_cukivb.jpg"
     - "/v1679527215/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_33_15.Still025_sydpgc.jpg"
     - "/v1679527227/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_37_08.Still029_od9r5u.jpg"
     - "/v1680121731/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_37_18.Still030_zcsyyk.jpg"
+    - "/v1679527284/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_05_51_20.Still012_qwghed.jpg"
+    - "/v1679527272/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_00_46_10.Still004_g9mmht.jpg"
+    - "/v1679527330/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_04_28_20.Still009_dh03mn.jpg"
+    - "/v1679527327/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_05_39_23.Still011_o2ozun.jpg"
+    - "/v1679527690/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_20_21.Still022_go4imm.jpg"
+    - "/v1679527258/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_07_23.Still019_cukivb.jpg"
+    - "/v1679527263/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_00_40_18.Still003_eyi10c.jpg"
+    - "/v1679527343/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_00_26_15.Still002_oy8miq.jpg"
+    - "/v1679527335/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_00_51_02.Still005_mghjta.jpg"
+    - "/v1679527292/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_07_56_01.Still017_swiovr.jpg"
+    - "/v1679527301/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_07_38_23.Still016_une8bn.jpg"
     featuredStill: "/v1679527101/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_20_21.Still022_etgiqe.jpg"
   - title: Green Cobra
     director: Sigurd Culhane

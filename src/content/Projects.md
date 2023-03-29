@@ -120,6 +120,25 @@ projectSets:
     - "/v1652514681/andrew-aiello/portfolio/fallen-queen-5_xeeeui.jpg"
     projectType: Feature
     colorAccent: rgb(124, 146, 164)
+  - title: Green Cobra
+    director: Sigurd Culhane
+    clips:
+    - https://vimeo.com/manage/videos/673324430
+    featuredStill: "/v1652516746/andrew-aiello/portfolio/green-cobra-13_gvgt7c.jpg"
+    stills:
+    - "/v1652516746/andrew-aiello/portfolio/green-cobra-13_gvgt7c.jpg"
+    - "/v1652516747/andrew-aiello/portfolio/green-cobra-12_abxg3f.jpg"
+    - "/v1652516742/andrew-aiello/portfolio/green-cobra-02_rvilp9.jpg"
+    - "/v1652516747/andrew-aiello/portfolio/green-cobra-11_ogwgpb.jpg"
+    - "/v1652516746/andrew-aiello/portfolio/green-cobra-09_hqfeoc.jpg"
+    - "/v1652516747/andrew-aiello/portfolio/green-cobra-10_bkfu3q.jpg"
+    - "/v1652516746/andrew-aiello/portfolio/green-cobra-06_veo9zp.jpg"
+    - "/v1652516742/andrew-aiello/portfolio/green-cobra-05_qoskqn.jpg"
+    - "/v1652516746/andrew-aiello/portfolio/green-cobra-08_bkwwec.jpg"
+    - "/v1652516742/andrew-aiello/portfolio/green-cobra-03_rqkbqs.jpg"
+    - "/v1652516741/andrew-aiello/portfolio/green-cobra-01_ektji2.jpg"
+    projectType: Short
+    colorAccent: rgb(81, 191, 160)
   - title: Vance and The Afterlife
     projectType: Short (coming soon)
     director: Sam Kimbrell
@@ -141,25 +160,6 @@ projectSets:
     - "/v1679527292/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_07_56_01.Still017_swiovr.jpg"
     - "/v1679527301/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_07_38_23.Still016_une8bn.jpg"
     featuredStill: "/v1680121822/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_37_18.Still030_rzz6fh.jpg"
-  - title: Green Cobra
-    director: Sigurd Culhane
-    clips:
-    - https://vimeo.com/manage/videos/673324430
-    featuredStill: "/v1652516746/andrew-aiello/portfolio/green-cobra-13_gvgt7c.jpg"
-    stills:
-    - "/v1652516746/andrew-aiello/portfolio/green-cobra-13_gvgt7c.jpg"
-    - "/v1652516747/andrew-aiello/portfolio/green-cobra-12_abxg3f.jpg"
-    - "/v1652516742/andrew-aiello/portfolio/green-cobra-02_rvilp9.jpg"
-    - "/v1652516747/andrew-aiello/portfolio/green-cobra-11_ogwgpb.jpg"
-    - "/v1652516746/andrew-aiello/portfolio/green-cobra-09_hqfeoc.jpg"
-    - "/v1652516747/andrew-aiello/portfolio/green-cobra-10_bkfu3q.jpg"
-    - "/v1652516746/andrew-aiello/portfolio/green-cobra-06_veo9zp.jpg"
-    - "/v1652516742/andrew-aiello/portfolio/green-cobra-05_qoskqn.jpg"
-    - "/v1652516746/andrew-aiello/portfolio/green-cobra-08_bkwwec.jpg"
-    - "/v1652516742/andrew-aiello/portfolio/green-cobra-03_rqkbqs.jpg"
-    - "/v1652516741/andrew-aiello/portfolio/green-cobra-01_ektji2.jpg"
-    projectType: Short
-    colorAccent: rgb(81, 191, 160)
   - title: Strip
     director: Maxwell Addae
     clips: []

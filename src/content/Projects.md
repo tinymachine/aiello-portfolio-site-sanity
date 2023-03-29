@@ -123,7 +123,7 @@ projectSets:
   - title: Vance and The Afterlife
     projectType: Short (coming soon)
     director: Sam Kimbrell
-    colorAccent: rgb(242, 223, 169)
+    colorAccent: rgb(248, 179, 96)
     clips: []
     stills:
     - "/v1679527215/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_33_15.Still025_sydpgc.jpg"

@@ -163,7 +163,7 @@ projectSets:
   - title: Strip
     director: Maxwell Addae
     clips: []
-    featuredStill: "/v1652517264/andrew-aiello/portfolio/strip-08_v6dray.jpg"
+    featuredStill: "/v1652517264/andrew-aiello/portfolio/strip-09_yu7h6j.jpg"
     stills:
     - "/v1652517264/andrew-aiello/portfolio/strip-12_mvmnwq.jpg"
     - "/v1652517263/andrew-aiello/portfolio/strip-04_hxsbta.jpg"

@@ -137,9 +137,9 @@ projectSets:
     - "/v1679527327/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_05_39_23.Still011_o2ozun.jpg"
     - "/v1679527690/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_20_21.Still022_go4imm.jpg"
     - "/v1679527258/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_07_23.Still019_cukivb.jpg"
-    - "/v1679527238/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_39_23.Still032_txdcvo.jpg"
-    - "/v1679527227/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_37_08.Still029_od9r5u.jpg"
     - "/v1679527215/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_33_15.Still025_sydpgc.jpg"
+    - "/v1679527227/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_37_08.Still029_od9r5u.jpg"
+    - "/v1680121731/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_37_18.Still030_zcsyyk.jpg"
     featuredStill: "/v1679527101/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_20_21.Still022_etgiqe.jpg"
   - title: Green Cobra
     director: Sigurd Culhane

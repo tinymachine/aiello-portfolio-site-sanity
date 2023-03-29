@@ -137,7 +137,7 @@ projectSets:
     - "/v1652516746/andrew-aiello/portfolio/green-cobra-08_bkwwec.jpg"
     - "/v1652516742/andrew-aiello/portfolio/green-cobra-03_rqkbqs.jpg"
     - "/v1652516741/andrew-aiello/portfolio/green-cobra-01_ektji2.jpg"
-    projectType: Short - 2022 ICG ECA Winner
+    projectType: Short (2022 ICG ECA Winner)
     colorAccent: rgb(81, 191, 160)
   - title: Vance and The Afterlife
     projectType: Short (coming soon)

@@ -182,7 +182,7 @@ projectSets:
   - director: Eli Kooris and Joshua Shaffer
     clips:
     - https://vimeo.com/manage/videos/673804873
-    featuredStill: "/v1652517138/andrew-aiello/portfolio/nothingman-13_whe3nh.jpg"
+    featuredStill: "/v1652517137/andrew-aiello/portfolio/nothingman-05_wh5jsy.jpg"
     stills:
     - "/v1652517138/andrew-aiello/portfolio/nothingman-13_whe3nh.jpg"
     - "/v1652517137/andrew-aiello/portfolio/nothingman-07_tszema.jpg"
@@ -199,7 +199,7 @@ projectSets:
     - "/v1652517135/andrew-aiello/portfolio/nothingman-06_zwaqfl.jpg"
     title: Nothingman
     projectType: Short
-    colorAccent: rgb(138, 125, 91)
+    colorAccent: rgb(118, 149, 172)
   - title: The Sound of Fear
     director: Colin Campbell
     clips: []

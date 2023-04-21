@@ -221,6 +221,24 @@ projectSets:
   fallbackProjectTypeLabel: Feature
 - heading: Short Form
   projects:
+  - title: Rob Moose feat. Brittany Howard - "I Bend But Never Break"
+    projectType: Music Video
+    director: Maxwell Addae
+    colorAccent: rgb(164, 10, 183)
+    clips: []
+    stills:
+    - "/v1682097008/andrew-aiello/portfolio/Bend_final_compressed.00_01_22_07.Still004_naie37.jpg"
+    - "/v1682097006/andrew-aiello/portfolio/Bend_final_compressed.00_01_14_11.Still003_rtndpk.jpg"
+    - "/v1682096954/andrew-aiello/portfolio/Bend_final_compressed.00_01_32_06.Still008_j2uulq.jpg"
+    - "/v1682097013/andrew-aiello/portfolio/Bend_final_compressed.00_01_48_08.Still010_dbgxqc.jpg"
+    - "/v1682096972/andrew-aiello/portfolio/Bend_final_compressed.00_00_44_05.Still001_xwpuwt.jpg"
+    - "/v1682096996/andrew-aiello/portfolio/Bend_final_compressed.00_02_13_05.Still012_mygnho.jpg"
+    - "/v1682096982/andrew-aiello/portfolio/Bend_final_compressed.00_01_04_02.Still002_qqxgwt.jpg"
+    - "/v1682097016/andrew-aiello/portfolio/Bend_final_compressed.00_02_39_12.Still013_qjohdp.jpg"
+    - "/v1682097018/andrew-aiello/portfolio/Bend_final_compressed.00_02_58_10.Still015_xqja8c.jpg"
+    - "/v1682097038/andrew-aiello/portfolio/Bend_final_compressed.00_03_12_03.Still016_efftbg.jpg"
+    - "/v1682097040/andrew-aiello/portfolio/Bend_final_compressed.00_03_17_11.Still018_xnve7i.jpg"
+    featuredStill: "/v1682096960/andrew-aiello/portfolio/Bend_final_compressed.00_01_32_06.Still008_yfebnw.jpg"
   - title: Cafune — "Perspective"
     projectType: Music Video
     director: Erin Elders

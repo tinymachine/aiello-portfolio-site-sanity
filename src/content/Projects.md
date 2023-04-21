@@ -225,7 +225,8 @@ projectSets:
     projectType: Music Video
     director: Maxwell Addae
     colorAccent: rgb(164, 10, 183)
-    clips: []
+    clips:
+    - https://vimeo.com/manage/videos/819922065
     stills:
     - "/v1682097008/andrew-aiello/portfolio/Bend_final_compressed.00_01_22_07.Still004_naie37.jpg"
     - "/v1682097006/andrew-aiello/portfolio/Bend_final_compressed.00_01_14_11.Still003_rtndpk.jpg"

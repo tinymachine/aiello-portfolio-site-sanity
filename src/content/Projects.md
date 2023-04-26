@@ -50,7 +50,7 @@ projectSets:
     - "/v1652514474/andrew-aiello/portfolio/bhinna-11_xb4ydg.jpg"
     featuredStill: "/v1652514475/andrew-aiello/portfolio/bhinna-10_ymbkak.jpg"
     projectType: Feature
-    colorAccent: rgb(116, 136, 149)
+    colorAccent: rgb(170, 195, 212)
   - title: International Falls
     director: Amber McGinnis
     clips:
@@ -119,7 +119,7 @@ projectSets:
     - "/v1652514683/andrew-aiello/portfolio/fallen-queen-6_vfqe9y.jpg"
     - "/v1652514681/andrew-aiello/portfolio/fallen-queen-5_xeeeui.jpg"
     projectType: Feature
-    colorAccent: rgb(124, 146, 164)
+    colorAccent: rgb(153, 170, 184)
   - title: Green Cobra
     director: Sigurd Culhane
     clips:
@@ -142,7 +142,7 @@ projectSets:
   - title: Vance and The Afterlife
     projectType: Short (coming soon)
     director: Sam Kimbrell
-    colorAccent: rgb(251, 218, 153)
+    colorAccent: rgb(210, 181, 121)
     clips: []
     stills:
     - "/v1679527215/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_33_15.Still025_sydpgc.jpg"
@@ -180,7 +180,7 @@ projectSets:
     - "/v1652517135/andrew-aiello/portfolio/nothingman-06_zwaqfl.jpg"
     title: Nothingman
     projectType: Short
-    colorAccent: rgb(118, 149, 172)
+    colorAccent: rgb(119, 163, 197)
   - title: Strip
     director: Maxwell Addae
     clips: []
@@ -199,7 +199,7 @@ projectSets:
     - "/v1652517263/andrew-aiello/portfolio/strip-02_gp5nek.jpg"
     - "/v1652517262/andrew-aiello/portfolio/strip-01_onr8dh.jpg"
     projectType: Short
-    colorAccent: rgb(143, 156, 145)
+    colorAccent: rgb(148, 168, 151)
   - title: The Sound of Fear
     director: Colin Campbell
     clips: []
@@ -217,14 +217,14 @@ projectSets:
     - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-06_b0zyyj.jpg"
     - "/v1652517210/andrew-aiello/portfolio/sound-of-fear-05_c9vcmg.jpg"
     projectType: Short
-    colorAccent: rgb(28, 110, 144)
+    colorAccent: rgb(71, 168, 209)
   fallbackProjectTypeLabel: Feature
 - heading: Short Form
   projects:
-  - title: Rob Moose feat. Brittany Howard - "I Bend But Never Break"
+  - title: Rob Moose feat. Brittany Howard — "I Bend But Never Break"
     projectType: Music Video
     director: Maxwell Addae
-    colorAccent: rgb(164, 10, 183)
+    colorAccent: rgb(196, 97, 209)
     clips:
     - https://vimeo.com/manage/videos/819922065
     stills:
@@ -281,7 +281,7 @@ projectSets:
     - "/v1661283427/andrew-aiello/portfolio/Sequence_01.00_01_01_23.Still007_t8c5bj.jpg"
     - "/v1661283427/andrew-aiello/portfolio/Sequence_01.00_00_53_18.Still004_ubo9wk.jpg"
     projectType: Music Video (coming soon)
-    colorAccent: rgb(167, 116, 61)
+    colorAccent: rgb(188, 129, 98)
   - title: 1916 — "For Whiskey"
     director: Sigurd Culhane
     clips: []
@@ -319,11 +319,11 @@ projectSets:
     - "/v1652517292/andrew-aiello/portfolio/vertis-01_ab6mdw.jpg"
     - "/v1652517294/andrew-aiello/portfolio/vertis-13_hk8qyh.jpg"
     projectType: Commercial
-    colorAccent: rgb(125, 113, 111)
+    colorAccent: rgb(190, 174, 172)
   - title: Coinbase
     projectType: Commercials
     director: Brian Mitchell and Ian Start
-    colorAccent: rgb(101, 84, 140)
+    colorAccent: rgb(160, 133, 224)
     clips:
     - https://vimeo.com/manage/videos/799693870
     - https://vimeo.com/manage/videos/799693021
@@ -355,7 +355,7 @@ projectSets:
     - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-05_qnqz2n.jpg"
     - "/v1652517042/andrew-aiello/portfolio/lizzy-powers-01_vvknw4.jpg"
     projectType: Commercials
-    colorAccent: rgb(137, 104, 107)
+    colorAccent: rgb(167, 139, 141)
   - title: Komb
     director: Sigurd Culhane
     clips:

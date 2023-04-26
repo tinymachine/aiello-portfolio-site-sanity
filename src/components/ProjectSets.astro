@@ -2,48 +2,47 @@
 import { frontmatter as projectData } from '../content/Projects.md'
 import { imagePath } from '../settings/siteInfo'
 import Project from './Project.svelte'
-import probeImageSize from 'probe-image-size'
+import getDimsFromImageUrls from '../scripts/getDimsFromImageUrls.js'
 
-/**
- * Get still image dimensions and calculate aspect ratio
- * to prevent cumulative layout shift and set dimensions
- * correctly in image galleries.
- */
+// Set max width for stills, to be used to calculate max heights
+const maxStillWidth = 1980
 
-  // Get still dimensions (as Promises) for all projects
-const imageDims = projectData.projectSets.map(projectSet => {
-  return projectSet.projects.map(async (project) => {
-    const result = await probeImageSize(imagePath + project.featuredStill)
-    return result
-  })
-})
+const getProjectWithImageDimsData = async (project) => {
+  // Get stills URLs
+  const urls = project.stills.map(still => imagePath + still)
 
-  // Flatten array for use with Promise.all()
-const imageDimsFlat = imageDims.flat()
-const resolvedImageDims = await Promise.all(imageDimsFlat)
+  // Add featured still URL (probably always an image from the standard stills,
+  // but include it here separately in case it's not)
+  urls.push(imagePath + project.featuredStill)
 
-  // Add still image dimensions as property on `project` object
-projectData.projectSets.forEach(projectSet => {
-  projectSet.projects.forEach(project => {
-    const thisDims = resolvedImageDims.find(
-      dims => dims.url.endsWith(project.featuredStill)
-    )
+  // Get dims and aspect ratio for all images
+  const stillsDimsSansMaxDims = await getDimsFromImageUrls(urls)
+  const stillsDimsWithMaxDims = 
+    stillsDimsSansMaxDims.map(({ width, height, aspect }) => {
+      return {
+        width,
+        height,
+        aspect,
+        maxWidth: maxStillWidth,
+        maxHeight: Math.round(maxStillWidth / aspect)
+      }
+    })
 
-    project.stillDims = thisDims
-
-    // Add aspect ratio to image dimension properties
-    project.stillDims.aspect = thisDims.width / thisDims.height
-  })
-})
+  return {
+    ...project,
+    stillsDims: stillsDimsWithMaxDims.slice(0, -1), // remove featured still
+    featuredStillDims: stillsDimsSansMaxDims.slice(-1)[0]
+  }
+}
 ---
 
 {projectData.projectSets.map((projectSet, i) => (
   <section class="section" id={i === 0 && 'first-section'}>
     <h3>{projectSet.heading}</h3>
 
-    {projectSet.projects.map((project) => (
+    {projectSet.projects.map(async (project) => (
       <Project
-        {project}
+        project={await getProjectWithImageDimsData(project)}
         projectTypeLabel={ 
           project.projectType ||
           projectSet.fallbackProjectTypeLabel

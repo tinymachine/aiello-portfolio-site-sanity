@@ -5,14 +5,14 @@
   
   import 'bigger-picture/dist/bigger-picture.css'
 
-  export let stillDims
   export let stills
+  export let stillsDims
   export let bpAnchor
   export let bpAnchorMounted
   export let modalDismissEnabled
 
   const cloudinaryStillTransforms = '/c_limit,w_1800' // `c_limit` = shrink to fit
-
+  
   let bp
   let isMounted
 
@@ -42,16 +42,13 @@
       })
     }
   }
-
-  const maxStillWidth = 1980
-  const maxStillHeight = Math.round(maxStillWidth / stillDims.aspect)
 </script>
 
 
 
 <section class="stills">
   <div class="still-thumbs" id="images">
-    {#each stills as still}
+    {#each stills as still, i}
       <a  
         href={
           imagePath +
@@ -68,8 +65,8 @@
           cloudinaryStillTransforms +
           still
         }
-        data-width={maxStillWidth}
-        data-height={maxStillHeight}
+        data-width={stillsDims[i].maxWidth}
+        data-height={stillsDims[i].maxHeight}
         data-alt=""
         on:click={openGallery}
       >

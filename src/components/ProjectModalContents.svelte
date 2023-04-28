@@ -86,6 +86,7 @@
 <style lang="scss">
   header {
     padding-left: var(--modal-h-margin);
+    padding-right: 4.5em; // don't overlap close button on right
     margin-bottom: 2rem;
     position: sticky;
     z-index: 1;

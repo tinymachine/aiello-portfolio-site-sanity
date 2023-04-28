@@ -37,7 +37,7 @@
     </div>
       
     <h4 style={`color: ${ colorAccent || 'var(--color-default'}`}>
-      {title} <!--  /* needs Markdown processing */ --> 
+      {title}
 
       <span class="type">
         <span aria-hidden="true">/</span>

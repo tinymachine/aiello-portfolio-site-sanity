@@ -2,10 +2,22 @@
 import { frontmatter as projectData } from '../content/Projects.md'
 import { imagePath } from '../settings/siteInfo'
 import Project from './Project.svelte'
+import { marked } from 'marked'
 import getDimsFromImageUrls from '../scripts/getDimsFromImageUrls.js'
 
 // Set max width for stills, to be used to calculate max heights
 const maxStillWidth = 1980
+
+const getTransformedProject = async (project) => {
+  // Change hypens to em dashes, then process with Markdown to smarten punctuation
+  const markdownTitle = marked.parseInline(
+    project.title.replace(/ - /g, ` — `),
+    { smartypants: true }
+  )
+
+  // Update project data with still dimensions
+  return await getProjectWithImageDimsData({ ...project, title: markdownTitle })
+}
 
 const getProjectWithImageDimsData = async (project) => {
   // Get stills URLs
@@ -42,7 +54,7 @@ const getProjectWithImageDimsData = async (project) => {
 
     {projectSet.projects.map(async (project) => (
       <Project
-        project={await getProjectWithImageDimsData(project)}
+        project={await getTransformedProject(project)}
         projectTypeLabel={ 
           project.projectType ||
           projectSet.fallbackProjectTypeLabel

@@ -139,11 +139,12 @@ projectSets:
     - "/v1652516741/andrew-aiello/portfolio/green-cobra-01_ektji2.jpg"
     projectType: Short (2022 ICG ECA Winner)
     colorAccent: rgb(81, 191, 160)
-  - title: Vance and The Afterlife
+  - title: Vance and the Afterlife
     projectType: Short (coming soon)
     director: Sam Kimbrell
     colorAccent: rgb(210, 181, 121)
-    clips: []
+    clips: 
+    - https://vimeo.com/848800196
     stills:
     - "/v1679527215/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_33_15.Still025_sydpgc.jpg"
     - "/v1679527227/andrew-aiello/portfolio/VTAL_031623_Stereo_H264_Master_4K.00_09_37_08.Still029_od9r5u.jpg"

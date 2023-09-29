@@ -180,7 +180,25 @@ projectSets:
     - "/v1652517262/andrew-aiello/portfolio/strip-01_onr8dh.jpg"
     projectType: Short
     colorAccent: rgb(148, 168, 151)
-
+  - title: The Greatest Joy
+    director: Lea Pascal
+    clips: []
+    featuredStill: "/v1696030477/andrew-aiello/portfolio/the-greatest-joy-project_main_image_twpzoh.jpg"
+    stills:
+    - "/v1696030477/andrew-aiello/portfolio/the-greatest-joy-project_main_image_twpzoh.jpg"
+    - "/v1696030478/andrew-aiello/portfolio/the-greatest-joy-Sequence_01.00_26_06_08.Still003_c6kfzg.jpg"
+    - "/v1696030480/andrew-aiello/portfolio/the-greatest-joy-Sequence_01.00_38_07_02.Still004_sx3z8n.jpg"
+    - "/v1696030478/andrew-aiello/portfolio/the-greatest-joy-Sequence_01.00_49_50_19.Still006_cjtfjf.jpg"
+    - "/v1696030479/andrew-aiello/portfolio/the-greatest-joy-Sequence_01.00_52_46_18.Still007_awng6s.jpg"
+    - "/v1696030478/andrew-aiello/portfolio/the-greatest-joy-Sequence_01.01_14_32_00.Still009_kgfoza.jpg"
+    - "/v1696030483/andrew-aiello/portfolio/the-greatest-joy-Sequence_01.03_45_06_21.Still012_dvwvbf.jpg"
+    - "/v1696030476/andrew-aiello/portfolio/the-greatest-joy-Sequence_01.04_12_33_21.Still013_mbhmay.jpg"
+    - "/v1696030480/andrew-aiello/portfolio/the-greatest-joy-Sequence_01.06_49_41_16.Still015_ususip.jpg"
+    - "/v1696030476/andrew-aiello/portfolio/the-greatest-joy-Sequence_01.06_56_11_21.Still016_z5tlrj.jpg"
+    - "/v1696030476/andrew-aiello/portfolio/the-greatest-joy-Sequence_01.07_06_46_01.Still018_ghhbf6.jpg"
+    - "/v1696030477/andrew-aiello/portfolio/the-greatest-joy-Sequence_01.07_26_14_03.Still020_igshjs.jpg"
+    projectType: Short (coming soon)
+    colorAccent: rgb(190, 163, 113)
   - title: Fallen Queen
     director: Joel Soisson
     clips: []

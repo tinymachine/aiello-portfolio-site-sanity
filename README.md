@@ -1,43 +1,56 @@
-# Welcome to [Astro](https://astro.build)
+# aiello-portfolio-site
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/starter)
+This site is built with [Astro](https://astro.build) 1.0.0-beta using both Astro-native and [Svelte](https://svelte.dev/) components (thanks to Astro's [islands architecture](https://docs.astro.build/en/concepts/islands/)).
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Forestry CMS (defunct)
 
-## 🚀 Project Structure
+This site was configured to integrate with [Forestry CMS](https://tina.io/forestry/), an excellent CMS that integrated with GitHub to edit site contents by making commits to the site's repo. But the service was discontinuted in March 2023, so currently the site must be updated manually by manually updating the Markdown files — not a user-friendly experience.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Netlify Hosting via CI/CD Pipeline
+
+The site is configured to be deployed via a [CI/CD pipeline][cicd]. Whenever commits are pushed to GitHub, [Netlify][netlify] automatically builds and deploys a new version of the site across its worldwide [edge network][edge] (for [free][free]!).
+
+[cicd]:https://www.netlify.com/blog/guide-to-ci-cd-automation-using-webhooks/
+[netlify]:https://www.netlify.com/
+[edge]:https://www.netlify.com/platform/core/edge/
+[free]:https://www.netlify.com/pricing/
+
+## Project Structure
+
+These are the most important parts of the structure:
 
 ```
 /
-├── public/
-│   ├── robots.txt
-│   └── favicon.ico
-├── src/
-│   ├── components/
-│   │   └── Tour.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+├── public                            # contents of this directory automatically served from site root
+│   ├── admin                         # Forestry CMS control panel (defunct)
+│   ├── fonts                         # custom web fonts
+│   └── img                           # images and icons not handled by the CMS
+└── src
+    ├── components                    # both Astro and Svelte components that comprise the site
+    ├── content           
+    │   ├── Projects.md               # user-editable content for all projects
+    │   └── About.md                  # user-editable content for About section
+    ├── layout
+    │   └── Layout.astro              # boilerplate site html
+    ├── pages             
+    │   └── index.astro               # site content (imports components)
+    ├── scripts
+    │   └── getDimsFromImageUrls.js   # fetches image dimensions and calculates aspect ratios
+    ├── settings
+    │   ├── Settings.md               # user-editable settings
+    │   └── siteInfo.js               # other settings
+    └── styles
+        └── global.scss               # site CSS (uses Sass)
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 
-| Command           | Action                                       |
-|:----------------  |:-------------------------------------------- |
-| `npm install`     | Installs dependencies                        |
-| `npm run dev`     | Starts local dev server at `localhost:3000`  |
-| `npm run build`   | Build your production site to `./dist/`      |
-| `npm run preview` | Preview your build locally, before deploying |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://github.com/withastro/astro) or jump into our [Discord server](https://astro.build/chat).
+| Command               | Action                                       |
+|:--------------------- |:-------------------------------------------- |
+| `npm install`         | Install dependencies                         |
+| `npm run dev`         | Start local dev server at `localhost:3000`   |
+| `npm run build`       | Build production site to `./dist/`           |
+| `npm run preview`     | Preview build locally before deploying       |
+| `npm run cms-preview` | For use by Forestry CMS (defunct)            |

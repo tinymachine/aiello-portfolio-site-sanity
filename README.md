@@ -1,4 +1,4 @@
-# aiello-portfolio-site
+d# aiello-portfolio-site
 
 This site is built with [Astro](https://astro.build) 1.0.0-beta using both Astro-native and [Svelte](https://svelte.dev/) components (thanks to Astro's [islands architecture](https://docs.astro.build/en/concepts/islands/)).
 
@@ -14,6 +14,10 @@ The site is configured to be deployed via a [CI/CD pipeline][cicd]. Whenever com
 [netlify]:https://www.netlify.com/
 [edge]:https://www.netlify.com/platform/core/edge/
 [free]:https://www.netlify.com/pricing/
+
+## Cloudinary Image Hosting
+
+Most images on the site are hosted using [Cloudinary](https://cloudinary.com/), for its ability to optimize images and because it integrated well with Forestry CMS.
 
 ## Project Structure
 

@@ -1,4 +1,4 @@
-d# aiello-portfolio-site
+# aiello-portfolio-site
 
 This site is built with [Astro](https://astro.build) 1.0.0-beta using both Astro-native and [Svelte](https://svelte.dev/) components (thanks to Astro's [islands architecture](https://docs.astro.build/en/concepts/islands/)).
 

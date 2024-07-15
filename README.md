@@ -21,6 +21,8 @@ These are the most important parts of the structure:
 
 ```
 /
+├── astro.config.mjs                  # Astro config
+├── netlify.toml                      # Netlify deployment config
 ├── public                            # contents of this directory automatically served from site root
 │   ├── admin                         # Forestry CMS control panel (defunct)
 │   ├── fonts                         # custom web fonts

@@ -4,12 +4,18 @@ export default {
   tabWidth: 2,
   semi: false,
   singleQuote: true,
-  plugins: ['prettier-plugin-astro'],
+  plugins: ['prettier-plugin-astro', 'prettier-plugin-svelte'],
   overrides: [
     {
       files: '*.astro',
       options: {
         parser: 'astro',
+      },
+    },
+    {
+      files: '*.svelte',
+      options: {
+        parser: 'svelte',
       },
     },
   ],

@@ -25,6 +25,7 @@
     "marked": "^4.0.15",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.0",
+    "prettier-plugin-svelte": "^3.2.6",
     "probe-image-size": "^7.2.3",
     "sass": "1.51.0"
   },

@@ -11,7 +11,7 @@ const getDimsFromImageURLs = async (urls) => {
     return {
       width: result.width,
       height: result.height,
-      aspect: (result.width / result.height)
+      aspect: result.width / result.height,
     }
   })
 

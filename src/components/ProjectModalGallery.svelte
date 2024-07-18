@@ -2,7 +2,7 @@
   import BiggerPicture from 'bigger-picture/src/bigger-picture.js'
   import { imagePath } from '../settings/siteInfo'
   import { onMount } from 'svelte'
-  
+
   import 'bigger-picture/dist/bigger-picture.css'
 
   export let stills
@@ -12,19 +12,19 @@
   export let modalDismissEnabled
 
   const cloudinaryStillTransforms = '/c_limit,w_1800' // `c_limit` = shrink to fit
-  
+
   let bp
   let isMounted
 
   onMount(() => {
     isMounted = true
   })
-  
+
   $: if (bpAnchorMounted && isMounted) {
     // initialize BP only when parent modal and self are mounted,
     // lest the target won't yet exist in the DOM
     bp = BiggerPicture({
-      target: bpAnchor
+      target: bpAnchor,
     })
   }
 
@@ -38,60 +38,42 @@
         el: e.currentTarget,
         intro: 'fadeup',
         scale: 1,
-        onClose: () => { modalDismissEnabled = true }
+        onClose: () => {
+          modalDismissEnabled = true
+        },
       })
     }
   }
 </script>
 
-
-
 <section class="stills">
   <div class="still-thumbs" id="images">
     {#each stills as still, i}
-      <a  
-        href={
-          imagePath +
-          cloudinaryStillTransforms +
-          still
-        }
-        data-img={
-          imagePath +
-          cloudinaryStillTransforms +
-          still
-        }
-        data-thumb={
-          imagePath +
-          cloudinaryStillTransforms +
-          still
-        }
+      <a
+        href={imagePath + cloudinaryStillTransforms + still}
+        data-img={imagePath + cloudinaryStillTransforms + still}
+        data-thumb={imagePath + cloudinaryStillTransforms + still}
         data-width={stillsDims[i].maxWidth}
         data-height={stillsDims[i].maxHeight}
         data-alt=""
         on:click={openGallery}
       >
         <img
-          src={
-            imagePath +
-            cloudinaryStillTransforms +
-            still
-          }
+          src={imagePath + cloudinaryStillTransforms + still}
           alt=""
-          loading="lazy" 
+          loading="lazy"
         />
       </a>
     {/each}
   </div>
 </section>
 
-
-
 <style lang="scss">
   .still-thumbs {
     display: flex;
     flex-wrap: wrap;
     gap: clamp(0.5rem, 4vw, 1.5rem);
-  
+
     a {
       display: block;
       width: calc(50% - clamp(0.25rem, 2vw, 0.75rem));
@@ -105,8 +87,8 @@
 
   // darken BP's scrim so modal contents don't appear beneath
   :global(.bp-wrap > div:first-child) {
-		background: rgb(0, 0, 0);
-	}
+    background: rgb(0, 0, 0);
+  }
 
   // align image count (e.g. '1 / 16') with modal header
   :global(.bp-count) {

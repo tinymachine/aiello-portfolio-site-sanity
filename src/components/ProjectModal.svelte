@@ -21,9 +21,8 @@
   onDismiss={handleDismiss}
   style="z-index: 10; background: transparent; overflow: visible;"
 >
-
   {#if isOpen}
-    <div class="fader" transition:fade="{{ duration: 400, easing: quadInOut }}">
+    <div class="fader" transition:fade={{ duration: 400, easing: quadInOut }}>
       <DialogContent
         style="
           width: 100vw;
@@ -34,14 +33,17 @@
           background-color: var(--color-modal-bg);
         "
       >
-
         <div class="modal__close">
           <button
             aria-label="Close"
             class="modal__close__button"
             on:click={onDismiss}
           >
-            <img src="/img/close-button.svg" alt="" title="Press Esc to close" />
+            <img
+              src="/img/close-button.svg"
+              alt=""
+              title="Press Esc to close"
+            />
           </button>
         </div>
 
@@ -50,11 +52,9 @@
           {projectTypeLabel}
           bind:modalDismissEnabled
         />
-
       </DialogContent>
     </div>
   {/if}
-
 </DialogOverlay>
 
 <style lang="scss">
@@ -80,7 +80,7 @@
         outline: none; /* TODO: Find a more a11y way of handling this, esp. in Safari desktop; 
                           Merely adding a `:focus-visible` declaration doesn't solve problem
                           of Safari highlighting the close button when launching a project modal
-                          even when using mouse. */ 
+                          even when using mouse. */
       }
 
       &:hover,

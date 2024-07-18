@@ -7,9 +7,8 @@
 
 :root {
   // --font-default: Fraunces, Georgia, 'Times New Roman', Times, serif;
-  --font-accent: CabinetGrotesk, -apple-system, BlinkMacSystemFont, 
-    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
-    'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-accent: CabinetGrotesk, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
   --color-strongest: hsl(0, 0%, 100%);
   --color-strong: hsl(0, 0%, 75%);
@@ -17,17 +16,9 @@
   --color-bg: black;
   --color-modal-bg: rgb(10, 10, 10);
 
-  --margin-body-top: clamp(
-    1rem,
-    4vh,
-    3rem
-  );
+  --margin-body-top: clamp(1rem, 4vh, 3rem);
   --margin-body-bottom: var(--margin-body-top);
-  --margin-body-h: clamp(
-    1rem,
-    1rem + 2.125vw,
-    2.75rem
-  );
+  --margin-body-h: clamp(1rem, 1rem + 2.125vw, 2.75rem);
   --margin-h-inset: var(--margin-body-h);
 
   --max-content-column-width: 48rem;
@@ -38,14 +29,10 @@
   --modal-h-margin: 2rem;
 
   font-family: var(--font-accent);
-  font-size: clamp(
-    1rem,
-    0.5rem + 1.0309vw,
-    1.0625rem
-  );
+  font-size: clamp(1rem, 0.5rem + 1.0309vw, 1.0625rem);
   font-weight: 400;
   font-optical-sizing: auto;
-  // font-variation-settings: 
+  // font-variation-settings:
   //   'WONK' 0,
   //   'opsz' 16;
   line-height: 1.5;
@@ -122,7 +109,7 @@ a {
 }
 
 @keyframes scaleY {
- to {
+  to {
     transform: scaleY(1);
   }
 }
@@ -139,7 +126,8 @@ header.landing {
   // background-color: yellow;
   // mix-blend-mode: color;
 
-  h1, h2 {
+  h1,
+  h2 {
     font-size: 1em;
     font-weight: inherit;
     line-height: 1.4;
@@ -151,7 +139,7 @@ header.landing {
       animation-fill-mode: forwards;
     }
   }
-  
+
   h1 {
     color: var(--color-strongest);
     letter-spacing: 0.04em;
@@ -160,7 +148,7 @@ header.landing {
       animation-delay: 1.25s;
     }
   }
-  
+
   h2 {
     font-family: var(--font-accent);
     letter-spacing: 0.04em;
@@ -201,9 +189,12 @@ h3 {
     color: var(--color-strong);
     padding: 0.5em 0.625em;
     position: relative;
-    transition: color 0.5s, border 0.5s;
+    transition:
+      color 0.5s,
+      border 0.5s;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: var(--color-strongest);
     }
   }
@@ -317,7 +308,7 @@ body.home {
   margin: 0.25rem 0 0;
   width: 100vw;
   min-width: 100%;
-  max-width: min(120vh, var(--max-element-width)); 
+  max-width: min(120vh, var(--max-element-width));
   align-self: center;
 }
 
@@ -327,15 +318,15 @@ body.home {
 
 @media (prefers-reduced-motion: no-preference) {
   .video-fade-in {
-      opacity: 0;
-      animation: fadeIn 2s ease-out 0.5s forwards;
-    }
+    opacity: 0;
+    animation: fadeIn 2s ease-out 0.5s forwards;
+  }
 
   .scroller-fade-in {
     opacity: 0;
     transform: translateY(-20%);
 
-    animation: 
+    animation:
       fadeIn 1.5s ease-out 2s forwards,
       slideIntoPosition 1.5s ease-out 2s forwards;
   }

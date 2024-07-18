@@ -21,7 +21,7 @@ const getTransformedProject = async (project) => {
 
 const getProjectWithImageDimsData = async (project) => {
   // Get stills URLs
-  const urls = project.stills.map(still => imagePath + still)
+  const urls = project.stills.map((still) => imagePath + still)
 
   // Add featured still URL (probably always an image from the standard stills,
   // but include it here separately in case it's not)
@@ -29,38 +29,40 @@ const getProjectWithImageDimsData = async (project) => {
 
   // Get dims and aspect ratio for all images
   const stillsDimsSansMaxDims = await getDimsFromImageUrls(urls)
-  const stillsDimsWithMaxDims = 
-    stillsDimsSansMaxDims.map(({ width, height, aspect }) => {
+  const stillsDimsWithMaxDims = stillsDimsSansMaxDims.map(
+    ({ width, height, aspect }) => {
       return {
         width,
         height,
         aspect,
         maxWidth: maxStillWidth,
-        maxHeight: Math.round(maxStillWidth / aspect)
+        maxHeight: Math.round(maxStillWidth / aspect),
       }
-    })
+    }
+  )
 
   return {
     ...project,
     stillsDims: stillsDimsWithMaxDims.slice(0, -1), // remove featured still
-    featuredStillDims: stillsDimsSansMaxDims.slice(-1)[0]
+    featuredStillDims: stillsDimsSansMaxDims.slice(-1)[0],
   }
 }
 ---
 
-{projectData.projectSets.map((projectSet, i) => (
-  <section class="section" id={i === 0 && 'first-section'}>
-    <h3>{projectSet.heading}</h3>
+{
+  projectData.projectSets.map((projectSet, i) => (
+    <section class="section" id={i === 0 && 'first-section'}>
+      <h3>{projectSet.heading}</h3>
 
-    {projectSet.projects.map(async (project) => (
-      <Project
-        project={await getTransformedProject(project)}
-        projectTypeLabel={ 
-          project.projectType ||
-          projectSet.fallbackProjectTypeLabel
-        }
-        client:load
-      />
-    ))}
-  </section>
-))}
+      {projectSet.projects.map(async (project) => (
+        <Project
+          project={await getTransformedProject(project)}
+          projectTypeLabel={
+            project.projectType || projectSet.fallbackProjectTypeLabel
+          }
+          client:load
+        />
+      ))}
+    </section>
+  ))
+}

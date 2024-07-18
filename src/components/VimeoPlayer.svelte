@@ -1,6 +1,6 @@
 <script>
   export let url
-  export let title = "Video"
+  export let title = 'Video'
   export let autoplay = false
 
   // Get ID from Vimeo URL, which has ID at the end, e.g.
@@ -8,23 +8,23 @@
   // (but also allow for ID alone being stored in place of URL)
   const id = url.toString().includes('/') // check if it's an URL
     ? url
-      .split("/") // get URL tokens between slashes
-      .filter(token => token) // remove empty tokens (if trailing slash)
-      .pop() // return last non-empty token
+        .split('/') // get URL tokens between slashes
+        .filter((token) => token) // remove empty tokens (if trailing slash)
+        .pop() // return last non-empty token
     : url
 </script>
 
-<div style="
+<div
+  style="
   padding:56.25% 0 0 0;
   position:relative;
-">
+"
+>
   <iframe
     {title}
-    src={
-      `https://player.vimeo.com/video/${id}`
-      + `${id.toString().includes('?') ? '&' : '?'}autoplay=${autoplay ? '1' : '0'}`
-      + `&playsinline=0`
-    }
+    src={`https://player.vimeo.com/video/${id}` +
+      `${id.toString().includes('?') ? '&' : '?'}autoplay=${autoplay ? '1' : '0'}` +
+      `&playsinline=0`}
     style="
       position: absolute;
       top: 0;

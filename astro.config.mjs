@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from 'astro/config'
 import svelte from '@astrojs/svelte'
 import yaml from '@rollup/plugin-yaml'
 
@@ -6,6 +6,6 @@ import yaml from '@rollup/plugin-yaml'
 export default defineConfig({
   integrations: [svelte()],
   vite: {
-    plugins: [yaml()]
-  }  
-});
+    plugins: [yaml()],
+  },
+})

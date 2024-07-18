@@ -8,22 +8,23 @@ import VimeoPlayer from './VimeoPlayer.svelte'
 const reelModalTriggerId = 'reel-slideshow'
 const cloudinaryTransforms = {
   slide: '/c_limit,w_1920', // limit to 1080p width
-  thumbnail: '/c_limit,w_256' // smaller for color sampling
+  thumbnail: '/c_limit,w_256', // smaller for color sampling
 }
 
 // Get dominant colors from reel slideshow images
 
-const thumbUrls = frontmatter.reel.placeholderStills.map(still => 
-  imagePath + cloudinaryTransforms.thumbnail + still
+const thumbUrls = frontmatter.reel.placeholderStills.map(
+  (still) => imagePath + cloudinaryTransforms.thumbnail + still
 )
 
-const getAverageRGBColor = async (imgUrl) => { // return as string `r, g, b` so alpha can easily be added
+const getAverageRGBColor = async (imgUrl) => {
+  // return as string `r, g, b` so alpha can easily be added
   const color = await getAverageColor(imgUrl)
   return `${color.value[0]}, ${color.value[1]}, ${color.value[2]}`
 }
 
 const slideAvgColorsRGB = await Promise.all(
-  thumbUrls.map(url => getAverageRGBColor(url))
+  thumbUrls.map((url) => getAverageRGBColor(url))
 )
 
 const backdropAlpha = 0.75
@@ -31,17 +32,19 @@ const backdropAlpha = 0.75
 
 <>
   <div class="backdrop">
-    {frontmatter.reel.placeholderStills.map((still, i) => (
-      <div
-        data-slideshow-backdrop
-        style={`background-color: rgb(${slideAvgColorsRGB[i]}, ${backdropAlpha})`}
-      ></div>
-    ))}
-    
+    {
+      frontmatter.reel.placeholderStills.map((still, i) => (
+        <div
+          data-slideshow-backdrop
+          style={`background-color: rgb(${slideAvgColorsRGB[i]}, ${backdropAlpha})`}
+        />
+      ))
+    }
+
     <div class="vignette-effect"></div>
     <div data-slideshow-backdrop-mask></div>
   </div>
-  
+
   <a
     class="slideshow"
     href={frontmatter.reel.vimeoUrl}
@@ -49,24 +52,22 @@ const backdropAlpha = 0.75
     id={reelModalTriggerId}
   >
     <div class="slide-container">
-      {frontmatter.reel.placeholderStills.map((still, i) => (
-        <img
-          src={imagePath + cloudinaryTransforms.slide + still}
-          alt=""
-          class="slide"
-          width="1796"
-          height="1010"
-          data-slide
-        >
-      ))}
+      {
+        frontmatter.reel.placeholderStills.map((still) => (
+          <img
+            src={imagePath + cloudinaryTransforms.slide + still}
+            alt=""
+            class="slide"
+            width="1796"
+            height="1010"
+            data-slide
+          />
+        ))
+      }
     </div>
 
     <div class="play-button">
-      <img
-        src="/img/play.svg"
-        alt=""
-        class="play-button-icon"
-      >
+      <img src="/img/play.svg" alt="" class="play-button-icon" />
     </div>
   </a>
 
@@ -85,11 +86,13 @@ const backdropAlpha = 0.75
         bottom: 0;
       "
     >
-      <div style="
+      <div
+        style="
         display: grid; /* centers player vertically */
         width: 100%;
         max-width: min(16 / 9 * 100vh - 4vh, var(--max-element-width));
-      ">
+      "
+      >
         <VimeoPlayer
           url={frontmatter.reel.vimeoUrl}
           title="Andrew Aiello Reel"
@@ -99,8 +102,6 @@ const backdropAlpha = 0.75
     </div>
   </BaseModal>
 </>
-
-
 
 <script>
   const slideshow = () => {
@@ -124,7 +125,7 @@ const backdropAlpha = 0.75
         thisSlide.style.opacity = 0
         thisBackdrop.style.opacity = 0
       }, interval)
-      
+
       slideCounter++
     }
 
@@ -137,7 +138,9 @@ const backdropAlpha = 0.75
     const maxMaskOpacity = 0.725
     const initialView = document.querySelector('[data-initial-view]')
     const initialViewHeight = initialView.offsetHeight
-    const backdropMask = document.querySelector('[data-slideshow-backdrop-mask]')
+    const backdropMask = document.querySelector(
+      '[data-slideshow-backdrop-mask]'
+    )
 
     function throttle(func, wait = 25) {
       let waiting = false
@@ -161,23 +164,26 @@ const backdropAlpha = 0.75
       if (scrollDist >= initialViewHeight && backdropMask.style.opacity === 1) {
         return
       } else {
-        const opacity = 1 - ((initialViewHeight - scrollDist) / initialViewHeight)
-        backdropMask.style.opacity = Math.min(Math.max(opacity, minMaskOpacity), maxMaskOpacity)
+        const opacity = 1 - (initialViewHeight - scrollDist) / initialViewHeight
+        backdropMask.style.opacity = Math.min(
+          Math.max(opacity, minMaskOpacity),
+          maxMaskOpacity
+        )
       }
     })
 
     updateBackdropMaskOpacity() // update opacity on load
-    window.addEventListener('scroll', updateBackdropMaskOpacity, {passive: true})
+    window.addEventListener('scroll', updateBackdropMaskOpacity, {
+      passive: true,
+    })
   }
 
   slideshow() // start slideshow
   dynamicBackdropMask() // set up backdrop mask
 </script>
 
-
-
 <style lang="scss">
-  [tabindex="-1"] {
+  [tabindex='-1'] {
     outline: none;
   }
 
@@ -195,7 +201,7 @@ const backdropAlpha = 0.75
                                 * Intentionally shorter than 1010 intrinsic
                                 * image height to workaround Safari height miscalculation:
                                 */
-    align-self: center; 
+    align-self: center;
   }
 
   .slide-container {
@@ -213,7 +219,7 @@ const backdropAlpha = 0.75
     bottom: 0;
     z-index: -5;
   }
-  
+
   [data-slideshow-backdrop],
   .vignette-effect,
   [data-slideshow-backdrop-mask] {
@@ -235,7 +241,7 @@ const backdropAlpha = 0.75
   [data-slideshow-backdrop] {
     transition: opacity 1.5s ease-out;
   }
-  
+
   [data-slideshow-backdrop-mask] {
     background-color: black;
     opacity: 0;
@@ -269,10 +275,10 @@ const backdropAlpha = 0.75
     display: flex;
     padding: 0.825em;
     border-radius: 999px;
-    transition: 
+    transition:
       opacity 0.25s ease-out,
       background-color 0.25s ease-out;
-    
+
     .slideshow:hover & {
       background-color: rgb(0 0 0 / 60%);
       opacity: 1;

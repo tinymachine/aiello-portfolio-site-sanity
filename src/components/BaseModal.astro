@@ -2,15 +2,11 @@
 /**
  * Based heavily on the Modal component from Mark Teekman's
  * [`accessible-astro-components`][1]
- * 
+ *
  * [1]: https://www.npmjs.com/package/accessible-astro-components#Modal
  */
 
-const {
-  autoplayVimeoPlayer,
-  closeText = 'Close',
-  triggerId
-} = Astro.props
+const { autoplayVimeoPlayer, closeText = 'Close', triggerId } = Astro.props
 ---
 
 <div
@@ -53,48 +49,57 @@ const {
   | functions
   | -------------------------------------------------------------
   */
-  const teleportToRoot = element => {
+  const teleportToRoot = (element) => {
     element.remove()
     body.appendChild(element)
   }
 
-  const getKeyboardFocusableElements = element => {
-    return [...element.querySelectorAll(
-      'a, button, input, textarea, select, details,[tabindex]:not([tabindex="-1"])'
-    )]
-      .filter(el => !el.hasAttribute('disabled'))
+  const getKeyboardFocusableElements = (element) => {
+    return [
+      ...element.querySelectorAll(
+        'a, button, input, textarea, select, details,[tabindex]:not([tabindex="-1"])'
+      ),
+    ].filter((el) => !el.hasAttribute('disabled'))
   }
 
-  const trapFocus = event => {
+  const trapFocus = (event) => {
     const focusables = getKeyboardFocusableElements(modal)
     const firstFocusable = focusables[0]
     const lastFocusable = focusables[focusables.length - 1]
 
-    if (document.activeElement === lastFocusable && event.key === 'Tab' && !event.shiftKey) {
+    if (
+      document.activeElement === lastFocusable &&
+      event.key === 'Tab' &&
+      !event.shiftKey
+    ) {
       event.preventDefault()
       firstFocusable.focus()
     }
 
-    if (document.activeElement === firstFocusable && event.key === 'Tab' && event.shiftKey) {
+    if (
+      document.activeElement === firstFocusable &&
+      event.key === 'Tab' &&
+      event.shiftKey
+    ) {
       event.preventDefault()
       lastFocusable.focus()
     }
   }
 
-  const closeOnEsc = event => {
+  const closeOnEsc = (event) => {
     if (event.key === 'Escape') {
       closeModal()
     }
   }
 
-  const openModal = event => {
+  const openModal = (event) => {
     event && event.preventDefault()
 
     // Make body stop scrolling
     body.style.overflow = 'hidden'
 
     // Load all still images (previously set to lazy)
-    images && images.forEach(image => image.setAttribute('loading', 'eager'))
+    images && images.forEach((image) => image.setAttribute('loading', 'eager'))
 
     const modalCloseButton = modal.querySelector('.modal__close__button')
 
@@ -102,28 +107,28 @@ const {
     modal.setAttribute('aria-hidden', false)
     body.classList.add('modal-is-active')
     modalCloseButton.focus()
-    
+
     // Set up keyboard functions
     document.addEventListener('keydown', trapFocus)
     document.addEventListener('keydown', closeOnEsc)
 
     // Autoplay Vimeo video if indicated by prop
     if (shouldAutoplay) {
-      const vimeoPlayerIframe = modal.querySelector('iframe');
-      const player = new Vimeo.Player(vimeoPlayerIframe);
+      const vimeoPlayerIframe = modal.querySelector('iframe')
+      const player = new window.Vimeo.Player(vimeoPlayerIframe)
       player.play()
     }
   }
 
-  const closeModal = _ => {
+  const closeModal = () => {
     // reset to lazy in case some didn't load before user closed modal
-    images && images.forEach(image => image.setAttribute('loading', 'lazy'))
+    images && images.forEach((image) => image.setAttribute('loading', 'lazy'))
 
     pauseIframeVideos()
 
     modalInner.classList.add('closing')
 
-    setTimeout(()=>{
+    setTimeout(() => {
       modalInner.scrollTop = 0
       modalInner.classList.remove('closing')
       modal.classList.remove('show')
@@ -131,24 +136,22 @@ const {
       body.classList.remove('modal-is-active')
       modalTrigger.focus({ preventScroll: true })
       body.style.overflow = 'visible'
-  
+
       document.removeEventListener('keydown', trapFocus)
       document.removeEventListener('keydown', closeOnEsc)
     }, 500)
   }
 
   const pauseIframeVideos = () => {
-    iframes && iframes.forEach(iframe => {
-      if (
-        iframe.contentWindow &&
-        iframe.src.startsWith("https://player.vimeo.com/")
-      ) {
-        iframe.contentWindow.postMessage(
-          '{ "method": "pause" }', 
-          '*'
-        )
-      }
-    })
+    iframes &&
+      iframes.forEach((iframe) => {
+        if (
+          iframe.contentWindow &&
+          iframe.src.startsWith('https://player.vimeo.com/')
+        ) {
+          iframe.contentWindow.postMessage('{ "method": "pause" }', '*')
+        }
+      })
   }
 
   /* -------------------------------------------------------------
@@ -161,7 +164,7 @@ const {
 
   modalCloseButton.addEventListener('click', closeModal)
 
-  modal.addEventListener('click', event => { 
+  modal.addEventListener('click', (event) => {
     if (!event.target.closest('.modal__content')) {
       closeModal()
     }
@@ -205,7 +208,7 @@ const {
     position: relative;
     background-color: var(--color-modal-bg);
     opacity: 0;
-    transition: 
+    transition:
       opacity 0.5s ease-in-out,
       transform 0.5s ease-out;
     overflow-y: scroll;

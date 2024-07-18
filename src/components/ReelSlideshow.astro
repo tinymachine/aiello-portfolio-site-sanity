@@ -26,8 +26,7 @@ const slideAvgColorsRGB = await Promise.all(
   thumbUrls.map(url => getAverageRGBColor(url))
 )
 
-const showVignette = true
-const backdropAlpha = showVignette ? 0.75 : 0.4
+const backdropAlpha = 0.75
 ---
 
 <>
@@ -39,7 +38,7 @@ const backdropAlpha = showVignette ? 0.75 : 0.4
       ></div>
     ))}
     
-    {showVignette && <div class="vignette-effect"></div>}
+    <div class="vignette-effect"></div>
     <div data-slideshow-backdrop-mask></div>
   </div>
   
@@ -103,7 +102,7 @@ const backdropAlpha = showVignette ? 0.75 : 0.4
 
 
 
-<script define:vars={{showVignette}}>
+<script>
   const slideshow = () => {
     let slideCounter = 0
     const interval = 3000
@@ -135,7 +134,7 @@ const backdropAlpha = showVignette ? 0.75 : 0.4
 
   const dynamicBackdropMask = () => {
     const minMaskOpacity = 0
-    const maxMaskOpacity = showVignette ? 0.725 : 0.675
+    const maxMaskOpacity = 0.725
     const initialView = document.querySelector('[data-initial-view]')
     const initialViewHeight = initialView.offsetHeight
     const backdropMask = document.querySelector('[data-slideshow-backdrop-mask]')

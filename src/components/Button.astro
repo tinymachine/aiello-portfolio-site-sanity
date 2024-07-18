@@ -1,11 +1,7 @@
 ---
-// Export a "Props" interface to .
-export interface Props {
-    href: string,
-    label: string
-}
-const { href, label } = Astro.props as Props;
+const { href, label } = Astro.props
 ---
+
 <a href={href}>{label}</a>
 
 <style lang="scss">
@@ -19,7 +15,8 @@ const { href, label } = Astro.props as Props;
     text-align: center;
     padding: 0.65em 1em;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       border-color: var(--color-button-border-hover);
     }
   }

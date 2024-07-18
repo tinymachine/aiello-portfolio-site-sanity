@@ -1,10 +1,10 @@
 ---
 import { frontmatter as site } from '../settings/Settings.md'
-import Layout from '../layout/Layout.astro'  
+import Layout from '../layout/Layout.astro'
 import AboutSection from '../components/AboutSection.astro'
 import ProjectSets from '../components/ProjectSets.astro'
 import ReelSlideshow from '../components/ReelSlideshow.astro'
-import ScrollButton from '../components/ScrollButton.astro'
+import ScrollButton from '../components/ScrollButton.svelte'
 
 const colorThemeVerticalRule = site.themeColors.verticalRule
 ---
@@ -16,15 +16,15 @@ const colorThemeVerticalRule = site.themeColors.verticalRule
         <h1>{site.name}</h1>
         <h2 style="color: rgb(255 255 255 / 50%)">{site.title}</h2>
       </header>
-      
+
       <ReelSlideshow />
-      
+
       <div class="align-r scroller-fade-in" style="padding-top: 1rem;">
-        <ScrollButton targetId="first-section" />
+        <ScrollButton targetId="first-section" client:load />
       </div>
     </div>
   </div>
-    
+
   <main class="landing">
     <ProjectSets />
     <AboutSection />
@@ -32,7 +32,7 @@ const colorThemeVerticalRule = site.themeColors.verticalRule
 </Layout>
 
 <style is:global define:vars={{ colorThemeVerticalRule }}>
-:root {
-  --color-vertical-rule: var(--colorThemeVerticalRule);
-}
+  :root {
+    --color-vertical-rule: var(--colorThemeVerticalRule);
+  }
 </style>

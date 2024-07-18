@@ -19,13 +19,26 @@ The site is configured to be deployed via a [CI/CD pipeline][cicd]. Whenever com
 
 Most images on the site are hosted using [Cloudinary](https://cloudinary.com/), for its ability to optimize images and because it integrated well with Forestry CMS.
 
+## Code Formatting and Linting
+
+This project is configured to use [Prettier][prettier] for formatting code and [ESLint][eslint] for [linting][lint] code. [Husky][husky] is used to provide a git pre-commit hook which calls [`lint-staged`][lint-staged] to run both Prettier and ESLint on any files being committed at the time of the commit. These tools help maintain (and enforce) code quality and consistency.
+
+[prettier]: https://prettier.io/
+[eslint]: https://eslint.org/
+[lint]: https://en.wikipedia.org/wiki/Lint_(software)
+[husky]: https://typicode.github.io/husky/
+[lint-staged]: https://www.npmjs.com/package/lint-staged
+
 ## Project Structure
 
 These are the most important parts of the structure:
 
 ```
 /
+├── .prettierignore                   # files Prettier should ignore
+├── .prettierrc.mjs                   # Prettier config
 ├── astro.config.mjs                  # Astro config
+├── eslint.config.mjs                 # ESLint config
 ├── netlify.toml                      # Netlify deployment config
 ├── public                            # contents of this directory automatically served from site root
 │   ├── admin                         # Forestry CMS control panel (defunct)

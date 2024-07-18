@@ -22,8 +22,7 @@
 </script>
 
 <article>
-  <a role="button" href="#" on:click={open}
-    ><!-- TODO: find accessible way of handling href -->
+  <button on:click={open}>
     <div class="bleed-r">
       <img
         class="still bleed-r"
@@ -40,19 +39,27 @@
         {projectType}
       </span>
     </h4>
-  </a>
+  </button>
 </article>
 
 <ProjectModal {isOpen} onDismiss={close} {project} {projectTypeLabel} />
 
 <style lang="scss">
-  a {
+  button {
+    -webkit-appearance: none;
+    appearance: none;
+    background: none;
+    border: none;
+    font-size: inherit;
+    font-family: inherit;
+    letter-spacing: inherit;
+    text-align: inherit;
     display: block;
-    text-decoration: none;
+    padding: 0;
     will-change: opacity;
     opacity: 0.85;
-    transition: opacity 0.5s linear;
-    text-decoration: none;
+    transition: opacity 0.5s ease-out;
+    cursor: pointer;
 
     &:hover {
       opacity: 1;

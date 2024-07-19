@@ -5,8 +5,6 @@ import AboutSection from '../components/AboutSection.astro'
 import ProjectSets from '../components/ProjectSets.astro'
 import ReelSlideshow from '../components/ReelSlideshow.astro'
 import ScrollButton from '../components/ScrollButton.svelte'
-
-const colorThemeVerticalRule = site.themeColors.verticalRule
 ---
 
 <Layout>
@@ -30,9 +28,3 @@ const colorThemeVerticalRule = site.themeColors.verticalRule
     <AboutSection />
   </main>
 </Layout>
-
-<style is:global define:vars={{ colorThemeVerticalRule }}>
-  :root {
-    --color-vertical-rule: var(--colorThemeVerticalRule);
-  }
-</style>

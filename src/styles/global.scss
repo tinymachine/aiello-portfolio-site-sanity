@@ -6,7 +6,6 @@
 }
 
 :root {
-  // --font-default: Fraunces, Georgia, 'Times New Roman', Times, serif;
   --font-accent: CabinetGrotesk, -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
@@ -32,9 +31,6 @@
   font-size: clamp(1rem, 0.5rem + 1.0309vw, 1.0625rem);
   font-weight: 400;
   font-optical-sizing: auto;
-  // font-variation-settings:
-  //   'WONK' 0,
-  //   'opsz' 16;
   line-height: 1.5;
   color: var(--color-default);
   letter-spacing: 0.025em;
@@ -122,9 +118,6 @@ a {
 
 header.landing {
   padding-bottom: 0.75em;
-  // background-color: var(--color-bg);
-  // background-color: yellow;
-  // mix-blend-mode: color;
 
   h1,
   h2 {
@@ -228,8 +221,6 @@ body.home {
   position: relative;
 
   main.landing {
-    // padding-bottom: 8rem;
-
     // Backdrop that obscures rotating thumbnail backgrounds as you scroll down page
     &::before {
       content: '';
@@ -239,13 +230,6 @@ body.home {
       transform: translateX(-50%);
       width: 100vw;
       height: 100%;
-      // background: linear-gradient(
-      //   to bottom,
-      //   rgb(0 0 0 / 0) 10%,
-      //   rgb(0 0 0 / 40%) 15%,
-      //   rgb(0 0 0 / 60%) 20%
-      // );
-      // background: orange;
       z-index: -1;
     }
   }

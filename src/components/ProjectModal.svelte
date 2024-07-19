@@ -22,7 +22,10 @@
   style="z-index: 10; background: transparent; overflow: visible;"
 >
   {#if isOpen}
-    <div class="fader" transition:fade={{ duration: 400, easing: quadInOut }}>
+    <div
+      class="fader"
+      transition:fade|global={{ duration: 400, easing: quadInOut }}
+    >
       <DialogContent
         style="
           width: 100vw;

@@ -8,10 +8,10 @@ sections:
   path: src/settings/Settings.md
   label: Site Settings
 - type: document
-  path: src/content/Projects.md
+  path: src/user-content/Projects.md
   label: Projects
 - type: document
-  path: src/content/About.md
+  path: src/user-content/About.md
   label: About Content
 upload_dir: andrew-aiello/portfolio
 public_path: https://res.cloudinary.com/tinymachine/image/upload

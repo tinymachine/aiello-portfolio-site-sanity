@@ -63,4 +63,4 @@ fields:
     min: 1
     labelField: heading
 pages:
-- src/content/Projects.md
+- src/user-content/Projects.md

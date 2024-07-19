@@ -1,6 +1,6 @@
 # aiello-portfolio-site
 
-This site is built with [Astro](https://astro.build) 1.0.0-beta using both Astro-native and [Svelte](https://svelte.dev/) components (thanks to Astro's [islands architecture](https://docs.astro.build/en/concepts/islands/)).
+This site is built with [Astro](https://astro.build) using both Astro-native and [Svelte](https://svelte.dev/) components (thanks to Astro's [islands architecture](https://docs.astro.build/en/concepts/islands/)).
 
 ## Forestry CMS (defunct)
 
@@ -46,20 +46,20 @@ These are the most important parts of the structure:
 │   └── img                           # images and icons not handled by the CMS
 └── src
     ├── components                    # both Astro and Svelte components that comprise the site
-    ├── content
-    │   ├── Projects.md               # user-editable content for all projects
-    │   └── About.md                  # user-editable content for About section
     ├── layout
     │   └── Layout.astro              # boilerplate site html
     ├── pages
-    │   └── index.astro               # site content (imports components)
+    │   └── index.astro               # page structure
     ├── scripts
     │   └── getDimsFromImageUrls.js   # fetches image dimensions and calculates aspect ratios
     ├── settings
     │   ├── Settings.md               # user-editable settings
     │   └── siteInfo.js               # other settings
-    └── styles
-        └── global.scss               # site CSS (uses Sass)
+    ├── styles
+    │    └── global.scss               # site CSS (uses Sass)
+    └── user-content
+        ├── Projects.md               # user-editable content for all projects
+        └── About.md                  # user-editable content for About section
 ```
 
 ## Commands

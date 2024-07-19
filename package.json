@@ -1,6 +1,6 @@
 {
   "name": "aiello-portfolio-site",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "keywords": [],
   "description": "Portfolio website of Andrew Aiello built using Astro, Svelte, Cloudinary image hosting, Netlify deployment, and Forestry CMS.",

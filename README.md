@@ -58,8 +58,8 @@ These are the most important parts of the structure:
     ├── styles
     │    └── global.scss               # site CSS (uses Sass)
     └── user-content
-        ├── Projects.md               # user-editable content for all projects
-        └── About.md                  # user-editable content for About section
+        ├── About.md                  # user-editable content for About section
+        └── Projects.md               # user-editable content for all projects
 ```
 
 ## Commands

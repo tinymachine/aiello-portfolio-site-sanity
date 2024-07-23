@@ -23,19 +23,24 @@
 </script>
 
 <header>
-  <h3 style={`color: ${getAccentColor()}`}>
+  <h3
+    style={`color: ${getAccentColor()}`}
+    aria-label={`Project title: ${title}`}
+  >
     {title}
   </h3>
 
-  <h4>
-    <span style={`color: ${getAccentColor()}`}>
+  <p class="screen-reader-only">{`Project type: ${projectTypeLabel}`}</p>
+
+  <p>
+    <span style={`color: ${getAccentColor()}`} aria-hidden="true">
       {projectTypeLabel}
     </span>
     {#if director}
       <br />
-      {getDirectorLabel()}: {director}
+      {`${getDirectorLabel()}: ${director}`}
     {/if}
-  </h4>
+  </p>
 </header>
 
 <main class="content" bind:this={bpAnchor}>
@@ -77,7 +82,7 @@
       margin-bottom: 0;
     }
 
-    h4 {
+    p {
       font-weight: 400;
       font-size: 0.8125em;
       letter-spacing: 0.05ch;

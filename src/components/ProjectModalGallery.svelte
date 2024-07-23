@@ -15,6 +15,7 @@
 
   let bp
   let isMounted
+  let thumbThatLaunchedModal
 
   onMount(() => {
     isMounted = true
@@ -38,8 +39,16 @@
         el: e.currentTarget,
         intro: 'fadeup',
         scale: 1,
+        onOpen: () => {
+          const bpModalCloseButton = document.querySelector('button.bp-x')
+          bpModalCloseButton && bpModalCloseButton.focus()
+          thumbThatLaunchedModal = e.currentTarget
+        },
         onClose: () => {
           modalDismissEnabled = true
+          setTimeout(() => {
+            thumbThatLaunchedModal.focus()
+          }, 50) // added setTimeout to override Vimeo player taking over focus
         },
       })
     }

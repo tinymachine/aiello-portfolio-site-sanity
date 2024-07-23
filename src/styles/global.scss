@@ -14,6 +14,10 @@
   --color-default: hsl(0, 0%, 55%);
   --color-bg: black;
   --color-modal-bg: rgb(10, 10, 10);
+  --color-focus-ring: rgb(0, 173, 239);
+
+  --focus-outline-shorthand: 3px solid var(--color-focus-ring);
+  --focus-outline-offset: 2px;
 
   --margin-body-top: clamp(1rem, 4vh, 3rem);
   --margin-body-bottom: var(--margin-body-top);
@@ -34,6 +38,12 @@
   line-height: 1.5;
   color: var(--color-default);
   letter-spacing: 0.025em;
+}
+
+:focus-visible {
+  outline: var(--focus-outline-shorthand);
+  outline-offset: var(--focus-outline-offset);
+  border-radius: 2px;
 }
 
 html {

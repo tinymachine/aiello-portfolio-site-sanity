@@ -80,19 +80,22 @@
       cursor: pointer;
 
       &:focus {
-        outline: none; /* TODO: Find a more a11y way of handling this, esp. in Safari desktop; 
-                          Merely adding a `:focus-visible` declaration doesn't solve problem
-                          of Safari highlighting the close button when launching a project modal
-                          even when using mouse. */
+        outline: none; // focus ring handled on the close button image below
       }
 
       &:hover,
       &:focus {
-        opacity: 0.625;
+        opacity: 0.75;
       }
 
       img {
         width: 2.25rem;
+      }
+
+      &:focus-visible img {
+        outline: var(--focus-outline-shorthand);
+        outline-offset: var(--focus-outline-offset);
+        border-radius: 999px;
       }
     }
   }

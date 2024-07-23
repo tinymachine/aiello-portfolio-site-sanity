@@ -22,10 +22,10 @@
 </script>
 
 <article>
-  <button on:click={open}>
-    <div class="bleed-r">
+  <button on:click={open} class="bleed-r">
+    <div>
       <img
-        class="still bleed-r"
+        class="still"
         src={imagePath + cloudinaryFeaturedStillTransforms + featuredStill}
         alt=""
       />

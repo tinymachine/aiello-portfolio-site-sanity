@@ -44,6 +44,8 @@
       })
     }
   }
+
+  const getAltText = (i) => `Still ${i + 1} of ${stills.length}`
 </script>
 
 <section class="stills">
@@ -55,12 +57,12 @@
         data-thumb={imagePath + cloudinaryStillTransforms + still}
         data-width={stillsDims[i].maxWidth}
         data-height={stillsDims[i].maxHeight}
-        data-alt=""
+        data-alt={getAltText(i)}
         on:click={openGallery}
       >
         <img
           src={imagePath + cloudinaryStillTransforms + still}
-          alt=""
+          alt={getAltText(i)}
           loading="lazy"
         />
       </a>

@@ -31,7 +31,12 @@
       />
     </div>
 
-    <h4 style={`color: ${colorAccent || 'var(--color-default'}`}>
+    <h4
+      style={`
+        --color-accent: ${colorAccent || 'var(--color-default'};
+        color: var(--color-accent);
+      `}
+    >
       {title}
 
       <span class="type">
@@ -56,23 +61,35 @@
     text-align: inherit;
     display: block;
     padding: 0;
-    will-change: opacity;
-    opacity: 0.85;
-    transition: opacity 0.5s ease-out;
     cursor: pointer;
 
-    &:hover {
-      opacity: 1;
+    h4 {
+      font-weight: normal;
+      font-size: 0.875em;
+      margin: 0;
+      padding: 0;
+      color: var(--color-strong);
+      will-change: opacity;
+      display: inline;
+      position: relative;
     }
-  }
 
-  h4 {
-    font-weight: normal;
-    font-size: 0.875em;
-    margin: 0;
-    padding: 0;
-    color: var(--color-strong);
-    transition: opacity 0.5s linear;
+    h4::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -0.2em;
+      width: 0;
+      height: 2px;
+      opacity: 0.1;
+      background-color: var(--color-accent);
+      transition: all 0.5s ease-in-out;
+    }
+
+    &:hover h4::after {
+      opacity: 0.375;
+      width: 100%;
+    }
   }
 
   article {

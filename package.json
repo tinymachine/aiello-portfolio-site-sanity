@@ -43,6 +43,6 @@
   },
   "lint-staged": {
     "*.{astro,js,svelte}": "eslint --cache --fix",
-    "*.{astro,css,htm,html,js,md,svelte}": "prettier --write"
+    "*.{astro,css,htm,html,js,md,scss,svelte}": "prettier --write"
   }
 }

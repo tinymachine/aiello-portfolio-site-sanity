@@ -40,8 +40,17 @@
         intro: 'fadeup',
         scale: 1,
         onOpen: () => {
+          // change the aria-label on the BP modal's close button (default: 'Close')
           const bpModalCloseButton = document.querySelector('button.bp-x')
+          bpModalCloseButton.setAttribute(
+            'aria-label',
+            'Close image zoom modal'
+          )
+
+          // set focus on BP modal's close button
           bpModalCloseButton && bpModalCloseButton.focus()
+
+          // remember the launching modal to restore focus after closing
           thumbThatLaunchedModal = e.currentTarget
         },
         onClose: () => {

@@ -38,7 +38,7 @@
       >
         <div class="modal__close">
           <button
-            aria-label="Close"
+            aria-label="Close project detail modal"
             class="modal__close__button"
             on:click={onDismiss}
           >

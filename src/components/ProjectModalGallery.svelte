@@ -54,7 +54,7 @@
     }
   }
 
-  const getAltText = (i) => `Still ${i + 1} of ${stills.length}`
+  const getStillIndex = (i) => `${i + 1} of ${stills.length}`
 </script>
 
 <section class="stills">
@@ -66,12 +66,12 @@
         data-thumb={imagePath + cloudinaryStillTransforms + still}
         data-width={stillsDims[i].maxWidth}
         data-height={stillsDims[i].maxHeight}
-        data-alt={getAltText(i)}
+        data-alt={`Still ${getStillIndex(i)}`}
         on:click={openGallery}
       >
         <img
           src={imagePath + cloudinaryStillTransforms + still}
-          alt={getAltText(i)}
+          alt={`Still thumbnail ${getStillIndex(i)}`}
           loading="lazy"
         />
       </a>

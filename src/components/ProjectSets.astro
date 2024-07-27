@@ -1,9 +1,10 @@
 ---
-import { frontmatter as projectData } from '../user-content/Projects.md'
 import { imagePath } from '../settings/siteInfo'
 import Project from './Project.svelte'
 import { marked } from 'marked'
 import getDimsFromImageUrls from '../scripts/getDimsFromImageUrls.js'
+
+const { projectSets } = Astro.props
 
 // Set max width for stills, to be used to calculate max heights
 const maxStillWidth = 1980
@@ -50,7 +51,7 @@ const getProjectWithImageDimsData = async (project) => {
 ---
 
 {
-  projectData.projectSets.map((projectSet, i) => (
+  projectSets.map((projectSet, i) => (
     <section class="section" id={i === 0 ? 'first-section' : ''}>
       <h3>{projectSet.heading}</h3>
 

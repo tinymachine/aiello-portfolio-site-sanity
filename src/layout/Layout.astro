@@ -1,9 +1,10 @@
 ---
-import { frontmatter as metadata } from '../settings/Settings.md'
 import Monogram from '../components/Monogram.astro'
 import '../styles/global.scss'
 
-const htmlString = `<style>:root { --color-vertical-rule: ${metadata.themeColors.verticalRule}; }</style>`
+const { description, name, title, themeColors } = Astro.props
+
+const htmlString = `<style>:root { --color-vertical-rule: ${themeColors.verticalRule}; }</style>`
 ---
 
 <html lang="en" class="no-js">
@@ -11,8 +12,8 @@ const htmlString = `<style>:root { --color-vertical-rule: ${metadata.themeColors
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content={metadata.description} />
-    <title>{metadata.name} · {metadata.title}</title>
+    <meta name="description" content={description} />
+    <title>{name} · {title}</title>
 
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -58,7 +59,7 @@ const htmlString = `<style>:root { --color-vertical-rule: ${metadata.themeColors
 
       <footer>
         <Monogram />
-        <p>&copy; {metadata.name}</p>
+        <p>&copy; {name}</p>
       </footer>
     </div>
 

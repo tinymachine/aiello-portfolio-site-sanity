@@ -1,9 +1,10 @@
 ---
 import { getAverageColor } from 'fast-average-color-node'
-import { frontmatter } from '../settings/Settings.md'
 import { imagePath } from '../settings/siteInfo'
 import BaseModal from './BaseModal.astro'
 import VimeoPlayer from './VimeoPlayer.svelte'
+
+const { reel } = Astro.props
 
 const reelModalTriggerId = 'reel-slideshow'
 const cloudinaryTransforms = {
@@ -13,7 +14,7 @@ const cloudinaryTransforms = {
 
 // Get dominant colors from reel slideshow images
 
-const thumbUrls = frontmatter.reel.placeholderStills.map(
+const thumbUrls = reel.placeholderStills.map(
   (still) => imagePath + cloudinaryTransforms.thumbnail + still
 )
 
@@ -33,7 +34,7 @@ const backdropAlpha = 0.75
 <>
   <div class="backdrop">
     {
-      frontmatter.reel.placeholderStills.map((still, i) => (
+      reel.placeholderStills.map((still, i) => (
         <div
           data-slideshow-backdrop
           style={`background-color: rgb(${slideAvgColorsRGB[i]}, ${backdropAlpha})`}
@@ -47,13 +48,13 @@ const backdropAlpha = 0.75
 
   <a
     class="slideshow"
-    href={frontmatter.reel.vimeoUrl}
+    href={reel.vimeoUrl}
     data-slideshow
     id={reelModalTriggerId}
   >
     <div class="slide-container">
       {
-        frontmatter.reel.placeholderStills.map((still) => (
+        reel.placeholderStills.map((still) => (
           <img
             src={imagePath + cloudinaryTransforms.slide + still}
             alt=""
@@ -98,7 +99,7 @@ const backdropAlpha = 0.75
       "
       >
         <VimeoPlayer
-          url={frontmatter.reel.vimeoUrl}
+          url={reel.vimeoUrl}
           title="Andrew Aiello Reel"
           autoplay={false}
         />

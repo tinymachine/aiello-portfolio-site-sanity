@@ -1,21 +1,34 @@
 ---
-import { frontmatter as site } from '../settings/Settings.md'
+import { frontmatter } from '../settings/Settings.md'
+import {
+  Content as AboutContent,
+  frontmatter as aboutData,
+} from '../user-content/About.md'
+import { frontmatter as projectData } from '../user-content/Projects.md'
+
 import Layout from '../layout/Layout.astro'
 import AboutSection from '../components/AboutSection.astro'
 import ProjectSets from '../components/ProjectSets.astro'
 import ReelSlideshow from '../components/ReelSlideshow.astro'
 import ScrollButton from '../components/ScrollButton.svelte'
+
+const { description, name, title, themeColors, reel } = frontmatter
 ---
 
-<Layout>
+<Layout
+  description={description}
+  name={name}
+  title={title}
+  themeColors={themeColors}
+>
   <div class="section top">
     <div class="initial-view" data-initial-view>
       <header class="landing">
-        <h1>{site.name}</h1>
-        <h2 style="color: rgb(255 255 255 / 50%)">{site.title}</h2>
+        <h1>{name}</h1>
+        <h2 style="color: rgb(255 255 255 / 50%)">{title}</h2>
       </header>
 
-      <ReelSlideshow />
+      <ReelSlideshow reel={reel} />
 
       <div class="align-r scroller-fade-in" style="padding-top: 1rem;">
         <ScrollButton targetId="first-section" client:load />
@@ -24,7 +37,14 @@ import ScrollButton from '../components/ScrollButton.svelte'
   </div>
 
   <main class="landing">
-    <ProjectSets />
-    <AboutSection />
+    <ProjectSets projectSets={projectData.projectSets} />
+
+    <AboutSection
+      AboutContent={AboutContent}
+      title={aboutData.title}
+      image={aboutData.image}
+      email_button={aboutData.email_button}
+      social_links={aboutData.social_links}
+    />
   </main>
 </Layout>

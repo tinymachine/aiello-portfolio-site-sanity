@@ -1,30 +1,24 @@
 ---
-import {
-  Content as AboutContent,
-  frontmatter as about,
-} from '../user-content/About.md'
 import Button from './Button.astro'
+
+const { AboutContent, title, image, email_button, social_links } = Astro.props
 ---
 
 <section class="section" id="about">
-  <h3>{about.title}</h3>
+  <h3>{title}</h3>
 
   <div class="bleed-r">
-    <img src={about.image.url} alt={about.image.alt} class="portrait" />
+    <img src={image.url} alt={image.alt} class="portrait" />
   </div>
 
   <div class="contact">
     <Button
-      href={`mailto:${about.email_button.address}`}
-      label={about.email_button.label}
+      href={`mailto:${email_button.address}`}
+      label={email_button.label}
     />
 
     <nav class="social">
-      {
-        about.social_links.map((service) => (
-          <a href={service.url}>{service.label}</a>
-        ))
-      }
+      {social_links.map((service) => <a href={service.url}>{service.label}</a>)}
     </nav>
   </div>
 

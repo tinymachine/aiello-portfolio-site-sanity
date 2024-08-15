@@ -1,23 +1,25 @@
 # aiello-portfolio-site
 
+## Framework
+
 This site is built with [Astro](https://astro.build) using both Astro-native and [Svelte](https://svelte.dev/) components (thanks to Astro's [islands architecture](https://docs.astro.build/en/concepts/islands/)).
 
-## Forestry CMS (defunct)
+## CMS
 
 This site was configured to integrate with [Forestry CMS](https://tina.io/forestry/), an excellent CMS that integrated with GitHub to edit site contents by making commits to the site's repo. But the service was discontinuted in March 2023, so currently the site must be updated manually by manually updating the Markdown files — not a user-friendly experience.
 
-## Netlify Hosting via CI/CD Pipeline
+## Site Hosting
 
-The site is configured to be deployed via a [CI/CD pipeline][cicd]. Whenever commits are pushed to GitHub, [Netlify][netlify] automatically builds and deploys a new version of the site across its worldwide [edge network][edge] (for [free][free]!).
+The site is configured to be deployed to [Netlify][netlify] via a [CI/CD pipeline][cicd]. Whenever commits are pushed to GitHub, Netlify automatically builds and deploys a new version of the site across its worldwide [edge network][edge] (for [free][free]!).
 
 [cicd]: https://www.netlify.com/blog/guide-to-ci-cd-automation-using-webhooks/
 [netlify]: https://www.netlify.com/
 [edge]: https://www.netlify.com/platform/core/edge/
 [free]: https://www.netlify.com/pricing/
 
-## Cloudinary Image Hosting
+## Image Hosting
 
-Most images on the site are hosted using [Cloudinary](https://cloudinary.com/), for its ability to optimize images and because it integrated well with Forestry CMS.
+Most images on the site are hosted using the free tier of [Cloudinary](https://cloudinary.com/), for its ability to optimize images and because it integrated well with Forestry CMS.
 
 ## Code Formatting and Linting
 
@@ -56,7 +58,7 @@ These are the most important parts of the structure:
     │   ├── Settings.md               # user-editable settings
     │   └── siteInfo.js               # other settings
     ├── styles
-    │    └── global.scss               # site CSS (uses Sass)
+    │    └── global.scss              # site CSS (uses Sass)
     └── user-content
         ├── About.md                  # user-editable content for About section
         └── Projects.md               # user-editable content for all projects

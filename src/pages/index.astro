@@ -2,8 +2,10 @@
 import { frontmatter } from '../settings/Settings.md'
 import {
   Content as AboutContent,
-  frontmatter as aboutData,
+  // frontmatter as aboutData,
 } from '../user-content/About.md'
+import { loadQuery } from '../sanity/lib/loadQuery'
+
 import { frontmatter as projectData } from '../user-content/Projects.md'
 
 import Layout from '../layout/Layout.astro'
@@ -13,6 +15,12 @@ import ReelSlideshow from '../components/ReelSlideshow.astro'
 import ScrollButton from '../components/ScrollButton.svelte'
 
 const { description, name, title, themeColors, reel } = frontmatter
+
+const { data: aboutData } = await loadQuery({
+  // query: `*[_type=="about"][0]`,
+  query: `*[_type == "about"][0] { ..., image{ ..., asset-> } }`,
+  params: {},
+})
 ---
 
 <Layout

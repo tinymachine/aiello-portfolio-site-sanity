@@ -1,14 +1,19 @@
 ---
 import Button from './Button.astro'
 
+import { urlForImage } from '../sanity/lib/urlForImage'
+
 const { AboutContent, title, image, email_button, social_links } = Astro.props
+
+// Generate image URL
+const imageUrl = image ? urlForImage(image.asset).url() : null
 ---
 
 <section class="section" id="about">
   <h3>{title}</h3>
 
   <div class="bleed-r">
-    <img src={image.url} alt={image.alt} class="portrait" />
+    <img src={imageUrl} alt={image.alt} class="portrait" />
   </div>
 
   <div class="contact">

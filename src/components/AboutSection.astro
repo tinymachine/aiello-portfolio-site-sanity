@@ -1,19 +1,17 @@
 ---
 import Button from './Button.astro'
-
-import { urlForImage } from '../sanity/lib/urlForImage'
+import { renderPortableText } from '../sanity/lib/renderPortableText.js'
 
 const { AboutContent, title, image, email_button, social_links } = Astro.props
 
-// Generate image URL
-const imageUrl = image ? urlForImage(image.asset).url() : null
+const aboutText = renderPortableText(AboutContent)
 ---
 
 <section class="section" id="about">
   <h3>{title}</h3>
 
   <div class="bleed-r">
-    <img src={imageUrl} alt={image.alt} class="portrait" />
+    <img src={image.asset.url} alt={image.alt} class="portrait" />
   </div>
 
   <div class="contact">
@@ -27,7 +25,7 @@ const imageUrl = image ? urlForImage(image.asset).url() : null
     </nav>
   </div>
 
-  <AboutContent />
+  <div set:html={aboutText} />
 </section>
 
 <style>

@@ -1,9 +1,9 @@
 ---
 import { frontmatter } from '../settings/Settings.md'
-import {
-  Content as AboutContent,
-  // frontmatter as aboutData,
-} from '../user-content/About.md'
+// import {
+// Content as AboutContent,
+// frontmatter as aboutData,
+// } from '../user-content/About.md'
 import { loadQuery } from '../sanity/lib/loadQuery'
 
 import { frontmatter as projectData } from '../user-content/Projects.md'
@@ -17,7 +17,6 @@ import ScrollButton from '../components/ScrollButton.svelte'
 const { description, name, title, themeColors, reel } = frontmatter
 
 const { data: aboutData } = await loadQuery({
-  // query: `*[_type=="about"][0]`,
   query: `*[_type == "about"][0] { ..., image{ ..., asset-> } }`,
   params: {},
 })
@@ -48,7 +47,7 @@ const { data: aboutData } = await loadQuery({
     <ProjectSets projectSets={projectData.projectSets} />
 
     <AboutSection
-      AboutContent={AboutContent}
+      AboutContent={aboutData.content}
       title={aboutData.title}
       image={aboutData.image}
       email_button={aboutData.email_button}

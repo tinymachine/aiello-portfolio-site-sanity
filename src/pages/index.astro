@@ -14,10 +14,16 @@ import ProjectSets from '../components/ProjectSets.astro'
 import ReelSlideshow from '../components/ReelSlideshow.astro'
 import ScrollButton from '../components/ScrollButton.svelte'
 
-const { description, name, title, themeColors, reel } = frontmatter
+const { description, name, title, themeColors } = frontmatter
+// const { description, name, title, themeColors, reel } = frontmatter
 
 const { data: aboutData } = await loadQuery({
-  query: `*[_type == "about"][0] { ..., image{ ..., asset-> } }`,
+  query: `*[_type == "about"][0] { ..., image { ..., asset-> } }`,
+  params: {},
+})
+
+const { data: reel } = await loadQuery({
+  query: `*[_type=="reel"][0] { ..., placeholderStills[] { ..., asset-> } }`,
   params: {},
 })
 ---

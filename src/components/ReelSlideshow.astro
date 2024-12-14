@@ -1,22 +1,23 @@
 ---
 import { getAverageColor } from 'fast-average-color-node'
-import { imagePath } from '../settings/siteInfo'
+// import { imagePath } from '../settings/siteInfo'
 import BaseModal from './BaseModal.astro'
 import VimeoPlayer from './VimeoPlayer.svelte'
 
 const { reel } = Astro.props
 
 const reelModalTriggerId = 'reel-slideshow'
-const cloudinaryTransforms = {
-  slide: '/c_limit,w_1920', // limit to 1080p width
-  thumbnail: '/c_limit,w_256', // smaller for color sampling
-}
+// const cloudinaryTransforms = {
+//   slide: '/c_limit,w_1920', // limit to 1080p width
+//   thumbnail: '/c_limit,w_256', // smaller for color sampling
+// }
 
 // Get dominant colors from reel slideshow images
 
-const thumbUrls = reel.placeholderStills.map(
-  (still) => imagePath + cloudinaryTransforms.thumbnail + still
-)
+// const thumbUrls = reel.placeholderStills.map(
+//   (still) => imagePath + cloudinaryTransforms.thumbnail + still
+// )
+const thumbUrls = reel.placeholderStills.map((still) => still.asset.url)
 
 const getAverageRGBColor = async (imgUrl) => {
   // return as string `r, g, b` so alpha can easily be added
@@ -56,7 +57,7 @@ const backdropAlpha = 0.75
       {
         reel.placeholderStills.map((still) => (
           <img
-            src={imagePath + cloudinaryTransforms.slide + still}
+            src={still.asset.url}
             alt=""
             class="slide"
             width="1796"

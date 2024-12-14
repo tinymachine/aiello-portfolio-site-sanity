@@ -1,5 +1,5 @@
 ---
-import { frontmatter } from '../settings/Settings.md'
+// import { frontmatter } from '../settings/Settings.md'
 // import {
 // Content as AboutContent,
 // frontmatter as aboutData,
@@ -14,7 +14,6 @@ import ProjectSets from '../components/ProjectSets.astro'
 import ReelSlideshow from '../components/ReelSlideshow.astro'
 import ScrollButton from '../components/ScrollButton.svelte'
 
-const { description, name, title, themeColors } = frontmatter
 // const { description, name, title, themeColors, reel } = frontmatter
 
 const { data: aboutData } = await loadQuery({
@@ -26,19 +25,24 @@ const { data: reel } = await loadQuery({
   query: `*[_type=="reel"][0] { ..., placeholderStills[] { ..., asset-> } }`,
   params: {},
 })
+
+const { data: settings } = await loadQuery({
+  query: `*[_type=="settings"][0] { ..., projectSets[]-> }`,
+  params: {},
+})
 ---
 
 <Layout
-  description={description}
-  name={name}
-  title={title}
-  themeColors={themeColors}
+  description={settings.description}
+  name={settings.name}
+  title={settings.title}
+  themeColors={settings.colorVerticalRule}
 >
   <div class="section top">
     <div class="initial-view" data-initial-view>
       <header class="landing">
-        <h1>{name}</h1>
-        <h2 style="color: rgb(255 255 255 / 50%)">{title}</h2>
+        <h1>{settings.name}</h1>
+        <h2 style="color: rgb(255 255 255 / 50%)">{settings.title}</h2>
       </header>
 
       <ReelSlideshow reel={reel} />

@@ -4,7 +4,8 @@ import '../styles/global.scss'
 
 const { description, name, title, themeColors } = Astro.props
 
-const htmlString = `<style>:root { --color-vertical-rule: ${themeColors.verticalRule}; }</style>`
+// const htmlString = `<style>:root { --color-vertical-rule: ${themeColors.verticalRule}; }</style>`
+const htmlString = `<style>:root { --color-vertical-rule: rgb(${themeColors.rgb.r}, ${themeColors.rgb.g}, ${themeColors.rgb.b}); }</style>`
 ---
 
 <html lang="en" class="no-js">

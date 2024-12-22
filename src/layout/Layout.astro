@@ -2,10 +2,14 @@
 import Monogram from '../components/Monogram.astro'
 import '../styles/global.scss'
 
-const { description, name, title, themeColors } = Astro.props
-
-// const htmlString = `<style>:root { --color-vertical-rule: ${themeColors.verticalRule}; }</style>`
-const htmlString = `<style>:root { --color-vertical-rule: rgb(${themeColors.rgb.r}, ${themeColors.rgb.g}, ${themeColors.rgb.b}); }</style>`
+const { description, name, title, colorVerticalRule } = Astro.props
+const htmlString = `<style>:root {
+  --color-vertical-rule: rgb(
+    ${colorVerticalRule.rgb.r},
+    ${colorVerticalRule.rgb.g},
+    ${colorVerticalRule.rgb.b},
+    ${colorVerticalRule.rgb.a}
+  ); }</style>`
 ---
 
 <html lang="en" class="no-js">

@@ -19,23 +19,25 @@ const { data: reel } = await loadQuery({
   params: {},
 })
 
-const { data: settings } = await loadQuery({
+const {
+  data: { description, name, title, colorVerticalRule },
+} = await loadQuery({
   query: `*[_type=="settings"][0] { ..., projectSets[]-> }`,
   params: {},
 })
 ---
 
 <Layout
-  description={settings.description}
-  name={settings.name}
-  title={settings.title}
-  themeColors={settings.colorVerticalRule}
+  description={description}
+  name={name}
+  title={title}
+  colorVerticalRule={colorVerticalRule}
 >
   <div class="section top">
     <div class="initial-view" data-initial-view>
       <header class="landing">
-        <h1>{settings.name}</h1>
-        <h2 style="color: rgb(255 255 255 / 50%)">{settings.title}</h2>
+        <h1>{name}</h1>
+        <h2 style="color: rgb(255 255 255 / 50%)">{title}</h2>
       </header>
 
       <ReelSlideshow reel={reel} />

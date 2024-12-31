@@ -4,6 +4,7 @@ export default {
   tabWidth: 2,
   semi: false,
   singleQuote: true,
+  singleAttributePerLine: true,
   plugins: ['prettier-plugin-astro', 'prettier-plugin-svelte'],
   overrides: [
     {

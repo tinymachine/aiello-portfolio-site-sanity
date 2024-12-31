@@ -1,17 +1,29 @@
 ---
-import Button from './Button.astro'
+import { loadQuery } from '../sanity/lib/loadQuery'
 import { renderPortableText } from '../sanity/lib/renderPortableText.js'
+import Button from './Button.astro'
 
-const { AboutContent, title, image, email_button, social_links } = Astro.props
+const { data } = await loadQuery({
+  query: `*[_type == "about"][0] { ..., image { ..., asset-> } }`,
+  params: {},
+})
 
-const aboutText = renderPortableText(AboutContent)
+const { content, title, image, email_button, social_links } = data
+const aboutText = renderPortableText(content)
 ---
 
-<section class="section" id="about">
+<section
+  class="section"
+  id="about"
+>
   <h3>{title}</h3>
 
   <div class="bleed-r">
-    <img src={image.asset.url} alt={image.alt} class="portrait" />
+    <img
+      src={image.asset.url}
+      alt={image.alt}
+      class="portrait"
+    />
   </div>
 
   <div class="contact">

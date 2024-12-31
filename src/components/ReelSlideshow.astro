@@ -1,22 +1,16 @@
 ---
+import { loadQuery } from '../sanity/lib/loadQuery'
 import { getAverageColor } from 'fast-average-color-node'
-// import { imagePath } from '../settings/siteInfo'
 import BaseModal from './BaseModal.astro'
 import VimeoPlayer from './VimeoPlayer.svelte'
 
-const { reel } = Astro.props
+const { data: reel } = await loadQuery({
+  query: `*[_type=="reel"][0] { ..., placeholderStills[] { ..., asset-> } }`,
+  params: {},
+})
 
 const reelModalTriggerId = 'reel-slideshow'
-// const cloudinaryTransforms = {
-//   slide: '/c_limit,w_1920', // limit to 1080p width
-//   thumbnail: '/c_limit,w_256', // smaller for color sampling
-// }
 
-// Get dominant colors from reel slideshow images
-
-// const thumbUrls = reel.placeholderStills.map(
-//   (still) => imagePath + cloudinaryTransforms.thumbnail + still
-// )
 const thumbUrls = reel.placeholderStills.map((still) => still.asset.url)
 
 const getAverageRGBColor = async (imgUrl) => {
@@ -77,7 +71,10 @@ const backdropAlpha = 0.75
     </div>
   </a>
 
-  <BaseModal triggerId={reelModalTriggerId} autoplayVimeoPlayer>
+  <BaseModal
+    triggerId={reelModalTriggerId}
+    autoplayVimeoPlayer
+  >
     <div
       style="
         display: grid;
@@ -203,7 +200,7 @@ const backdropAlpha = 0.75
     max-width: min(120vh, var(--max-element-width));
     aspect-ratio: 1796 / 1005; /** 
                                 * Intentionally shorter than 1010 intrinsic
-                                * image height to workaround Safari height miscalculation:
+                                * image height to work around Safari height miscalculation:
                                 */
     align-self: center;
   }

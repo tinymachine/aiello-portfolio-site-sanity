@@ -9,16 +9,6 @@ import ProjectSets from '../components/ProjectSets.astro'
 import ReelSlideshow from '../components/ReelSlideshow.astro'
 import ScrollButton from '../components/ScrollButton.svelte'
 
-const { data: aboutData } = await loadQuery({
-  query: `*[_type == "about"][0] { ..., image { ..., asset-> } }`,
-  params: {},
-})
-
-const { data: reel } = await loadQuery({
-  query: `*[_type=="reel"][0] { ..., placeholderStills[] { ..., asset-> } }`,
-  params: {},
-})
-
 const {
   data: { description, name, title, colorVerticalRule },
 } = await loadQuery({
@@ -34,29 +24,31 @@ const {
   colorVerticalRule={colorVerticalRule}
 >
   <div class="section top">
-    <div class="initial-view" data-initial-view>
+    <div
+      class="initial-view"
+      data-initial-view
+    >
       <header class="landing">
         <h1>{name}</h1>
         <h2 style="color: rgb(255 255 255 / 50%)">{title}</h2>
       </header>
 
-      <ReelSlideshow reel={reel} />
+      <ReelSlideshow />
 
-      <div class="align-r scroller-fade-in" style="padding-top: 1rem;">
-        <ScrollButton targetId="first-section" client:load />
+      <div
+        class="align-r scroller-fade-in"
+        style="padding-top: 1rem;"
+      >
+        <ScrollButton
+          targetId="first-section"
+          client:load
+        />
       </div>
     </div>
   </div>
 
   <main class="landing">
     <ProjectSets projectSets={projectData.projectSets} />
-
-    <AboutSection
-      AboutContent={aboutData.content}
-      title={aboutData.title}
-      image={aboutData.image}
-      email_button={aboutData.email_button}
-      social_links={aboutData.social_links}
-    />
+    <AboutSection />
   </main>
 </Layout>

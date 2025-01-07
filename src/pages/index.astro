@@ -1,8 +1,6 @@
 ---
 import { loadQuery } from '../sanity/lib/loadQuery'
 
-import { frontmatter as projectData } from '../user-content/Projects.md'
-
 import Layout from '../layout/Layout.astro'
 import AboutSection from '../components/AboutSection.astro'
 import ProjectSets from '../components/ProjectSets.astro'
@@ -10,10 +8,9 @@ import ReelSlideshow from '../components/ReelSlideshow.astro'
 import ScrollButton from '../components/ScrollButton.svelte'
 
 const {
-  data: { description, name, title, colorVerticalRule },
+  data: { description, name, title, colorVerticalRule, projectSets },
 } = await loadQuery({
   query: `*[_type=="settings"][0] { ..., projectSets[]-> }`,
-  params: {},
 })
 ---
 
@@ -48,7 +45,7 @@ const {
   </div>
 
   <main class="landing">
-    <ProjectSets projectSets={projectData.projectSets} />
+    <ProjectSets projectSets={projectSets} />
     <AboutSection />
   </main>
 </Layout>

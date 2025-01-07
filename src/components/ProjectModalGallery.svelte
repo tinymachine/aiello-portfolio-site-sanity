@@ -1,6 +1,5 @@
 <script>
   import BiggerPicture from 'bigger-picture/src/bigger-picture.js'
-  import { imagePath } from '../settings/siteInfo'
   import { onMount } from 'svelte'
 
   import 'bigger-picture/dist/bigger-picture.css'
@@ -10,8 +9,6 @@
   export let bpAnchor
   export let bpAnchorMounted
   export let modalDismissEnabled
-
-  const cloudinaryStillTransforms = '/c_limit,w_1800' // `c_limit` = shrink to fit
 
   let bp
   let isMounted
@@ -67,19 +64,22 @@
 </script>
 
 <section class="stills">
-  <div class="still-thumbs" id="images">
+  <div
+    class="still-thumbs"
+    id="images"
+  >
     {#each stills as still, i}
       <a
-        href={imagePath + cloudinaryStillTransforms + still}
-        data-img={imagePath + cloudinaryStillTransforms + still}
-        data-thumb={imagePath + cloudinaryStillTransforms + still}
+        href={still.asset.url + '?w=1800'}
+        data-img={still.asset.url + '?w=1800'}
+        data-thumb={still.asset.url + '?w=1800'}
         data-width={stillsDims[i].maxWidth}
         data-height={stillsDims[i].maxHeight}
         data-alt={`Still ${getStillIndex(i)}`}
         on:click={openGallery}
       >
         <img
-          src={imagePath + cloudinaryStillTransforms + still}
+          src={still.asset.url + '?w=1800'}
           alt={`Still thumbnail ${getStillIndex(i)}`}
           loading="lazy"
         />

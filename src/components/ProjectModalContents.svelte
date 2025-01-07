@@ -9,7 +9,10 @@
 
   const { title, director, clips, stills, stillsDims, colorAccent } = project
 
-  const getAccentColor = () => colorAccent || 'var(--color-strong)'
+  const getAccentColor = () =>
+    colorAccent
+      ? `rgb(${colorAccent.rgb.r} ${colorAccent.rgb.g} ${colorAccent.rgb.b} / ${colorAccent.rgb.a})`
+      : 'var(--color-strong)'
 
   const getDirectorLabel = () =>
     `Director${director.includes('and') || director.includes(',') ? 's' : ''}`
@@ -24,7 +27,7 @@
 
 <header>
   <h3
-    style={`color: ${getAccentColor()}`}
+    style={`color: ${getAccentColor()};`}
     aria-label={`Project title: ${title}`}
   >
     {title}
@@ -33,7 +36,10 @@
   <p class="screen-reader-only">{`Project type: ${projectTypeLabel}`}</p>
 
   <p>
-    <span style={`color: ${getAccentColor()}`} aria-hidden="true">
+    <span
+      style={`color: ${getAccentColor()}`}
+      aria-hidden="true"
+    >
       {projectTypeLabel}
     </span>
     {#if director}
@@ -43,13 +49,19 @@
   </p>
 </header>
 
-<main class="content" bind:this={bpAnchor}>
+<main
+  class="content"
+  bind:this={bpAnchor}
+>
   <div class="content-inner">
     {#if clips}
       <section class="clips">
         {#each clips as clip}
           <div class="clip bleed">
-            <VimeoPlayer url={clip} title={`${title} video clip`} />
+            <VimeoPlayer
+              url={clip}
+              title={`${title} video clip`}
+            />
           </div>
         {/each}
       </section>

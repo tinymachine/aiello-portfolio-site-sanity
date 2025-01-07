@@ -1,10 +1,18 @@
 ---
-import { imagePath } from '../settings/siteInfo'
+import { loadQuery } from '../sanity/lib/loadQuery'
 import Project from './Project.svelte'
 import { marked } from 'marked'
 import getDimsFromImageUrls from '../scripts/getDimsFromImageUrls.js'
 
 const { projectSets } = Astro.props
+
+const { data: projectsUngrouped } = await loadQuery({
+  query: `*[_type=="project"] | order(orderRank asc) [] {
+    ...,
+    featuredStill {..., asset->},
+    stills[] {..., asset->},
+  }`,
+})
 
 // Set max width for stills, to be used to calculate max heights
 const maxStillWidth = 1980
@@ -22,11 +30,11 @@ const getTransformedProject = async (project) => {
 
 const getProjectWithImageDimsData = async (project) => {
   // Get stills URLs
-  const urls = project.stills.map((still) => imagePath + still)
+  const urls = project.stills.map((still) => still.asset.url)
 
   // Add featured still URL (probably always an image from the standard stills,
   // but include it here separately in case it's not)
-  urls.push(imagePath + project.featuredStill)
+  urls.push(project.featuredStill.asset.url)
 
   // Get dims and aspect ratio for all images
   const stillsDimsSansMaxDims = await getDimsFromImageUrls(urls)
@@ -52,18 +60,23 @@ const getProjectWithImageDimsData = async (project) => {
 
 {
   projectSets.map((projectSet, i) => (
-    <section class="section" id={i === 0 ? 'first-section' : ''}>
+    <section
+      class="section"
+      id={i === 0 ? 'first-section' : ''}
+    >
       <h3>{projectSet.heading}</h3>
 
-      {projectSet.projects.map(async (project) => (
-        <Project
-          project={await getTransformedProject(project)}
-          projectTypeLabel={
-            project.projectType || projectSet.fallbackProjectTypeLabel
-          }
-          client:load
-        />
-      ))}
+      {projectsUngrouped
+        .filter((project) => project.projectSet._ref === projectSet._id)
+        .map(async (project) => (
+          <Project
+            project={await getTransformedProject(project)}
+            projectTypeLabel={
+              project.projectType || projectSet.fallbackProjectTypeLabel
+            }
+            client:load
+          />
+        ))}
     </section>
   ))
 }

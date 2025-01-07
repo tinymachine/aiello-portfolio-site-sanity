@@ -1,13 +1,10 @@
 <script>
   import ProjectModal from './ProjectModal.svelte'
-  import { imagePath } from '../settings/siteInfo'
 
   export let project
   export let projectTypeLabel
 
   const { projectType, colorAccent, title, featuredStill } = project
-
-  const cloudinaryFeaturedStillTransforms = '/c_limit,w_1280' // `c_limit` = shrink to fit
 
   let isOpen = false
 
@@ -22,18 +19,21 @@
 </script>
 
 <article>
-  <button on:click={open} class="bleed-r">
+  <button
+    on:click={open}
+    class="bleed-r"
+  >
     <div>
       <img
         class="still"
-        src={imagePath + cloudinaryFeaturedStillTransforms + featuredStill}
+        src={featuredStill.asset.url + '?w=1280'}
         alt=""
       />
     </div>
 
     <h4
       style={`
-        --color-accent: ${colorAccent || 'var(--color-default'};
+        --color-accent: ${colorAccent ? `rgb(${colorAccent.rgb.r} ${colorAccent.rgb.g} ${colorAccent.rgb.b} / ${colorAccent.rgb.a});` : 'var(--color-default)'};
         color: var(--color-accent);
       `}
     >
@@ -47,7 +47,12 @@
   </button>
 </article>
 
-<ProjectModal {isOpen} onDismiss={close} {project} {projectTypeLabel} />
+<ProjectModal
+  {isOpen}
+  onDismiss={close}
+  {project}
+  {projectTypeLabel}
+/>
 
 <style lang="scss">
   button {

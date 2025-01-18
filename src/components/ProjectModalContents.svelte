@@ -7,12 +7,10 @@
   export let projectTypeLabel
   export let modalDismissEnabled
 
-  const { title, director, clips, stills, stillsDims, colorAccent } = project
+  const { title, director, clips, stills, colorAccentRgb } = project
 
   const getAccentColor = () =>
-    colorAccent
-      ? `rgb(${colorAccent.rgb.r} ${colorAccent.rgb.g} ${colorAccent.rgb.b} / ${colorAccent.rgb.a})`
-      : 'var(--color-strong)'
+    colorAccentRgb ? colorAccentRgb : 'var(--color-strong)'
 
   const getDirectorLabel = () =>
     `Director${director.includes('and') || director.includes(',') ? 's' : ''}`
@@ -70,7 +68,6 @@
     {#if stills}
       <ProjectModalGallery
         {stills}
-        {stillsDims}
         {bpAnchor}
         {bpAnchorMounted}
         bind:modalDismissEnabled

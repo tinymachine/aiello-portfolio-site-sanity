@@ -4,7 +4,7 @@
   export let project
   export let projectTypeLabel
 
-  const { projectType, colorAccent, title, featuredStill } = project
+  const { projectType, colorAccentRgb, title, featuredStill } = project
 
   let isOpen = false
 
@@ -26,14 +26,14 @@
     <div>
       <img
         class="still"
-        src={featuredStill.asset.url + '?w=1280'}
+        src={featuredStill.url + '?w=1280'}
         alt=""
       />
     </div>
 
     <h4
       style={`
-        --color-accent: ${colorAccent ? `rgb(${colorAccent.rgb.r} ${colorAccent.rgb.g} ${colorAccent.rgb.b} / ${colorAccent.rgb.a});` : 'var(--color-default)'};
+        --color-accent: ${colorAccentRgb ? colorAccentRgb : 'var(--color-default)'};
         color: var(--color-accent);
       `}
     >

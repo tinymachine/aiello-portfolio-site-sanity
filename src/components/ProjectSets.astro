@@ -2,58 +2,66 @@
 import { loadQuery } from '../sanity/lib/loadQuery'
 import Project from './Project.svelte'
 import { marked } from 'marked'
-import getDimsFromImageUrls from '../scripts/getDimsFromImageUrls.js'
+// import getDimsFromImageUrls from '../scripts/getDimsFromImageUrls.js'
 
 const { projectSets } = Astro.props
 
 const { data: projectsUngrouped } = await loadQuery({
-  query: `*[_type=="project"] | order(orderRank asc) [] {
-    ...,
-    featuredStill {..., asset->},
-    stills[] {..., asset->},
+  query: `*[_type=="project"] | order(orderRank asc) {
+    clips,
+    title,
+    projectType,
+    orderRank,
+    director,
+    "projectSetId": projectSet._ref,
+    "colorAccentRgb": 
+      "rgb("
+        + string(colorAccent.rgb.r)
+        + " " + string(colorAccent.rgb.g)
+        + " " + string(colorAccent.rgb.b)
+        + " / " + string(colorAccent.rgb.a)
+        + 
+      ")",
+    "featuredStill": {
+      "width": featuredStill.asset->metadata.dimensions.width,
+      "height": featuredStill.asset->metadata.dimensions.height,
+      "aspect": featuredStill.asset->metadata.dimensions.aspectRatio,
+      "url": featuredStill.asset->url,
+    },
+    "stills": stills[] {
+      "width": asset->metadata.dimensions.width,
+      "height": asset->metadata.dimensions.height,
+      "aspect": asset->metadata.dimensions.aspectRatio,
+      "url": asset->url,
+    },
   }`,
 })
 
 // Set max width for stills, to be used to calculate max heights
-const maxStillWidth = 1980
+const maxStillWidth = 1920
 
-const getTransformedProject = async (project) => {
+const getTransformedProject = (project) => {
   // Change hypens to em dashes, then process with Markdown to smarten punctuation
   const markdownTitle = marked.parseInline(
     project.title.replace(/ - /g, ` — `),
     { smartypants: true }
   )
 
-  // Update project data with still dimensions
-  return await getProjectWithImageDimsData({ ...project, title: markdownTitle })
-}
-
-const getProjectWithImageDimsData = async (project) => {
-  // Get stills URLs
-  const urls = project.stills.map((still) => still.asset.url)
-
-  // Add featured still URL (probably always an image from the standard stills,
-  // but include it here separately in case it's not)
-  urls.push(project.featuredStill.asset.url)
-
-  // Get dims and aspect ratio for all images
-  const stillsDimsSansMaxDims = await getDimsFromImageUrls(urls)
-  const stillsDimsWithMaxDims = stillsDimsSansMaxDims.map(
-    ({ width, height, aspect }) => {
-      return {
-        width,
-        height,
-        aspect,
-        maxWidth: maxStillWidth,
-        maxHeight: Math.round(maxStillWidth / aspect),
-      }
-    }
-  )
-
   return {
     ...project,
-    stillsDims: stillsDimsWithMaxDims.slice(0, -1), // remove featured still
-    featuredStillDims: stillsDimsSansMaxDims.slice(-1)[0],
+    tite: markdownTitle,
+    featuredStill: {
+      ...project.featuredStill,
+      maxWidth: maxStillWidth,
+      maxHeight: Math.round(maxStillWidth / project.featuredStill.aspect),
+    },
+    stills: project.stills.map((still) => {
+      return {
+        ...still,
+        maxWidth: maxStillWidth,
+        maxHeight: Math.round(maxStillWidth / still.aspect),
+      }
+    }),
   }
 }
 ---
@@ -67,10 +75,10 @@ const getProjectWithImageDimsData = async (project) => {
       <h3>{projectSet.heading}</h3>
 
       {projectsUngrouped
-        .filter((project) => project.projectSet._ref === projectSet._id)
-        .map(async (project) => (
+        .filter((project) => project.projectSetId === projectSet._id)
+        .map((project) => (
           <Project
-            project={await getTransformedProject(project)}
+            project={getTransformedProject(project)}
             projectTypeLabel={
               project.projectType || projectSet.fallbackProjectTypeLabel
             }

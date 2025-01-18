@@ -5,7 +5,6 @@
   import 'bigger-picture/dist/bigger-picture.css'
 
   export let stills
-  export let stillsDims
   export let bpAnchor
   export let bpAnchorMounted
   export let modalDismissEnabled
@@ -70,16 +69,16 @@
   >
     {#each stills as still, i}
       <a
-        href={still.asset.url + '?w=1800'}
-        data-img={still.asset.url + '?w=1800'}
-        data-thumb={still.asset.url + '?w=1800'}
-        data-width={stillsDims[i].maxWidth}
-        data-height={stillsDims[i].maxHeight}
+        href={still.url + '?w=1800'}
+        data-img={still.url + '?w=1800'}
+        data-thumb={still.url + '?w=1800'}
+        data-width={still.maxWidth}
+        data-height={still.maxHeight}
         data-alt={`Still ${getStillIndex(i)}`}
         on:click={openGallery}
       >
         <img
-          src={still.asset.url + '?w=1800'}
+          src={still.url + '?w=1800'}
           alt={`Still thumbnail ${getStillIndex(i)}`}
           loading="lazy"
         />

@@ -14,6 +14,12 @@ export default {
       },
     },
     {
+      files: 'src/layout/Layout.astro',
+      options: {
+        singleAttributePerLine: false,
+      },
+    },
+    {
       files: '*.svelte',
       options: {
         parser: 'svelte',

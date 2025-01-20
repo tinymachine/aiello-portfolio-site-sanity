@@ -1,7 +1,0 @@
----
-label: Reel
-hide_body: true
-fields:
-- type: text
-  name: vimeoUrl
-  label: Vimeo URL

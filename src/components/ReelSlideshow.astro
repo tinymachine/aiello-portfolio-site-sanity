@@ -5,15 +5,21 @@ import BaseModal from './BaseModal.astro'
 import VimeoPlayer from './VimeoPlayer.svelte'
 
 const { data: reel } = await loadQuery({
-  query: `*[_type=="reel"][0] { ..., placeholderStills[] { ..., asset-> } }`,
+  query: `*[_type=="reel"][0] { 
+    ...,
+    placeholderStills[] {
+      "width": asset->metadata.dimensions.width,
+      "height": asset->metadata.dimensions.height,
+      "aspect": asset->metadata.dimensions.aspectRatio,
+      "url": asset->url,
+    } 
+  }`,
   params: {},
 })
 
 const reelModalTriggerId = 'reel-slideshow'
 
-const thumbUrls = reel.placeholderStills.map(
-  (still) => still.asset.url + '?w=256'
-)
+const thumbUrls = reel.placeholderStills.map((still) => still.url + '?w=256')
 
 const getAverageRGBColor = async (imgUrl) => {
   // return as string `r, g, b` so alpha can easily be added
@@ -53,7 +59,24 @@ const backdropAlpha = 0.75
       {
         reel.placeholderStills.map((still) => (
           <img
-            src={still.asset.url + '?w=1796'}
+            src={still.url + '?w=1796&fit=max&auto=format'}
+            srcset=`
+              ${still.url}?w=400&fit=max&auto=format 400w,
+              ${still.url}?w=600&fit=max&auto=format 600w,
+              ${still.url}?w=800&fit=max&auto=format 800w,
+              ${still.url}?w=1000&fit=max&auto=format 1000w,
+              ${still.url}?w=1200&fit=max&auto=format 1200w,
+              ${still.url}?w=1400&fit=max&auto=format 1400w,
+              ${still.url}?w=1600&fit=max&auto=format 1600w,
+              ${still.url}?w=1800&fit=max&auto=format 1800w,
+              ${still.url}?w=2000&fit=max&auto=format 2000w,
+              ${still.url}?w=2200&fit=max&auto=format 2200w,
+              ${still.url}?w=2400&fit=max&auto=format 2400w,
+              ${still.url}?w=3200&fit=max&auto=format 3200w,
+              ${still.url}?w=3400&fit=max&auto=format 3400w,
+              ${still.url}?w=3600&fit=max&auto=format 3600w,
+            `
+            sizes="(max-width: 1796px) 100vw, 3592px"
             alt=""
             class="slide"
             width="1796"

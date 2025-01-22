@@ -50,11 +50,6 @@ const getTransformedProject = (project) => {
   return {
     ...project,
     tite: markdownTitle,
-    featuredStill: {
-      ...project.featuredStill,
-      maxWidth: maxStillWidth,
-      maxHeight: Math.round(maxStillWidth / project.featuredStill.aspect),
-    },
     stills: project.stills.map((still) => {
       return {
         ...still,

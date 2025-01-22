@@ -1,11 +1,13 @@
 <script>
   import ProjectModal from './ProjectModal.svelte'
+  import { IMG_GLOBAL_URL_PARAMS } from '../config'
 
   export let project
   export let projectTypeLabel
 
   const { projectType, colorAccentRgb, title, featuredStill } = project
 
+  const IMG_MAX_WIDTH = 744
   let isOpen = false
 
   const open = (e) => {
@@ -26,7 +28,10 @@
     <div>
       <img
         class="still"
-        src={featuredStill.url + '?w=1280'}
+        src={featuredStill.url +
+          `?w=${IMG_MAX_WIDTH * 2}${IMG_GLOBAL_URL_PARAMS}`}
+        width={IMG_MAX_WIDTH}
+        height={Math.round(IMG_MAX_WIDTH / featuredStill.aspect)}
         alt=""
       />
     </div>

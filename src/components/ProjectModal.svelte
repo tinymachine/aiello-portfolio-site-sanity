@@ -44,6 +44,8 @@
           >
             <img
               src="/img/close-button.svg"
+              width="36"
+              height="36"
               alt=""
               title="Press Esc to close"
             />

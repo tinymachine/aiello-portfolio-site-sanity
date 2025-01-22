@@ -18,8 +18,17 @@ const { autoplayVimeoPlayer, closeText = 'Close', triggerId } = Astro.props
 >
   <div class="modal__inner">
     <div class="modal__close">
-      <button aria-label={closeText} class="modal__close__button">
-        <img src="/img/close-button.svg" alt="" title="Press Esc to close" />
+      <button
+        aria-label={closeText}
+        class="modal__close__button"
+      >
+        <img
+          src="/img/close-button.svg"
+          width="36"
+          height="36"
+          alt=""
+          title="Press Esc to close"
+        />
       </button>
     </div>
 

@@ -2,6 +2,7 @@
 import { loadQuery } from '../sanity/lib/loadQuery'
 import { renderPortableText } from '../sanity/lib/renderPortableText.js'
 import Button from './Button.astro'
+import { IMG_GLOBAL_URL_PARAMS } from '../config'
 
 const { data } = await loadQuery({
   query: `
@@ -34,7 +35,7 @@ const IMG_MAX_WIDTH = 572 // ~36rem max-width from CSS
 
   <div class="bleed-r">
     <img
-      src={image.url}
+      src={image.url + `?w=${IMG_MAX_WIDTH * 2}${IMG_GLOBAL_URL_PARAMS}`}
       width={IMG_MAX_WIDTH}
       height={Math.round(IMG_MAX_WIDTH / image.aspect)}
       class="portrait"

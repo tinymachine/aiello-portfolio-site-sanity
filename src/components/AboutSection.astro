@@ -4,12 +4,26 @@ import { renderPortableText } from '../sanity/lib/renderPortableText.js'
 import Button from './Button.astro'
 
 const { data } = await loadQuery({
-  query: `*[_type == "about"][0] { ..., image { ..., asset-> } }`,
-  params: {},
+  query: `
+    *[_type == "about"][0] { 
+      title,
+      content,
+      social_links,
+      email_button,
+      image {
+        alt,
+        "width": asset->metadata.dimensions.width,
+        "height": asset->metadata.dimensions.height,
+        "aspect": asset->metadata.dimensions.aspectRatio,
+        "url": asset->url,
+      }
+    }
+  `,
 })
 
 const { content, title, image, email_button, social_links } = data
 const aboutText = renderPortableText(content)
+const IMG_MAX_WIDTH = 572 // ~36rem max-width from CSS
 ---
 
 <section
@@ -20,9 +34,11 @@ const aboutText = renderPortableText(content)
 
   <div class="bleed-r">
     <img
-      src={image.asset.url}
-      alt={image.alt}
+      src={image.url}
+      width={IMG_MAX_WIDTH}
+      height={Math.round(IMG_MAX_WIDTH / image.aspect)}
       class="portrait"
+      alt={image.alt}
     />
   </div>
 
@@ -43,6 +59,10 @@ const aboutText = renderPortableText(content)
 <style>
   .section {
     max-width: 36rem;
+  }
+
+  img.portrait {
+    height: 100%;
   }
 
   @media (min-width: 36rem) {

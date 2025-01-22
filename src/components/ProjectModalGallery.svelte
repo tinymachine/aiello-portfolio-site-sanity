@@ -1,7 +1,7 @@
 <script>
   import BiggerPicture from 'bigger-picture/src/bigger-picture.js'
   import { onMount } from 'svelte'
-
+  import { IMG_GLOBAL_URL_PARAMS } from '../config'
   import 'bigger-picture/dist/bigger-picture.css'
 
   export let stills
@@ -12,6 +12,8 @@
   let bp
   let isMounted
   let thumbThatLaunchedModal
+
+  const THUMB_MAX_WIDTH = 882
 
   onMount(() => {
     isMounted = true
@@ -69,16 +71,19 @@
   >
     {#each stills as still, i}
       <a
-        href={still.url + '?w=1800'}
-        data-img={still.url + '?w=1800'}
-        data-thumb={still.url + '?w=1800'}
+        href={still.url + `?w=${still.maxWidth}${IMG_GLOBAL_URL_PARAMS}`}
+        data-img={still.url + `?w=${still.maxWidth}${IMG_GLOBAL_URL_PARAMS}`}
+        data-thumb={still.url +
+          `?w=${THUMB_MAX_WIDTH * 2}${IMG_GLOBAL_URL_PARAMS}`}
         data-width={still.maxWidth}
         data-height={still.maxHeight}
         data-alt={`Still ${getStillIndex(i)}`}
         on:click={openGallery}
       >
         <img
-          src={still.url + '?w=1800'}
+          src={still.url + `?w=${THUMB_MAX_WIDTH * 2}${IMG_GLOBAL_URL_PARAMS}`}
+          width={THUMB_MAX_WIDTH}
+          height={Math.round(THUMB_MAX_WIDTH / still.aspect)}
           alt={`Still thumbnail ${getStillIndex(i)}`}
           loading="lazy"
         />
@@ -100,6 +105,7 @@
 
     img {
       width: 100%;
+      height: auto;
       display: block;
     }
   }

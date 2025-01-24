@@ -1,6 +1,9 @@
 <script>
   import ProjectModal from './ProjectModal.svelte'
   import { IMG_GLOBAL_URL_PARAMS } from '../config'
+  import { onMount } from 'svelte'
+  import { fadeInImages } from '../scripts/imgFadeIn'
+  import '../scripts/imgFadeIn/styles.css'
 
   export let project
   export let projectTypeLabel
@@ -18,6 +21,10 @@
   const close = () => {
     isOpen = false
   }
+
+  onMount(() => {
+    fadeInImages()
+  })
 </script>
 
 <article>
@@ -33,6 +40,8 @@
         width={IMG_MAX_WIDTH}
         height={Math.round(IMG_MAX_WIDTH / featuredStill.aspect)}
         alt=""
+        loading="lazy"
+        data-fadein
       />
     </div>
 

@@ -1,8 +1,10 @@
 <script>
   import BiggerPicture from 'bigger-picture/src/bigger-picture.js'
+  import 'bigger-picture/dist/bigger-picture.css'
   import { onMount } from 'svelte'
   import { IMG_GLOBAL_URL_PARAMS } from '../config'
-  import 'bigger-picture/dist/bigger-picture.css'
+  import { fadeInImages } from '../scripts/imgFadeIn'
+  import '../scripts/imgFadeIn/styles.css'
 
   export let stills
   export let bpAnchor
@@ -17,6 +19,7 @@
 
   onMount(() => {
     isMounted = true
+    fadeInImages()
   })
 
   $: if (bpAnchorMounted && isMounted) {
@@ -86,6 +89,7 @@
           height={Math.round(THUMB_MAX_WIDTH / still.aspect)}
           alt={`Still thumbnail ${getStillIndex(i)}`}
           loading="lazy"
+          data-fadein
         />
       </a>
     {/each}

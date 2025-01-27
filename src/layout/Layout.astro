@@ -1,8 +1,9 @@
 ---
 import Monogram from '../components/Monogram.astro'
 import '../styles/global.scss'
+import { getOgImageUrl } from '../scripts/utils/getImageUrl'
 
-const { description, name, title, colorVerticalRule } = Astro.props
+const { name, title, description, ogImage, colorVerticalRule } = Astro.props
 const htmlString = `<style>:root {
   --color-vertical-rule: rgb(
     ${colorVerticalRule.rgb.r},
@@ -10,6 +11,7 @@ const htmlString = `<style>:root {
     ${colorVerticalRule.rgb.b},
     ${colorVerticalRule.rgb.a}
   ); }</style>`
+const docTitle = `${name}${title ? ` · ${title}` : ''}`
 ---
 
 <html lang="en" class="no-js">
@@ -17,8 +19,22 @@ const htmlString = `<style>:root {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content={description} />
-    <title>{name} · {title}</title>
+    {description && <meta name="description" content={description} />}
+    <title>{docTitle}</title>
+
+    <meta property="og:title" content={docTitle} />
+    {description && <meta property="og:description" content={description} />}
+    {
+      ogImage?.url && (
+        <meta
+          property="og:image"
+          content={getOgImageUrl(ogImage, {
+            targetWidth: 1200,
+            targetHeight: 630,
+          })}
+        />
+      )
+    }
 
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />

@@ -8,17 +8,30 @@ import ReelSlideshow from '../components/ReelSlideshow.astro'
 import ScrollButton from '../components/ScrollButton.svelte'
 
 const {
-  data: { description, name, title, colorVerticalRule, projectSets },
+  data: { name, title, description, ogImage, colorVerticalRule, projectSets },
 } = await loadQuery({
-  query: `*[_type=="settings"][0] { ..., projectSets[]-> }`,
+  query: `
+    *[_type=="settings"][0] {
+      ...,
+      "ogImage": {
+        "url": ogImage.asset->url,
+        "width": ogImage.asset->metadata.dimensions.width,
+        "height": ogImage.asset->metadata.dimensions.height,
+        "hotspot": ogImage.hotspot,
+        "crop": ogImage.crop,
+      },
+      projectSets[]->
+    }
+  `,
 })
 ---
 
 <Layout
-  description={description}
-  name={name}
-  title={title}
-  colorVerticalRule={colorVerticalRule}
+  {name}
+  {title}
+  {description}
+  {ogImage}
+  {colorVerticalRule}
 >
   <div class="section top">
     <div

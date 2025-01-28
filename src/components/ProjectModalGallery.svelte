@@ -2,7 +2,8 @@
   import BiggerPicture from 'bigger-picture/src/bigger-picture.js'
   import 'bigger-picture/dist/bigger-picture.css'
   import { onMount } from 'svelte'
-  import { IMG_GLOBAL_URL_PARAMS } from '../config'
+  import { getSrcset } from '../scripts/utils/getSrcset'
+  import { IMG_GLOBAL_URL_PARAMS, MAX_DPR } from '../config'
   import { fadeInImages } from '../scripts/imgFadeIn'
   import '../scripts/imgFadeIn/styles.css'
 
@@ -16,6 +17,16 @@
   let thumbThatLaunchedModal
 
   const THUMB_MAX_WIDTH = 882
+
+  const getThumbSrcset = (url) => {
+    return getSrcset({
+      url,
+      min: 200,
+      max: THUMB_MAX_WIDTH * MAX_DPR,
+      step: 200,
+      additionalParams: IMG_GLOBAL_URL_PARAMS,
+    })
+  }
 
   onMount(() => {
     isMounted = true
@@ -75,16 +86,25 @@
     {#each stills as still, i}
       <a
         href={still.url + `?w=${still.maxWidth}${IMG_GLOBAL_URL_PARAMS}`}
-        data-img={still.url + `?w=${still.maxWidth}${IMG_GLOBAL_URL_PARAMS}`}
+        data-img={getSrcset({
+          url: still.url,
+          min: 400,
+          max: still.maxWidth * MAX_DPR,
+          step: 200,
+          additionalParams: IMG_GLOBAL_URL_PARAMS,
+        })}
         data-thumb={still.url +
-          `?w=${THUMB_MAX_WIDTH * 2}${IMG_GLOBAL_URL_PARAMS}`}
+          `?w=${THUMB_MAX_WIDTH / 2}${IMG_GLOBAL_URL_PARAMS}`}
         data-width={still.maxWidth}
         data-height={still.maxHeight}
         data-alt={`Still ${getStillIndex(i)}`}
         on:click={openGallery}
       >
         <img
-          src={still.url + `?w=${THUMB_MAX_WIDTH * 2}${IMG_GLOBAL_URL_PARAMS}`}
+          src={still.url +
+            `?w=${THUMB_MAX_WIDTH * MAX_DPR}${IMG_GLOBAL_URL_PARAMS}`}
+          srcset={getThumbSrcset(still.url)}
+          sizes={`(max-width: 1836px) 48vw, ${THUMB_MAX_WIDTH}px`}
           width={THUMB_MAX_WIDTH}
           height={Math.round(THUMB_MAX_WIDTH / still.aspect)}
           alt={`Still thumbnail ${getStillIndex(i)}`}

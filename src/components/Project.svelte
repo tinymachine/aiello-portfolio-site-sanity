@@ -1,6 +1,7 @@
 <script>
   import ProjectModal from './ProjectModal.svelte'
-  import { IMG_GLOBAL_URL_PARAMS } from '../config'
+  import { getSrcset } from '../scripts/utils/getSrcset.js'
+  import { IMG_GLOBAL_URL_PARAMS, MAX_DPR } from '../config'
   import { onMount } from 'svelte'
   import { fadeInImages } from '../scripts/imgFadeIn'
   import '../scripts/imgFadeIn/styles.css'
@@ -36,7 +37,15 @@
       <img
         class="still"
         src={featuredStill.url +
-          `?w=${IMG_MAX_WIDTH * 2}${IMG_GLOBAL_URL_PARAMS}`}
+          `?w=${IMG_MAX_WIDTH * MAX_DPR}${IMG_GLOBAL_URL_PARAMS}`}
+        srcset={getSrcset({
+          url: featuredStill.url,
+          min: 300,
+          max: IMG_MAX_WIDTH * MAX_DPR,
+          step: 200,
+          additionalParams: IMG_GLOBAL_URL_PARAMS,
+        })}
+        sizes={`(max-width: 48rem) 90vw, ${IMG_MAX_WIDTH}px`}
         width={IMG_MAX_WIDTH}
         height={Math.round(IMG_MAX_WIDTH / featuredStill.aspect)}
         alt=""

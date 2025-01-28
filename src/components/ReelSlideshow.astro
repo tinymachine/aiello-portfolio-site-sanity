@@ -4,6 +4,7 @@ import { getAverageColor } from 'fast-average-color-node'
 import BaseModal from './BaseModal.astro'
 import VimeoPlayer from './VimeoPlayer.svelte'
 import { IMG_GLOBAL_URL_PARAMS } from '../config'
+import { getSrcset } from '../scripts/utils/getSrcset'
 
 const { data: reel } = await loadQuery({
   query: `*[_type=="reel"][0] { 
@@ -61,22 +62,13 @@ const backdropAlpha = 0.75
         reel.placeholderStills.map((still) => (
           <img
             src={still.url + `?w=1796${IMG_GLOBAL_URL_PARAMS}`}
-            srcset=`
-              ${still.url}?w=400${IMG_GLOBAL_URL_PARAMS} 400w,
-              ${still.url}?w=600${IMG_GLOBAL_URL_PARAMS} 600w,
-              ${still.url}?w=800${IMG_GLOBAL_URL_PARAMS} 800w,
-              ${still.url}?w=1000${IMG_GLOBAL_URL_PARAMS} 1000w,
-              ${still.url}?w=1200${IMG_GLOBAL_URL_PARAMS} 1200w,
-              ${still.url}?w=1400${IMG_GLOBAL_URL_PARAMS} 1400w,
-              ${still.url}?w=1600${IMG_GLOBAL_URL_PARAMS} 1600w,
-              ${still.url}?w=1800${IMG_GLOBAL_URL_PARAMS} 1800w,
-              ${still.url}?w=2000${IMG_GLOBAL_URL_PARAMS} 2000w,
-              ${still.url}?w=2200${IMG_GLOBAL_URL_PARAMS} 2200w,
-              ${still.url}?w=2400${IMG_GLOBAL_URL_PARAMS} 2400w,
-              ${still.url}?w=3200${IMG_GLOBAL_URL_PARAMS} 3200w,
-              ${still.url}?w=3400${IMG_GLOBAL_URL_PARAMS} 3400w,
-              ${still.url}?w=3600${IMG_GLOBAL_URL_PARAMS} 3600w,
-            `
+            srcset={getSrcset({
+              url: still.url,
+              min: 400,
+              max: 3600,
+              step: 200,
+              additionalParams: IMG_GLOBAL_URL_PARAMS,
+            })}
             sizes="(max-width: 1796px) 100vw, 3592px"
             alt=""
             class="slide"

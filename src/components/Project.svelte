@@ -121,7 +121,7 @@
   }
 
   article {
-    margin-bottom: 3.5em;
+    margin-bottom: 7.5em;
   }
 
   .type {

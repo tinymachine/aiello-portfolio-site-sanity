@@ -13,7 +13,6 @@
   },
   "devDependencies": {
     "@astrojs/svelte": "^5.7.0",
-    "@rollup/plugin-yaml": "^3.1.0",
     "accessible-astro-components": "^1.4.7",
     "astro": "^4.12.1",
     "eslint": "^9.7.0",

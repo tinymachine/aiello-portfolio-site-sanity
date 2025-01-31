@@ -59,14 +59,14 @@ const backdropAlpha = 0.75
   >
     <div class="slide-container">
       {
-        reel.placeholderStills.map((still) => (
+        reel.placeholderStills.map((still, i) => (
           <img
             src={still.url + `?w=1796${IMG_GLOBAL_URL_PARAMS}`}
             srcset={getSrcset({
               url: still.url,
               min: 400,
               max: 3600,
-              step: 200,
+              step: 400,
               additionalParams: IMG_GLOBAL_URL_PARAMS,
             })}
             sizes="(max-width: 1796px) 100vw, 3592px"
@@ -75,6 +75,7 @@ const backdropAlpha = 0.75
             width="1796"
             height="1010"
             data-slide
+            loading={i === 0 ? 'eager' : 'lazy'}
           />
         ))
       }
@@ -203,8 +204,12 @@ const backdropAlpha = 0.75
     })
   }
 
-  slideshow() // start slideshow
-  dynamicBackdropMask() // set up backdrop mask
+  window.onload = () => {
+    setTimeout(() => {
+      slideshow() // start slideshow
+      dynamicBackdropMask() // set up backdrop mask
+    }, 1000)
+  }
 </script>
 
 <style lang="scss">

@@ -5,7 +5,6 @@
   import { getSrcset } from '../scripts/getSrcset'
   import { IMG_GLOBAL_URL_PARAMS, MAX_DPR } from '../config'
   import { fadeInImagesOnLoad } from '../scripts/imgFadeInOnLoad'
-  import '../scripts/imgFadeInOnLoad/styles.css'
 
   export let stills
   export let bpAnchor

@@ -1,3 +1,5 @@
+import './styles.css'
+
 export const fadeInImagesOnLoad = () => {
   const FADEIN_DATA_ATTR = 'data-fadein-onload' // if updating, search and replace globally
   const imgsToFadeIn = document.querySelectorAll(`[${FADEIN_DATA_ATTR}]`)

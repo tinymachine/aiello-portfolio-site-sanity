@@ -1,4 +1,4 @@
-img[data-fadein] {
+img[data-fadein-onload] {
   opacity: 0;
   filter: blur(1em);
   transition:

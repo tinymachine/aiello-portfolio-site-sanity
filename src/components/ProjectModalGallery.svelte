@@ -4,7 +4,7 @@
   import { onMount } from 'svelte'
   import { getSrcset } from '../scripts/getSrcset'
   import { IMG_GLOBAL_URL_PARAMS, MAX_DPR } from '../config'
-  import { fadeInImages } from '../scripts/imgFadeInOnLoad'
+  import { fadeInImagesOnLoad } from '../scripts/imgFadeInOnLoad'
   import '../scripts/imgFadeInOnLoad/styles.css'
 
   export let stills
@@ -30,7 +30,7 @@
 
   onMount(() => {
     isMounted = true
-    fadeInImages()
+    fadeInImagesOnLoad()
   })
 
   $: if (bpAnchorMounted && isMounted) {
@@ -109,7 +109,7 @@
           height={Math.round(THUMB_MAX_WIDTH / still.aspect)}
           alt={`Still thumbnail ${getStillIndex(i)}`}
           loading="lazy"
-          data-fadein
+          data-fadein-onload
         />
       </a>
     {/each}

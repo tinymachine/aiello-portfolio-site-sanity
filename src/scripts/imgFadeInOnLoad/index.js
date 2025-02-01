@@ -1,5 +1,5 @@
-export const fadeInImages = () => {
-  const FADEIN_DATA_ATTR = 'data-fadein' // if updating, search and replace globally
+export const fadeInImagesOnLoad = () => {
+  const FADEIN_DATA_ATTR = 'data-fadein-onload' // if updating, search and replace globally
   const imgsToFadeIn = document.querySelectorAll(`[${FADEIN_DATA_ATTR}]`)
 
   imgsToFadeIn.forEach((img) => {

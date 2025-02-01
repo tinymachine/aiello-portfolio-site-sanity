@@ -2,10 +2,10 @@
   import BiggerPicture from 'bigger-picture/src/bigger-picture.js'
   import 'bigger-picture/dist/bigger-picture.css'
   import { onMount } from 'svelte'
-  import { getSrcset } from '../scripts/utils/getSrcset'
+  import { getSrcset } from '../scripts/getSrcset'
   import { IMG_GLOBAL_URL_PARAMS, MAX_DPR } from '../config'
-  import { fadeInImages } from '../scripts/imgFadeIn'
-  import '../scripts/imgFadeIn/styles.css'
+  import { fadeInImages } from '../scripts/imgFadeInOnLoad'
+  import '../scripts/imgFadeInOnLoad/styles.css'
 
   export let stills
   export let bpAnchor

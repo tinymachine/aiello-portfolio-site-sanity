@@ -1,6 +1,6 @@
 <script>
   import ProjectModal from './ProjectModal.svelte'
-  import { getSrcset } from '../scripts/utils/getSrcset.js'
+  import { getSrcset } from '../scripts/getSrcset.js'
   import { IMG_GLOBAL_URL_PARAMS, MAX_DPR } from '../config'
   import { onMount } from 'svelte'
   // import { fadeInImages } from '../scripts/imgFadeIn'

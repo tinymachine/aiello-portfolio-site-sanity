@@ -4,7 +4,7 @@ import { getAverageColor } from 'fast-average-color-node'
 import BaseModal from './BaseModal.astro'
 import VimeoPlayer from './VimeoPlayer.svelte'
 import { IMG_GLOBAL_URL_PARAMS } from '../config'
-import { getSrcset } from '../scripts/utils/getSrcset'
+import { getSrcset } from '../scripts/getSrcset'
 
 const { data: reel } = await loadQuery({
   query: `*[_type=="reel"][0] { 

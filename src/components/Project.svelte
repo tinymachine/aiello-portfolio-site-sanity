@@ -146,7 +146,7 @@
   }
 
   article {
-    margin-bottom: 7.5em;
+    margin-bottom: clamp(2.5em, 7.5vw, 7.5em);
   }
 
   .type {

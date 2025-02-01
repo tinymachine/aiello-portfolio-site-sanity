@@ -266,7 +266,9 @@ body.home {
     top: 4.95em;
     left: 2px;
     width: 0.5px;
-    height: calc(100% + 4em);
+    height: calc(
+      100% + clamp(2.5em, 7.5vw, 7.5em) - 3.5em
+    ); // clamp() function must be identical to the value set for `article` in Project component
     background-color: var(--color-vertical-rule);
     mix-blend-mode: screen;
   }

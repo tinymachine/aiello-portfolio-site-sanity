@@ -1,0 +1,14 @@
+[data-animateonscroll='slideup-fadein'] {
+  opacity: 0;
+  @media (prefers-reduced-motion: no-preference) {
+    transform: translateY(4em);
+  }
+  transition:
+    opacity 2s ease-out,
+    transform 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+[data-animateonscroll='fadein'] {
+  opacity: 0;
+  transition: opacity 1.25s ease-in-out 0.125s;
+}

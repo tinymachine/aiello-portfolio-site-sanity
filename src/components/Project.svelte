@@ -3,8 +3,7 @@
   import { getSrcset } from '../scripts/getSrcset.js'
   import { IMG_GLOBAL_URL_PARAMS, MAX_DPR } from '../config'
   import { onMount } from 'svelte'
-  // import { fadeInImages } from '../scripts/imgFadeIn'
-  import '../scripts/imgFadeIn/styles.css'
+  import { animateOnScroll } from '../scripts/animateOnScroll'
 
   export let project
   export let projectTypeLabel
@@ -23,32 +22,8 @@
     isOpen = false
   }
 
-  // Initialize the intersection observer
-  const observerOptions = {
-    threshold: 0.5, // Trigger when at least 10% of the element is visible
-  }
-
   onMount(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = 1
-          if (entry.target.hasAttribute('data-slideup-fadein')) {
-            entry.target.style.transform = 'translateY(0)'
-          }
-          // Optional: stop observing after animation
-          observer.unobserve(entry.target)
-        }
-      })
-    }, observerOptions)
-
-    // Function to start observing elements
-    function observeElements(selector = '[data-slideup-fadein],[data-fadein]') {
-      const elements = document.querySelectorAll(selector)
-      elements.forEach((element) => observer.observe(element))
-    }
-
-    observeElements()
+    animateOnScroll()
   })
 </script>
 
@@ -74,7 +49,7 @@
         height={Math.round(IMG_MAX_WIDTH / featuredStill.aspect)}
         alt=""
         loading="lazy"
-        data-slideup-fadein
+        data-animateonscroll="slideup-fadein"
       />
     </div>
 
@@ -83,7 +58,7 @@
         --color-accent: ${colorAccentRgb ? colorAccentRgb : 'var(--color-default)'};
         color: var(--color-accent);
       `}
-      data-fadein
+      data-animateonscroll="fadein"
     >
       {title}
 
@@ -152,17 +127,5 @@
   .type {
     white-space: nowrap;
     opacity: 0.7;
-  }
-
-  [data-slideup-fadein] {
-    opacity: 0;
-    transform: translateY(4em);
-    transition:
-      opacity 2s ease-out,
-      transform 1.5s cubic-bezier(0.25, 1, 0.5, 1);
-  }
-  [data-fadein] {
-    opacity: 0;
-    transition: 1s opacity 0.5s ease-out;
   }
 </style>

@@ -49,6 +49,7 @@ const IMG_MAX_WIDTH = 572 // ~36rem max-width from CSS
       height={Math.round(IMG_MAX_WIDTH / image.aspect)}
       class="portrait"
       alt={image.alt}
+      data-animateonscroll="fadein"
     />
   </div>
 
@@ -81,3 +82,11 @@ const IMG_MAX_WIDTH = 572 // ~36rem max-width from CSS
     }
   }
 </style>
+
+<script>
+  import { animateOnScroll } from '../scripts/animateOnScroll'
+
+  document.addEventListener('DOMContentLoaded', () => {
+    animateOnScroll()
+  })
+</script>

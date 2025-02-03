@@ -1,9 +1,9 @@
 ---
 import { loadQuery } from '../sanity/lib/loadQuery'
 import { renderPortableText } from '../sanity/lib/renderPortableText.js'
-import Button from './Button.astro'
 import { getSrcset } from '../scripts/getSrcset'
 import { IMG_GLOBAL_URL_PARAMS, MAX_DPR } from '../config'
+import Button from './Button.astro'
 
 const { data } = await loadQuery({
   query: `
@@ -32,7 +32,7 @@ const IMG_MAX_WIDTH = 572 // ~36rem max-width from CSS
   class="section"
   id="about"
 >
-  <h3>{title}</h3>
+  <h3 data-animateonscroll="fadein">{title}</h3>
 
   <div class="bleed-r">
     <img

@@ -2,7 +2,6 @@
 import { loadQuery } from '../sanity/lib/loadQuery'
 import Project from './Project.svelte'
 import { marked } from 'marked'
-// import getDimsFromImageUrls from '../scripts/getDimsFromImageUrls.js'
 
 const { projectSets } = Astro.props
 
@@ -67,7 +66,7 @@ const getTransformedProject = (project) => {
       class="section"
       id={i === 0 ? 'first-section' : ''}
     >
-      <h3>{projectSet.heading}</h3>
+      <h3 data-animateonscroll="fadein">{projectSet.heading}</h3>
 
       {projectsUngrouped
         .filter((project) => project.projectSetId === projectSet._id)
@@ -83,3 +82,10 @@ const getTransformedProject = (project) => {
     </section>
   ))
 }
+
+<script>
+  import { animateOnScroll } from '../scripts/animateOnScroll'
+  document.addEventListener('DOMContentLoaded', () => {
+    animateOnScroll()
+  })
+</script>

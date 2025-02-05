@@ -75,7 +75,8 @@ const backdropAlpha = 0.65
             width="1796"
             height="1010"
             data-slide
-            loading={i === 0 ? 'eager' : 'lazy'}
+            {...(i === 0 && { fetchpriority: 'high' })}
+            {...(i > 0 && { loading: 'lazy' })}
           />
         ))
       }

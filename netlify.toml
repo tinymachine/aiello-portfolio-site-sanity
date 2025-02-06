@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/admin"
+  to = "https://drewaiello-edit.netlify.app/structure"
+  status = 301
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 301

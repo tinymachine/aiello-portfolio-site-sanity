@@ -128,101 +128,6 @@ const backdropAlpha = 0.65
   </BaseModal>
 </>
 
-<script>
-  // @ts-nocheck // prevent VS Code from showing TypeScript 'problems' since this is just JavaScript
-
-  const slideshow = () => {
-    let slideCounter = 0
-    const interval = 3000
-
-    const slides = document.querySelectorAll('[data-slide]')
-    const backdrops = document.querySelectorAll('[data-slideshow-backdrop]')
-
-    const advanceSlideshow = () => {
-      const slideIndex = slideCounter % slides.length
-      const thisSlide = slides[slideIndex]
-      const thisBackdrop = backdrops[slideIndex]
-
-      // Transition in
-      thisSlide.style.opacity = 1
-      thisBackdrop.style.opacity = 1
-
-      // Transition out
-      setTimeout(() => {
-        thisSlide.style.opacity = 0
-        thisBackdrop.style.opacity = 0
-      }, interval)
-
-      slideCounter++
-    }
-
-    advanceSlideshow()
-    setInterval(() => advanceSlideshow(), interval)
-  }
-
-  const dynamicBackdropMask = () => {
-    const minMaskOpacity = 0
-    const maxMaskOpacity = 0.725
-    const initialView = document.querySelector('[data-initial-view]')
-    const initialViewHeight = initialView.offsetHeight
-    const backdropMask = document.querySelector(
-      '[data-slideshow-backdrop-mask]'
-    )
-
-    function throttle(func, wait = 25) {
-      let waiting = false
-
-      return function () {
-        if (waiting) {
-          return
-        }
-
-        waiting = true
-        setTimeout(() => {
-          func.apply(this, arguments)
-          waiting = false
-        }, wait)
-      }
-    }
-
-    const updateBackdropMaskOpacity = throttle(() => {
-      const scrollDist = document.documentElement.scrollTop
-
-      if (scrollDist >= initialViewHeight && backdropMask.style.opacity === 1) {
-        return
-      } else {
-        const opacity = 1 - (initialViewHeight - scrollDist) / initialViewHeight
-        backdropMask.style.opacity = Math.min(
-          Math.max(opacity, minMaskOpacity),
-          maxMaskOpacity
-        )
-      }
-    })
-
-    updateBackdropMaskOpacity() // update opacity on load
-    window.addEventListener('scroll', updateBackdropMaskOpacity, {
-      passive: true,
-    })
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    // Start slideshow when first slide has loaded
-    const firstSlide = document.querySelector('[data-slide-index="0"')
-
-    const handleLoad = () => {
-      slideshow() // start slideshow
-      dynamicBackdropMask() // set up backdrop mask that darkens bg as you scroll down
-    }
-
-    firstSlide.addEventListener('load', handleLoad)
-
-    // Fallback for cached images
-    if (firstSlide.complete) {
-      handleLoad()
-    }
-  })
-</script>
-
 <style lang="scss">
   [tabindex='-1'] {
     outline: none;
@@ -326,3 +231,98 @@ const backdropAlpha = 0.65
     height: 1.25em;
   }
 </style>
+
+<script>
+  // @ts-nocheck // prevent VS Code from showing TypeScript 'problems' since this is just JavaScript
+
+  const slideshow = () => {
+    let slideCounter = 0
+    const interval = 3000
+
+    const slides = document.querySelectorAll('[data-slide]')
+    const backdrops = document.querySelectorAll('[data-slideshow-backdrop]')
+
+    const advanceSlideshow = () => {
+      const slideIndex = slideCounter % slides.length
+      const thisSlide = slides[slideIndex]
+      const thisBackdrop = backdrops[slideIndex]
+
+      // Transition in
+      thisSlide.style.opacity = 1
+      thisBackdrop.style.opacity = 1
+
+      // Transition out
+      setTimeout(() => {
+        thisSlide.style.opacity = 0
+        thisBackdrop.style.opacity = 0
+      }, interval)
+
+      slideCounter++
+    }
+
+    advanceSlideshow()
+    setInterval(() => advanceSlideshow(), interval)
+  }
+
+  const dynamicBackdropMask = () => {
+    const minMaskOpacity = 0
+    const maxMaskOpacity = 0.725
+    const initialView = document.querySelector('[data-initial-view]')
+    const initialViewHeight = initialView.offsetHeight
+    const backdropMask = document.querySelector(
+      '[data-slideshow-backdrop-mask]'
+    )
+
+    function throttle(func, wait = 25) {
+      let waiting = false
+
+      return function () {
+        if (waiting) {
+          return
+        }
+
+        waiting = true
+        setTimeout(() => {
+          func.apply(this, arguments)
+          waiting = false
+        }, wait)
+      }
+    }
+
+    const updateBackdropMaskOpacity = throttle(() => {
+      const scrollDist = document.documentElement.scrollTop
+
+      if (scrollDist >= initialViewHeight && backdropMask.style.opacity === 1) {
+        return
+      } else {
+        const opacity = 1 - (initialViewHeight - scrollDist) / initialViewHeight
+        backdropMask.style.opacity = Math.min(
+          Math.max(opacity, minMaskOpacity),
+          maxMaskOpacity
+        )
+      }
+    })
+
+    updateBackdropMaskOpacity() // update opacity on load
+    window.addEventListener('scroll', updateBackdropMaskOpacity, {
+      passive: true,
+    })
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Start slideshow when first slide has loaded
+    const firstSlide = document.querySelector('[data-slide-index="0"')
+
+    const handleLoad = () => {
+      slideshow() // start slideshow
+      dynamicBackdropMask() // set up backdrop mask that darkens bg as you scroll down
+    }
+
+    firstSlide.addEventListener('load', handleLoad)
+
+    // Fallback for cached images
+    if (firstSlide.complete) {
+      handleLoad()
+    }
+  })
+</script>

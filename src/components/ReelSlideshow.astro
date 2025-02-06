@@ -42,7 +42,7 @@ const backdropAlpha = 0.65
       reel.placeholderStills.map((still, i) => (
         <div
           data-slideshow-backdrop
-          style={`background-color: rgb(${slideAvgColorsRGB[i]}, ${backdropAlpha})`}
+          style={`background-color: rgb(${slideAvgColorsRGB[i]}, ${backdropAlpha}); opacity: 0;`}
         />
       ))
     }

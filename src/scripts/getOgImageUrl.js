@@ -37,6 +37,7 @@ export const getOgImageUrl = (
       &fit=crop
       &crop=focalpoint
       &fm=jpg
+      &q=95
     `.replace(/\s/g, '')
   }
 

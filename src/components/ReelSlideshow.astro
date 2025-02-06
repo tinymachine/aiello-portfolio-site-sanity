@@ -66,7 +66,7 @@ const backdropAlpha = 0.65
               url: still.url,
               min: 400,
               max: 3600,
-              step: 400,
+              step: 200,
               additionalParams: IMG_GLOBAL_URL_PARAMS,
             })}
             sizes="(max-width: 1796px) 100vw, 1796px"
@@ -75,8 +75,8 @@ const backdropAlpha = 0.65
             width="1796"
             height="1010"
             data-slide
+            data-slide-index={i}
             {...(i === 0 && { fetchpriority: 'high' })}
-            {...(i > 0 && { loading: 'lazy' })}
           />
         ))
       }
@@ -205,12 +205,22 @@ const backdropAlpha = 0.65
     })
   }
 
-  window.onload = () => {
-    setTimeout(() => {
+  document.addEventListener('DOMContentLoaded', () => {
+    // Start slideshow when first slide has loaded
+    const firstSlide = document.querySelector('[data-slide-index="0"')
+
+    const handleLoad = () => {
       slideshow() // start slideshow
-      dynamicBackdropMask() // set up backdrop mask
-    }, 1000)
-  }
+      dynamicBackdropMask() // set up backdrop mask that darkens bg as you scroll down
+    }
+
+    firstSlide.addEventListener('load', handleLoad)
+
+    // Fallback for cached images
+    if (firstSlide.complete) {
+      handleLoad()
+    }
+  })
 </script>
 
 <style lang="scss">
@@ -235,7 +245,6 @@ const backdropAlpha = 0.65
     position: relative;
     width: 100%;
     height: 100%;
-    overflow: hidden;
   }
 
   .backdrop {

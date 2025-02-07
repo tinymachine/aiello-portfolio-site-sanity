@@ -1,4 +1,4 @@
-# aiello-portfolio-site
+# aiello-portfolio-site-sanity
 
 ## Framework
 
@@ -6,20 +6,15 @@ This site is built with [Astro](https://astro.build) using both Astro-native and
 
 ## CMS
 
-This site was configured to integrate with [Forestry CMS](https://tina.io/forestry/), an excellent CMS that integrated with GitHub to edit site contents by making commits to the site's repo. But the service was discontinuted in March 2023, so currently the site must be updated manually by manually updating the Markdown files — not a user-friendly experience.
+This site integrates [Sanity](https://www.sanity.io/) for content management (including image hosting, with on-the-fly, URL-based [transformations](https://www.sanity.io/docs/image-urls)). Sanity is configured to trigger a Vercel-generated web hook trigger so that when any updates are made, Vercel will re-deploy.
 
 ## Site Hosting
 
-The site is configured to be deployed to [Netlify][netlify] via a [CI/CD pipeline][cicd]. Whenever commits are pushed to GitHub, Netlify automatically builds and deploys a new version of the site across its worldwide [edge network][edge] (for [free][free]!).
+Whenever commits are pushed to GitHub or changes are made in Sanity, [Vercel][vercel] automatically builds and deploys a new version of the site across its worldwide [edge network][edge] (for [free][free]!).
 
-[cicd]: https://www.netlify.com/blog/guide-to-ci-cd-automation-using-webhooks/
-[netlify]: https://www.netlify.com/
-[edge]: https://www.netlify.com/platform/core/edge/
-[free]: https://www.netlify.com/pricing/
-
-## Image Hosting
-
-Most images on the site are hosted using the free tier of [Cloudinary](https://cloudinary.com/), for its ability to optimize images and because it integrated well with Forestry CMS.
+[vercel]: https://vercel.com/home
+[edge]: https://vercel.com/docs/edge-network/overview
+[free]: https://vercel.com/pricing
 
 ## Code Formatting and Linting
 
@@ -31,47 +26,13 @@ This project is configured to use [Prettier][prettier] for formatting code and [
 [husky]: https://typicode.github.io/husky/
 [lint-staged]: https://www.npmjs.com/package/lint-staged
 
-## Project Structure
-
-These are the most important parts of the structure:
-
-```
-/
-├── .prettierignore                   # files Prettier should ignore
-├── .prettierrc.mjs                   # Prettier config
-├── astro.config.mjs                  # Astro config
-├── eslint.config.mjs                 # ESLint config
-├── netlify.toml                      # Netlify deployment config
-├── public                            # contents of this directory automatically served from site root
-│   ├── admin                         # Forestry CMS control panel (defunct)
-│   ├── fonts                         # custom web fonts
-│   └── img                           # images and icons not handled by the CMS
-└── src
-    ├── components                    # both Astro and Svelte components that comprise the site
-    ├── layout
-    │   └── Layout.astro              # boilerplate site html
-    ├── pages
-    │   └── index.astro               # page structure
-    ├── scripts
-    │   └── getDimsFromImageUrls.js   # fetches image dimensions and calculates aspect ratios
-    ├── settings
-    │   ├── Settings.md               # user-editable settings
-    │   └── siteInfo.js               # other settings
-    ├── styles
-    │    └── global.scss              # site CSS (uses Sass)
-    └── user-content
-        ├── About.md                  # user-editable content for About section
-        └── Projects.md               # user-editable content for all projects
-```
-
 ## Commands
 
-All commands are run from the root of the project, from a terminal:
+These should be run from the root of the project:
 
-| Command               | Action                                     |
-| :-------------------- | :----------------------------------------- |
-| `npm install`         | Install dependencies                       |
-| `npm run dev`         | Start local dev server at `localhost:3000` |
-| `npm run build`       | Build production site to `./dist/`         |
-| `npm run preview`     | Preview build locally before deploying     |
-| `npm run cms-preview` | For use by Forestry CMS (defunct)          |
+| Command   | Action                                             |
+| :-------- | :------------------------------------------------- |
+| `dev`     | Start local dev server                             |
+| `build`   | Build production site to `./dist/`                 |
+| `preview` | Preview build locally before deploying             |
+| `prepare` | npm runs this after `npm install`, to set up husky |

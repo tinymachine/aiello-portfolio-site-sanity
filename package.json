@@ -1,14 +1,13 @@
 {
-  "name": "aiello-portfolio-site",
-  "version": "1.1.0",
+  "name": "aiello-portfolio-site-sanity",
+  "version": "1.0.0",
   "private": true,
   "keywords": [],
-  "description": "Portfolio website of Andrew Aiello built using Astro, Svelte, Cloudinary image hosting, Netlify deployment, and Sanity CMS.",
+  "description": "Portfolio website of Andrew Aiello built using Astro, Svelte, Vercel deployment, and Sanity CMS.",
   "scripts": {
     "dev": "astro dev --host",
     "build": "astro build",
     "preview": "astro preview",
-    "cms-preview": "astro dev --port 8080",
     "prepare": "husky && husky install"
   },
   "devDependencies": {
@@ -27,16 +26,12 @@
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.0",
     "prettier-plugin-svelte": "^3.2.6",
-    "sass": "1.51.0",
     "svelte-preprocess": "^6.0.2"
   },
   "dependencies": {
     "@sanity/astro": "^3.1.6",
     "@sanity/client": "^6.22.4",
-    "@sanity/visual-editing": "^2.7.0",
     "bigger-picture": "^1.1.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
     "sanity": "^3.64.1",
     "svelte": "^4.0.0",
     "svelte-accessible-dialog": "^2.1.3"

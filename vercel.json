@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/admin",
+      "destination": "https://drewaiello-edit.netlify.app/structure",
+      "permanent": true
+    }
+  ],
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}

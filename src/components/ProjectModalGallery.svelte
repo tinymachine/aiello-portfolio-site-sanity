@@ -106,7 +106,7 @@
           sizes={`(max-width: 1836px) 48vw, ${THUMB_MAX_WIDTH}px`}
           width={THUMB_MAX_WIDTH}
           height={Math.round(THUMB_MAX_WIDTH / still.aspect)}
-          alt={`Still thumbnail ${getStillIndex(i)}`}
+          alt={`${i === 0 ? `Still thumbnail ` : ''}${getStillIndex(i)}`}
           loading="lazy"
           data-fadein-onload
         />

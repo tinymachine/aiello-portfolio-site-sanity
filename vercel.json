@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/admin",
-      "destination": "https://drewaiello-edit.netlify.app/structure",
+      "destination": "https://admin.drewaiello.com/",
       "permanent": true
     }
   ],

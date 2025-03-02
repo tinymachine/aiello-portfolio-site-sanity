@@ -102,7 +102,6 @@
     z-index: 1;
     background-color: var(--color-modal-bg);
     box-shadow: 0 -1rem 1rem var(--color-modal-bg);
-    width: 100vw;
   }
 
   .content-inner {

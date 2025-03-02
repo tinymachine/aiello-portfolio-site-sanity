@@ -28,7 +28,7 @@
     >
       <DialogContent
         style="
-          width: 100vw;
+          width: 100%;
           height: 100%;
           margin: 0 auto;
           padding: var(--margin-body-top) 0 6rem;

@@ -1,5 +1,8 @@
 <script>
-  import { DialogOverlay, DialogContent } from 'svelte-accessible-dialog'
+  import {
+    DialogOverlay,
+    DialogContent,
+  } from './svelte-accessible-dialog@2.1.3'
   import { fade } from 'svelte/transition'
   import { quadInOut } from 'svelte/easing'
   import ProjectModalContents from './ProjectModalContents.svelte'

@@ -23,9 +23,13 @@
   class={isButtonBelowMidline ? '' : 'reverse'}
   bind:this={buttonEl}
   on:click={scrollToTarget}
-  aria-label={isButtonBelowMidline ? 'Scroll to content' : 'Scroll to top'}
+  aria-hidden="true"
+  tabindex="-1"
 >
-  <img src="/img/chevron-down.svg" alt="" />
+  <img
+    src="/img/chevron-down.svg"
+    alt=""
+  />
 </a>
 
 <svelte:window on:scroll|passive={updateButtonPosition} />

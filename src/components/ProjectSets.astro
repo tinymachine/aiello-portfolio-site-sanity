@@ -49,13 +49,14 @@ const getTransformedProject = (project) => {
   return {
     ...project,
     tite: markdownTitle,
-    stills: project.stills.map((still) => {
-      return {
-        ...still,
-        maxWidth: maxStillWidth,
-        maxHeight: Math.round(maxStillWidth / still.aspect),
-      }
-    }),
+    stills:
+      project.stills?.map((still) => {
+        return {
+          ...still,
+          maxWidth: maxStillWidth,
+          maxHeight: Math.round(maxStillWidth / still.aspect),
+        }
+      }) || [],
   }
 }
 ---
